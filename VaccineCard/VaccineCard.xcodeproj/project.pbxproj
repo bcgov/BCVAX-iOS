@@ -1,0 +1,462 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		292BC32326D6B16000B0A064 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC32226D6B16000B0A064 /* AppDelegate.swift */; };
+		292BC32526D6B16000B0A064 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC32426D6B16000B0A064 /* SceneDelegate.swift */; };
+		292BC32726D6B16000B0A064 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC32626D6B16000B0A064 /* ViewController.swift */; };
+		292BC32A26D6B16000B0A064 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 292BC32826D6B16000B0A064 /* Main.storyboard */; };
+		292BC32C26D6B16200B0A064 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 292BC32B26D6B16200B0A064 /* Assets.xcassets */; };
+		292BC32F26D6B16200B0A064 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 292BC32D26D6B16200B0A064 /* LaunchScreen.storyboard */; };
+		292BC34926D6B2EA00B0A064 /* VaccineQRCodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC34726D6B2EA00B0A064 /* VaccineQRCodeTableViewCell.swift */; };
+		292BC34A26D6B2EA00B0A064 /* VaccineQRCodeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 292BC34826D6B2EA00B0A064 /* VaccineQRCodeTableViewCell.xib */; };
+		292BC34C26D6B40F00B0A064 /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC34B26D6B40F00B0A064 /* LabelView.swift */; };
+		292BC34F26D6B47600B0A064 /* LabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC34D26D6B47600B0A064 /* LabelTableViewCell.swift */; };
+		292BC35026D6B47600B0A064 /* LabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 292BC34E26D6B47600B0A064 /* LabelTableViewCell.xib */; };
+		292BC35626D6D2EE00B0A064 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC35526D6D2EE00B0A064 /* ScannerViewController.swift */; };
+		292BC35926D6D68600B0A064 /* CodeValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC35826D6D68600B0A064 /* CodeValidationService.swift */; };
+		292BC35B26D6D79300B0A064 /* ScanResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC35A26D6D79300B0A064 /* ScanResultViewController.swift */; };
+		292BC35D26D6DB2A00B0A064 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC35C26D6DB2A00B0A064 /* Constants.swift */; };
+		292BC36026D6DB4400B0A064 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC35F26D6DB4400B0A064 /* UIView.swift */; };
+		292BC36226D6EC9100B0A064 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC36126D6EC9100B0A064 /* UIColor.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		292BC31F26D6B16000B0A064 /* VaccineCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VaccineCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		292BC32226D6B16000B0A064 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		292BC32426D6B16000B0A064 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		292BC32626D6B16000B0A064 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		292BC32926D6B16000B0A064 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		292BC32B26D6B16200B0A064 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		292BC32E26D6B16200B0A064 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		292BC33026D6B16200B0A064 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		292BC34726D6B2EA00B0A064 /* VaccineQRCodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineQRCodeTableViewCell.swift; sourceTree = "<group>"; };
+		292BC34826D6B2EA00B0A064 /* VaccineQRCodeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VaccineQRCodeTableViewCell.xib; sourceTree = "<group>"; };
+		292BC34B26D6B40F00B0A064 /* LabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelView.swift; sourceTree = "<group>"; };
+		292BC34D26D6B47600B0A064 /* LabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTableViewCell.swift; sourceTree = "<group>"; };
+		292BC34E26D6B47600B0A064 /* LabelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelTableViewCell.xib; sourceTree = "<group>"; };
+		292BC35526D6D2EE00B0A064 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		292BC35826D6D68600B0A064 /* CodeValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeValidationService.swift; sourceTree = "<group>"; };
+		292BC35A26D6D79300B0A064 /* ScanResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanResultViewController.swift; sourceTree = "<group>"; };
+		292BC35C26D6DB2A00B0A064 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		292BC35F26D6DB4400B0A064 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		292BC36126D6EC9100B0A064 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		292BC31C26D6B16000B0A064 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		292BC31626D6B16000B0A064 = {
+			isa = PBXGroup;
+			children = (
+				292BC32126D6B16000B0A064 /* VaccineCard */,
+				292BC32026D6B16000B0A064 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		292BC32026D6B16000B0A064 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				292BC31F26D6B16000B0A064 /* VaccineCard.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		292BC32126D6B16000B0A064 /* VaccineCard */ = {
+			isa = PBXGroup;
+			children = (
+				292BC32826D6B16000B0A064 /* Main.storyboard */,
+				292BC33826D6B17B00B0A064 /* ViewControllers */,
+				292BC33726D6B17500B0A064 /* Models */,
+				292BC33626D6B16D00B0A064 /* Views */,
+				292BC35726D6D67300B0A064 /* Services */,
+				292BC35E26D6DB3300B0A064 /* Extensions */,
+				292BC32226D6B16000B0A064 /* AppDelegate.swift */,
+				292BC32426D6B16000B0A064 /* SceneDelegate.swift */,
+				292BC32B26D6B16200B0A064 /* Assets.xcassets */,
+				292BC32D26D6B16200B0A064 /* LaunchScreen.storyboard */,
+				292BC33026D6B16200B0A064 /* Info.plist */,
+				292BC35C26D6DB2A00B0A064 /* Constants.swift */,
+			);
+			path = VaccineCard;
+			sourceTree = "<group>";
+		};
+		292BC33626D6B16D00B0A064 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				292BC35126D6B47C00B0A064 /* Common */,
+				292BC34B26D6B40F00B0A064 /* LabelView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		292BC33726D6B17500B0A064 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		292BC33826D6B17B00B0A064 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				292BC32626D6B16000B0A064 /* ViewController.swift */,
+				292BC35526D6D2EE00B0A064 /* ScannerViewController.swift */,
+				292BC35A26D6D79300B0A064 /* ScanResultViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		292BC35126D6B47C00B0A064 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				292BC35226D6B48300B0A064 /* TableViewCells */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		292BC35226D6B48300B0A064 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				292BC35426D6B4B300B0A064 /* Vaccine QR Code */,
+				292BC35326D6B49000B0A064 /* Label */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		292BC35326D6B49000B0A064 /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				292BC34D26D6B47600B0A064 /* LabelTableViewCell.swift */,
+				292BC34E26D6B47600B0A064 /* LabelTableViewCell.xib */,
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
+		292BC35426D6B4B300B0A064 /* Vaccine QR Code */ = {
+			isa = PBXGroup;
+			children = (
+				292BC34726D6B2EA00B0A064 /* VaccineQRCodeTableViewCell.swift */,
+				292BC34826D6B2EA00B0A064 /* VaccineQRCodeTableViewCell.xib */,
+			);
+			path = "Vaccine QR Code";
+			sourceTree = "<group>";
+		};
+		292BC35726D6D67300B0A064 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				292BC35826D6D68600B0A064 /* CodeValidationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		292BC35E26D6DB3300B0A064 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				292BC35F26D6DB4400B0A064 /* UIView.swift */,
+				292BC36126D6EC9100B0A064 /* UIColor.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		292BC31E26D6B16000B0A064 /* VaccineCard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 292BC33326D6B16200B0A064 /* Build configuration list for PBXNativeTarget "VaccineCard" */;
+			buildPhases = (
+				292BC31B26D6B16000B0A064 /* Sources */,
+				292BC31C26D6B16000B0A064 /* Frameworks */,
+				292BC31D26D6B16000B0A064 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VaccineCard;
+			productName = VaccineCard;
+			productReference = 292BC31F26D6B16000B0A064 /* VaccineCard.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		292BC31726D6B16000B0A064 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					292BC31E26D6B16000B0A064 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = 292BC31A26D6B16000B0A064 /* Build configuration list for PBXProject "VaccineCard" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 292BC31626D6B16000B0A064;
+			productRefGroup = 292BC32026D6B16000B0A064 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				292BC31E26D6B16000B0A064 /* VaccineCard */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		292BC31D26D6B16000B0A064 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				292BC34A26D6B2EA00B0A064 /* VaccineQRCodeTableViewCell.xib in Resources */,
+				292BC32F26D6B16200B0A064 /* LaunchScreen.storyboard in Resources */,
+				292BC35026D6B47600B0A064 /* LabelTableViewCell.xib in Resources */,
+				292BC32C26D6B16200B0A064 /* Assets.xcassets in Resources */,
+				292BC32A26D6B16000B0A064 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		292BC31B26D6B16000B0A064 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				292BC32726D6B16000B0A064 /* ViewController.swift in Sources */,
+				292BC36226D6EC9100B0A064 /* UIColor.swift in Sources */,
+				292BC35D26D6DB2A00B0A064 /* Constants.swift in Sources */,
+				292BC32326D6B16000B0A064 /* AppDelegate.swift in Sources */,
+				292BC35B26D6D79300B0A064 /* ScanResultViewController.swift in Sources */,
+				292BC36026D6DB4400B0A064 /* UIView.swift in Sources */,
+				292BC34F26D6B47600B0A064 /* LabelTableViewCell.swift in Sources */,
+				292BC34C26D6B40F00B0A064 /* LabelView.swift in Sources */,
+				292BC32526D6B16000B0A064 /* SceneDelegate.swift in Sources */,
+				292BC35926D6D68600B0A064 /* CodeValidationService.swift in Sources */,
+				292BC34926D6B2EA00B0A064 /* VaccineQRCodeTableViewCell.swift in Sources */,
+				292BC35626D6D2EE00B0A064 /* ScannerViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		292BC32826D6B16000B0A064 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				292BC32926D6B16000B0A064 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		292BC32D26D6B16200B0A064 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				292BC32E26D6B16200B0A064 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		292BC33126D6B16200B0A064 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		292BC33226D6B16200B0A064 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		292BC33426D6B16200B0A064 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YJY3GTSU5J;
+				INFOPLIST_FILE = VaccineCard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ca.shayegh.VaccineCard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		292BC33526D6B16200B0A064 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YJY3GTSU5J;
+				INFOPLIST_FILE = VaccineCard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ca.shayegh.VaccineCard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		292BC31A26D6B16000B0A064 /* Build configuration list for PBXProject "VaccineCard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				292BC33126D6B16200B0A064 /* Debug */,
+				292BC33226D6B16200B0A064 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		292BC33326D6B16200B0A064 /* Build configuration list for PBXNativeTarget "VaccineCard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				292BC33426D6B16200B0A064 /* Debug */,
+				292BC33526D6B16200B0A064 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 292BC31726D6B16000B0A064 /* Project object */;
+}
