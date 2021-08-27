@@ -13,6 +13,18 @@ struct Constants {
         static let vaccinationStatusHeader = "Covid-19 Vaccination Status Validation"
         static let scanAgain = "Scan Again"
         
+        struct Errors {
+            struct VideoNotSupported {
+                static let title = "Unsupported Device"
+                static let message = "Please use a device that supports video capture."
+            }
+            
+            struct QRScanningNotSupported {
+                static let title = "Unsupported Device"
+                static let message = "Your device does not support QR code scanning."
+            }
+        }
+        
     }
     struct UI {
         struct Theme {

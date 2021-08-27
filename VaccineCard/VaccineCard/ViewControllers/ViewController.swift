@@ -36,7 +36,7 @@ class ViewController: ScannerViewController {
                 guard let `self` = self else {return}
                 // On close, Dismiss results and start capture session
                 destination.dismiss(animated: true, completion: nil)
-                self.captureSession.startRunning()
+                self.captureSession?.startRunning()
             }
         }
     }
