@@ -9,9 +9,16 @@ import Foundation
 import UIKit
 
 struct Constants {
+    struct Strings {
+        static let vaccinationStatusHeader = "Covid-19 Vaccination Status Validation"
+        static let scanAgain = "Scan Again"
+        
+    }
     struct UI {
         struct Theme {
             static let primaryColor = UIColor(hexString: "#003366")
+            static let secondaryColor = UIColor(hexString: "#eea73b")
+            static let primaryConstractColor = UIColor.white
             static let cornerRadius: CGFloat = 4
         }
         struct LoadingIndicator {
@@ -34,7 +41,9 @@ struct Constants {
             static let font = UIFont.systemFont(ofSize: 22)
             static let textColor = UIColor.white
             
-            static let vaccinatedColor = UIColor(hexString: "2e8540")
+            // MARK: Status Colours
+            static let vaccinatedColor = UIColor(hexString: "#2e8540")
+            static let notVaccinatedColor = UIColor.red
         }
     }
 }

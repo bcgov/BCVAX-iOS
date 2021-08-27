@@ -8,83 +8,85 @@
 import UIKit
 
 class ScanResultViewController: UIViewController {
-    
-    // MARK: Constants
-    let cellNames: [String] = ["LabelTableViewCell", "VaccineQRCodeTableViewCell"]
 
     // MARK: Outlets
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var scanButton: UIButton!
+    @IBOutlet weak var closeButton: UIButton!
+    
+    @IBOutlet weak var logo: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var divider: UIView!
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var statusContainer: UIView!
+    
+    // MARK: Variables
+    private var onClose: (()->(Void))? = nil
+    private var model: ScanResultModel? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
-    }
-    
-    func setup() {
-        setupTable()
         style()
+        setData()
     }
     
-    func style() {
-        tableView.backgroundColor = .clear
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setData()
+    }
+    
+    @IBAction func closeButtonAction(_ sender: Any) {
+        dimissPage()
+    }
+    
+    @IBAction func scanButtonAction(_ sender: Any) {
+        dimissPage()
+    }
+    
+    private func dimissPage() {
+        guard let onClose = self.onClose else {return}
+        onClose()
+    }
+    
+    public func setup(model: ScanResultModel, onClose: @escaping()->Void) {
+        self.onClose = onClose
+        self.model = model
+    }
+    
+    private func setData() {
+        guard let model = self.model else {return}
+        nameLabel.text = model.name
+        switch model.status {
+        case .Vaccinated:
+            statusContainer.backgroundColor = Constants.UI.Status.vaccinatedColor
+        case .NotVaccinated:
+            statusContainer.backgroundColor = Constants.UI.Status.notVaccinatedColor
+        }
+    }
+    
+    private func style() {
+        // Strings
+        scanButton.setTitle(Constants.Strings.scanAgain, for: .normal)
+        titleLabel.text = Constants.Strings.vaccinationStatusHeader
+        
+        // Colours
         view.backgroundColor = Constants.UI.Theme.primaryColor
+        closeButton.tintColor = Constants.UI.Theme.primaryConstractColor
+        titleLabel.textColor = Constants.UI.Theme.primaryConstractColor
+        nameLabel.textColor = Constants.UI.Theme.primaryConstractColor
+        divider.backgroundColor = Constants.UI.Theme.secondaryColor
+        
+        scanButton.backgroundColor = Constants.UI.Theme.primaryConstractColor
+        scanButton.layer.borderWidth = 2
+        scanButton.layer.borderColor = Constants.UI.Theme.primaryColor.cgColor
+        scanButton.setTitleColor(Constants.UI.Theme.primaryColor, for: .normal)
+        
+        // Fonts
+        titleLabel.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
+        nameLabel.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+        if let btnLabel = scanButton.titleLabel {
+            btnLabel.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+        }
     }
 
 }
-
-// MARK: TableView
-extension ScanResultViewController: UITableViewDelegate, UITableViewDataSource {
-    
-    private enum sections: Int, CaseIterable {
-        case Name = 0
-        case Age
-        case QRCode
-    }
-    
-    func setupTable() {
-        if self.tableView == nil {return}
-        tableView.delegate = self
-        tableView.dataSource = self
-        for cell in cellNames {
-            registerCell(name: cell)
-        }
-    }
-    
-    func registerCell(name: String) {
-        let nib = UINib(nibName: name, bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: name)
-    }
-    
-    func getLabelCell(indexPath: IndexPath) -> LabelTableViewCell {
-        return tableView.dequeueReusableCell(withIdentifier: "LabelTableViewCell", for: indexPath) as! LabelTableViewCell
-    }
-    
-    func getQRCodeCell(indexPath: IndexPath) -> VaccineQRCodeTableViewCell {
-        return tableView.dequeueReusableCell(withIdentifier: "VaccineQRCodeTableViewCell", for: indexPath) as! VaccineQRCodeTableViewCell
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sections.allCases.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let section = sections.init(rawValue: indexPath.row) else {return UITableViewCell()}
-        switch section {
-        case .Name:
-            let cell = getLabelCell(indexPath: indexPath)
-            cell.setup(header: "Name", value: "xyz")
-            return cell
-        case .Age:
-            let cell = getLabelCell(indexPath: indexPath)
-            cell.setup(header: "Date of Birth", value: "xyz")
-            return cell
-        case .QRCode:
-            let cell = getQRCodeCell(indexPath: indexPath)
-            cell.setup()
-            return cell
-        }
-    }
-    
-    
-}
-
