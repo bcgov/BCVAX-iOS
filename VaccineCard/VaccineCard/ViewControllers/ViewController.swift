@@ -47,6 +47,7 @@ class ViewController: ScannerViewController {
     /// Function called when a QR code is found
     /// - Parameter code: QR code string
     override func found(code: String) {
+        print(code)
         view.startLoadingIndicator()
         // Validate
         CodeValidationService.shared.validate(code: code) { [weak self] status in
