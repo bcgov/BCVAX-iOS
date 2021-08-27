@@ -15,6 +15,7 @@ class ViewController: ScannerViewController {
     
     private var result: ScanResultModel? = nil
     
+    // MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -40,6 +41,8 @@ class ViewController: ScannerViewController {
             }
         }
     }
+    
+    // MARK: Class Functions
     
     /// Function called when a QR code is found
     /// - Parameter code: QR code string

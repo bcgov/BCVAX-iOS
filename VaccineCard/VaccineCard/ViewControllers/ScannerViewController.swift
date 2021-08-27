@@ -25,7 +25,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         return .portrait
     }
 
-    // Mark: LifeCycle
+    // MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.black
@@ -48,6 +48,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         }
     }
     
+    // MARK: Setup
     private func setupCaptureSession() {
         let captureSession = AVCaptureSession()
         self.captureSession = captureSession

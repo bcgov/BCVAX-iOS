@@ -24,6 +24,7 @@ class ScanResultViewController: UIViewController {
     private var onClose: (()->(Void))? = nil
     private var model: ScanResultModel? = nil
     
+    // MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         style()
@@ -35,6 +36,7 @@ class ScanResultViewController: UIViewController {
         setData()
     }
     
+    // MARK: Outlet Actions
     @IBAction func closeButtonAction(_ sender: Any) {
         dimissPage()
     }
@@ -48,6 +50,7 @@ class ScanResultViewController: UIViewController {
         onClose()
     }
     
+    // MARK: Setup
     public func setup(model: ScanResultModel, onClose: @escaping()->Void) {
         self.onClose = onClose
         self.model = model
