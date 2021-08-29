@@ -50,17 +50,15 @@ class ViewController: ScannerViewController {
         print(code)
         view.startLoadingIndicator()
         // Validate
-        CodeValidationService.shared.validate(code: code) { [weak self] status in
+        CodeValidationService.shared.validate(code: code) { [weak self] result in
             guard let `self` = self else {return}
             self.view.endLoadingIndicator()
-            if status != .notVaccineCard {
-                // If it's a vaccine card, show results
-                // TODO:
-                self.result = ScanResultModel(name: "Jane Doe", status: .Vaccinated)
-                self.showResult()
-            } else {
-                // Otherwise show an error
+            guard let res = result else {
+                // show an error
+                return
             }
+            self.result = res
+            self.showResult()
         }
     }
     
