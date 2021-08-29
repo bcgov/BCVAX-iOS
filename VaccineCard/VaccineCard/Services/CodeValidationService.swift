@@ -18,11 +18,15 @@ class CodeValidationService {
     static let shared = CodeValidationService()
     
     public func validate(code: String, completion: @escaping (ScanResultModel?)->Void) {
-        guard let model = code.decodeSMART(), let name = model.getName() else {
-            return completion(nil)
+        DispatchQueue.global(qos: .userInitiated).async {
+            guard let model = code.decodeSMART(), let name = model.getName() else {
+                return completion(nil)
+            }
+            let result = ScanResultModel(name: name, status: .Vaccinated)
+            DispatchQueue.main.async {
+                return completion(result)
+            }
         }
-        let result = ScanResultModel(name: name, status: .Vaccinated)
-        return completion(result)
     }
     
     func test() {

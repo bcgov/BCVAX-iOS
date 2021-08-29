@@ -36,8 +36,14 @@ class ViewController: ScannerViewController {
             destination.setup(model: result) { [weak self] in
                 guard let `self` = self else {return}
                 // On close, Dismiss results and start capture session
-                destination.dismiss(animated: true, completion: nil)
-                self.captureSession?.startRunning()
+                destination.dismiss(animated: true, completion: { [weak self] in
+                    guard let `self` = self else {return}
+                    self.captureSession?.startRunning()
+//                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+//                       
+//                    }
+                })
+                
             }
         }
     }
