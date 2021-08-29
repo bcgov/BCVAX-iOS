@@ -10,7 +10,8 @@ import Foundation
 extension String {
     
     /// Decondes numeric code that is prefixed with 'shc:/' - coming from QR code
-    /// - Parameter code: shc:/ followed by a numeric code
+    /// returns nil if string is not valid
+    /// - Returns: DecodedQRPayload model containing data
     public func decodeSMART() -> DecodedQRPayload? {
         guard let compactjws = decodeNumeric(code: self) else {
             return nil
