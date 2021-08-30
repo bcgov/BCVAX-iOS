@@ -37,6 +37,15 @@ struct Constants {
             static let cornerRadius: CGFloat = 4
             static let animationDuration = 0.3
         }
+        
+        struct QRCodeHighlighter {
+            static let tag = 72192376
+            static let cornerRadius: CGFloat = Constants.UI.Theme.cornerRadius
+            static let borderWidth: CGFloat = 3
+            static let borderColor = Constants.UI.Theme.secondaryColor.cgColor
+            static let borderColorInvalid = UIColor.red.cgColor
+        }
+        
         struct LoadingIndicator {
             static let backdropTag = 45645676
             static let backdropColor = UIColor.black.withAlphaComponent(0.5)

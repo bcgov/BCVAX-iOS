@@ -38,7 +38,7 @@ class ViewController: ScannerViewController {
                 // On close, Dismiss results and start capture session
                 destination.dismiss(animated: true, completion: { [weak self] in
                     guard let `self` = self else {return}
-                    self.captureSession?.startRunning()
+                    self.startCamera()
                 })
                 
             }
@@ -46,31 +46,9 @@ class ViewController: ScannerViewController {
     }
     
     // MARK: Class Functions
-    
-    /// Function called when a QR code is found
-    /// - Parameter code: QR code string
-    override func found(code: String) {
-        hideBanner()
-        view.startLoadingIndicator()
-        // Validate
-        CodeValidationService.shared.validate(code: code) { [weak self] result in
-            guard let `self` = self else {return}
-            self.view.endLoadingIndicator()
-            guard let res = result else {
-                // show an error
-                self.showBanner(message: Constants.Strings.Errors.InvalidCode.message)
-                self.captureSession?.startRunning()
-                return
-            }
-            self.result = res
-            self.showResult()
-        }
-    }
-    
     /// Show results of QR scan
-    func showResult() {
+    override func found(card: ScanResultModel) {
+        self.result = card
         self.performSegue(withIdentifier: Segues.showScanResult.rawValue, sender: self)
     }
-    
-    
 }

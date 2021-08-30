@@ -47,20 +47,19 @@ extension String {
     fileprivate func decodeCompactJWS(string: String) -> DecodedQRPayload? {
         let parts = string.components(separatedBy: ".")
         guard parts.count == 3 else {
-            print("Invalid Compact JSW: must have 3 base64 components separated by a dot")
+            print("Invalid Compact JWS: must have 3 base64 components separated by a dot")
             return nil
         }
         let header = parts[0]
         let payload = parts[1]
-        let signature = parts[2]
         guard let decodedHeader: String = header.base64Decoded(),
               let decodedPayload: Data = payload.base64Decoded()
-              // let decodedSignature = decodeBase64(string: signature)
         else {
-            print("Invalid Compact JSW: Could not decode base64")
+            print("Invalid Compact JWS: Could not decode base64")
             return nil
         }
-        
+        print(decodedHeader)
+        // TODO: Perform Decompression based on hedader data.
         return decodedPayload.decompressJSON()
     }
     

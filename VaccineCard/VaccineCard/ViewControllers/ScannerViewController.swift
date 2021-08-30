@@ -12,8 +12,10 @@ import UIKit
 class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
     // MARK: Variables
-    public var captureSession: AVCaptureSession?
+    private var captureSession: AVCaptureSession?
     private var previewLayer: AVCaptureVideoPreviewLayer!
+    fileprivate var codeHighlightTags: [Int] = []
+    fileprivate var invalidScannedCodes: [String] = []
     
     // Hide Statusbar
     override var prefersStatusBarHidden: Bool {
@@ -97,15 +99,110 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     
     /// Medatada Delegate function - called when a QR is found
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
-        captureSession?.stopRunning()
-        guard let metadataObject = metadataObjects.first else {return}
-        guard let readableObject = metadataObject as? AVMetadataMachineReadableCodeObject else { return }
-        guard let stringValue = readableObject.stringValue else { return }
-        AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
-        found(code: stringValue)
+        // Remove boxes for previous qr codes
+        clearQRCodeLocations()
+        // if there are multiple codes in camera view
+        if metadataObjects.count > 1 {
+            showMultipleQRCodesWarning(metadataObjects: metadataObjects)
+            return
+        }
+        
+        // get data from single code in view
+        guard let metadataObject = metadataObjects.first,
+              let readableObject = metadataObject as? AVMetadataMachineReadableCodeObject,
+              let stringValue = readableObject.stringValue
+              else {
+            return
+        }
+        
+        // if code has been invalidated already in this session, avoid blocking the camera
+        if !invalidScannedCodes.contains(stringValue) {
+            // Pause camera
+            captureSession?.stopRunning()
+            // Show code location
+            showQRCodeLocation(for: metadataObject, isInValid: false, tag: Constants.UI.QRCodeHighlighter.tag)
+            // Feedback
+            AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
+            // Validate QR code
+            validate(code: stringValue)
+        } else {
+            // Show message
+            self.showBanner(message: Constants.Strings.Errors.InvalidCode.message, animatePersentation: true)
+            // Show code location
+            showQRCodeLocation(for: metadataObject, isInValid: false, tag: Constants.UI.QRCodeHighlighter.tag)
+        }
     }
-
-    /// Called when a QR code is found - override this function & handle string
+    
+    fileprivate func validate(code: String) {
+        hideBanner()
+        view.startLoadingIndicator()
+        // Validate
+        CodeValidationService.shared.validate(code: code) { [weak self] result in
+            guard let `self` = self else {return}
+            self.view.endLoadingIndicator()
+            guard let res = result else {
+                // show an error & start camera
+                self.showBanner(message: Constants.Strings.Errors.InvalidCode.message, animatePersentation: true)
+                self.startCamera()
+                self.invalidScannedCodes.append(code)
+                return
+            }
+            self.found(card: res)
+        }
+        
+        // TODO: consider cashing invalid codes for the session to avoid re-validating
+    }
+    
+    public func startCamera() {
+        clearQRCodeLocations()
+        captureSession?.startRunning()
+    }
+    
+    /// Called when a SMART QR code is found - override this function
     /// - Parameter code: QR code
-    func found(code: String) {}
+    func found(card: ScanResultModel) {}
+    
+    fileprivate func showMultipleQRCodesWarning(metadataObjects: [AVMetadataObject]) {
+        for (index, item) in metadataObjects.enumerated() {
+            showQRCodeLocation(for: item, isInValid: true, tag: 1000 + index)
+        }
+        showBanner(message: "There are multiple QR codes in view", animatePersentation: false)
+    }
+    
+    fileprivate func showQRCodeLocation(for object: AVMetadataObject, isInValid: Bool, tag: Int) {
+        guard let metadataLocation = previewLayer.transformedMetadataObject(for: object) else {
+            return
+        }
+        if let existing = view.viewWithTag(tag) {
+            existing.removeFromSuperview()
+        }
+        let container = UIView(frame: metadataLocation.bounds)
+        container.tag = tag
+        container.layer.borderWidth =  Constants.UI.QRCodeHighlighter.borderWidth
+        container.layer.borderColor = isInValid ? Constants.UI.QRCodeHighlighter.borderColorInvalid : Constants.UI.QRCodeHighlighter.borderColor
+        container.layer.cornerRadius =  Constants.UI.QRCodeHighlighter.cornerRadius
+        container.backgroundColor = .clear
+        
+        codeHighlightTags.append(tag)
+        view.addSubview(container)
+        
+        // If its a known invalid QR code, make show invalid colour
+        guard let readableObject = object as? AVMetadataMachineReadableCodeObject,
+              let stringValue = readableObject.stringValue,
+              invalidScannedCodes.contains(stringValue)
+              else {
+            return
+        }
+        container.layer.borderColor = Constants.UI.QRCodeHighlighter.borderColorInvalid
+    }
+    
+    fileprivate func clearQRCodeLocations() {
+        for tag in codeHighlightTags {
+            if let box = view.viewWithTag(tag) {
+                box.removeFromSuperview()
+            }
+        }
+    }
+    
+    
 }
