@@ -127,7 +127,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             validate(code: stringValue)
         } else {
             // Show message
-            self.showBanner(message: Constants.Strings.Errors.InvalidCode.message, animatePersentation: true)
+            self.showBanner(message: Constants.Strings.Errors.InvalidCode.message)
             // Show code location
             showQRCodeLocation(for: metadataObject, isInValid: false, tag: Constants.UI.QRCodeHighlighter.tag)
         }
@@ -142,7 +142,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             self.view.endLoadingIndicator()
             guard let res = result else {
                 // show an error & start camera
-                self.showBanner(message: Constants.Strings.Errors.InvalidCode.message, animatePersentation: true)
+                self.showBanner(message: Constants.Strings.Errors.InvalidCode.message)
                 self.startCamera()
                 self.invalidScannedCodes.append(code)
                 return
@@ -166,7 +166,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         for (index, item) in metadataObjects.enumerated() {
             showQRCodeLocation(for: item, isInValid: true, tag: 1000 + index)
         }
-        showBanner(message: "There are multiple QR codes in view", animatePersentation: false)
+        showBanner(message: "There are multiple QR codes in view")
     }
     
     fileprivate func showQRCodeLocation(for object: AVMetadataObject, isInValid: Bool, tag: Int) {
