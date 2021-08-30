@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2904724726DD9A75003C4CA2 /* VaccineCardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2904724626DD9A75003C4CA2 /* VaccineCardTests.swift */; };
 		292BC32326D6B16000B0A064 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC32226D6B16000B0A064 /* AppDelegate.swift */; };
 		292BC32726D6B16000B0A064 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC32626D6B16000B0A064 /* ViewController.swift */; };
 		292BC32A26D6B16000B0A064 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 292BC32826D6B16000B0A064 /* Main.storyboard */; };
@@ -27,7 +28,20 @@
 		296030B526DC30AD0026A0AC /* DecodedQRPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296030B426DC30AD0026A0AC /* DecodedQRPayload.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2904724926DD9A75003C4CA2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 292BC31726D6B16000B0A064 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 292BC31E26D6B16000B0A064;
+			remoteInfo = VaccineCard;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		2904724426DD9A75003C4CA2 /* VaccineCardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VaccineCardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2904724626DD9A75003C4CA2 /* VaccineCardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineCardTests.swift; sourceTree = "<group>"; };
+		2904724826DD9A75003C4CA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		292BC31F26D6B16000B0A064 /* VaccineCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VaccineCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		292BC32226D6B16000B0A064 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		292BC32626D6B16000B0A064 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +65,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2904724126DD9A75003C4CA2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		292BC31C26D6B16000B0A064 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -61,10 +82,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2904724526DD9A75003C4CA2 /* VaccineCardTests */ = {
+			isa = PBXGroup;
+			children = (
+				2904724626DD9A75003C4CA2 /* VaccineCardTests.swift */,
+				2904724826DD9A75003C4CA2 /* Info.plist */,
+			);
+			path = VaccineCardTests;
+			sourceTree = "<group>";
+		};
 		292BC31626D6B16000B0A064 = {
 			isa = PBXGroup;
 			children = (
 				292BC32126D6B16000B0A064 /* VaccineCard */,
+				2904724526DD9A75003C4CA2 /* VaccineCardTests */,
 				292BC32026D6B16000B0A064 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				292BC31F26D6B16000B0A064 /* VaccineCard.app */,
+				2904724426DD9A75003C4CA2 /* VaccineCardTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -154,6 +186,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2904724326DD9A75003C4CA2 /* VaccineCardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2904724B26DD9A75003C4CA2 /* Build configuration list for PBXNativeTarget "VaccineCardTests" */;
+			buildPhases = (
+				2904724026DD9A75003C4CA2 /* Sources */,
+				2904724126DD9A75003C4CA2 /* Frameworks */,
+				2904724226DD9A75003C4CA2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2904724A26DD9A75003C4CA2 /* PBXTargetDependency */,
+			);
+			name = VaccineCardTests;
+			productName = VaccineCardTests;
+			productReference = 2904724426DD9A75003C4CA2 /* VaccineCardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		292BC31E26D6B16000B0A064 /* VaccineCard */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 292BC33326D6B16200B0A064 /* Build configuration list for PBXNativeTarget "VaccineCard" */;
@@ -180,6 +230,10 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					2904724326DD9A75003C4CA2 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 292BC31E26D6B16000B0A064;
+					};
 					292BC31E26D6B16000B0A064 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
@@ -199,11 +253,19 @@
 			projectRoot = "";
 			targets = (
 				292BC31E26D6B16000B0A064 /* VaccineCard */,
+				2904724326DD9A75003C4CA2 /* VaccineCardTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2904724226DD9A75003C4CA2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		292BC31D26D6B16000B0A064 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -217,6 +279,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2904724026DD9A75003C4CA2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2904724726DD9A75003C4CA2 /* VaccineCardTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		292BC31B26D6B16000B0A064 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -241,6 +311,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		2904724A26DD9A75003C4CA2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 292BC31E26D6B16000B0A064 /* VaccineCard */;
+			targetProxy = 2904724926DD9A75003C4CA2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		292BC32826D6B16000B0A064 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -261,6 +339,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2904724C26DD9A75003C4CA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YJY3GTSU5J;
+				INFOPLIST_FILE = VaccineCardTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ca.shayegh.VaccineCardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VaccineCard.app/VaccineCard";
+			};
+			name = Debug;
+		};
+		2904724D26DD9A75003C4CA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YJY3GTSU5J;
+				INFOPLIST_FILE = VaccineCardTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ca.shayegh.VaccineCardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VaccineCard.app/VaccineCard";
+			};
+			name = Release;
+		};
 		292BC33126D6B16200B0A064 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -384,7 +504,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = L796QSLV3E;
 				INFOPLIST_FILE = VaccineCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -406,7 +526,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = L796QSLV3E;
 				INFOPLIST_FILE = VaccineCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -424,6 +544,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2904724B26DD9A75003C4CA2 /* Build configuration list for PBXNativeTarget "VaccineCardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2904724C26DD9A75003C4CA2 /* Debug */,
+				2904724D26DD9A75003C4CA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		292BC31A26D6B16000B0A064 /* Build configuration list for PBXProject "VaccineCard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
