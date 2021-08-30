@@ -10,16 +10,52 @@ import AVFoundation
 import UIKit
 
 class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
-    var captureSession: AVCaptureSession!
-    var previewLayer: AVCaptureVideoPreviewLayer!
+    
+    // MARK: Variables
+    public var captureSession: AVCaptureSession?
+    private var previewLayer: AVCaptureVideoPreviewLayer!
+    
+    // Hide Statusbar
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
+    // Lock in portrait mode
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
 
+    // MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
         view.backgroundColor = UIColor.black
-        captureSession = AVCaptureSession()
+        setupCaptureSession()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if (captureSession?.isRunning == false) {
+            captureSession?.startRunning()
+        }
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        if (captureSession?.isRunning == true) {
+            captureSession?.stopRunning()
+        }
+    }
+    
+    // MARK: Setup
+    private func setupCaptureSession() {
+        let captureSession = AVCaptureSession()
+        self.captureSession = captureSession
 
         guard let videoCaptureDevice = AVCaptureDevice.default(for: .video) else { return }
+        
+        // Setup Video input
         let videoInput: AVCaptureDeviceInput
 
         do {
@@ -31,75 +67,45 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         if (captureSession.canAddInput(videoInput)) {
             captureSession.addInput(videoInput)
         } else {
-            failed()
+            alert(title: Constants.Strings.Errors.VideoNotSupported.title,
+                  message: Constants.Strings.Errors.VideoNotSupported.message)
             return
         }
 
+        // Setup medatada delegate to capture QR codes
         let metadataOutput = AVCaptureMetadataOutput()
-
         if (captureSession.canAddOutput(metadataOutput)) {
             captureSession.addOutput(metadataOutput)
-
             metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
             metadataOutput.metadataObjectTypes = [.qr]
         } else {
-            failed()
+            alert(title: Constants.Strings.Errors.QRScanningNotSupported.title,
+                  message: Constants.Strings.Errors.QRScanningNotSupported.message)
             return
         }
 
+        // Setup Preview
         previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         previewLayer.frame = view.layer.bounds
         previewLayer.videoGravity = .resizeAspectFill
         view.layer.addSublayer(previewLayer)
 
+        // Begin Capture Session
         captureSession.startRunning()
     }
 
-    func failed() {
-        let ac = UIAlertController(title: "Scanning not supported", message: "Your device does not support scanning a code from an item. Please use a device with a camera.", preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "OK", style: .default))
-        present(ac, animated: true)
-        captureSession = nil
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-        if (captureSession?.isRunning == false) {
-            captureSession.startRunning()
-        }
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-
-        if (captureSession?.isRunning == true) {
-            captureSession.stopRunning()
-        }
-    }
-
+    
+    /// Medatada Delegate function - called when a QR is found
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
-        captureSession.stopRunning()
-
-        if let metadataObject = metadataObjects.first {
-            guard let readableObject = metadataObject as? AVMetadataMachineReadableCodeObject else { return }
-            guard let stringValue = readableObject.stringValue else { return }
-            AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
-            found(code: stringValue)
-        }
-
-        dismiss(animated: true)
+        captureSession?.stopRunning()
+        guard let metadataObject = metadataObjects.first else {return}
+        guard let readableObject = metadataObject as? AVMetadataMachineReadableCodeObject else { return }
+        guard let stringValue = readableObject.stringValue else { return }
+        AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
+        found(code: stringValue)
     }
 
-    func found(code: String) {
-        print(code)
-    }
-
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
-
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return .portrait
-    }
+    /// Called when a QR code is found - override this function & handle string
+    /// - Parameter code: QR code
+    func found(code: String) {}
 }

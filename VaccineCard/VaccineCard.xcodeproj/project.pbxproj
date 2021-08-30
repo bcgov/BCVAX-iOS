@@ -8,44 +8,46 @@
 
 /* Begin PBXBuildFile section */
 		292BC32326D6B16000B0A064 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC32226D6B16000B0A064 /* AppDelegate.swift */; };
-		292BC32526D6B16000B0A064 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC32426D6B16000B0A064 /* SceneDelegate.swift */; };
 		292BC32726D6B16000B0A064 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC32626D6B16000B0A064 /* ViewController.swift */; };
 		292BC32A26D6B16000B0A064 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 292BC32826D6B16000B0A064 /* Main.storyboard */; };
 		292BC32C26D6B16200B0A064 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 292BC32B26D6B16200B0A064 /* Assets.xcassets */; };
 		292BC32F26D6B16200B0A064 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 292BC32D26D6B16200B0A064 /* LaunchScreen.storyboard */; };
-		292BC34926D6B2EA00B0A064 /* VaccineQRCodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC34726D6B2EA00B0A064 /* VaccineQRCodeTableViewCell.swift */; };
-		292BC34A26D6B2EA00B0A064 /* VaccineQRCodeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 292BC34826D6B2EA00B0A064 /* VaccineQRCodeTableViewCell.xib */; };
-		292BC34C26D6B40F00B0A064 /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC34B26D6B40F00B0A064 /* LabelView.swift */; };
-		292BC34F26D6B47600B0A064 /* LabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC34D26D6B47600B0A064 /* LabelTableViewCell.swift */; };
-		292BC35026D6B47600B0A064 /* LabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 292BC34E26D6B47600B0A064 /* LabelTableViewCell.xib */; };
 		292BC35626D6D2EE00B0A064 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC35526D6D2EE00B0A064 /* ScannerViewController.swift */; };
 		292BC35926D6D68600B0A064 /* CodeValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC35826D6D68600B0A064 /* CodeValidationService.swift */; };
 		292BC35B26D6D79300B0A064 /* ScanResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC35A26D6D79300B0A064 /* ScanResultViewController.swift */; };
 		292BC35D26D6DB2A00B0A064 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC35C26D6DB2A00B0A064 /* Constants.swift */; };
 		292BC36026D6DB4400B0A064 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC35F26D6DB4400B0A064 /* UIView.swift */; };
 		292BC36226D6EC9100B0A064 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC36126D6EC9100B0A064 /* UIColor.swift */; };
+		296030A026D96F2E0026A0AC /* ScanResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2960309F26D96F2E0026A0AC /* ScanResultModel.swift */; };
+		296030A426D976A40026A0AC /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296030A326D976A40026A0AC /* UIViewController.swift */; };
+		296030AB26DB543E0026A0AC /* Compressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296030AA26DB543E0026A0AC /* Compressor.swift */; };
+		296030AD26DB55180026A0AC /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296030AC26DB55180026A0AC /* Data.swift */; };
+		296030AF26DB55ED0026A0AC /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296030AE26DB55ED0026A0AC /* Array.swift */; };
+		296030B126DB55F80026A0AC /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296030B026DB55F80026A0AC /* String.swift */; };
+		296030B526DC30AD0026A0AC /* DecodedQRPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296030B426DC30AD0026A0AC /* DecodedQRPayload.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		292BC31F26D6B16000B0A064 /* VaccineCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VaccineCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		292BC32226D6B16000B0A064 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		292BC32426D6B16000B0A064 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		292BC32626D6B16000B0A064 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		292BC32926D6B16000B0A064 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		292BC32B26D6B16200B0A064 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		292BC32E26D6B16200B0A064 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		292BC33026D6B16200B0A064 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		292BC34726D6B2EA00B0A064 /* VaccineQRCodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineQRCodeTableViewCell.swift; sourceTree = "<group>"; };
-		292BC34826D6B2EA00B0A064 /* VaccineQRCodeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VaccineQRCodeTableViewCell.xib; sourceTree = "<group>"; };
-		292BC34B26D6B40F00B0A064 /* LabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelView.swift; sourceTree = "<group>"; };
-		292BC34D26D6B47600B0A064 /* LabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTableViewCell.swift; sourceTree = "<group>"; };
-		292BC34E26D6B47600B0A064 /* LabelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelTableViewCell.xib; sourceTree = "<group>"; };
 		292BC35526D6D2EE00B0A064 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		292BC35826D6D68600B0A064 /* CodeValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeValidationService.swift; sourceTree = "<group>"; };
 		292BC35A26D6D79300B0A064 /* ScanResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanResultViewController.swift; sourceTree = "<group>"; };
 		292BC35C26D6DB2A00B0A064 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		292BC35F26D6DB4400B0A064 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		292BC36126D6EC9100B0A064 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		2960309F26D96F2E0026A0AC /* ScanResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanResultModel.swift; sourceTree = "<group>"; };
+		296030A326D976A40026A0AC /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		296030AA26DB543E0026A0AC /* Compressor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compressor.swift; sourceTree = "<group>"; };
+		296030AC26DB55180026A0AC /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		296030AE26DB55ED0026A0AC /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		296030B026DB55F80026A0AC /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		296030B426DC30AD0026A0AC /* DecodedQRPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodedQRPayload.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +87,6 @@
 				292BC35726D6D67300B0A064 /* Services */,
 				292BC35E26D6DB3300B0A064 /* Extensions */,
 				292BC32226D6B16000B0A064 /* AppDelegate.swift */,
-				292BC32426D6B16000B0A064 /* SceneDelegate.swift */,
 				292BC32B26D6B16200B0A064 /* Assets.xcassets */,
 				292BC32D26D6B16200B0A064 /* LaunchScreen.storyboard */,
 				292BC33026D6B16200B0A064 /* Info.plist */,
@@ -98,7 +99,6 @@
 			isa = PBXGroup;
 			children = (
 				292BC35126D6B47C00B0A064 /* Common */,
-				292BC34B26D6B40F00B0A064 /* LabelView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -106,6 +106,8 @@
 		292BC33726D6B17500B0A064 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2960309F26D96F2E0026A0AC /* ScanResultModel.swift */,
+				296030B426DC30AD0026A0AC /* DecodedQRPayload.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -123,42 +125,15 @@
 		292BC35126D6B47C00B0A064 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				292BC35226D6B48300B0A064 /* TableViewCells */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		292BC35226D6B48300B0A064 /* TableViewCells */ = {
-			isa = PBXGroup;
-			children = (
-				292BC35426D6B4B300B0A064 /* Vaccine QR Code */,
-				292BC35326D6B49000B0A064 /* Label */,
-			);
-			path = TableViewCells;
-			sourceTree = "<group>";
-		};
-		292BC35326D6B49000B0A064 /* Label */ = {
-			isa = PBXGroup;
-			children = (
-				292BC34D26D6B47600B0A064 /* LabelTableViewCell.swift */,
-				292BC34E26D6B47600B0A064 /* LabelTableViewCell.xib */,
-			);
-			path = Label;
-			sourceTree = "<group>";
-		};
-		292BC35426D6B4B300B0A064 /* Vaccine QR Code */ = {
-			isa = PBXGroup;
-			children = (
-				292BC34726D6B2EA00B0A064 /* VaccineQRCodeTableViewCell.swift */,
-				292BC34826D6B2EA00B0A064 /* VaccineQRCodeTableViewCell.xib */,
-			);
-			path = "Vaccine QR Code";
 			sourceTree = "<group>";
 		};
 		292BC35726D6D67300B0A064 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				292BC35826D6D68600B0A064 /* CodeValidationService.swift */,
+				296030AA26DB543E0026A0AC /* Compressor.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -168,6 +143,10 @@
 			children = (
 				292BC35F26D6DB4400B0A064 /* UIView.swift */,
 				292BC36126D6EC9100B0A064 /* UIColor.swift */,
+				296030A326D976A40026A0AC /* UIViewController.swift */,
+				296030AC26DB55180026A0AC /* Data.swift */,
+				296030AE26DB55ED0026A0AC /* Array.swift */,
+				296030B026DB55F80026A0AC /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -229,9 +208,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				292BC34A26D6B2EA00B0A064 /* VaccineQRCodeTableViewCell.xib in Resources */,
 				292BC32F26D6B16200B0A064 /* LaunchScreen.storyboard in Resources */,
-				292BC35026D6B47600B0A064 /* LabelTableViewCell.xib in Resources */,
 				292BC32C26D6B16200B0A064 /* Assets.xcassets in Resources */,
 				292BC32A26D6B16000B0A064 /* Main.storyboard in Resources */,
 			);
@@ -248,13 +225,16 @@
 				292BC36226D6EC9100B0A064 /* UIColor.swift in Sources */,
 				292BC35D26D6DB2A00B0A064 /* Constants.swift in Sources */,
 				292BC32326D6B16000B0A064 /* AppDelegate.swift in Sources */,
+				296030AB26DB543E0026A0AC /* Compressor.swift in Sources */,
+				296030A426D976A40026A0AC /* UIViewController.swift in Sources */,
 				292BC35B26D6D79300B0A064 /* ScanResultViewController.swift in Sources */,
+				296030AD26DB55180026A0AC /* Data.swift in Sources */,
+				296030AF26DB55ED0026A0AC /* Array.swift in Sources */,
+				296030B526DC30AD0026A0AC /* DecodedQRPayload.swift in Sources */,
 				292BC36026D6DB4400B0A064 /* UIView.swift in Sources */,
-				292BC34F26D6B47600B0A064 /* LabelTableViewCell.swift in Sources */,
-				292BC34C26D6B40F00B0A064 /* LabelView.swift in Sources */,
-				292BC32526D6B16000B0A064 /* SceneDelegate.swift in Sources */,
+				296030A026D96F2E0026A0AC /* ScanResultModel.swift in Sources */,
+				296030B126DB55F80026A0AC /* String.swift in Sources */,
 				292BC35926D6D68600B0A064 /* CodeValidationService.swift in Sources */,
-				292BC34926D6B2EA00B0A064 /* VaccineQRCodeTableViewCell.swift in Sources */,
 				292BC35626D6D2EE00B0A064 /* ScannerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,7 +312,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -387,7 +367,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -402,15 +382,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YJY3GTSU5J;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = L796QSLV3E;
 				INFOPLIST_FILE = VaccineCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ca.shayegh.VaccineCard;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.bc.gov.VaxCheck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -421,15 +404,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YJY3GTSU5J;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = L796QSLV3E;
 				INFOPLIST_FILE = VaccineCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ca.shayegh.VaccineCard;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.bc.gov.VaxCheck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
