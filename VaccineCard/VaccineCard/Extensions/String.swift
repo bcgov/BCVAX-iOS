@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 extension String {
     
@@ -62,15 +63,12 @@ extension String {
         
         return decodedPayload.decompressJSON()
     }
-}
-
-extension String {
     
-    func chunks(size: Int) -> [String] {
+    fileprivate func chunks(size: Int) -> [String] {
         map { $0 }.chunks(size: size).compactMap { String($0) }
     }
     
-    func base64Decoded() -> String? {
+    fileprivate func base64Decoded() -> String? {
         var st = self
             .replacingOccurrences(of: "_", with: "/")
             .replacingOccurrences(of: "-", with: "+")
@@ -86,7 +84,7 @@ extension String {
         return String(data: d, encoding: .utf8)
     }
     
-    func base64Decoded() -> Data? {
+    fileprivate func base64Decoded() -> Data? {
         var st = self
             .replacingOccurrences(of: "_", with: "/")
             .replacingOccurrences(of: "-", with: "+")
@@ -98,4 +96,19 @@ extension String {
         }
          return Data(base64Encoded: st, options: .ignoreUnknownCharacters)
     }
+}
+
+
+extension String {
+    func heightForView(font:UIFont, width:CGFloat)-> CGFloat {
+        let label:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: CGFloat.greatestFiniteMagnitude))
+        label.numberOfLines = 0
+        label.lineBreakMode = NSLineBreakMode.byWordWrapping
+        label.font = font
+        label.text = self
+
+        label.sizeToFit()
+        return label.frame.height
+    }
+    
 }

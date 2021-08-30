@@ -50,7 +50,7 @@ class ViewController: ScannerViewController {
     /// Function called when a QR code is found
     /// - Parameter code: QR code string
     override func found(code: String) {
-        print(code)
+        hideBanner()
         view.startLoadingIndicator()
         // Validate
         CodeValidationService.shared.validate(code: code) { [weak self] result in
@@ -58,6 +58,8 @@ class ViewController: ScannerViewController {
             self.view.endLoadingIndicator()
             guard let res = result else {
                 // show an error
+                self.showBanner(message: Constants.Strings.Errors.InvalidCode.message)
+                self.captureSession?.startRunning()
                 return
             }
             self.result = res
