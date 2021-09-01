@@ -32,8 +32,6 @@ class CodeValidationService {
         DispatchQueue.global(qos: .userInitiated).async {
             // Decode string and get name
             if let model = code.decodeSMART(), let name = model.getName() {
-                // return results
-                // TODO: vaccination status is hard coded here
                 let result = ScanResultModel(name: name, status: self.immunizationStatus(payload: model, checkDate: Date()))
                 DispatchQueue.main.async {
                     // move back to main thread and return result
@@ -48,7 +46,7 @@ class CodeValidationService {
         }
     }
     
-    func immunizationStatus(payload: DecodedQRPayload, checkDate: Date)-> ImmunizationStatus {
+    public func immunizationStatus(payload: DecodedQRPayload, checkDate: Date)-> ImmunizationStatus {
         var imms = payload.vc.credentialSubject.fhirBundle.entry
             .compactMap({$0.resource}).filter({$0.resourceType.lowercased() == "Immunization".lowercased()})
         

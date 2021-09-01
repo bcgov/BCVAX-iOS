@@ -58,10 +58,25 @@ struct Constants {
             static let font = UIFont.systemFont(ofSize: 22)
             static let textColor = UIColor.white
             
+            
             // MARK: Status Colours
-            static let vaccinatedColor = UIColor(hexString: "#2e8540")
-            static let notVaccinatedColor = UIColor.red
-            static let partiallyVaccinated = UIColor.gray
+            struct fullyVaccinated {
+                static let color = UIColor(hexString: "#2e8540")
+                static let cardTitle = "Vaccinated"
+                static let cardSubtitle = "British Columbia Official Result"
+            }
+            struct partiallyVaccinated {
+                static let color = UIColor(hexString: "#3f5986")
+                static let cardTitle = "Partically Vaccinated"
+                static let cardSubtitle = "British Columbia Official Result"
+            }
+            
+            struct notVaccinated {
+                static let color = UIColor(hexString: "#d44f4f")
+                static let cardTitle = "Not Vaccinated"
+                static let cardSubtitle = "British Columbia Official Result"
+            }
+            
         }
         
         struct Banner {
