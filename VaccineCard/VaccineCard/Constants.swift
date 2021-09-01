@@ -61,6 +61,7 @@ struct Constants {
             // MARK: Status Colours
             static let vaccinatedColor = UIColor(hexString: "#2e8540")
             static let notVaccinatedColor = UIColor.red
+            static let partiallyVaccinated = UIColor.gray
         }
         
         struct Banner {

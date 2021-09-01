@@ -60,10 +60,12 @@ class ScanResultViewController: UIViewController {
         guard let model = self.model else {return}
         nameLabel.text = model.name
         switch model.status {
-        case .Vaccinated:
+        case .fully:
             statusContainer.backgroundColor = Constants.UI.Status.vaccinatedColor
-        case .NotVaccinated:
+        case .none:
             statusContainer.backgroundColor = Constants.UI.Status.notVaccinatedColor
+        case .partially:
+            statusContainer.backgroundColor = Constants.UI.Status.partiallyVaccinated
         }
     }
     
