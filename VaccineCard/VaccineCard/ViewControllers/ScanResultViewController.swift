@@ -74,6 +74,7 @@ class ScanResultViewController: UIViewController {
         }
     }
     
+    // MARK: Style
     private func style() {
         // Strings
         scanButton.setTitle(Constants.Strings.scanAgain, for: .normal)
@@ -92,8 +93,8 @@ class ScanResultViewController: UIViewController {
         scanButton.setTitleColor(Constants.UI.Theme.primaryColor, for: .normal)
         
         // Fonts
-        titleLabel.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
-        nameLabel.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+        titleLabel.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+        nameLabel.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
         if let btnLabel = scanButton.titleLabel {
             btnLabel.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
         }
@@ -102,10 +103,13 @@ class ScanResultViewController: UIViewController {
     private func styleStatusCard() {
         cardTitle.font = UIFont.systemFont(ofSize: 32, weight: .bold)
         cardTitle.numberOfLines = 0
-        cardSubtitle.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        cardSubtitle.font = UIFont.systemFont(ofSize: 12, weight: .regular)
         statusCardContainer.backgroundColor = .clear
         statusCardContainer.layer.borderColor = UIColor.white.cgColor
         statusCardContainer.layer.borderWidth = 6
+        
+        cardTitle.textColor = .white
+        cardSubtitle.textColor = .white
     }
     
     private func styleVaxinatedCard() {

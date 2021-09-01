@@ -10,6 +10,9 @@ import AVFoundation
 import UIKit
 
 class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
+    // MARK: Constants
+    let flashOnIcon = UIImage(named: "flashOn")
+    let flashOffIcon = UIImage(named: "flashOff")
     
     // MARK: Variables
     private var captureSession: AVCaptureSession?
@@ -32,6 +35,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         super.viewDidLoad()
         view.backgroundColor = UIColor.black
         setupCaptureSession()
+        addFlashlightButton()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,6 +43,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
 
         if (captureSession?.isRunning == false) {
             captureSession?.startRunning()
+            setFlash(on: false)
         }
     }
 
@@ -46,7 +51,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         super.viewWillDisappear(animated)
 
         if (captureSession?.isRunning == true) {
-            captureSession?.stopRunning()
+            pauseCamera()
         }
     }
     
@@ -118,7 +123,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         // if code has been invalidated already in this session, avoid blocking the camera
         if !invalidScannedCodes.contains(stringValue) {
             // Pause camera
-            captureSession?.stopRunning()
+            pauseCamera()
             // Show code location
             showQRCodeLocation(for: metadataObject, isInValid: false, tag: Constants.UI.QRCodeHighlighter.tag)
             // Feedback
@@ -156,6 +161,11 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     public func startCamera() {
         clearQRCodeLocations()
         captureSession?.startRunning()
+    }
+    
+    public func pauseCamera() {
+        setFlash(on: false)
+        captureSession?.stopRunning()
     }
     
     /// Called when a SMART QR code is found - override this function
@@ -201,6 +211,64 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             if let box = view.viewWithTag(tag) {
                 box.removeFromSuperview()
             }
+        }
+    }
+    
+    func setFlash(on: Bool) {
+        guard
+            let device = AVCaptureDevice.default(for: AVMediaType.video),
+            device.hasTorch
+        else { return }
+
+        do {
+            try device.lockForConfiguration()
+            device.torchMode = on ? .on : .off
+            device.unlockForConfiguration()
+        } catch {
+            print("Flash could not be used")
+        }
+        
+        guard let btn = self.view.viewWithTag(92133) as? UIButton else {
+            return
+        }
+        if on {
+            btn.setImage(flashOnIcon, for: .normal)
+        } else {
+            btn.setImage(flashOffIcon, for: .normal)
+        }
+    }
+    
+    fileprivate func addFlashlightButton() {
+        // TODO: Refactor constants
+        let btnSize: CGFloat = 42
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: btnSize, height: btnSize))
+        button.tag = 92133
+        view.addSubview(button)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.heightAnchor.constraint(equalToConstant: btnSize).isActive = true
+        button.widthAnchor.constraint(equalToConstant: btnSize).isActive = true
+        button.topAnchor.constraint(equalTo: view.topAnchor, constant: 32).isActive = true
+        button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
+        button.backgroundColor = .lightGray
+        button.setImage(flashOffIcon, for: .normal)
+        
+        button.addTarget(self, action: #selector(flashTapped), for: .touchUpInside)
+        button.layer.cornerRadius = btnSize/2
+        
+        button.imageView?.contentMode = .scaleAspectFit
+        button.imageEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+    }
+    
+    @objc func flashTapped(sender: UIButton?) {
+        // TODO: Refactor constants (Tag)
+        guard let btn = self.view.viewWithTag(92133) as? UIButton else {
+            return
+        }
+        let isOn = btn.imageView?.image == flashOnIcon
+        if isOn {
+            setFlash(on: false)
+        } else {
+            setFlash(on: true)
         }
     }
     
