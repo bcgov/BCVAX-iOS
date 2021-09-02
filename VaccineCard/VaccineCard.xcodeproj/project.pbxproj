@@ -9,6 +9,25 @@
 /* Begin PBXBuildFile section */
 		2904724726DD9A75003C4CA2 /* VaccineCardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2904724626DD9A75003C4CA2 /* VaccineCardTests.swift */; };
 		2904724F26DF44F9003C4CA2 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2904724E26DF44F9003C4CA2 /* Date.swift */; };
+		2904725226E15210003C4CA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC32626D6B16000B0A064 /* ViewController.swift */; };
+		2904725326E15210003C4CA2 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC36126D6EC9100B0A064 /* UIColor.swift */; };
+		2904725426E15210003C4CA2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC35C26D6DB2A00B0A064 /* Constants.swift */; };
+		2904725526E15210003C4CA2 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2904724E26DF44F9003C4CA2 /* Date.swift */; };
+		2904725626E15210003C4CA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC32226D6B16000B0A064 /* AppDelegate.swift */; };
+		2904725726E15210003C4CA2 /* Compressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296030AA26DB543E0026A0AC /* Compressor.swift */; };
+		2904725826E15210003C4CA2 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296030A326D976A40026A0AC /* UIViewController.swift */; };
+		2904725926E15210003C4CA2 /* ScanResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC35A26D6D79300B0A064 /* ScanResultViewController.swift */; };
+		2904725A26E15210003C4CA2 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296030AC26DB55180026A0AC /* Data.swift */; };
+		2904725B26E15210003C4CA2 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296030AE26DB55ED0026A0AC /* Array.swift */; };
+		2904725C26E15210003C4CA2 /* DecodedQRPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296030B426DC30AD0026A0AC /* DecodedQRPayload.swift */; };
+		2904725D26E15210003C4CA2 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC35F26D6DB4400B0A064 /* UIView.swift */; };
+		2904725E26E15210003C4CA2 /* ScanResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2960309F26D96F2E0026A0AC /* ScanResultModel.swift */; };
+		2904725F26E15210003C4CA2 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296030B026DB55F80026A0AC /* String.swift */; };
+		2904726026E15210003C4CA2 /* CodeValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC35826D6D68600B0A064 /* CodeValidationService.swift */; };
+		2904726126E15210003C4CA2 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC35526D6D2EE00B0A064 /* ScannerViewController.swift */; };
+		2904726426E15210003C4CA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 292BC32D26D6B16200B0A064 /* LaunchScreen.storyboard */; };
+		2904726526E15210003C4CA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 292BC32B26D6B16200B0A064 /* Assets.xcassets */; };
+		2904726626E15210003C4CA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 292BC32826D6B16000B0A064 /* Main.storyboard */; };
 		292BC32326D6B16000B0A064 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC32226D6B16000B0A064 /* AppDelegate.swift */; };
 		292BC32726D6B16000B0A064 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC32626D6B16000B0A064 /* ViewController.swift */; };
 		292BC32A26D6B16000B0A064 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 292BC32826D6B16000B0A064 /* Main.storyboard */; };
@@ -44,6 +63,8 @@
 		2904724626DD9A75003C4CA2 /* VaccineCardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineCardTests.swift; sourceTree = "<group>"; };
 		2904724826DD9A75003C4CA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2904724E26DF44F9003C4CA2 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		2904726A26E15210003C4CA2 /* VaccineCardTEST.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VaccineCardTEST.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2904726B26E15210003C4CA2 /* VaccineCard copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "VaccineCard copy-Info.plist"; path = "/Users/amir/Developer/Work/covid/fw/BCVAX-iOS/VaccineCard/VaccineCard copy-Info.plist"; sourceTree = "<absolute>"; };
 		292BC31F26D6B16000B0A064 /* VaccineCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VaccineCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		292BC32226D6B16000B0A064 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		292BC32626D6B16000B0A064 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +89,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		2904724126DD9A75003C4CA2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2904726226E15210003C4CA2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -99,6 +127,7 @@
 				292BC32126D6B16000B0A064 /* VaccineCard */,
 				2904724526DD9A75003C4CA2 /* VaccineCardTests */,
 				292BC32026D6B16000B0A064 /* Products */,
+				2904726B26E15210003C4CA2 /* VaccineCard copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +136,7 @@
 			children = (
 				292BC31F26D6B16000B0A064 /* VaccineCard.app */,
 				2904724426DD9A75003C4CA2 /* VaccineCardTests.xctest */,
+				2904726A26E15210003C4CA2 /* VaccineCardTEST.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -207,6 +237,23 @@
 			productReference = 2904724426DD9A75003C4CA2 /* VaccineCardTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		2904725026E15210003C4CA2 /* VaccineCardTEST */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2904726726E15210003C4CA2 /* Build configuration list for PBXNativeTarget "VaccineCardTEST" */;
+			buildPhases = (
+				2904725126E15210003C4CA2 /* Sources */,
+				2904726226E15210003C4CA2 /* Frameworks */,
+				2904726326E15210003C4CA2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VaccineCardTEST;
+			productName = VaccineCard;
+			productReference = 2904726A26E15210003C4CA2 /* VaccineCardTEST.app */;
+			productType = "com.apple.product-type.application";
+		};
 		292BC31E26D6B16000B0A064 /* VaccineCard */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 292BC33326D6B16200B0A064 /* Build configuration list for PBXNativeTarget "VaccineCard" */;
@@ -257,6 +304,7 @@
 			targets = (
 				292BC31E26D6B16000B0A064 /* VaccineCard */,
 				2904724326DD9A75003C4CA2 /* VaccineCardTests */,
+				2904725026E15210003C4CA2 /* VaccineCardTEST */,
 			);
 		};
 /* End PBXProject section */
@@ -266,6 +314,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2904726326E15210003C4CA2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2904726426E15210003C4CA2 /* LaunchScreen.storyboard in Resources */,
+				2904726526E15210003C4CA2 /* Assets.xcassets in Resources */,
+				2904726626E15210003C4CA2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +345,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				2904724726DD9A75003C4CA2 /* VaccineCardTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2904725126E15210003C4CA2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2904725226E15210003C4CA2 /* ViewController.swift in Sources */,
+				2904725326E15210003C4CA2 /* UIColor.swift in Sources */,
+				2904725426E15210003C4CA2 /* Constants.swift in Sources */,
+				2904725526E15210003C4CA2 /* Date.swift in Sources */,
+				2904725626E15210003C4CA2 /* AppDelegate.swift in Sources */,
+				2904725726E15210003C4CA2 /* Compressor.swift in Sources */,
+				2904725826E15210003C4CA2 /* UIViewController.swift in Sources */,
+				2904725926E15210003C4CA2 /* ScanResultViewController.swift in Sources */,
+				2904725A26E15210003C4CA2 /* Data.swift in Sources */,
+				2904725B26E15210003C4CA2 /* Array.swift in Sources */,
+				2904725C26E15210003C4CA2 /* DecodedQRPayload.swift in Sources */,
+				2904725D26E15210003C4CA2 /* UIView.swift in Sources */,
+				2904725E26E15210003C4CA2 /* ScanResultModel.swift in Sources */,
+				2904725F26E15210003C4CA2 /* String.swift in Sources */,
+				2904726026E15210003C4CA2 /* CodeValidationService.swift in Sources */,
+				2904726126E15210003C4CA2 /* ScannerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +463,50 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VaccineCard.app/VaccineCard";
+			};
+			name = Release;
+		};
+		2904726826E15210003C4CA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 9;
+				DEVELOPMENT_TEAM = TCH45SXZ69;
+				INFOPLIST_FILE = "VaccineCard copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.freshworks.VaxCheck;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		2904726926E15210003C4CA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 9;
+				DEVELOPMENT_TEAM = TCH45SXZ69;
+				INFOPLIST_FILE = "VaccineCard copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.freshworks.VaxCheck;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -553,6 +678,15 @@
 			buildConfigurations = (
 				2904724C26DD9A75003C4CA2 /* Debug */,
 				2904724D26DD9A75003C4CA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2904726726E15210003C4CA2 /* Build configuration list for PBXNativeTarget "VaccineCardTEST" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2904726826E15210003C4CA2 /* Debug */,
+				2904726926E15210003C4CA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
