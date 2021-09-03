@@ -19,6 +19,11 @@ class ScanResultViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     
     @IBOutlet weak var statusContainer: UIView!
+    @IBOutlet weak var statusCardContainer: UIView!
+    
+    @IBOutlet weak var cardIcon: UIImageView!
+    @IBOutlet weak var cardTitle: UILabel!
+    @IBOutlet weak var cardSubtitle: UILabel!
     
     // MARK: Variables
     private var onClose: (()->(Void))? = nil
@@ -60,13 +65,16 @@ class ScanResultViewController: UIViewController {
         guard let model = self.model else {return}
         nameLabel.text = model.name
         switch model.status {
-        case .Vaccinated:
-            statusContainer.backgroundColor = Constants.UI.Status.vaccinatedColor
-        case .NotVaccinated:
-            statusContainer.backgroundColor = Constants.UI.Status.notVaccinatedColor
+        case .fully:
+            styleVaxinatedCard()
+        case .none:
+            styleNotVaxinatedCard()
+        case .partially:
+            stylePartiallyVaxinatedCard()
         }
     }
     
+    // MARK: Style
     private func style() {
         // Strings
         scanButton.setTitle(Constants.Strings.scanAgain, for: .normal)
@@ -85,11 +93,49 @@ class ScanResultViewController: UIViewController {
         scanButton.setTitleColor(Constants.UI.Theme.primaryColor, for: .normal)
         
         // Fonts
-        titleLabel.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
-        nameLabel.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+        titleLabel.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+        nameLabel.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
         if let btnLabel = scanButton.titleLabel {
             btnLabel.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
         }
+    }
+    
+    private func styleStatusCard() {
+        cardTitle.font = UIFont.systemFont(ofSize: 32, weight: .bold)
+        cardTitle.numberOfLines = 0
+        cardSubtitle.font = UIFont.systemFont(ofSize: 12, weight: .regular)
+        statusCardContainer.backgroundColor = .clear
+        statusCardContainer.layer.borderColor = UIColor.white.cgColor
+        statusCardContainer.layer.borderWidth = 6
+        
+        cardTitle.textColor = .white
+        cardSubtitle.textColor = .white
+    }
+    
+    private func styleVaxinatedCard() {
+        statusContainer.backgroundColor = Constants.UI.Status.fullyVaccinated.color
+        styleStatusCard()
+        cardIcon.image = UIImage(named: "checkmark")
+        cardTitle.text = Constants.UI.Status.fullyVaccinated.cardTitle
+        cardSubtitle.text = Constants.UI.Status.fullyVaccinated.cardSubtitle
+    }
+    
+    private func styleNotVaxinatedCard() {
+        statusContainer.backgroundColor = Constants.UI.Status.notVaccinated.color
+        styleStatusCard()
+        cardIcon.isHidden = true
+        cardTitle.text = Constants.UI.Status.notVaccinated.cardTitle
+        cardSubtitle.text = Constants.UI.Status.notVaccinated.cardSubtitle
+    }
+    
+    private func stylePartiallyVaxinatedCard() {
+        statusContainer.backgroundColor = Constants.UI.Status.partiallyVaccinated.color
+        styleStatusCard()
+        cardIcon.isHidden = true
+        cardTitle.text = Constants.UI.Status.partiallyVaccinated.cardTitle
+        cardSubtitle.text = Constants.UI.Status.partiallyVaccinated.cardSubtitle
+        statusCardContainer.layer.borderWidth = 0
+        statusCardContainer.addDashedBorder(color: UIColor.white.cgColor, width: 6)
     }
 
 }

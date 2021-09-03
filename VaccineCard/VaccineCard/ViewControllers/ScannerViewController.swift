@@ -10,10 +10,15 @@ import AVFoundation
 import UIKit
 
 class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
+    // MARK: Constants
+    let flashOnIcon = UIImage(named: "flashOn")
+    let flashOffIcon = UIImage(named: "flashOff")
     
     // MARK: Variables
-    public var captureSession: AVCaptureSession?
+    private var captureSession: AVCaptureSession?
     private var previewLayer: AVCaptureVideoPreviewLayer!
+    fileprivate var codeHighlightTags: [Int] = []
+    fileprivate var invalidScannedCodes: [String] = []
     
     // Hide Statusbar
     override var prefersStatusBarHidden: Bool {
@@ -30,6 +35,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         super.viewDidLoad()
         view.backgroundColor = UIColor.black
         setupCaptureSession()
+        addFlashlightButton()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,6 +43,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
 
         if (captureSession?.isRunning == false) {
             captureSession?.startRunning()
+            setFlash(on: false)
         }
     }
 
@@ -44,7 +51,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         super.viewWillDisappear(animated)
 
         if (captureSession?.isRunning == true) {
-            captureSession?.stopRunning()
+            pauseCamera()
         }
     }
     
@@ -97,15 +104,173 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     
     /// Medatada Delegate function - called when a QR is found
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
-        captureSession?.stopRunning()
-        guard let metadataObject = metadataObjects.first else {return}
-        guard let readableObject = metadataObject as? AVMetadataMachineReadableCodeObject else { return }
-        guard let stringValue = readableObject.stringValue else { return }
-        AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
-        found(code: stringValue)
+        // Remove boxes for previous qr codes
+        clearQRCodeLocations()
+        // if there are multiple codes in camera view
+        if metadataObjects.count > 1 {
+            showMultipleQRCodesWarning(metadataObjects: metadataObjects)
+            return
+        }
+        
+        // get data from single code in view
+        guard let metadataObject = metadataObjects.first,
+              let readableObject = metadataObject as? AVMetadataMachineReadableCodeObject,
+              let stringValue = readableObject.stringValue
+              else {
+            return
+        }
+        
+        // if code has been invalidated already in this session, avoid blocking the camera
+        if !invalidScannedCodes.contains(stringValue) {
+            // Pause camera
+            pauseCamera()
+            // Show code location
+            showQRCodeLocation(for: metadataObject, isInValid: false, tag: Constants.UI.QRCodeHighlighter.tag)
+            // Feedback
+            AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
+            // Validate QR code
+            validate(code: stringValue)
+        } else {
+            // Show message
+            self.showBanner(message: Constants.Strings.Errors.InvalidCode.message)
+            // Show code location
+            showQRCodeLocation(for: metadataObject, isInValid: false, tag: Constants.UI.QRCodeHighlighter.tag)
+        }
     }
-
-    /// Called when a QR code is found - override this function & handle string
+    
+    fileprivate func validate(code: String) {
+        hideBanner()
+        view.startLoadingIndicator()
+        // Validate
+        CodeValidationService.shared.validate(code: code) { [weak self] result in
+            guard let `self` = self else {return}
+            self.view.endLoadingIndicator()
+            guard let res = result else {
+                // show an error & start camera
+                self.showBanner(message: Constants.Strings.Errors.InvalidCode.message)
+                self.startCamera()
+                self.invalidScannedCodes.append(code)
+                return
+            }
+            self.found(card: res)
+        }
+        
+        // TODO: consider cashing invalid codes for the session to avoid re-validating
+    }
+    
+    public func startCamera() {
+        clearQRCodeLocations()
+        captureSession?.startRunning()
+    }
+    
+    public func pauseCamera() {
+        setFlash(on: false)
+        captureSession?.stopRunning()
+    }
+    
+    /// Called when a SMART QR code is found - override this function
     /// - Parameter code: QR code
-    func found(code: String) {}
+    func found(card: ScanResultModel) {}
+    
+    fileprivate func showMultipleQRCodesWarning(metadataObjects: [AVMetadataObject]) {
+        for (index, item) in metadataObjects.enumerated() {
+            showQRCodeLocation(for: item, isInValid: true, tag: 1000 + index)
+        }
+        showBanner(message: "There are multiple QR codes in view")
+    }
+    
+    fileprivate func showQRCodeLocation(for object: AVMetadataObject, isInValid: Bool, tag: Int) {
+        guard let metadataLocation = previewLayer.transformedMetadataObject(for: object) else {
+            return
+        }
+        if let existing = view.viewWithTag(tag) {
+            existing.removeFromSuperview()
+        }
+        let container = UIView(frame: metadataLocation.bounds)
+        container.tag = tag
+        container.layer.borderWidth =  Constants.UI.QRCodeHighlighter.borderWidth
+        container.layer.borderColor = isInValid ? Constants.UI.QRCodeHighlighter.borderColorInvalid : Constants.UI.QRCodeHighlighter.borderColor
+        container.layer.cornerRadius =  Constants.UI.QRCodeHighlighter.cornerRadius
+        container.backgroundColor = .clear
+        
+        codeHighlightTags.append(tag)
+        view.addSubview(container)
+        
+        // If its a known invalid QR code, make show invalid colour
+        guard let readableObject = object as? AVMetadataMachineReadableCodeObject,
+              let stringValue = readableObject.stringValue,
+              invalidScannedCodes.contains(stringValue)
+              else {
+            return
+        }
+        container.layer.borderColor = Constants.UI.QRCodeHighlighter.borderColorInvalid
+    }
+    
+    fileprivate func clearQRCodeLocations() {
+        for tag in codeHighlightTags {
+            if let box = view.viewWithTag(tag) {
+                box.removeFromSuperview()
+            }
+        }
+    }
+    
+    func setFlash(on: Bool) {
+        guard
+            let device = AVCaptureDevice.default(for: AVMediaType.video),
+            device.hasTorch
+        else { return }
+
+        do {
+            try device.lockForConfiguration()
+            device.torchMode = on ? .on : .off
+            device.unlockForConfiguration()
+        } catch {
+            print("Flash could not be used")
+        }
+        
+        guard let btn = self.view.viewWithTag(92133) as? UIButton else {
+            return
+        }
+        if on {
+            btn.setImage(flashOnIcon, for: .normal)
+        } else {
+            btn.setImage(flashOffIcon, for: .normal)
+        }
+    }
+    
+    fileprivate func addFlashlightButton() {
+        // TODO: Refactor constants
+        let btnSize: CGFloat = 42
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: btnSize, height: btnSize))
+        button.tag = 92133
+        view.addSubview(button)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.heightAnchor.constraint(equalToConstant: btnSize).isActive = true
+        button.widthAnchor.constraint(equalToConstant: btnSize).isActive = true
+        button.topAnchor.constraint(equalTo: view.topAnchor, constant: 32).isActive = true
+        button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
+        button.backgroundColor = .lightGray
+        button.setImage(flashOffIcon, for: .normal)
+        
+        button.addTarget(self, action: #selector(flashTapped), for: .touchUpInside)
+        button.layer.cornerRadius = btnSize/2
+        
+        button.imageView?.contentMode = .scaleAspectFit
+        button.imageEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+    }
+    
+    @objc func flashTapped(sender: UIButton?) {
+        // TODO: Refactor constants (Tag)
+        guard let btn = self.view.viewWithTag(92133) as? UIButton else {
+            return
+        }
+        let isOn = btn.imageView?.image == flashOnIcon
+        if isOn {
+            setFlash(on: false)
+        } else {
+            setFlash(on: true)
+        }
+    }
+    
+    
 }

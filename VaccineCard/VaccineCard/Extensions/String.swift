@@ -47,20 +47,19 @@ extension String {
     fileprivate func decodeCompactJWS(string: String) -> DecodedQRPayload? {
         let parts = string.components(separatedBy: ".")
         guard parts.count == 3 else {
-            print("Invalid Compact JSW: must have 3 base64 components separated by a dot")
+            print("Invalid Compact JWS: must have 3 base64 components separated by a dot")
             return nil
         }
         let header = parts[0]
         let payload = parts[1]
-        let signature = parts[2]
         guard let decodedHeader: String = header.base64Decoded(),
-              let decodedPayload: Data = payload.base64Decoded()
-              // let decodedSignature = decodeBase64(string: signature)
+              let decodedPayload: Data = payload.base64DecodedData()
         else {
-            print("Invalid Compact JSW: Could not decode base64")
+            print("Invalid Compact JWS: Could not decode base64")
             return nil
         }
-        
+        print(decodedHeader)
+        // TODO: Perform Decompression based on hedader data.
         return decodedPayload.decompressJSON()
     }
     
@@ -68,13 +67,13 @@ extension String {
         map { $0 }.chunks(size: size).compactMap { String($0) }
     }
     
-    fileprivate func base64Decoded() -> String? {
+    public func base64Decoded() -> String? {
         var st = self
             .replacingOccurrences(of: "_", with: "/")
             .replacingOccurrences(of: "-", with: "+")
         let remainder = self.count % 4
         if remainder > 0 {
-            st = self.padding(toLength: self.count + 4 - remainder,
+            st = st.padding(toLength: st.count + 4 - remainder,
                               withPad: "=",
                               startingAt: 0)
         }
@@ -84,13 +83,13 @@ extension String {
         return String(data: d, encoding: .utf8)
     }
     
-    fileprivate func base64Decoded() -> Data? {
+    public func base64DecodedData() -> Data? {
         var st = self
             .replacingOccurrences(of: "_", with: "/")
             .replacingOccurrences(of: "-", with: "+")
         let remainder = self.count % 4
         if remainder > 0 {
-            st = self.padding(toLength: self.count + 4 - remainder,
+            st = st.padding(toLength: st.count + 4 - remainder,
                               withPad: "=",
                               startingAt: 0)
         }

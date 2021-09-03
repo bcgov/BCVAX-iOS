@@ -57,3 +57,27 @@ extension UIView {
         self.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0).isActive = true
     }
 }
+
+extension UIView {
+    func addDashedBorder(color: CGColor, width: CGFloat) {
+        let shapeLayer: CAShapeLayer = CAShapeLayer()
+        let frameSize = self.frame.size
+        let shapeRect = CGRect(x: 0, y: 0, width: frameSize.width, height: frameSize.height)
+        
+        shapeLayer.bounds = shapeRect
+        shapeLayer.position = CGPoint(x: frameSize.width/2, y: frameSize.height/2)
+        shapeLayer.fillColor = UIColor.clear.cgColor
+        shapeLayer.strokeColor = color
+        shapeLayer.lineWidth = width
+        shapeLayer.lineJoin = CAShapeLayerLineJoin.round
+        shapeLayer.lineDashPattern = [6,3]
+        shapeLayer.path = UIBezierPath(roundedRect: shapeRect, cornerRadius: 5).cgPath
+        shapeLayer.name = "dashed"
+        if let subs = self.layer.sublayers {
+            for sub in subs where sub.name == shapeLayer.name {
+                sub.removeFromSuperlayer()
+            }
+        }
+        self.layer.addSublayer(shapeLayer)
+    }
+}
