@@ -15,7 +15,7 @@ extension UIViewController {
         present(controller, animated: true)
     }
     
-    func showBanner(message: String, animatePersentation: Bool) {
+    func showBanner(message: String) {
         // padding Constants
         let textPadding: CGFloat = Constants.UI.Banner.labelPadding
         let containerPadding: CGFloat = Constants.UI.Banner.containerPadding
@@ -23,8 +23,6 @@ extension UIViewController {
         // Create label and container
         let container = UIView(frame: .zero)
         let label = UILabel(frame: .zero)
-        
-        container.alpha = animatePersentation ? 0 : 1 // So we can animate the displaying
         
         // Remove existing Banner / Container
         if let existing = view.viewWithTag(Constants.UI.Banner.tag) {
@@ -61,13 +59,6 @@ extension UIViewController {
         label.textColor = Constants.UI.Banner.labelColor
         container.backgroundColor = Constants.UI.Banner.backgroundColor
         container.layer.cornerRadius = Constants.UI.Theme.cornerRadius
-        
-        // Animate the displaying of banner (just fades in)
-        if animatePersentation {
-            UIView.animate(withDuration: Constants.UI.Theme.animationDuration) {
-                container.alpha = 1
-            }
-        }
         
         // Remove banner after x seconds
         DispatchQueue.main.asyncAfter(deadline: .now() + Constants.UI.Banner.displayDuration) {[weak self] in

@@ -13,6 +13,12 @@ enum CodeValidationResult {
     case invalid
 }
 
+enum ImmunizationStatus: String {
+    case fully = "fully"
+    case partially = "partially"
+    case none = "none"
+}
+
 
 class CodeValidationService {
     static let shared = CodeValidationService()
@@ -26,9 +32,7 @@ class CodeValidationService {
         DispatchQueue.global(qos: .userInitiated).async {
             // Decode string and get name
             if let model = code.decodeSMART(), let name = model.getName() {
-                // return results
-                // TODO: vaccination status is hard coded here
-                let result = ScanResultModel(name: name, status: .Vaccinated)
+                let result = ScanResultModel(name: name, status: self.immunizationStatus(payload: model, checkDate: Date()))
                 DispatchQueue.main.async {
                     // move back to main thread and return result
                     return completion(result)
@@ -42,27 +46,76 @@ class CodeValidationService {
         }
     }
     
-    // TODO: Move to tests
-    func test() {
-        testDecoding()
-        let scannedCode = "shc:/56762909524320603460292437404460312229595326546034602925407728043360287028647167452228092862122256653722370429635625447453424003564233364124297431427521394155375341407543031245324324075339375955045557327736605736010641293361123274243503696800275229652430713203294260360023586029433809662112564533625234275563340569313057055726533756365573572422555026577335647356560821750322413323240528406877033269574275366471596238736609082760405342547408203970035432241027442763435955257071633441733270632870296120666834105961432805076125221257052111652007452855450873740031747275762943272664064003663711243122453623750476210657033472556363722309745432774371380507717732564360424575720512106865772968450811253061576642607545042600454350737123043837505603521040636344290730436445252966603553045612693603767564337473415507640477210856276824673677597161343864602035082504447209337257342620335700686023207143602400207345664310002433656064403805055920577331422411382733053470213154571076394154697731446126377468116511347564453876755760426259676440210777590841280407437006277376323440544400293172113537270858745267633152075565416040301042556700245904342805251005622709643257340332297570276538556800252821226704366365324455763224005872243836083450376642557257223731283055431012323764530641106760603907442971404136100804715253714460414338563042705534603339653073047743720309304208005621226776327108705859265954501200054242092528377776454435635729635872500642225406074409577422013727083941422100524469356553715305314340125867220442376952035836276145753824505971333854681133552855586640710822046273556043534468231012421110706012750909572522746422645874"
+    public func immunizationStatus(payload: DecodedQRPayload, checkDate: Date)-> ImmunizationStatus {
+        var imms = payload.vc.credentialSubject.fhirBundle.entry
+            .compactMap({$0.resource}).filter({$0.resourceType.lowercased() == "Immunization".lowercased()})
         
-        let scannedCodeTwo = "shc:/567629095243206034602924374044603122295953265460346029254077280433602870286471674522280928613331456437653141590640220306450459085643550341424541364037063665417137241236380304375622046737407532323925433443326057360157413131537170742435764144277366374544672906417027557258362770686223361221230836043267607407552040626954363550564355662940602233743271383210327776060322040637364100717754530856535442092021036104332265333237097242774029210041233403564355622561350523235056754126457066282129365703240939205804275473672659633823043062506838725727237041597436527750071038046612335045333156733671405771297171444155203867586076086752521027086156687529520943665553232925045269586637416437277112002763046962232640756612210740050523095457753862343026113268370555402833746628766235216977327558223535336936442365075806592775382700203776037229373725677138200072352757540974625539502210552060106441280464592957765436220457453831243725210052085633332212530925535050345539580876702034207767647336070325752239392635325810222374443911552933403861731107717354377363427206053425201175663905712369004511755353406973343109356012226839443143087130622457457331386875590663247369123644705805345730337121666641455507704163720561302777744231287752373035692221417057213829106241041034431076542711127208563545553850413554046963111111507440016259336163316477397563727544092734527454226129706228685904677128567704076855694475427610770060755553255344095423123256295004680625694534067359342430286238226034522239441158"
-        let decoded = scannedCode.decodeSMART()
-        print(decoded)
+        if (imms.count < 1) {
+            return .none
+        }
         
-        let decodedTwo = scannedCodeTwo.decodeSMART()
-        print(decodedTwo)
-    }
-    
-    func testDecoding() {
-        let base64Encoded = "fVLLbtswEPyVYHvoRZYpJ3VsHdugQHsqkDQ9BD5Q1Mpiw4dAUkrcQP_eXdoJUiCNwMtSM7Mzy30C13RQV-tzcb5ebcW6AB0j1NCnNMR6uWzUJB-VDO0eXdkFjP2DD_exVGZsoIBJQf0E6TAg1HcvpGhlSD1Kk_qSufHDsVhwQaz_47S1o9N_ZNLevQtUftJttYVdASpgiy5paa7H5jeqxJa6XodbDJF1argoRVmRHt9-Hl1rkDGUxo9B4U22D6cfxSkOKG8MqR2dUINwoIykPBrzMxgCPPNrQYDn4g3hHxSH-ARy0uJRRFptSA-uPHfc6wkdT_C7dAi7mVI1mhJfycQC1fZSLERFB-a5eNNC9b6Fb__OdTg5ysAOAzpmvQ40FxCTTGPMg7CDwYT8dJNUSjv84tvcRvlWu32OFA8xoT2tDr-Z8xbbUrvOL6Pi9CqTYLX5tKkEfZvLSqxh3lEvr9QYsg2OfKNtBooVZd4sVlu2jKHzwWLIzaRKPrCBVsfBSJ7kV17OX7ycH89u5ePZdS_VPc1rl888_wU"
-
+        let janssenCode = "28951000087107"
+        let dateFormat = "yyyy-MM-dd"
         
-        print(base64Encoded.base64DecodedData())
+        // Sort by date vaccinated
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale.current
+        dateFormatter.dateFormat = dateFormat
+        imms.sort { x, y in
+            guard let xTimeString = x.occurrenceDateTime,
+                  let xTime = dateFormatter.date(from: xTimeString) else {
+                return false
+            }
+            guard let yTimeString = y.occurrenceDateTime,
+                  let yTime = dateFormatter.date(from: yTimeString) else {
+                return true
+            }
+            return xTime > yTime
+        }
+        
+        let janssenImms = imms.filter({$0.vaccineCode?.coding[0].code == janssenCode})
+        
+        // 14 days or later after dose 1: partially immunized
+        let oneDosePartially: Bool
+        if let lastDoseDateString = imms[0].occurrenceDateTime,
+           let lastDoseDate = dateFormatter.date(from: lastDoseDateString),
+           let daysSinceLastDose = lastDoseDate.daysSince(past: checkDate)
+        {
+            oneDosePartially = daysSinceLastDose >= 14
+        } else {
+            oneDosePartially = false
+        }
+        
+        // 14 days or later after Janssen vaccine dose: fully immunized
+        let oneDoseFully: Bool
+        if janssenImms.count > 0,
+           let lastDoseDateString = janssenImms[0].occurrenceDateTime,
+           let lastDoseDate = dateFormatter.date(from: lastDoseDateString),
+           let daysSinceLastDose = lastDoseDate.daysSince(past: checkDate) {
+            oneDoseFully = daysSinceLastDose >= 14
+        } else {
+            oneDoseFully = false
+        }
+        
+        // Less than 7 days after dose 2: partially immunized
+        let twoDosePartially = imms.count > 1
+        
+        let twoDoseFully: Bool
+        if imms.count > 1,
+           let lastDoseDateString = imms[1].occurrenceDateTime,
+           let lastDoseDate = dateFormatter.date(from: lastDoseDateString),
+           let daysSinceLastDose = lastDoseDate.daysSince(past: checkDate) {
+            twoDoseFully = daysSinceLastDose >= 14
+        } else {
+            twoDoseFully = false
+        }
+        
+        if oneDoseFully || twoDoseFully {
+            return .fully
+        } else if oneDosePartially || twoDosePartially {
+            return .partially
+        } else {
+            return .none
+        }
     }
 }
-
-
-
-
