@@ -28,8 +28,13 @@
 		2904726426E15210003C4CA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 292BC32D26D6B16200B0A064 /* LaunchScreen.storyboard */; };
 		2904726526E15210003C4CA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 292BC32B26D6B16200B0A064 /* Assets.xcassets */; };
 		2904726626E15210003C4CA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 292BC32826D6B16000B0A064 /* Main.storyboard */; };
-		2904726E26E1AEF8003C4CA2 /* SwiftJWT in Frameworks */ = {isa = PBXBuildFile; productRef = 2904726D26E1AEF8003C4CA2 /* SwiftJWT */; };
+		2904726E26E1AEF8003C4CA2 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 2904726D26E1AEF8003C4CA2 /* SwiftPackageProductDependency */; };
 		2904727026E1B7DE003C4CA2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2904726F26E1B7DD003C4CA2 /* GoogleService-Info.plist */; };
+		2904727226E1B916003C4CA2 /* ImmunizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2904727126E1B916003C4CA2 /* ImmunizationService.swift */; };
+		2904727326E1B96D003C4CA2 /* ImmunizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2904727126E1B916003C4CA2 /* ImmunizationService.swift */; };
+		2904727526E1BA2A003C4CA2 /* JWTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2904727426E1BA2A003C4CA2 /* JWTService.swift */; };
+		2904727626E1BA51003C4CA2 /* JWTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2904727426E1BA2A003C4CA2 /* JWTService.swift */; };
+		291D584526E1BD6D00C91F66 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 291D584426E1BD6D00C91F66 /* SwiftPackageProductDependency */; };
 		292BC32326D6B16000B0A064 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC32226D6B16000B0A064 /* AppDelegate.swift */; };
 		292BC32726D6B16000B0A064 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC32626D6B16000B0A064 /* ViewController.swift */; };
 		292BC32A26D6B16000B0A064 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 292BC32826D6B16000B0A064 /* Main.storyboard */; };
@@ -48,9 +53,6 @@
 		296030AF26DB55ED0026A0AC /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296030AE26DB55ED0026A0AC /* Array.swift */; };
 		296030B126DB55F80026A0AC /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296030B026DB55F80026A0AC /* String.swift */; };
 		296030B526DC30AD0026A0AC /* DecodedQRPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296030B426DC30AD0026A0AC /* DecodedQRPayload.swift */; };
-		99D639BCDDD902AA6A6B5C9F /* Pods_VaccineCard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 459E7D3A335F3FAEE15F203C /* Pods_VaccineCard.framework */; };
-		A78452E4D4391BBF4B2B9628 /* Pods_VaccineCardTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96ED963E3FE83B5EAA744913 /* Pods_VaccineCardTests.framework */; };
-		B5C96DB4987364671D3E467E /* Pods_VaccineCardTEST.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4748E598113486D3CE9C48E /* Pods_VaccineCardTEST.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		2904726A26E15210003C4CA2 /* VaccineCardTEST.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VaccineCardTEST.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2904726B26E15210003C4CA2 /* VaccineCard copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "VaccineCard copy-Info.plist"; path = "/Users/amir/Developer/Work/covid/fw/BCVAX-iOS/VaccineCard/VaccineCard copy-Info.plist"; sourceTree = "<absolute>"; };
 		2904726F26E1B7DD003C4CA2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2904727126E1B916003C4CA2 /* ImmunizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmunizationService.swift; sourceTree = "<group>"; };
+		2904727426E1BA2A003C4CA2 /* JWTService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWTService.swift; sourceTree = "<group>"; };
 		292BC31F26D6B16000B0A064 /* VaccineCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VaccineCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		292BC32226D6B16000B0A064 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		292BC32626D6B16000B0A064 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,15 +95,6 @@
 		296030AE26DB55ED0026A0AC /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		296030B026DB55F80026A0AC /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		296030B426DC30AD0026A0AC /* DecodedQRPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodedQRPayload.swift; sourceTree = "<group>"; };
-		459E7D3A335F3FAEE15F203C /* Pods_VaccineCard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VaccineCard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7BC8D85319D1C503F47F541D /* Pods-VaccineCard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccineCard.debug.xcconfig"; path = "Target Support Files/Pods-VaccineCard/Pods-VaccineCard.debug.xcconfig"; sourceTree = "<group>"; };
-		96ED963E3FE83B5EAA744913 /* Pods_VaccineCardTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VaccineCardTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9C4430DBF6E0D11E7CB814B1 /* Pods-VaccineCard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccineCard.release.xcconfig"; path = "Target Support Files/Pods-VaccineCard/Pods-VaccineCard.release.xcconfig"; sourceTree = "<group>"; };
-		AD9E8D4CA996C90F9A57096C /* Pods-VaccineCardTEST.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccineCardTEST.release.xcconfig"; path = "Target Support Files/Pods-VaccineCardTEST/Pods-VaccineCardTEST.release.xcconfig"; sourceTree = "<group>"; };
-		B720404E01D45522B2E8E277 /* Pods-VaccineCardTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccineCardTests.release.xcconfig"; path = "Target Support Files/Pods-VaccineCardTests/Pods-VaccineCardTests.release.xcconfig"; sourceTree = "<group>"; };
-		E687CF6D10A22E117B34D38A /* Pods-VaccineCardTEST.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccineCardTEST.debug.xcconfig"; path = "Target Support Files/Pods-VaccineCardTEST/Pods-VaccineCardTEST.debug.xcconfig"; sourceTree = "<group>"; };
-		F2E9DEAE5C73D45E5532B92D /* Pods-VaccineCardTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccineCardTests.debug.xcconfig"; path = "Target Support Files/Pods-VaccineCardTests/Pods-VaccineCardTests.debug.xcconfig"; sourceTree = "<group>"; };
-		F4748E598113486D3CE9C48E /* Pods_VaccineCardTEST.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VaccineCardTEST.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +102,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A78452E4D4391BBF4B2B9628 /* Pods_VaccineCardTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,7 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5C96DB4987364671D3E467E /* Pods_VaccineCardTEST.framework in Frameworks */,
+				291D584526E1BD6D00C91F66 /* BuildFile in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,8 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2904726E26E1AEF8003C4CA2 /* SwiftJWT in Frameworks */,
-				99D639BCDDD902AA6A6B5C9F /* Pods_VaccineCard.framework in Frameworks */,
+				2904726E26E1AEF8003C4CA2 /* BuildFile in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,7 +141,6 @@
 				292BC32026D6B16000B0A064 /* Products */,
 				2904726B26E15210003C4CA2 /* VaccineCard copy-Info.plist */,
 				88134F2A27DE5591CFE2D8D9 /* Pods */,
-				7597E50C448644B4505BB5AC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -220,6 +212,8 @@
 			children = (
 				292BC35826D6D68600B0A064 /* CodeValidationService.swift */,
 				296030AA26DB543E0026A0AC /* Compressor.swift */,
+				2904727126E1B916003C4CA2 /* ImmunizationService.swift */,
+				2904727426E1BA2A003C4CA2 /* JWTService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -238,25 +232,9 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		7597E50C448644B4505BB5AC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				459E7D3A335F3FAEE15F203C /* Pods_VaccineCard.framework */,
-				F4748E598113486D3CE9C48E /* Pods_VaccineCardTEST.framework */,
-				96ED963E3FE83B5EAA744913 /* Pods_VaccineCardTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		88134F2A27DE5591CFE2D8D9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7BC8D85319D1C503F47F541D /* Pods-VaccineCard.debug.xcconfig */,
-				9C4430DBF6E0D11E7CB814B1 /* Pods-VaccineCard.release.xcconfig */,
-				E687CF6D10A22E117B34D38A /* Pods-VaccineCardTEST.debug.xcconfig */,
-				AD9E8D4CA996C90F9A57096C /* Pods-VaccineCardTEST.release.xcconfig */,
-				F2E9DEAE5C73D45E5532B92D /* Pods-VaccineCardTests.debug.xcconfig */,
-				B720404E01D45522B2E8E277 /* Pods-VaccineCardTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -268,7 +246,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2904724B26DD9A75003C4CA2 /* Build configuration list for PBXNativeTarget "VaccineCardTests" */;
 			buildPhases = (
-				91A119753002D4946A8EB254 /* [CP] Check Pods Manifest.lock */,
 				2904724026DD9A75003C4CA2 /* Sources */,
 				2904724126DD9A75003C4CA2 /* Frameworks */,
 				2904724226DD9A75003C4CA2 /* Resources */,
@@ -287,17 +264,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2904726726E15210003C4CA2 /* Build configuration list for PBXNativeTarget "VaccineCardTEST" */;
 			buildPhases = (
-				A413ED7C15FDCC0A0EA25908 /* [CP] Check Pods Manifest.lock */,
 				2904725126E15210003C4CA2 /* Sources */,
 				2904726226E15210003C4CA2 /* Frameworks */,
 				2904726326E15210003C4CA2 /* Resources */,
-				2ED4BBAE7B9215DD00498B2F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = VaccineCardTEST;
+			packageProductDependencies = (
+				291D584426E1BD6D00C91F66 /* SwiftPackageProductDependency */,
+			);
 			productName = VaccineCard;
 			productReference = 2904726A26E15210003C4CA2 /* VaccineCardTEST.app */;
 			productType = "com.apple.product-type.application";
@@ -306,7 +284,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 292BC33326D6B16200B0A064 /* Build configuration list for PBXNativeTarget "VaccineCard" */;
 			buildPhases = (
-				51BF7C7E97157952BE275BC0 /* [CP] Check Pods Manifest.lock */,
 				292BC31B26D6B16000B0A064 /* Sources */,
 				292BC31C26D6B16000B0A064 /* Frameworks */,
 				292BC31D26D6B16000B0A064 /* Resources */,
@@ -317,7 +294,7 @@
 			);
 			name = VaccineCard;
 			packageProductDependencies = (
-				2904726D26E1AEF8003C4CA2 /* SwiftJWT */,
+				2904726D26E1AEF8003C4CA2 /* SwiftPackageProductDependency */,
 			);
 			productName = VaccineCard;
 			productReference = 292BC31F26D6B16000B0A064 /* VaccineCard.app */;
@@ -351,7 +328,8 @@
 			);
 			mainGroup = 292BC31626D6B16000B0A064;
 			packageReferences = (
-				2904726C26E1AEF8003C4CA2 /* XCRemoteSwiftPackageReference "Swift-JWT" */,
+				2904726C26E1AEF8003C4CA2 /* RemoteSwiftPackageReference */,
+				291D584326E1BD6D00C91F66 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = 292BC32026D6B16000B0A064 /* Products */;
 			projectDirPath = "";
@@ -395,92 +373,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		2ED4BBAE7B9215DD00498B2F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VaccineCardTEST/Pods-VaccineCardTEST-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VaccineCardTEST/Pods-VaccineCardTEST-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VaccineCardTEST/Pods-VaccineCardTEST-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		51BF7C7E97157952BE275BC0 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-VaccineCard-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		91A119753002D4946A8EB254 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-VaccineCardTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A413ED7C15FDCC0A0EA25908 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-VaccineCardTEST-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		2904724026DD9A75003C4CA2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -496,6 +388,8 @@
 			files = (
 				2904725226E15210003C4CA2 /* ViewController.swift in Sources */,
 				2904725326E15210003C4CA2 /* UIColor.swift in Sources */,
+				2904727326E1B96D003C4CA2 /* ImmunizationService.swift in Sources */,
+				2904727626E1BA51003C4CA2 /* JWTService.swift in Sources */,
 				2904725426E15210003C4CA2 /* Constants.swift in Sources */,
 				2904725526E15210003C4CA2 /* Date.swift in Sources */,
 				2904725626E15210003C4CA2 /* AppDelegate.swift in Sources */,
@@ -519,6 +413,8 @@
 			files = (
 				292BC32726D6B16000B0A064 /* ViewController.swift in Sources */,
 				292BC36226D6EC9100B0A064 /* UIColor.swift in Sources */,
+				2904727226E1B916003C4CA2 /* ImmunizationService.swift in Sources */,
+				2904727526E1BA2A003C4CA2 /* JWTService.swift in Sources */,
 				292BC35D26D6DB2A00B0A064 /* Constants.swift in Sources */,
 				2904724F26DF44F9003C4CA2 /* Date.swift in Sources */,
 				292BC32326D6B16000B0A064 /* AppDelegate.swift in Sources */,
@@ -568,7 +464,6 @@
 /* Begin XCBuildConfiguration section */
 		2904724C26DD9A75003C4CA2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F2E9DEAE5C73D45E5532B92D /* Pods-VaccineCardTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -590,7 +485,6 @@
 		};
 		2904724D26DD9A75003C4CA2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B720404E01D45522B2E8E277 /* Pods-VaccineCardTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -612,7 +506,6 @@
 		};
 		2904726826E15210003C4CA2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E687CF6D10A22E117B34D38A /* Pods-VaccineCardTEST.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -635,7 +528,6 @@
 		};
 		2904726926E15210003C4CA2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AD9E8D4CA996C90F9A57096C /* Pods-VaccineCardTEST.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -774,7 +666,6 @@
 		};
 		292BC33426D6B16200B0A064 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7BC8D85319D1C503F47F541D /* Pods-VaccineCard.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -797,7 +688,6 @@
 		};
 		292BC33526D6B16200B0A064 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9C4430DBF6E0D11E7CB814B1 /* Pods-VaccineCard.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -860,7 +750,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		2904726C26E1AEF8003C4CA2 /* XCRemoteSwiftPackageReference "Swift-JWT" */ = {
+		2904726C26E1AEF8003C4CA2 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Kitura/Swift-JWT";
 			requirement = {
@@ -868,13 +758,26 @@
 				minimumVersion = 3.6.200;
 			};
 		};
+		291D584326E1BD6D00C91F66 /* RemoteSwiftPackageReference */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.6.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2904726D26E1AEF8003C4CA2 /* SwiftJWT */ = {
+		2904726D26E1AEF8003C4CA2 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2904726C26E1AEF8003C4CA2 /* XCRemoteSwiftPackageReference "Swift-JWT" */;
+			package = 2904726C26E1AEF8003C4CA2 /* RemoteSwiftPackageReference */;
 			productName = SwiftJWT;
+		};
+		291D584426E1BD6D00C91F66 /* SwiftPackageProductDependency */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 291D584326E1BD6D00C91F66 /* RemoteSwiftPackageReference */;
+			productName = "FirebaseAppDistribution-Beta";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
