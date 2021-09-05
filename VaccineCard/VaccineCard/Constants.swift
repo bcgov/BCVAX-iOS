@@ -11,7 +11,7 @@ import UIKit
 struct Constants {
     struct Strings {
         static let vaccinationStatusHeader = "Covid-19 Vaccination Status Validation"
-        static let scanAgain = "Scan Again"
+        static let scanAgain = "Scan Next"
         
         struct Errors {
             struct InvalidCode {

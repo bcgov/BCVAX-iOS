@@ -32,7 +32,7 @@ class CodeValidationService {
         DispatchQueue.global(qos: .userInitiated).async {
             // Decode string and get name
             if let model = code.decodeSMART(), let name = model.getName() {
-                let result = ScanResultModel(name: name, status: ImmunizationService.immunizationStatus(payload: model, checkDate: Date()))
+                let result = ScanResultModel(name: name, status: ImmunizationService.immunizationStatus(payload: model))
                 DispatchQueue.main.async {
                     // move back to main thread and return result
                     return completion(result)

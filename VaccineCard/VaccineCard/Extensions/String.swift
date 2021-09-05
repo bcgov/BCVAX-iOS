@@ -58,7 +58,8 @@ extension String {
             print("Invalid Compact JWS: Could not decode base64")
             return nil
         }
-        print(decodedHeader)
+//        print(decodedHeader)
+        
         // TODO: Perform Decompression based on hedader data.
         return decodedPayload.decompressJSON()
     }

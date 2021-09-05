@@ -40,7 +40,6 @@ class ViewController: ScannerViewController {
                     guard let `self` = self else {return}
                     self.startCamera()
                 })
-                
             }
         }
     }

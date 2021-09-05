@@ -228,6 +228,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             print("Flash could not be used")
         }
         
+        // TODO: TAG FROM CONSTANT
         guard let btn = self.view.viewWithTag(92133) as? UIButton else {
             return
         }

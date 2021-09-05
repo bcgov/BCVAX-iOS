@@ -28,13 +28,15 @@
 		2904726426E15210003C4CA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 292BC32D26D6B16200B0A064 /* LaunchScreen.storyboard */; };
 		2904726526E15210003C4CA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 292BC32B26D6B16200B0A064 /* Assets.xcassets */; };
 		2904726626E15210003C4CA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 292BC32826D6B16000B0A064 /* Main.storyboard */; };
-		2904726E26E1AEF8003C4CA2 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 2904726D26E1AEF8003C4CA2 /* SwiftPackageProductDependency */; };
+		2904726E26E1AEF8003C4CA2 /* SwiftJWT in Frameworks */ = {isa = PBXBuildFile; productRef = 2904726D26E1AEF8003C4CA2 /* SwiftJWT */; };
 		2904727026E1B7DE003C4CA2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2904726F26E1B7DD003C4CA2 /* GoogleService-Info.plist */; };
 		2904727226E1B916003C4CA2 /* ImmunizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2904727126E1B916003C4CA2 /* ImmunizationService.swift */; };
 		2904727326E1B96D003C4CA2 /* ImmunizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2904727126E1B916003C4CA2 /* ImmunizationService.swift */; };
 		2904727526E1BA2A003C4CA2 /* JWTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2904727426E1BA2A003C4CA2 /* JWTService.swift */; };
 		2904727626E1BA51003C4CA2 /* JWTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2904727426E1BA2A003C4CA2 /* JWTService.swift */; };
-		291D584526E1BD6D00C91F66 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 291D584426E1BD6D00C91F66 /* SwiftPackageProductDependency */; };
+		29136DD826E281BA00D6D829 /* SwiftJWT in Frameworks */ = {isa = PBXBuildFile; productRef = 29136DD726E281BA00D6D829 /* SwiftJWT */; };
+		29136DDC26E283DC00D6D829 /* TEST Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29136DDB26E283DC00D6D829 /* TEST Info.plist */; };
+		291D584526E1BD6D00C91F66 /* FirebaseAppDistribution-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 291D584426E1BD6D00C91F66 /* FirebaseAppDistribution-Beta */; };
 		292BC32326D6B16000B0A064 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC32226D6B16000B0A064 /* AppDelegate.swift */; };
 		292BC32726D6B16000B0A064 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC32626D6B16000B0A064 /* ViewController.swift */; };
 		292BC32A26D6B16000B0A064 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 292BC32826D6B16000B0A064 /* Main.storyboard */; };
@@ -71,10 +73,10 @@
 		2904724826DD9A75003C4CA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2904724E26DF44F9003C4CA2 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		2904726A26E15210003C4CA2 /* VaccineCardTEST.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VaccineCardTEST.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2904726B26E15210003C4CA2 /* VaccineCard copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "VaccineCard copy-Info.plist"; path = "/Users/amir/Developer/Work/covid/fw/BCVAX-iOS/VaccineCard/VaccineCard copy-Info.plist"; sourceTree = "<absolute>"; };
 		2904726F26E1B7DD003C4CA2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2904727126E1B916003C4CA2 /* ImmunizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmunizationService.swift; sourceTree = "<group>"; };
 		2904727426E1BA2A003C4CA2 /* JWTService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWTService.swift; sourceTree = "<group>"; };
+		29136DDB26E283DC00D6D829 /* TEST Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TEST Info.plist"; sourceTree = "<group>"; };
 		292BC31F26D6B16000B0A064 /* VaccineCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VaccineCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		292BC32226D6B16000B0A064 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		292BC32626D6B16000B0A064 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,7 +111,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				291D584526E1BD6D00C91F66 /* BuildFile in Frameworks */,
+				29136DD826E281BA00D6D829 /* SwiftJWT in Frameworks */,
+				291D584526E1BD6D00C91F66 /* FirebaseAppDistribution-Beta in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,7 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2904726E26E1AEF8003C4CA2 /* BuildFile in Frameworks */,
+				2904726E26E1AEF8003C4CA2 /* SwiftJWT in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,14 +136,21 @@
 			path = VaccineCardTests;
 			sourceTree = "<group>";
 		};
+		29136DD626E281BA00D6D829 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29136DDB26E283DC00D6D829 /* TEST Info.plist */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		292BC31626D6B16000B0A064 = {
 			isa = PBXGroup;
 			children = (
 				292BC32126D6B16000B0A064 /* VaccineCard */,
 				2904724526DD9A75003C4CA2 /* VaccineCardTests */,
 				292BC32026D6B16000B0A064 /* Products */,
-				2904726B26E15210003C4CA2 /* VaccineCard copy-Info.plist */,
-				88134F2A27DE5591CFE2D8D9 /* Pods */,
+				29136DD626E281BA00D6D829 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -232,13 +242,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		88134F2A27DE5591CFE2D8D9 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -274,7 +277,8 @@
 			);
 			name = VaccineCardTEST;
 			packageProductDependencies = (
-				291D584426E1BD6D00C91F66 /* SwiftPackageProductDependency */,
+				291D584426E1BD6D00C91F66 /* FirebaseAppDistribution-Beta */,
+				29136DD726E281BA00D6D829 /* SwiftJWT */,
 			);
 			productName = VaccineCard;
 			productReference = 2904726A26E15210003C4CA2 /* VaccineCardTEST.app */;
@@ -294,7 +298,7 @@
 			);
 			name = VaccineCard;
 			packageProductDependencies = (
-				2904726D26E1AEF8003C4CA2 /* SwiftPackageProductDependency */,
+				2904726D26E1AEF8003C4CA2 /* SwiftJWT */,
 			);
 			productName = VaccineCard;
 			productReference = 292BC31F26D6B16000B0A064 /* VaccineCard.app */;
@@ -328,8 +332,8 @@
 			);
 			mainGroup = 292BC31626D6B16000B0A064;
 			packageReferences = (
-				2904726C26E1AEF8003C4CA2 /* RemoteSwiftPackageReference */,
-				291D584326E1BD6D00C91F66 /* RemoteSwiftPackageReference */,
+				2904726C26E1AEF8003C4CA2 /* XCRemoteSwiftPackageReference "Swift-JWT" */,
+				291D584326E1BD6D00C91F66 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 292BC32026D6B16000B0A064 /* Products */;
 			projectDirPath = "";
@@ -358,6 +362,7 @@
 				2904726526E15210003C4CA2 /* Assets.xcassets in Resources */,
 				2904727026E1B7DE003C4CA2 /* GoogleService-Info.plist in Resources */,
 				2904726626E15210003C4CA2 /* Main.storyboard in Resources */,
+				29136DDC26E283DC00D6D829 /* TEST Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,9 +516,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = TCH45SXZ69;
-				INFOPLIST_FILE = "VaccineCard copy-Info.plist";
+				INFOPLIST_FILE = "TEST Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -533,9 +538,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = TCH45SXZ69;
-				INFOPLIST_FILE = "VaccineCard copy-Info.plist";
+				INFOPLIST_FILE = "TEST Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -671,7 +676,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = L796QSLV3E;
 				INFOPLIST_FILE = VaccineCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -693,7 +698,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = L796QSLV3E;
 				INFOPLIST_FILE = VaccineCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -750,7 +755,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		2904726C26E1AEF8003C4CA2 /* RemoteSwiftPackageReference */ = {
+		2904726C26E1AEF8003C4CA2 /* XCRemoteSwiftPackageReference "Swift-JWT" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Kitura/Swift-JWT";
 			requirement = {
@@ -758,7 +763,7 @@
 				minimumVersion = 3.6.200;
 			};
 		};
-		291D584326E1BD6D00C91F66 /* RemoteSwiftPackageReference */ = {
+		291D584326E1BD6D00C91F66 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
 			requirement = {
@@ -769,14 +774,19 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2904726D26E1AEF8003C4CA2 /* SwiftPackageProductDependency */ = {
+		2904726D26E1AEF8003C4CA2 /* SwiftJWT */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2904726C26E1AEF8003C4CA2 /* RemoteSwiftPackageReference */;
+			package = 2904726C26E1AEF8003C4CA2 /* XCRemoteSwiftPackageReference "Swift-JWT" */;
 			productName = SwiftJWT;
 		};
-		291D584426E1BD6D00C91F66 /* SwiftPackageProductDependency */ = {
+		29136DD726E281BA00D6D829 /* SwiftJWT */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 291D584326E1BD6D00C91F66 /* RemoteSwiftPackageReference */;
+			package = 2904726C26E1AEF8003C4CA2 /* XCRemoteSwiftPackageReference "Swift-JWT" */;
+			productName = SwiftJWT;
+		};
+		291D584426E1BD6D00C91F66 /* FirebaseAppDistribution-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 291D584326E1BD6D00C91F66 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseAppDistribution-Beta";
 		};
 /* End XCSwiftPackageProductDependency section */
