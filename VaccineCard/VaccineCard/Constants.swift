@@ -17,6 +17,12 @@ struct Constants {
             struct InvalidCode {
                 static let message = "Invalid QR Code"
             }
+            struct ForgedCode {
+                static let message = "This is a forged QR Code"
+            }
+            struct IncompleteDataInCode {
+                static let message = "Code has imcomplete data"
+            }
             struct VideoNotSupported {
                 static let title = "Unsupported Device"
                 static let message = "Please use a device that supports video capture."

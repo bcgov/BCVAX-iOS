@@ -144,18 +144,27 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         // Validate
         CodeValidationService.shared.validate(code: code) { [weak self] result in
             guard let `self` = self else {return}
-            self.view.endLoadingIndicator()
-            guard let res = result else {
-                // show an error & start camera
-                self.showBanner(message: Constants.Strings.Errors.InvalidCode.message)
-                self.startCamera()
-                self.invalidScannedCodes.append(code)
-                return
+            DispatchQueue.main.async {
+                self.view.endLoadingIndicator()
+                guard let data = result.result else {
+                    // show an error & start camera
+                    switch result.status {
+                    case .ValidCode:
+                        break
+                    case .InvalidCode:
+                        self.showBanner(message: Constants.Strings.Errors.InvalidCode.message)
+                    case .ForgedCode:
+                        self.showBanner(message: Constants.Strings.Errors.ForgedCode.message)
+                    case .MissingData:
+                        self.showBanner(message: Constants.Strings.Errors.IncompleteDataInCode.message)
+                    }
+                    self.startCamera()
+                    self.invalidScannedCodes.append(code)
+                    return
+                }
+                self.found(card: data)
             }
-            self.found(card: res)
         }
-        
-        // TODO: consider cashing invalid codes for the session to avoid re-validating
     }
     
     public func startCamera() {
