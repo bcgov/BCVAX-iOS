@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 struct Constants {
+    static let dismissResultsAfterSeconds: Double = 10
     struct Strings {
         static let vaccinationStatusHeader = "Covid-19 Vaccination Status Validation"
         static let scanAgain = "Scan Next"
@@ -36,6 +37,7 @@ struct Constants {
         
     }
     struct UI {
+        
         struct Theme {
             static let primaryColor = UIColor(hexString: "#003366")
             static let secondaryColor = UIColor(hexString: "#eea73b")

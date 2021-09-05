@@ -29,6 +29,8 @@ class ScanResultViewController: UIViewController {
     private var onClose: (()->(Void))? = nil
     private var model: ScanResultModel? = nil
     
+    private var timer: Timer?
+    
     // MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +54,7 @@ class ScanResultViewController: UIViewController {
     }
     
     private func dimissPage() {
+        timer?.invalidate()
         guard let onClose = self.onClose else {return}
         onClose()
     }
@@ -78,11 +81,12 @@ class ScanResultViewController: UIViewController {
     
     func beginAutoDismissTimer() {
         // TODO: Add time to constants
-        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {[weak self] in
+        if let t = timer {
+            t.invalidate()
+        }
+        timer = Timer.scheduledTimer(withTimeInterval: Constants.dismissResultsAfterSeconds, repeats: false) {[weak self] timer in
             guard let `self` = self else {return}
-            if let onClose = self.onClose {
-                onClose()
-            }
+            self.dimissPage()
         }
     }
     
