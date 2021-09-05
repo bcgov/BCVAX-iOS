@@ -26,17 +26,12 @@ enum ImmunizationStatus: String {
     case none = "none"
 }
 
-
 class CodeValidationService {
     static let shared = CodeValidationService()
     
-//    func decodeSMART(code: String)-> DecodedQRPayload? {
-//        return code.decodeSMART()
-//    }
-    
     public func validate(code: String, completion: @escaping (CodeValidationResult)->Void) {
         // Move to a background thread
-        DispatchQueue.global(qos: .userInitiated).async {
+        DispatchQueue.global(qos: .userInteractive).async {
             // Decode string and get name
             
             guard let compactjws = self.decodeNumeric(code: code) else {
@@ -61,23 +56,7 @@ class CodeValidationService {
             
             let result = ScanResultModel(name: name, status: ImmunizationService.immunizationStatus(payload: payload))
             
-            DispatchQueue.main.async {
-                // move back to main thread and return result
-                return completion(CodeValidationResult(status: .MissingData, result: result))
-            }
-            
-//            if let model = CodeValidationService.shared.decodeSMART(shcPayload: code), let name = model.getName() {
-//                let result = ScanResultModel(name: name, status: ImmunizationService.immunizationStatus(payload: model))
-//                DispatchQueue.main.async {
-//                    // move back to main thread and return result
-//                    return completion(result)
-//                }
-//            } else {
-//                // Decodeing failed or could not get a name.
-//                DispatchQueue.main.async {
-//                    return completion(nil)
-//                }
-//            }
+            return completion(CodeValidationResult(status: .MissingData, result: result))
         }
     }
     

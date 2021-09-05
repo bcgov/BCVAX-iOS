@@ -8,6 +8,7 @@
 import Foundation
 import JOSESwift
 
+/// This class is responsible for verifying the QR Code's (JWS) signature
 class VerificationService {
     
     static func verify(jwkSigned: String) -> Bool {

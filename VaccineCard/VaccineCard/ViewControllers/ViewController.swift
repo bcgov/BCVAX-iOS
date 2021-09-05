@@ -266,6 +266,7 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
         // Validate
         CodeValidationService.shared.validate(code: code) { [weak self] result in
             guard let `self` = self else {return}
+            // Validation is done on background thread. This moves us back to main thread
             DispatchQueue.main.async {
                 self.view.endLoadingIndicator()
                 guard let data = result.result else {

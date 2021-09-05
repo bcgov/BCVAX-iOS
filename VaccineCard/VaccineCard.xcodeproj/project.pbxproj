@@ -169,7 +169,7 @@
 				292BC33726D6B17500B0A064 /* Models */,
 				292BC33626D6B16D00B0A064 /* Views */,
 				292BC35726D6D67300B0A064 /* Services */,
-				292BC35E26D6DB3300B0A064 /* Extensions */,
+				292BC35E26D6DB3300B0A064 /* Extensions & utilities */,
 				292BC32226D6B16000B0A064 /* AppDelegate.swift */,
 				292BC32B26D6B16200B0A064 /* Assets.xcassets */,
 				292BC32D26D6B16200B0A064 /* LaunchScreen.storyboard */,
@@ -217,25 +217,25 @@
 			isa = PBXGroup;
 			children = (
 				292BC35826D6D68600B0A064 /* CodeValidationService.swift */,
-				296030AA26DB543E0026A0AC /* Compressor.swift */,
 				2904727126E1B916003C4CA2 /* ImmunizationService.swift */,
 				2904727426E1BA2A003C4CA2 /* VerificationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
 		};
-		292BC35E26D6DB3300B0A064 /* Extensions */ = {
+		292BC35E26D6DB3300B0A064 /* Extensions & utilities */ = {
 			isa = PBXGroup;
 			children = (
 				292BC35F26D6DB4400B0A064 /* UIView.swift */,
 				292BC36126D6EC9100B0A064 /* UIColor.swift */,
+				296030AA26DB543E0026A0AC /* Compressor.swift */,
 				296030A326D976A40026A0AC /* UIViewController.swift */,
 				296030AC26DB55180026A0AC /* Data.swift */,
 				296030AE26DB55ED0026A0AC /* Array.swift */,
 				296030B026DB55F80026A0AC /* String.swift */,
 				2904724E26DF44F9003C4CA2 /* Date.swift */,
 			);
-			path = Extensions;
+			path = "Extensions & utilities";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -510,7 +510,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = TCH45SXZ69;
 				INFOPLIST_FILE = "TEST Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -532,7 +532,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = TCH45SXZ69;
 				INFOPLIST_FILE = "TEST Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -670,7 +670,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = L796QSLV3E;
 				INFOPLIST_FILE = VaccineCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -692,7 +692,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = L796QSLV3E;
 				INFOPLIST_FILE = VaccineCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
