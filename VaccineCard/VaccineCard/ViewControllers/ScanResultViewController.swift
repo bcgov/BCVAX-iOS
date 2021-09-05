@@ -39,6 +39,7 @@ class ScanResultViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         setData()
+        beginAutoDismissTimer()
     }
     
     // MARK: Outlet Actions
@@ -59,6 +60,7 @@ class ScanResultViewController: UIViewController {
     public func setup(model: ScanResultModel, onClose: @escaping()->Void) {
         self.onClose = onClose
         self.model = model
+        
     }
     
     private func setData() {
@@ -71,6 +73,16 @@ class ScanResultViewController: UIViewController {
             styleNotVaxinatedCard()
         case .partially:
             stylePartiallyVaxinatedCard()
+        }
+    }
+    
+    func beginAutoDismissTimer() {
+        // TODO: Add time to constants
+        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {[weak self] in
+            guard let `self` = self else {return}
+            if let onClose = self.onClose {
+                onClose()
+            }
         }
     }
     
