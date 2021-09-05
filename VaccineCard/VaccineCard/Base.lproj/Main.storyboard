@@ -17,16 +17,73 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FHh-SG-13Y">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="64" translatesAutoresizingMaskIntoConstraints="NO" id="ClZ-Zm-8K7">
+                                        <rect key="frame" x="16" y="64" width="382" height="643.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboardIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Gy4-AH-zY2">
+                                                <rect key="frame" x="94.5" y="0.0" width="193.5" height="348"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BC Vaccine Card Verifier" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6PM-We-HjX">
+                                                <rect key="frame" x="98" y="412" width="186" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Businesses can scan official digital or paper BC vaccine cards" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yl1-pY-60v">
+                                                <rect key="frame" x="9.5" y="496.5" width="363" height="41"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kr9-e8-wHg">
+                                                <rect key="frame" x="32" y="601.5" width="318" height="42"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="42" id="63z-VB-Mew"/>
+                                                </constraints>
+                                                <state key="normal" title="Start scanning"/>
+                                                <connections>
+                                                    <action selector="startScanningAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a0U-tN-lI3"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Kr9-e8-wHg" firstAttribute="leading" secondItem="ClZ-Zm-8K7" secondAttribute="leading" constant="32" id="3Cb-1I-w1N"/>
+                                            <constraint firstAttribute="trailing" secondItem="Kr9-e8-wHg" secondAttribute="trailing" constant="32" id="ZeC-CT-QPg"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="ClZ-Zm-8K7" firstAttribute="leading" secondItem="FHh-SG-13Y" secondAttribute="leading" constant="16" id="HyO-nP-lMB"/>
+                                    <constraint firstAttribute="trailing" secondItem="ClZ-Zm-8K7" secondAttribute="trailing" constant="16" id="WJ9-XK-VV1"/>
+                                    <constraint firstItem="ClZ-Zm-8K7" firstAttribute="top" secondItem="FHh-SG-13Y" secondAttribute="top" constant="64" id="jOk-Vy-u3X"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FHh-SG-13Y" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="EEB-T7-ZXg"/>
+                            <constraint firstAttribute="bottom" secondItem="FHh-SG-13Y" secondAttribute="bottom" id="M1n-UT-QMP"/>
+                            <constraint firstItem="FHh-SG-13Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hwO-DW-6L6"/>
+                            <constraint firstItem="FHh-SG-13Y" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="wgz-th-7Vd"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="onBoardButton" destination="Kr9-e8-wHg" id="3IN-8m-mZ3"/>
+                        <outlet property="onBoardContainer" destination="FHh-SG-13Y" id="d3N-n8-LXA"/>
+                        <outlet property="onBoardSubtitle" destination="Yl1-pY-60v" id="a4I-cK-dEz"/>
+                        <outlet property="onBoardTitle" destination="6PM-We-HjX" id="7FT-wo-LlI"/>
                         <segue destination="Q9v-9P-r5w" kind="show" identifier="showScanResult" id="f9J-5K-v7T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="139"/>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
         <!--Scan Result View Controller-->
         <scene sceneID="iih-as-c1q">
@@ -185,6 +242,7 @@
     </scenes>
     <resources>
         <image name="bcGovLogo" width="766.5" height="401.5"/>
+        <image name="onboardIcon" width="193.5" height="348"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="separatorColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>

@@ -12,6 +12,15 @@ extension UIViewController {
     func alert(title: String, message: String) {
         let controller = UIAlertController(title: title, message: message, preferredStyle: .alert)
         controller.addAction(UIAlertAction(title: "OK", style: .default))
+        
+        present(controller, animated: true)
+    }
+    
+    func alert(title: String, message: String, completion: @escaping()->Void) {
+        let controller = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        controller.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            return completion()
+        }))
         present(controller, animated: true)
     }
     

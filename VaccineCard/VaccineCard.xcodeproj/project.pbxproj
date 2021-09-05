@@ -24,7 +24,6 @@
 		2904725E26E15210003C4CA2 /* ScanResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2960309F26D96F2E0026A0AC /* ScanResultModel.swift */; };
 		2904725F26E15210003C4CA2 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296030B026DB55F80026A0AC /* String.swift */; };
 		2904726026E15210003C4CA2 /* CodeValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC35826D6D68600B0A064 /* CodeValidationService.swift */; };
-		2904726126E15210003C4CA2 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC35526D6D2EE00B0A064 /* ScannerViewController.swift */; };
 		2904726426E15210003C4CA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 292BC32D26D6B16200B0A064 /* LaunchScreen.storyboard */; };
 		2904726526E15210003C4CA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 292BC32B26D6B16200B0A064 /* Assets.xcassets */; };
 		2904726626E15210003C4CA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 292BC32826D6B16000B0A064 /* Main.storyboard */; };
@@ -40,7 +39,6 @@
 		292BC32A26D6B16000B0A064 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 292BC32826D6B16000B0A064 /* Main.storyboard */; };
 		292BC32C26D6B16200B0A064 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 292BC32B26D6B16200B0A064 /* Assets.xcassets */; };
 		292BC32F26D6B16200B0A064 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 292BC32D26D6B16200B0A064 /* LaunchScreen.storyboard */; };
-		292BC35626D6D2EE00B0A064 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC35526D6D2EE00B0A064 /* ScannerViewController.swift */; };
 		292BC35926D6D68600B0A064 /* CodeValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC35826D6D68600B0A064 /* CodeValidationService.swift */; };
 		292BC35B26D6D79300B0A064 /* ScanResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC35A26D6D79300B0A064 /* ScanResultViewController.swift */; };
 		292BC35D26D6DB2A00B0A064 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC35C26D6DB2A00B0A064 /* Constants.swift */; };
@@ -84,7 +82,6 @@
 		292BC32B26D6B16200B0A064 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		292BC32E26D6B16200B0A064 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		292BC33026D6B16200B0A064 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		292BC35526D6D2EE00B0A064 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		292BC35826D6D68600B0A064 /* CodeValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeValidationService.swift; sourceTree = "<group>"; };
 		292BC35A26D6D79300B0A064 /* ScanResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanResultViewController.swift; sourceTree = "<group>"; };
 		292BC35C26D6DB2A00B0A064 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -204,7 +201,6 @@
 			isa = PBXGroup;
 			children = (
 				292BC32626D6B16000B0A064 /* ViewController.swift */,
-				292BC35526D6D2EE00B0A064 /* ScannerViewController.swift */,
 				292BC35A26D6D79300B0A064 /* ScanResultViewController.swift */,
 			);
 			path = ViewControllers;
@@ -408,7 +404,6 @@
 				2904725E26E15210003C4CA2 /* ScanResultModel.swift in Sources */,
 				2904725F26E15210003C4CA2 /* String.swift in Sources */,
 				2904726026E15210003C4CA2 /* CodeValidationService.swift in Sources */,
-				2904726126E15210003C4CA2 /* ScannerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,7 +428,6 @@
 				296030A026D96F2E0026A0AC /* ScanResultModel.swift in Sources */,
 				296030B126DB55F80026A0AC /* String.swift in Sources */,
 				292BC35926D6D68600B0A064 /* CodeValidationService.swift in Sources */,
-				292BC35626D6D2EE00B0A064 /* ScannerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,6 +15,10 @@ struct Constants {
         static let scanAgain = "Scan Next"
         
         struct Errors {
+            struct CameraAccessIsNecessary {
+                static let title = "No Camera Access"
+                static let message = "Camera access is necessary to use this app."
+            }
             struct InvalidCode {
                 static let message = "Invalid QR Code"
             }
@@ -33,6 +37,15 @@ struct Constants {
                 static let title = "Unsupported Device"
                 static let message = "Your device does not support QR code scanning."
             }
+        }
+        
+        struct onBoarding {
+            static let title = "BC Vaccine Card Verifier"
+            static let subtitle = "Businesses can scan official digital or paper BC vaccine cards"
+            static let buttonTitle = "Start Scanning"
+            static let titleFont = UIFont.systemFont(ofSize: 24, weight: .bold)
+            static let subtitleFont = UIFont.systemFont(ofSize: 16)
+            static let buttonFont = UIFont.systemFont(ofSize: 18, weight: .semibold)
         }
         
     }
