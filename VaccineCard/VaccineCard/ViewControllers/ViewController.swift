@@ -282,9 +282,9 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
                     case .InvalidCode:
                         self.showBanner(message: Constants.Strings.Errors.InvalidCode.message)
                     case .ForgedCode:
-                        self.showBanner(message: Constants.Strings.Errors.ForgedCode.message)
+                        self.showBanner(message: Constants.Strings.Errors.InvalidCode.message)
                     case .MissingData:
-                        self.showBanner(message: Constants.Strings.Errors.IncompleteDataInCode.message)
+                        self.showBanner(message: Constants.Strings.Errors.InvalidCode.message)
                     }
                     self.startCamera()
                     self.invalidScannedCodes.append(code)
@@ -309,7 +309,7 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
         for (index, item) in metadataObjects.enumerated() {
             showQRCodeLocation(for: item, isInValid: true, tag: 1000 + index)
         }
-        showBanner(message: "There are multiple QR codes in view")
+        showBanner(message: Constants.Strings.Errors.MultipleQRCodes.message)
     }
     
     fileprivate func showQRCodeLocation(for object: AVMetadataObject, isInValid: Bool, tag: Int) {
