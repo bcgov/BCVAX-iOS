@@ -14,6 +14,12 @@ struct Constants {
             static let x = "xscSbZemoTx1qFzFo-j9VSnvAXdv9K-3DchzJvNnwrY"
             static let y = "jA5uS5bz8R2nxf_TU-0ZmXq6CKWZhAG1Y4icAx8a9CA"
         }
+        
+        struct Dev {
+            static let x = "c12pG4HpiCvx0nM4CHMfERZWG2rS7Bq8-GI2EFMcEHo"
+            static let y = "VsGE-cIg-a4s9chaFyRKCovIvqwM1Iw9FvdgikJ0yeg"
+        }
+        
         struct Test {
             static let x = "11XvRWy1I2S0EyJlyf_bWfw_TQ5CJJNLw78bHXNxcgw"
             static let y = "eZXwxvO1hvCY0KucrPfKo7yAyMT6Ajc3N7OkAB6VYy8"
