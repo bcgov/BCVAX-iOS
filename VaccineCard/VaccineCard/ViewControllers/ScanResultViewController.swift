@@ -11,7 +11,6 @@ class ScanResultViewController: UIViewController {
 
     // MARK: Outlets
     @IBOutlet weak var scanButton: UIButton!
-    @IBOutlet weak var closeButton: UIButton!
     
     @IBOutlet weak var logo: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -45,10 +44,6 @@ class ScanResultViewController: UIViewController {
     }
     
     // MARK: Outlet Actions
-    @IBAction func closeButtonAction(_ sender: Any) {
-        dimissPage()
-    }
-    
     @IBAction func scanButtonAction(_ sender: Any) {
         dimissPage()
     }
@@ -98,7 +93,6 @@ class ScanResultViewController: UIViewController {
         
         // Colours
         view.backgroundColor = Constants.UI.Theme.primaryColor
-        closeButton.tintColor = Constants.UI.Theme.primaryConstractColor
         titleLabel.textColor = Constants.UI.Theme.primaryConstractColor
         nameLabel.textColor = Constants.UI.Theme.primaryConstractColor
         divider.backgroundColor = Constants.UI.Theme.secondaryColor

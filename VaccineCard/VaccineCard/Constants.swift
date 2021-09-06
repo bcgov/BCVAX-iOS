@@ -11,7 +11,7 @@ import UIKit
 struct Constants {
     static let dismissResultsAfterSeconds: Double = 10
     struct Strings {
-        static let vaccinationStatusHeader = "Covid-19 Vaccination Status Validation"
+        static let vaccinationStatusHeader = "BC Vaccine Card Verifier"
         static let scanAgain = "Scan Next"
         
         struct Errors {
@@ -88,13 +88,13 @@ struct Constants {
             }
             struct partiallyVaccinated {
                 static let color = UIColor(hexString: "#3f5986")
-                static let cardTitle = "Partically Vaccinated"
+                static let cardTitle = "Partially Vaccinated"
                 static let cardSubtitle = "British Columbia Official Result"
             }
             
             struct notVaccinated {
-                static let color = UIColor(hexString: "#d44f4f")
-                static let cardTitle = "Not Vaccinated"
+                static let color = UIColor(hexString: "#b6b6b6")
+                static let cardTitle = "No Records Found"
                 static let cardSubtitle = "British Columbia Official Result"
             }
             

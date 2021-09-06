@@ -54,9 +54,15 @@ class CodeValidationService {
                 return completion(CodeValidationResult(status: .MissingData, result: nil))
             }
             
-            let result = ScanResultModel(name: name, status: ImmunizationService.immunizationStatus(payload: payload))
+            let status = ImmunizationService.immunizationStatus(payload: payload)
             
-            return completion(CodeValidationResult(status: .MissingData, result: result))
+            if status == .none {
+                return completion(CodeValidationResult(status: .InvalidCode, result: nil))
+            }
+            
+            let result = ScanResultModel(name: name, status: status)
+            
+            return completion(CodeValidationResult(status: .ValidCode, result: result))
         }
     }
     

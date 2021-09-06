@@ -110,13 +110,16 @@ class ViewController: UIViewController {
     
     // MARK: Class Functions
     func showCameraOrOnboarding() {
-        if isCameraUsageAuthorized() {
-            setupCaptureSession()
-            addFlashlightButton()
-            onBoardContainer.alpha = 0
-        } else {
-            onBoardContainer.alpha = 1
-            styleOnBoarding()
+        DispatchQueue.main.async { [weak self] in
+            guard let `self` = self else {return}
+            if self.isCameraUsageAuthorized() {
+                self.setupCaptureSession()
+                self.addFlashlightButton()
+                self.onBoardContainer.alpha = 0
+            } else {
+                self.onBoardContainer.alpha = 1
+                self.styleOnBoarding()
+            }
         }
     }
     
@@ -150,7 +153,7 @@ class ViewController: UIViewController {
             })
         }
     }
-
+    
     func alertCameraAccessIsNecessary() {
         self.alert(title: Constants.Strings.Errors.CameraAccessIsNecessary.title, message: Constants.Strings.Errors.CameraAccessIsNecessary.message, completion: { [weak self] in
             guard let `self` = self else {return}
@@ -179,6 +182,7 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
     
     // MARK: Setup
     private func setupCaptureSession() {
+        
         let captureSession = AVCaptureSession()
         self.captureSession = captureSession
         
@@ -196,8 +200,8 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
         if (captureSession.canAddInput(videoInput)) {
             captureSession.addInput(videoInput)
         } else {
-            alert(title: Constants.Strings.Errors.VideoNotSupported.title,
-                  message: Constants.Strings.Errors.VideoNotSupported.message)
+            self.alert(title: Constants.Strings.Errors.VideoNotSupported.title,
+                       message: Constants.Strings.Errors.VideoNotSupported.message)
             return
         }
         
@@ -208,19 +212,20 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
             metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
             metadataOutput.metadataObjectTypes = [.qr]
         } else {
-            alert(title: Constants.Strings.Errors.QRScanningNotSupported.title,
-                  message: Constants.Strings.Errors.QRScanningNotSupported.message)
+            self.alert(title: Constants.Strings.Errors.QRScanningNotSupported.title,
+                       message: Constants.Strings.Errors.QRScanningNotSupported.message)
             return
         }
         
         // Setup Preview
-        previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        previewLayer.frame = view.layer.bounds
-        previewLayer.videoGravity = .resizeAspectFill
-        view.layer.addSublayer(previewLayer)
+        self.previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+        self.previewLayer.frame = self.view.layer.bounds
+        self.previewLayer.videoGravity = .resizeAspectFill
+        self.view.layer.addSublayer(self.previewLayer)
         
         // Begin Capture Session
         captureSession.startRunning()
+        
     }
     
     
