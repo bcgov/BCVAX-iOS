@@ -7,44 +7,125 @@
 
 import Foundation
 
-enum CodeValidationResult {
-    case notVaccineCard
-    case valid
-    case invalid
+
+enum CodeValidationResultStatus {
+    case ValidCode
+    case InvalidCode
+    case ForgedCode
+    case MissingData
 }
 
+struct CodeValidationResult {
+    let status: CodeValidationResultStatus
+    let result: ScanResultModel?
+}
+
+enum ImmunizationStatus: String {
+    case fully = "fully"
+    case partially = "partially"
+    case none = "none"
+}
 
 class CodeValidationService {
     static let shared = CodeValidationService()
     
-    public func validate(code: String, completion: @escaping (ScanResultModel?)->Void) {
+    public func validate(code: String, completion: @escaping (CodeValidationResult)->Void) {
         // Move to a background thread
-        DispatchQueue.global(qos: .userInitiated).async {
+        DispatchQueue.global(qos: .userInteractive).async {
             // Decode string and get name
-            if let model = code.decodeSMART(), let name = model.getName() {
-                // return results
-                // TODO: vaccination status is hard coded here
-                let result = ScanResultModel(name: name, status: .Vaccinated)
-                DispatchQueue.main.async {
-                    // move back to main thread and return result
-                    return completion(result)
-                }
-            } else {
-                // Decodeing failed or could not get a name.
-                DispatchQueue.main.async {
-                    return completion(nil)
-                }
+            
+            guard let compactjws = self.decodeNumeric(code: code) else {
+                return completion(CodeValidationResult(status: .InvalidCode, result: nil))
             }
+            
+            guard let decodedJWS: Data = self.decodeCompactJWS(string: compactjws) else {
+                return completion(CodeValidationResult(status: .InvalidCode, result: nil))
+            }
+            
+            guard let payload = decodedJWS.decompressJSON() else {
+                return completion(CodeValidationResult(status: .InvalidCode, result: nil))
+            }
+            
+            guard VerificationService.verify(jwkSigned: compactjws) else {
+                return completion(CodeValidationResult(status: .ForgedCode, result: nil))
+            }
+            
+            guard let name = payload.getName() else {
+                return completion(CodeValidationResult(status: .MissingData, result: nil))
+            }
+            
+            let status = ImmunizationService.immunizationStatus(payload: payload)
+            
+            if status == .none {
+                return completion(CodeValidationResult(status: .InvalidCode, result: nil))
+            }
+            
+            let result = ScanResultModel(name: name, status: status)
+            
+            return completion(CodeValidationResult(status: .ValidCode, result: result))
         }
     }
     
-    // TODO: Move to tests
-    func test() {
-        var scannedCode = "shc:/56762909524320603460292437404460312229595326546034602925407728043360287028647167452228092862122256653722370429635625447453424003564233364124297431427521394155375341407543031245324324075339375955045557327736605736010641293361123274243503696800275229652430713203294260360023586029433809662112564533625234275563340569313057055726533756365573572422555026577335647356560821750322413323240528406877033269574275366471596238736609082760405342547408203970035432241027442763435955257071633441733270632870296120666834105961432805076125221257052111652007452855450873740031747275762943272664064003663711243122453623750476210657033472556363722309745432774371380507717732564360424575720512106865772968450811253061576642607545042600454350737123043837505603521040636344290730436445252966603553045612693603767564337473415507640477210856276824673677597161343864602035082504447209337257342620335700686023207143602400207345664310002433656064403805055920577331422411382733053470213154571076394154697731446126377468116511347564453876755760426259676440210777590841280407437006277376323440544400293172113537270858745267633152075565416040301042556700245904342805251005622709643257340332297570276538556800252821226704366365324455763224005872243836083450376642557257223731283055431012323764530641106760603907442971404136100804715253714460414338563042705534603339653073047743720309304208005621226776327108705859265954501200054242092528377776454435635729635872500642225406074409577422013727083941422100524469356553715305314340125867220442376952035836276145753824505971333854681133552855586640710822046273556043534468231012421110706012750909572522746422645874"
-        let decoded = scannedCode.decodeSMART()
+    
+    /// Decondes numeric code that is prefixed with 'shc:/' - coming from QR code
+    /// returns nil if string is not valid
+    /// - Returns: DecodedQRPayload model containing data
+    public func decodeSMART(shcPayload: String) -> DecodedQRPayload? {
+        guard let compactjws = decodeNumeric(code: shcPayload) else {
+            return nil
+        }
+        
+        return decodeCompactJWS(string: compactjws)
+    }
+    
+    fileprivate func decodeNumeric(code: String) -> String? {
+        if let range = code.range(of: "shc:/") {
+            let numericCode = String(code[range.upperBound...])
+            let jwsNumeric = numericCode.chunks(size: 2)
+            var uint16s: [UInt16] = []
+            jwsNumeric.forEach { pair in
+                if let pairInt = Int(pair),
+                   let binInt = Int(String(pairInt, radix: 10)),
+                   let uint16: UInt16 = UInt16(String(binInt + 45))
+                   {
+                        uint16s.append(uint16)
+                }
+            }
+            if uint16s.isEmpty {
+                return nil
+            }
+            let decodedJWS = String(utf16CodeUnits: uint16s, count: uint16s.count)
+            return decodedJWS
+        } else {
+            return nil
+        }
+    }
+    
+    fileprivate func decodeCompactJWS(string: String) -> DecodedQRPayload? {
+        let parts = string.components(separatedBy: ".")
+        guard parts.count == 3 else {
+            print("Invalid Compact JWS: must have 3 base64 components separated by a dot")
+            return nil
+        }
+        let payload = parts[1]
+        guard let decodedPayload: Data = payload.base64DecodedData()
+        else {
+            print("Invalid Compact JWS: Could not decode base64")
+            return nil
+        }
+        guard VerificationService.verify(jwkSigned: string) else {
+            return nil
+        }
+        return decodedPayload.decompressJSON()
+    }
+    
+    fileprivate func decodeCompactJWS(string: String) -> Data? {
+        let parts = string.components(separatedBy: ".")
+        guard parts.count == 3 else {
+            print("Invalid Compact JWS: must have 3 base64 components separated by a dot")
+            return nil
+        }
+        let payload = parts[1]
+        return payload.base64DecodedData()
     }
 }
-
-
-
-

@@ -7,12 +7,7 @@
 
 import Foundation
 
-enum VaccinationStatus {
-    case Vaccinated
-    case NotVaccinated
-}
-
 struct ScanResultModel {
     let name: String
-    let status: VaccinationStatus
+    let status: ImmunizationStatus
 }
