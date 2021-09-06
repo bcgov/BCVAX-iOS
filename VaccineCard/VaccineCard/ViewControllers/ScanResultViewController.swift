@@ -129,6 +129,7 @@ class ScanResultViewController: UIViewController {
         cardIcon.image = UIImage(named: "checkmark")
         cardTitle.text = Constants.UI.Status.fullyVaccinated.cardTitle.uppercased()
         cardSubtitle.text = Constants.UI.Status.fullyVaccinated.cardSubtitle
+        cardTitle.textAlignment = .center
     }
     
     private func styleNotVaxinatedCard() {
@@ -137,6 +138,7 @@ class ScanResultViewController: UIViewController {
         cardIcon.isHidden = true
         cardTitle.text = Constants.UI.Status.notVaccinated.cardTitle.uppercased()
         cardSubtitle.text = Constants.UI.Status.notVaccinated.cardSubtitle
+        cardTitle.textAlignment = .center
     }
     
     private func stylePartiallyVaxinatedCard() {
@@ -145,6 +147,7 @@ class ScanResultViewController: UIViewController {
         cardIcon.isHidden = true
         cardTitle.text = Constants.UI.Status.partiallyVaccinated.cardTitle.uppercased()
         cardSubtitle.text = Constants.UI.Status.partiallyVaccinated.cardSubtitle
+        cardTitle.textAlignment = .center
         statusCardContainer.layer.borderWidth = 0
         view.layoutIfNeeded()
         statusContainer.layoutIfNeeded()
