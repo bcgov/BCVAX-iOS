@@ -29,8 +29,8 @@ class VerificationService {
     }
 
     private static func getKey() -> ECPublicKey? {
-        let x = "11XvRWy1I2S0EyJlyf_bWfw_TQ5CJJNLw78bHXNxcgw"
-        let y = "eZXwxvO1hvCY0KucrPfKo7yAyMT6Ajc3N7OkAB6VYy8"
+        let x = Constants.JWKSPublic.Prod.x
+        let y = Constants.JWKSPublic.Prod.y
         return ECPublicKey(crv: ECCurveType.P256, x: x, y: y)
     }
 }
