@@ -105,7 +105,13 @@ class ScanResultViewController: UIViewController {
         
         // Fonts
         titleLabel.font = UIFont.init(name: "BCSans-Bold", size: 18) ?? UIFont.systemFont(ofSize: 18, weight: .semibold)
-        nameLabel.font = UIFont.init(name: "BCSans-Bold", size: 20) ?? UIFont.systemFont(ofSize: 20, weight: .semibold)
+        
+        let nameFont = UIFont.init(name: "BCSans-Bold", size: 20) ?? UIFont.systemFont(ofSize: 20, weight: .semibold)
+        nameLabel.font = nameFont
+        nameLabel.font = UIFontMetrics.default.scaledFont(for: nameFont)
+        nameLabel.adjustsFontForContentSizeCategory = true
+        nameLabel.adjustsFontSizeToFitWidth = true
+        
         if let btnLabel = scanButton.titleLabel {
             btnLabel.font = UIFont.init(name: "BCSans-Bold", size: 18) ?? UIFont.systemFont(ofSize: 18, weight: .semibold)
         }
