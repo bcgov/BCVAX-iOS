@@ -38,18 +38,20 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Businesses can scan official digital or paper BC vaccine cards" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yl1-pY-60v">
                                                 <rect key="frame" x="0.0" y="372" width="288" height="42"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="42" id="znI-x2-d8J"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="42" id="znI-x2-d8J"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kr9-e8-wHg">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kr9-e8-wHg">
                                                 <rect key="frame" x="32" y="446" width="224" height="42"/>
+                                                <color key="backgroundColor" red="0.0" green="0.45882352939999999" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="42" id="63z-VB-Mew"/>
                                                 </constraints>
-                                                <state key="normal" title="Start scanning"/>
+                                                <inset key="imageEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="Start scanning" image="onBoardButton"/>
                                                 <connections>
                                                     <action selector="startScanningAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a0U-tN-lI3"/>
                                                 </connections>
@@ -94,13 +96,13 @@
         <!--Scan Result View Controller-->
         <scene sceneID="iih-as-c1q">
             <objects>
-                <viewController id="Q9v-9P-r5w" customClass="ScanResultViewController" customModule="VaccineCard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Q9v-9P-r5w" customClass="ScanResultViewController" customModule="VaccineCard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Iv-3v-mzn">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eRl-oG-aYv">
-                                <rect key="frame" x="0.0" y="215" width="320" height="333"/>
+                                <rect key="frame" x="0.0" y="215" width="320" height="353"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0OL-is-euo">
                                         <rect key="frame" x="16" y="64" width="288" height="192"/>
@@ -150,7 +152,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C9Y-3U-boH">
-                                <rect key="frame" x="32" y="490" width="256" height="42"/>
+                                <rect key="frame" x="32" y="510" width="256" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="sj3-zV-gtV"/>
                                 </constraints>
@@ -231,6 +233,7 @@
     </scenes>
     <resources>
         <image name="bcGovLogo" width="766.5" height="401.5"/>
+        <image name="onBoardButton" width="16" height="16"/>
         <image name="onboardIcon" width="193.5" height="348"/>
         <systemColor name="separatorColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>

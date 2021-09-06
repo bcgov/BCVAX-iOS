@@ -34,6 +34,14 @@
 		2904727626E1BA51003C4CA2 /* VerificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2904727426E1BA2A003C4CA2 /* VerificationService.swift */; };
 		29136DDC26E283DC00D6D829 /* TEST Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29136DDB26E283DC00D6D829 /* TEST Info.plist */; };
 		291D584526E1BD6D00C91F66 /* FirebaseAppDistribution-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 291D584426E1BD6D00C91F66 /* FirebaseAppDistribution-Beta */; };
+		291E8AC626E67B5B00A60ADD /* BCSans-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 291E8AC226E67B5B00A60ADD /* BCSans-Italic.otf */; };
+		291E8AC726E67B5B00A60ADD /* BCSans-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 291E8AC226E67B5B00A60ADD /* BCSans-Italic.otf */; };
+		291E8AC826E67B5B00A60ADD /* BCSans-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 291E8AC326E67B5B00A60ADD /* BCSans-BoldItalic.otf */; };
+		291E8AC926E67B5B00A60ADD /* BCSans-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 291E8AC326E67B5B00A60ADD /* BCSans-BoldItalic.otf */; };
+		291E8ACA26E67B5B00A60ADD /* BCSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 291E8AC426E67B5B00A60ADD /* BCSans-Bold.otf */; };
+		291E8ACB26E67B5B00A60ADD /* BCSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 291E8AC426E67B5B00A60ADD /* BCSans-Bold.otf */; };
+		291E8ACC26E67B5B00A60ADD /* BCSans-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 291E8AC526E67B5B00A60ADD /* BCSans-Regular.otf */; };
+		291E8ACD26E67B5B00A60ADD /* BCSans-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 291E8AC526E67B5B00A60ADD /* BCSans-Regular.otf */; };
 		292BC32326D6B16000B0A064 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC32226D6B16000B0A064 /* AppDelegate.swift */; };
 		292BC32726D6B16000B0A064 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC32626D6B16000B0A064 /* ViewController.swift */; };
 		292BC32A26D6B16000B0A064 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 292BC32826D6B16000B0A064 /* Main.storyboard */; };
@@ -75,6 +83,10 @@
 		2904727126E1B916003C4CA2 /* ImmunizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmunizationService.swift; sourceTree = "<group>"; };
 		2904727426E1BA2A003C4CA2 /* VerificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationService.swift; sourceTree = "<group>"; };
 		29136DDB26E283DC00D6D829 /* TEST Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TEST Info.plist"; sourceTree = "<group>"; };
+		291E8AC226E67B5B00A60ADD /* BCSans-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BCSans-Italic.otf"; sourceTree = "<group>"; };
+		291E8AC326E67B5B00A60ADD /* BCSans-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BCSans-BoldItalic.otf"; sourceTree = "<group>"; };
+		291E8AC426E67B5B00A60ADD /* BCSans-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BCSans-Bold.otf"; sourceTree = "<group>"; };
+		291E8AC526E67B5B00A60ADD /* BCSans-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BCSans-Regular.otf"; sourceTree = "<group>"; };
 		292BC31F26D6B16000B0A064 /* VaccineCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VaccineCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		292BC32226D6B16000B0A064 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		292BC32626D6B16000B0A064 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -141,10 +153,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		291E8AC126E67B4600A60ADD /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				291E8AC426E67B5B00A60ADD /* BCSans-Bold.otf */,
+				291E8AC326E67B5B00A60ADD /* BCSans-BoldItalic.otf */,
+				291E8AC226E67B5B00A60ADD /* BCSans-Italic.otf */,
+				291E8AC526E67B5B00A60ADD /* BCSans-Regular.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		292BC31626D6B16000B0A064 = {
 			isa = PBXGroup;
 			children = (
 				292BC32126D6B16000B0A064 /* VaccineCard */,
+				291E8AC126E67B4600A60ADD /* Fonts */,
 				2904724526DD9A75003C4CA2 /* VaccineCardTests */,
 				292BC32026D6B16000B0A064 /* Products */,
 				29136DD626E281BA00D6D829 /* Frameworks */,
@@ -355,10 +379,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2904726426E15210003C4CA2 /* LaunchScreen.storyboard in Resources */,
+				291E8ACD26E67B5B00A60ADD /* BCSans-Regular.otf in Resources */,
 				2904726526E15210003C4CA2 /* Assets.xcassets in Resources */,
 				2904727026E1B7DE003C4CA2 /* GoogleService-Info.plist in Resources */,
 				2904726626E15210003C4CA2 /* Main.storyboard in Resources */,
+				291E8AC926E67B5B00A60ADD /* BCSans-BoldItalic.otf in Resources */,
 				29136DDC26E283DC00D6D829 /* TEST Info.plist in Resources */,
+				291E8ACB26E67B5B00A60ADD /* BCSans-Bold.otf in Resources */,
+				291E8AC726E67B5B00A60ADD /* BCSans-Italic.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,8 +395,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				292BC32F26D6B16200B0A064 /* LaunchScreen.storyboard in Resources */,
+				291E8AC626E67B5B00A60ADD /* BCSans-Italic.otf in Resources */,
+				291E8ACA26E67B5B00A60ADD /* BCSans-Bold.otf in Resources */,
+				291E8AC826E67B5B00A60ADD /* BCSans-BoldItalic.otf in Resources */,
 				292BC32C26D6B16200B0A064 /* Assets.xcassets in Resources */,
 				292BC32A26D6B16000B0A064 /* Main.storyboard in Resources */,
+				291E8ACC26E67B5B00A60ADD /* BCSans-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,7 +542,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 19;
 				DEVELOPMENT_TEAM = TCH45SXZ69;
 				INFOPLIST_FILE = "TEST Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -532,7 +564,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 19;
 				DEVELOPMENT_TEAM = TCH45SXZ69;
 				INFOPLIST_FILE = "TEST Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -670,7 +702,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 19;
 				DEVELOPMENT_TEAM = L796QSLV3E;
 				INFOPLIST_FILE = VaccineCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -692,7 +724,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 19;
 				DEVELOPMENT_TEAM = L796QSLV3E;
 				INFOPLIST_FILE = VaccineCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

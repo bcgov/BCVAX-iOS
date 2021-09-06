@@ -26,6 +26,13 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>We need permission to your camera to let you scan vaccine cards</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>BCSans-Regular.otf</string>
+		<string>BCSans-Italic.otf</string>
+		<string>BCSans-Bold.otf</string>
+		<string>BCSans-BoldItalic.otf</string>
+	</array>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>

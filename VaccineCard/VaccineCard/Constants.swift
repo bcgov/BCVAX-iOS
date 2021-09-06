@@ -43,9 +43,9 @@ struct Constants {
             static let title = "BC Vaccine Card Verifier"
             static let subtitle = "Businesses can scan official digital or paper BC vaccine cards"
             static let buttonTitle = "Start Scanning"
-            static let titleFont = UIFont.systemFont(ofSize: 24, weight: .bold)
-            static let subtitleFont = UIFont.systemFont(ofSize: 16)
-            static let buttonFont = UIFont.systemFont(ofSize: 18, weight: .semibold)
+            static let titleFont: UIFont = UIFont.init(name: "BCSans-Bold", size: 24) ?? UIFont.systemFont(ofSize: 24, weight: .bold)
+            static let subtitleFont: UIFont = UIFont.init(name: "BCSans-Regular", size: 16) ?? UIFont.systemFont(ofSize: 16)
+            static let buttonFont: UIFont = UIFont.init(name: "BCSans-Bold", size: 18) ?? UIFont.systemFont(ofSize: 18, weight: .semibold)
         }
         
     }
@@ -62,7 +62,7 @@ struct Constants {
         struct QRCodeHighlighter {
             static let tag = 72192376
             static let cornerRadius: CGFloat = Constants.UI.Theme.cornerRadius
-            static let borderWidth: CGFloat = 3
+            static let borderWidth: CGFloat = 6
             static let borderColor = Constants.UI.Theme.secondaryColor.cgColor
             static let borderColorInvalid = UIColor.red.cgColor
         }
@@ -76,7 +76,7 @@ struct Constants {
         }
         
         struct Status {
-            static let font = UIFont.systemFont(ofSize: 22)
+            static let font: UIFont = UIFont.init(name: "BCSans-Regular", size: 22) ?? UIFont.systemFont(ofSize: 22)
             static let textColor = UIColor.white
             
             
@@ -105,7 +105,7 @@ struct Constants {
             static let displayDuration: Double = 2.0 // seconds
             static let backgroundColor = Constants.UI.Theme.primaryColor
             static let labelColor = Constants.UI.Theme.primaryConstractColor
-            static let labelFont = UIFont.systemFont(ofSize: 14)
+            static let labelFont: UIFont = UIFont.init(name: "BCSans-Regular", size: 14) ?? UIFont.systemFont(ofSize: 14)
             static let labelPadding: CGFloat = 8
             static let containerPadding: CGFloat = 16
         }

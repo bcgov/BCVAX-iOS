@@ -41,6 +41,7 @@ class ScanResultViewController: UIViewController {
         super.viewDidAppear(animated)
         setData()
         beginAutoDismissTimer()
+        
     }
     
     // MARK: Outlet Actions
@@ -63,7 +64,7 @@ class ScanResultViewController: UIViewController {
     
     private func setData() {
         guard let model = self.model else {return}
-        nameLabel.text = model.name
+        nameLabel.text = model.name.uppercased()
         switch model.status {
         case .fully:
             styleVaxinatedCard()
@@ -103,17 +104,17 @@ class ScanResultViewController: UIViewController {
         scanButton.setTitleColor(Constants.UI.Theme.primaryColor, for: .normal)
         
         // Fonts
-        titleLabel.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
-        nameLabel.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
+        titleLabel.font = UIFont.init(name: "BCSans-Bold", size: 18) ?? UIFont.systemFont(ofSize: 18, weight: .semibold)
+        nameLabel.font = UIFont.init(name: "BCSans-Bold", size: 20) ?? UIFont.systemFont(ofSize: 20, weight: .semibold)
         if let btnLabel = scanButton.titleLabel {
-            btnLabel.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+            btnLabel.font = UIFont.init(name: "BCSans-Bold", size: 18) ?? UIFont.systemFont(ofSize: 18, weight: .semibold)
         }
     }
     
     private func styleStatusCard() {
-        cardTitle.font = UIFont.systemFont(ofSize: 32, weight: .bold)
+        cardTitle.font = UIFont.init(name: "BCSans-Bold", size: 32) ?? UIFont.systemFont(ofSize: 32, weight: .bold)
         cardTitle.numberOfLines = 0
-        cardSubtitle.font = UIFont.systemFont(ofSize: 12, weight: .regular)
+        cardSubtitle.font = UIFont.init(name: "BCSans-regular", size: 12) ?? UIFont.systemFont(ofSize: 12, weight: .regular)
         statusCardContainer.backgroundColor = .clear
         statusCardContainer.layer.borderColor = UIColor.white.cgColor
         statusCardContainer.layer.borderWidth = 6
@@ -126,7 +127,7 @@ class ScanResultViewController: UIViewController {
         statusContainer.backgroundColor = Constants.UI.Status.fullyVaccinated.color
         styleStatusCard()
         cardIcon.image = UIImage(named: "checkmark")
-        cardTitle.text = Constants.UI.Status.fullyVaccinated.cardTitle
+        cardTitle.text = Constants.UI.Status.fullyVaccinated.cardTitle.uppercased()
         cardSubtitle.text = Constants.UI.Status.fullyVaccinated.cardSubtitle
     }
     
@@ -134,7 +135,7 @@ class ScanResultViewController: UIViewController {
         statusContainer.backgroundColor = Constants.UI.Status.notVaccinated.color
         styleStatusCard()
         cardIcon.isHidden = true
-        cardTitle.text = Constants.UI.Status.notVaccinated.cardTitle
+        cardTitle.text = Constants.UI.Status.notVaccinated.cardTitle.uppercased()
         cardSubtitle.text = Constants.UI.Status.notVaccinated.cardSubtitle
     }
     
@@ -142,9 +143,11 @@ class ScanResultViewController: UIViewController {
         statusContainer.backgroundColor = Constants.UI.Status.partiallyVaccinated.color
         styleStatusCard()
         cardIcon.isHidden = true
-        cardTitle.text = Constants.UI.Status.partiallyVaccinated.cardTitle
+        cardTitle.text = Constants.UI.Status.partiallyVaccinated.cardTitle.uppercased()
         cardSubtitle.text = Constants.UI.Status.partiallyVaccinated.cardSubtitle
         statusCardContainer.layer.borderWidth = 0
+        view.layoutIfNeeded()
+        statusContainer.layoutIfNeeded()
         statusCardContainer.addDashedBorder(color: UIColor.white.cgColor, width: 6)
     }
 
