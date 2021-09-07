@@ -12,6 +12,15 @@ extension UIViewController {
     func alert(title: String, message: String) {
         let controller = UIAlertController(title: title, message: message, preferredStyle: .alert)
         controller.addAction(UIAlertAction(title: "OK", style: .default))
+        
+        present(controller, animated: true)
+    }
+    
+    func alert(title: String, message: String, completion: @escaping()->Void) {
+        let controller = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        controller.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            return completion()
+        }))
         present(controller, animated: true)
     }
     
@@ -23,8 +32,6 @@ extension UIViewController {
         // Create label and container
         let container = UIView(frame: .zero)
         let label = UILabel(frame: .zero)
-        
-        container.alpha = 0 // So we can animate the displaying
         
         // Remove existing Banner / Container
         if let existing = view.viewWithTag(Constants.UI.Banner.tag) {
@@ -62,17 +69,11 @@ extension UIViewController {
         container.backgroundColor = Constants.UI.Banner.backgroundColor
         container.layer.cornerRadius = Constants.UI.Theme.cornerRadius
         
-        // Animate the displaying of banner (just fades in)
-        UIView.animate(withDuration: Constants.UI.Theme.animationDuration) {
-            container.alpha = 1
-        }
-        
         // Remove banner after x seconds
-        
         DispatchQueue.main.asyncAfter(deadline: .now() + Constants.UI.Banner.displayDuration) {[weak self] in
             guard let `self` = self,
                   let container = self.view.viewWithTag(Constants.UI.Banner.tag),
-                  let label = container.viewWithTag(labelTAG)
+                  container.viewWithTag(labelTAG) != nil
                   else {return}
             /*
              We Randomly generated labelTAG.
