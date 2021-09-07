@@ -30,6 +30,14 @@ class ScanResultViewController: UIViewController {
     
     private var timer: Timer?
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        if #available(iOS 13.0, *) {
+            return .darkContent
+        } else {
+            return .default
+        }
+    }
+    
     // MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -105,7 +113,13 @@ class ScanResultViewController: UIViewController {
         
         // Fonts
         titleLabel.font = UIFont.init(name: "BCSans-Bold", size: 18) ?? UIFont.systemFont(ofSize: 18, weight: .semibold)
-        nameLabel.font = UIFont.init(name: "BCSans-Bold", size: 20) ?? UIFont.systemFont(ofSize: 20, weight: .semibold)
+        
+        let nameFont = UIFont.init(name: "BCSans-Bold", size: 20) ?? UIFont.systemFont(ofSize: 20, weight: .semibold)
+        nameLabel.font = nameFont
+        nameLabel.font = UIFontMetrics.default.scaledFont(for: nameFont)
+        nameLabel.adjustsFontForContentSizeCategory = true
+        nameLabel.adjustsFontSizeToFitWidth = true
+        
         if let btnLabel = scanButton.titleLabel {
             btnLabel.font = UIFont.init(name: "BCSans-Bold", size: 18) ?? UIFont.systemFont(ofSize: 18, weight: .semibold)
         }
@@ -129,6 +143,7 @@ class ScanResultViewController: UIViewController {
         cardIcon.image = UIImage(named: "checkmark")
         cardTitle.text = Constants.UI.Status.fullyVaccinated.cardTitle.uppercased()
         cardSubtitle.text = Constants.UI.Status.fullyVaccinated.cardSubtitle
+        cardTitle.textAlignment = .center
     }
     
     private func styleNotVaxinatedCard() {
@@ -137,6 +152,7 @@ class ScanResultViewController: UIViewController {
         cardIcon.isHidden = true
         cardTitle.text = Constants.UI.Status.notVaccinated.cardTitle.uppercased()
         cardSubtitle.text = Constants.UI.Status.notVaccinated.cardSubtitle
+        cardTitle.textAlignment = .center
     }
     
     private func stylePartiallyVaxinatedCard() {
@@ -145,6 +161,7 @@ class ScanResultViewController: UIViewController {
         cardIcon.isHidden = true
         cardTitle.text = Constants.UI.Status.partiallyVaccinated.cardTitle.uppercased()
         cardSubtitle.text = Constants.UI.Status.partiallyVaccinated.cardSubtitle
+        cardTitle.textAlignment = .center
         statusCardContainer.layer.borderWidth = 0
         view.layoutIfNeeded()
         statusContainer.layoutIfNeeded()

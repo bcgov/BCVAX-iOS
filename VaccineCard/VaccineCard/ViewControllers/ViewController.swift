@@ -42,6 +42,14 @@ class ViewController: UIViewController {
     
     private var result: ScanResultModel? = nil
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        if #available(iOS 13.0, *) {
+            return .darkContent
+        } else {
+            return .default
+        }
+    }
+    
     // MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()

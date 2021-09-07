@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>BC Vaccine Card</string>
+	<string>BC Vaccine Card Verifier</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -25,7 +25,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>We need permission to your camera to let you scan vaccine cards</string>
+	<string>We need permission to access your camera to be able to scan QR codes</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>BCSans-Regular.otf</string>
