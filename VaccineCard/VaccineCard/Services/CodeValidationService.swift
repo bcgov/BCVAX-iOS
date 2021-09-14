@@ -79,7 +79,7 @@ class CodeValidationService {
     }
     
     fileprivate func decodeNumeric(code: String) -> String? {
-        if let range = code.range(of: "shc:/") {
+        if let range = code.range(of: "shc:/", options: .caseInsensitive) {
             let numericCode = String(code[range.upperBound...])
             let jwsNumeric = numericCode.chunks(size: 2)
             var uint16s: [UInt16] = []
