@@ -17,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
         window?.makeKeyAndVisible()
 //        FirebaseApp.configure()
+        
+        // Seeds the initial JWKS data in its initializer
+        let _ = JWKSStorage()
         return true
     }
 }

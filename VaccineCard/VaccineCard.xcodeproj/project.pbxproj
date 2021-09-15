@@ -57,11 +57,16 @@
 		2953544426F1457000C0E437 /* ECPublicKeyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953544326F1457000C0E437 /* ECPublicKeyTest.swift */; };
 		2953544826F14A7F00C0E437 /* AccessibilityConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953544726F14A7F00C0E437 /* AccessibilityConstants.swift */; };
 		2953544926F14A9300C0E437 /* AccessibilityConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953544726F14A7F00C0E437 /* AccessibilityConstants.swift */; };
-		2953544A26F14A9300C0E437 /* AccessibilityConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953544726F14A7F00C0E437 /* AccessibilityConstants.swift */; };
-		2953544B26F14A9400C0E437 /* AccessibilityConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953544726F14A7F00C0E437 /* AccessibilityConstants.swift */; };
 		2953544D26F2680500C0E437 /* QRHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953544C26F2680500C0E437 /* QRHeader.swift */; };
 		2953544E26F2689800C0E437 /* QRHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953544C26F2680500C0E437 /* QRHeader.swift */; };
 		2953545026F26B8600C0E437 /* PublicKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953544F26F26B8600C0E437 /* PublicKeys.swift */; };
+		2953545226F2721900C0E437 /* PublicKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953544F26F26B8600C0E437 /* PublicKeys.swift */; };
+		2953545526F2802F00C0E437 /* JWKSStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953545426F2802F00C0E437 /* JWKSStorage.swift */; };
+		2953545626F28D2F00C0E437 /* JWKSStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953545426F2802F00C0E437 /* JWKSStorage.swift */; };
+		2953545826F2938900C0E437 /* JWKSIssuersProd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953545726F2938900C0E437 /* JWKSIssuersProd.swift */; };
+		2953546026F2A39800C0E437 /* JWKSIssuersTEST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953545E26F2A39800C0E437 /* JWKSIssuersTEST.swift */; };
+		2953546726F2A90B00C0E437 /* smarthealthcard.phsa.ca~v1~issuer~.well-known~jwks.json in Resources */ = {isa = PBXBuildFile; fileRef = 2953546626F2A90B00C0E437 /* smarthealthcard.phsa.ca~v1~issuer~.well-known~jwks.json */; };
+		2953546826F2A90B00C0E437 /* smarthealthcard.phsa.ca~v1~issuer~.well-known~jwks.json in Resources */ = {isa = PBXBuildFile; fileRef = 2953546626F2A90B00C0E437 /* smarthealthcard.phsa.ca~v1~issuer~.well-known~jwks.json */; };
 		296030A026D96F2E0026A0AC /* ScanResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2960309F26D96F2E0026A0AC /* ScanResultModel.swift */; };
 		296030A426D976A40026A0AC /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296030A326D976A40026A0AC /* UIViewController.swift */; };
 		296030AB26DB543E0026A0AC /* Compressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296030AA26DB543E0026A0AC /* Compressor.swift */; };
@@ -124,6 +129,10 @@
 		2953544726F14A7F00C0E437 /* AccessibilityConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityConstants.swift; sourceTree = "<group>"; };
 		2953544C26F2680500C0E437 /* QRHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRHeader.swift; sourceTree = "<group>"; };
 		2953544F26F26B8600C0E437 /* PublicKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicKeys.swift; sourceTree = "<group>"; };
+		2953545426F2802F00C0E437 /* JWKSStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWKSStorage.swift; sourceTree = "<group>"; };
+		2953545726F2938900C0E437 /* JWKSIssuersProd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWKSIssuersProd.swift; sourceTree = "<group>"; };
+		2953545E26F2A39800C0E437 /* JWKSIssuersTEST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWKSIssuersTEST.swift; sourceTree = "<group>"; };
+		2953546626F2A90B00C0E437 /* smarthealthcard.phsa.ca~v1~issuer~.well-known~jwks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "smarthealthcard.phsa.ca~v1~issuer~.well-known~jwks.json"; sourceTree = "<group>"; };
 		2960309F26D96F2E0026A0AC /* ScanResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanResultModel.swift; sourceTree = "<group>"; };
 		296030A326D976A40026A0AC /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		296030AA26DB543E0026A0AC /* Compressor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compressor.swift; sourceTree = "<group>"; };
@@ -236,13 +245,13 @@
 				292BC33726D6B17500B0A064 /* Models */,
 				292BC35726D6D67300B0A064 /* Services */,
 				292BC35E26D6DB3300B0A064 /* Extensions & utilities */,
+				2953545326F2725800C0E437 /* Constants */,
+				2953546526F2A77E00C0E437 /* seed */,
 				292BC32226D6B16000B0A064 /* AppDelegate.swift */,
 				292BC32B26D6B16200B0A064 /* Assets.xcassets */,
 				292BC32D26D6B16200B0A064 /* LaunchScreen.storyboard */,
 				292BC33026D6B16200B0A064 /* Info.plist */,
 				2904726F26E1B7DD003C4CA2 /* GoogleService-Info.plist */,
-				292BC35C26D6DB2A00B0A064 /* Constants.swift */,
-				2953544726F14A7F00C0E437 /* AccessibilityConstants.swift */,
 			);
 			path = VaccineCard;
 			sourceTree = "<group>";
@@ -275,6 +284,7 @@
 				2904727426E1BA2A003C4CA2 /* VerificationService.swift */,
 				2953544126F1447900C0E437 /* ECPublicKeyProd.swift */,
 				2953544326F1457000C0E437 /* ECPublicKeyTest.swift */,
+				2953545426F2802F00C0E437 /* JWKSStorage.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -292,6 +302,25 @@
 				2904724E26DF44F9003C4CA2 /* Date.swift */,
 			);
 			path = "Extensions & utilities";
+			sourceTree = "<group>";
+		};
+		2953545326F2725800C0E437 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				292BC35C26D6DB2A00B0A064 /* Constants.swift */,
+				2953544726F14A7F00C0E437 /* AccessibilityConstants.swift */,
+				2953545726F2938900C0E437 /* JWKSIssuersProd.swift */,
+				2953545E26F2A39800C0E437 /* JWKSIssuersTEST.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		2953546526F2A77E00C0E437 /* seed */ = {
+			isa = PBXGroup;
+			children = (
+				2953546626F2A90B00C0E437 /* smarthealthcard.phsa.ca~v1~issuer~.well-known~jwks.json */,
+			);
+			path = seed;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -440,6 +469,7 @@
 				2904726626E15210003C4CA2 /* Main.storyboard in Resources */,
 				291E8AC926E67B5B00A60ADD /* BCSans-BoldItalic.otf in Resources */,
 				29136DDC26E283DC00D6D829 /* TEST Info.plist in Resources */,
+				2953546826F2A90B00C0E437 /* smarthealthcard.phsa.ca~v1~issuer~.well-known~jwks.json in Resources */,
 				291E8ACB26E67B5B00A60ADD /* BCSans-Bold.otf in Resources */,
 				291E8AC726E67B5B00A60ADD /* BCSans-Italic.otf in Resources */,
 			);
@@ -463,6 +493,7 @@
 				292BC32C26D6B16200B0A064 /* Assets.xcassets in Resources */,
 				292BC32A26D6B16000B0A064 /* Main.storyboard in Resources */,
 				291E8ACC26E67B5B00A60ADD /* BCSans-Regular.otf in Resources */,
+				2953546726F2A90B00C0E437 /* smarthealthcard.phsa.ca~v1~issuer~.well-known~jwks.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,7 +504,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2953544B26F14A9400C0E437 /* AccessibilityConstants.swift in Sources */,
 				2904724726DD9A75003C4CA2 /* VaccineCardTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,6 +512,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2953545226F2721900C0E437 /* PublicKeys.swift in Sources */,
 				2904725226E15210003C4CA2 /* ViewController.swift in Sources */,
 				2904725326E15210003C4CA2 /* UIColor.swift in Sources */,
 				2904727326E1B96D003C4CA2 /* ImmunizationService.swift in Sources */,
@@ -494,7 +525,9 @@
 				2904725826E15210003C4CA2 /* UIViewController.swift in Sources */,
 				2904725926E15210003C4CA2 /* ScanResultViewController.swift in Sources */,
 				2953544426F1457000C0E437 /* ECPublicKeyTest.swift in Sources */,
+				2953546026F2A39800C0E437 /* JWKSIssuersTEST.swift in Sources */,
 				2904725A26E15210003C4CA2 /* Data.swift in Sources */,
+				2953545626F28D2F00C0E437 /* JWKSStorage.swift in Sources */,
 				2953544926F14A9300C0E437 /* AccessibilityConstants.swift in Sources */,
 				2904725B26E15210003C4CA2 /* Array.swift in Sources */,
 				2904725C26E15210003C4CA2 /* DecodedQRPayload.swift in Sources */,
@@ -509,7 +542,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2953544A26F14A9300C0E437 /* AccessibilityConstants.swift in Sources */,
 				291E8AD526E90ECE00A60ADD /* VaccineCardUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -532,9 +564,11 @@
 				296030A426D976A40026A0AC /* UIViewController.swift in Sources */,
 				292BC35B26D6D79300B0A064 /* ScanResultViewController.swift in Sources */,
 				296030AD26DB55180026A0AC /* Data.swift in Sources */,
+				2953545526F2802F00C0E437 /* JWKSStorage.swift in Sources */,
 				2953544826F14A7F00C0E437 /* AccessibilityConstants.swift in Sources */,
 				296030AF26DB55ED0026A0AC /* Array.swift in Sources */,
 				296030B526DC30AD0026A0AC /* DecodedQRPayload.swift in Sources */,
+				2953545826F2938900C0E437 /* JWKSIssuersProd.swift in Sources */,
 				292BC36026D6DB4400B0A064 /* UIView.swift in Sources */,
 				296030A026D96F2E0026A0AC /* ScanResultModel.swift in Sources */,
 				296030B126DB55F80026A0AC /* String.swift in Sources */,

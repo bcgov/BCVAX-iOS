@@ -15,4 +15,5 @@ extension VerificationService {
     static func keys() -> [ECPublicKey] {
         return Constants.JWKSPublic.prodKeys.map({ECPublicKey(crv: ECCurveType.P256, x: $0.x, y: $0.y)})
     }
+    
 }

@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "EC67B734-8A7D-44C7-AA68-6E7574A7F6A0"
+            uuid = "9BA68F28-6060-46A0-9AAB-46A1F02B447D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VaccineCard/Services/VerificationService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "verify(jwkSigned:iss:kid:)"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "fetchKeys(for:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
