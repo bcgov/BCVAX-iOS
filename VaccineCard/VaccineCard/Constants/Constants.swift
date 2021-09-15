@@ -8,34 +8,12 @@
 import Foundation
 import UIKit
 
-struct JWKSPublicKey {
-    var x: String
-    var y: String
-}
 
 struct Constants {
     static let dismissResultsAfterSeconds: Double = 10
     
     struct JWKSPublic {
         static let urlExtension = ".well-known/jwks.json"
-        static let prodKeys: [JWKSPublicKey] = [ JWKSPublicKey(x: BC.x, y: BC.y) ]
-        static let devKeys: [JWKSPublicKey] = [ JWKSPublicKey(x: Dev.x, y: Dev.y) ]
-        static let testKeys: [JWKSPublicKey] = [ JWKSPublicKey(x: Test.x, y: Test.y) ]
-        
-        private struct BC {
-            static let x = "xscSbZemoTx1qFzFo-j9VSnvAXdv9K-3DchzJvNnwrY"
-            static let y = "jA5uS5bz8R2nxf_TU-0ZmXq6CKWZhAG1Y4icAx8a9CA"
-        }
-        
-        private struct Dev {
-            static let x = "c12pG4HpiCvx0nM4CHMfERZWG2rS7Bq8-GI2EFMcEHo"
-            static let y = "VsGE-cIg-a4s9chaFyRKCovIvqwM1Iw9FvdgikJ0yeg"
-        }
-        
-        private struct Test {
-            static let x = "11XvRWy1I2S0EyJlyf_bWfw_TQ5CJJNLw78bHXNxcgw"
-            static let y = "eZXwxvO1hvCY0KucrPfKo7yAyMT6Ajc3N7OkAB6VYy8"
-        }
     }
     
     struct CVX {

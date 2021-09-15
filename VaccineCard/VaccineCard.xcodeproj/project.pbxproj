@@ -53,8 +53,6 @@
 		292BC35D26D6DB2A00B0A064 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC35C26D6DB2A00B0A064 /* Constants.swift */; };
 		292BC36026D6DB4400B0A064 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC35F26D6DB4400B0A064 /* UIView.swift */; };
 		292BC36226D6EC9100B0A064 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC36126D6EC9100B0A064 /* UIColor.swift */; };
-		2953544226F1447900C0E437 /* ECPublicKeyProd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953544126F1447900C0E437 /* ECPublicKeyProd.swift */; };
-		2953544426F1457000C0E437 /* ECPublicKeyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953544326F1457000C0E437 /* ECPublicKeyTest.swift */; };
 		2953544826F14A7F00C0E437 /* AccessibilityConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953544726F14A7F00C0E437 /* AccessibilityConstants.swift */; };
 		2953544926F14A9300C0E437 /* AccessibilityConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953544726F14A7F00C0E437 /* AccessibilityConstants.swift */; };
 		2953544D26F2680500C0E437 /* QRHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953544C26F2680500C0E437 /* QRHeader.swift */; };
@@ -124,8 +122,6 @@
 		292BC35C26D6DB2A00B0A064 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		292BC35F26D6DB4400B0A064 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		292BC36126D6EC9100B0A064 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
-		2953544126F1447900C0E437 /* ECPublicKeyProd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECPublicKeyProd.swift; sourceTree = "<group>"; };
-		2953544326F1457000C0E437 /* ECPublicKeyTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECPublicKeyTest.swift; sourceTree = "<group>"; };
 		2953544726F14A7F00C0E437 /* AccessibilityConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityConstants.swift; sourceTree = "<group>"; };
 		2953544C26F2680500C0E437 /* QRHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRHeader.swift; sourceTree = "<group>"; };
 		2953544F26F26B8600C0E437 /* PublicKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicKeys.swift; sourceTree = "<group>"; };
@@ -282,8 +278,6 @@
 				292BC35826D6D68600B0A064 /* CodeValidationService.swift */,
 				2904727126E1B916003C4CA2 /* ImmunizationService.swift */,
 				2904727426E1BA2A003C4CA2 /* VerificationService.swift */,
-				2953544126F1447900C0E437 /* ECPublicKeyProd.swift */,
-				2953544326F1457000C0E437 /* ECPublicKeyTest.swift */,
 				2953545426F2802F00C0E437 /* JWKSStorage.swift */,
 			);
 			path = Services;
@@ -524,7 +518,6 @@
 				2904725726E15210003C4CA2 /* Compressor.swift in Sources */,
 				2904725826E15210003C4CA2 /* UIViewController.swift in Sources */,
 				2904725926E15210003C4CA2 /* ScanResultViewController.swift in Sources */,
-				2953544426F1457000C0E437 /* ECPublicKeyTest.swift in Sources */,
 				2953546026F2A39800C0E437 /* JWKSIssuersTEST.swift in Sources */,
 				2904725A26E15210003C4CA2 /* Data.swift in Sources */,
 				2953545626F28D2F00C0E437 /* JWKSStorage.swift in Sources */,
@@ -554,7 +547,6 @@
 				292BC32726D6B16000B0A064 /* ViewController.swift in Sources */,
 				292BC36226D6EC9100B0A064 /* UIColor.swift in Sources */,
 				2904727226E1B916003C4CA2 /* ImmunizationService.swift in Sources */,
-				2953544226F1447900C0E437 /* ECPublicKeyProd.swift in Sources */,
 				2904727526E1BA2A003C4CA2 /* VerificationService.swift in Sources */,
 				2953544D26F2680500C0E437 /* QRHeader.swift in Sources */,
 				292BC35D26D6DB2A00B0A064 /* Constants.swift in Sources */,
