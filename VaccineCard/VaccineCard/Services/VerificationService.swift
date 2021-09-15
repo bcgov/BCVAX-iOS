@@ -11,7 +11,8 @@ import JOSESwift
 /// This class is responsible for verifying the QR Code's (JWS) signature
 class VerificationService {
     
-    static func verify(jwkSigned: String) -> Bool {
+    static func verify(jwkSigned: String, iss: String, kid: String) -> Bool {
+        let issuer = "\(iss)/\(Constants.JWKSPublic.urlExtension)"
         let keys = keys()
         for key in keys where verify(jwkSigned: jwkSigned, key: key) {
             return true

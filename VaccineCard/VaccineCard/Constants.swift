@@ -17,16 +17,12 @@ struct Constants {
     static let dismissResultsAfterSeconds: Double = 10
     
     struct JWKSPublic {
-        static let prodKeys: [JWKSPublicKey] = [ JWKSPublicKey(x: BC.x, y: BC.y), JWKSPublicKey(x: AB.x, y: AB.y)]
+        static let urlExtension = ".well-known/jwks.json"
+        static let prodKeys: [JWKSPublicKey] = [ JWKSPublicKey(x: BC.x, y: BC.y) ]
         static let devKeys: [JWKSPublicKey] = [ JWKSPublicKey(x: Dev.x, y: Dev.y) ]
         static let testKeys: [JWKSPublicKey] = [ JWKSPublicKey(x: Test.x, y: Test.y) ]
         
         private struct BC {
-            static let x = "xscSbZemoTx1qFzFo-j9VSnvAXdv9K-3DchzJvNnwrY"
-            static let y = "jA5uS5bz8R2nxf_TU-0ZmXq6CKWZhAG1Y4icAx8a9CA"
-        }
-        
-        private struct AB {
             static let x = "xscSbZemoTx1qFzFo-j9VSnvAXdv9K-3DchzJvNnwrY"
             static let y = "jA5uS5bz8R2nxf_TU-0ZmXq6CKWZhAG1Y4icAx8a9CA"
         }

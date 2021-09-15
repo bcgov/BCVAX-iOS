@@ -37,7 +37,7 @@ class CodeValidationService {
                 return completion(CodeValidationResult(status: .InvalidCode, result: nil))
             }
             
-            guard let decodedJWS: Data = self.decodeCompactJWS(string: compactjws) else {
+            guard let decodedJWS: Data = self.decodeCompactJWSPayload(string: compactjws) else {
                 return completion(CodeValidationResult(status: .InvalidCode, result: nil))
             }
             
@@ -45,7 +45,11 @@ class CodeValidationService {
                 return completion(CodeValidationResult(status: .InvalidCode, result: nil))
             }
             
-            guard VerificationService.verify(jwkSigned: compactjws) else {
+            guard let header = self.getJWSHeader(from: compactjws) else {
+                return completion(CodeValidationResult(status: .InvalidCode, result: nil))
+            }
+            
+            guard VerificationService.verify(jwkSigned: compactjws, iss: payload.iss, kid: header.kid) else {
                 return completion(CodeValidationResult(status: .ForgedCode, result: nil))
             }
             
@@ -74,7 +78,7 @@ class CodeValidationService {
             return nil
         }
         
-        return decodeCompactJWS(string: compactjws)
+        return decodeCompactJWSPayload(string: compactjws)
     }
     
     fileprivate func decodeNumeric(code: String) -> String? {
@@ -100,7 +104,7 @@ class CodeValidationService {
         }
     }
     
-    fileprivate func decodeCompactJWS(string: String) -> DecodedQRPayload? {
+    fileprivate func decodeCompactJWSPayload(string: String) -> DecodedQRPayload? {
         let parts = string.components(separatedBy: ".")
         guard parts.count == 3 else {
             print("Invalid Compact JWS: must have 3 base64 components separated by a dot")
@@ -112,13 +116,10 @@ class CodeValidationService {
             print("Invalid Compact JWS: Could not decode base64")
             return nil
         }
-        guard VerificationService.verify(jwkSigned: string) else {
-            return nil
-        }
         return decodedPayload.decompressJSON()
     }
     
-    fileprivate func decodeCompactJWS(string: String) -> Data? {
+    fileprivate func decodeCompactJWSPayload(string: String) -> Data? {
         let parts = string.components(separatedBy: ".")
         guard parts.count == 3 else {
             print("Invalid Compact JWS: must have 3 base64 components separated by a dot")
@@ -126,5 +127,23 @@ class CodeValidationService {
         }
         let payload = parts[1]
         return payload.base64DecodedData()
+    }
+    
+    fileprivate func getJWSHeader(from  string: String) -> QRHeader? {
+        let parts = string.components(separatedBy: ".")
+        guard parts.count == 3 else {
+            print("Invalid Compact JWS: must have 3 base64 components separated by a dot")
+            return nil
+        }
+        let header = parts[0]
+        guard let headerData = header.base64DecodedData() else {
+            return nil
+        }
+        do {
+            return try JSONDecoder().decode(QRHeader.self, from: headerData)
+        } catch {
+            print(error.localizedDescription)
+            return nil
+        }
     }
 }

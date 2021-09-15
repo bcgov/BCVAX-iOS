@@ -59,6 +59,9 @@
 		2953544926F14A9300C0E437 /* AccessibilityConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953544726F14A7F00C0E437 /* AccessibilityConstants.swift */; };
 		2953544A26F14A9300C0E437 /* AccessibilityConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953544726F14A7F00C0E437 /* AccessibilityConstants.swift */; };
 		2953544B26F14A9400C0E437 /* AccessibilityConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953544726F14A7F00C0E437 /* AccessibilityConstants.swift */; };
+		2953544D26F2680500C0E437 /* QRHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953544C26F2680500C0E437 /* QRHeader.swift */; };
+		2953544E26F2689800C0E437 /* QRHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953544C26F2680500C0E437 /* QRHeader.swift */; };
+		2953545026F26B8600C0E437 /* PublicKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953544F26F26B8600C0E437 /* PublicKeys.swift */; };
 		296030A026D96F2E0026A0AC /* ScanResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2960309F26D96F2E0026A0AC /* ScanResultModel.swift */; };
 		296030A426D976A40026A0AC /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296030A326D976A40026A0AC /* UIViewController.swift */; };
 		296030AB26DB543E0026A0AC /* Compressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296030AA26DB543E0026A0AC /* Compressor.swift */; };
@@ -119,6 +122,8 @@
 		2953544126F1447900C0E437 /* ECPublicKeyProd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECPublicKeyProd.swift; sourceTree = "<group>"; };
 		2953544326F1457000C0E437 /* ECPublicKeyTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECPublicKeyTest.swift; sourceTree = "<group>"; };
 		2953544726F14A7F00C0E437 /* AccessibilityConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityConstants.swift; sourceTree = "<group>"; };
+		2953544C26F2680500C0E437 /* QRHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRHeader.swift; sourceTree = "<group>"; };
+		2953544F26F26B8600C0E437 /* PublicKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicKeys.swift; sourceTree = "<group>"; };
 		2960309F26D96F2E0026A0AC /* ScanResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanResultModel.swift; sourceTree = "<group>"; };
 		296030A326D976A40026A0AC /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		296030AA26DB543E0026A0AC /* Compressor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compressor.swift; sourceTree = "<group>"; };
@@ -247,6 +252,8 @@
 			children = (
 				2960309F26D96F2E0026A0AC /* ScanResultModel.swift */,
 				296030B426DC30AD0026A0AC /* DecodedQRPayload.swift */,
+				2953544C26F2680500C0E437 /* QRHeader.swift */,
+				2953544F26F26B8600C0E437 /* PublicKeys.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -480,6 +487,7 @@
 				2904727326E1B96D003C4CA2 /* ImmunizationService.swift in Sources */,
 				2904727626E1BA51003C4CA2 /* VerificationService.swift in Sources */,
 				2904725426E15210003C4CA2 /* Constants.swift in Sources */,
+				2953544E26F2689800C0E437 /* QRHeader.swift in Sources */,
 				2904725526E15210003C4CA2 /* Date.swift in Sources */,
 				2904725626E15210003C4CA2 /* AppDelegate.swift in Sources */,
 				2904725726E15210003C4CA2 /* Compressor.swift in Sources */,
@@ -510,11 +518,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2953545026F26B8600C0E437 /* PublicKeys.swift in Sources */,
 				292BC32726D6B16000B0A064 /* ViewController.swift in Sources */,
 				292BC36226D6EC9100B0A064 /* UIColor.swift in Sources */,
 				2904727226E1B916003C4CA2 /* ImmunizationService.swift in Sources */,
 				2953544226F1447900C0E437 /* ECPublicKeyProd.swift in Sources */,
 				2904727526E1BA2A003C4CA2 /* VerificationService.swift in Sources */,
+				2953544D26F2680500C0E437 /* QRHeader.swift in Sources */,
 				292BC35D26D6DB2A00B0A064 /* Constants.swift in Sources */,
 				2904724F26DF44F9003C4CA2 /* Date.swift in Sources */,
 				292BC32326D6B16000B0A064 /* AppDelegate.swift in Sources */,
