@@ -84,6 +84,7 @@
                     <connections>
                         <outlet property="onBoardButton" destination="Kr9-e8-wHg" id="3IN-8m-mZ3"/>
                         <outlet property="onBoardContainer" destination="FHh-SG-13Y" id="d3N-n8-LXA"/>
+                        <outlet property="onBoardImage" destination="Gy4-AH-zY2" id="EP0-E8-lsk"/>
                         <outlet property="onBoardSubtitle" destination="Yl1-pY-60v" id="a4I-cK-dEz"/>
                         <outlet property="onBoardTitle" destination="6PM-We-HjX" id="7FT-wo-LlI"/>
                         <segue destination="Q9v-9P-r5w" kind="show" identifier="showScanResult" id="f9J-5K-v7T"/>

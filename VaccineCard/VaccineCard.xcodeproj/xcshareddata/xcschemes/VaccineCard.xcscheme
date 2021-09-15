@@ -38,6 +38,16 @@
                ReferencedContainer = "container:VaccineCard.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "291E8AD126E90ECE00A60ADD"
+               BuildableName = "VaccineCardUITests.xctest"
+               BlueprintName = "VaccineCardUITests"
+               ReferencedContainer = "container:VaccineCard.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

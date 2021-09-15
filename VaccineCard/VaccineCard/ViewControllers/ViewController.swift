@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     // MARK: Variables
     private var captureSession: AVCaptureSession?
-    private var previewLayer: AVCaptureVideoPreviewLayer!
+    private var previewLayer: AVCaptureVideoPreviewLayer?
     fileprivate var codeHighlightTags: [Int] = []
     fileprivate var invalidScannedCodes: [String] = []
     
@@ -35,6 +35,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var onBoardTitle: UILabel!
     @IBOutlet weak var onBoardSubtitle: UILabel!
     @IBOutlet weak var onBoardButton: UIButton!
+    @IBOutlet weak var onBoardImage: UIImageView!
     
     enum Segues: String {
         case showScanResult = "showScanResult"
@@ -55,6 +56,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = Constants.UI.Theme.primaryColor
         showCameraOrOnboarding()
+        setupAccessibilityTags()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -182,6 +184,16 @@ class ViewController: UIViewController {
         if let titleLabel = onBoardButton.titleLabel {
             titleLabel.font = Constants.Strings.onBoarding.buttonFont
         }
+        
+        
+    }
+    
+    func setupAccessibilityTags() {
+        onBoardContainer.accessibilityLabel = AccessibilityLabels.OnBoarding.onboardingView
+        onBoardButton.accessibilityLabel = AccessibilityLabels.OnBoarding.startScanningButton
+        onBoardTitle.accessibilityLabel = AccessibilityLabels.OnBoarding.title
+        onBoardSubtitle.accessibilityLabel = AccessibilityLabels.OnBoarding.subtitle
+        onBoardImage.accessibilityLabel = AccessibilityLabels.OnBoarding.phoneImage
     }
 }
 
@@ -226,10 +238,14 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
         }
         
         // Setup Preview
-        self.previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        self.previewLayer.frame = self.view.layer.bounds
-        self.previewLayer.videoGravity = .resizeAspectFill
-        self.view.layer.addSublayer(self.previewLayer)
+        let preview = AVCaptureVideoPreviewLayer(session: captureSession)
+        preview.frame = self.view.layer.bounds
+        preview.videoGravity = .resizeAspectFill
+        preview.isAccessibilityElement = true
+        preview.accessibilityLabel = AccessibilityLabels.scannerView.cameraView
+        self.view.layer.addSublayer(preview)
+        self.view.accessibilityLabel = AccessibilityLabels.scannerView.cameraView
+        self.previewLayer = preview
         
         // Begin Capture Session
         captureSession.startRunning()
@@ -321,7 +337,7 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
     }
     
     fileprivate func showQRCodeLocation(for object: AVMetadataObject, isInValid: Bool, tag: Int) {
-        guard let metadataLocation = previewLayer.transformedMetadataObject(for: object) else {
+        guard let preview =  previewLayer, let metadataLocation = preview.transformedMetadataObject(for: object) else {
             return
         }
         if let existing = view.viewWithTag(tag) {
@@ -369,22 +385,22 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
             print("Flash could not be used")
         }
         
-        // TODO: TAG FROM CONSTANT
-        guard let btn = self.view.viewWithTag(92133) as? UIButton else {
+        guard let btn = self.view.viewWithTag(Constants.UI.TorchButton.tag) as? UIButton else {
             return
         }
         if on {
             btn.setImage(flashOnIcon, for: .normal)
+            btn.accessibilityLabel = AccessibilityLabels.scannerView.turnOffFlash
         } else {
             btn.setImage(flashOffIcon, for: .normal)
+            btn.accessibilityLabel = AccessibilityLabels.scannerView.turnOnFlash
         }
     }
     
     fileprivate func addFlashlightButton() {
-        // TODO: Refactor constants
-        let btnSize: CGFloat = 42
+        let btnSize: CGFloat = Constants.UI.TorchButton.buttonSize
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: btnSize, height: btnSize))
-        button.tag = 92133
+        button.tag = Constants.UI.TorchButton.tag
         view.addSubview(button)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.heightAnchor.constraint(equalToConstant: btnSize).isActive = true
@@ -393,6 +409,7 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
         button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
         button.backgroundColor = .lightGray
         button.setImage(flashOffIcon, for: .normal)
+        button.accessibilityLabel = AccessibilityLabels.scannerView.turnOnFlash
         
         button.addTarget(self, action: #selector(flashTapped), for: .touchUpInside)
         button.layer.cornerRadius = btnSize/2
@@ -402,8 +419,7 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
     }
     
     @objc func flashTapped(sender: UIButton?) {
-        // TODO: Refactor constants (Tag)
-        guard let btn = self.view.viewWithTag(92133) as? UIButton else {
+        guard let btn = self.view.viewWithTag(Constants.UI.TorchButton.tag) as? UIButton else {
             return
         }
         let isOn = btn.imageView?.image == flashOnIcon

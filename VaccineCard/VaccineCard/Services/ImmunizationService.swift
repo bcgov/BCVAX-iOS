@@ -13,7 +13,7 @@ class ImmunizationService {
     public static func immunizationStatus(payload: DecodedQRPayload)-> ImmunizationStatus {
         let vaxes = payload.vc.credentialSubject.fhirBundle.entry
             .compactMap({$0.resource}).filter({$0.resourceType.lowercased() == "Immunization".lowercased()})
-        let janssenCVX = "212"
+        let janssenCVX = Constants.CVX.janssen
         let oneDoseVaxes = vaxes.filter({$0.vaccineCode?.coding[0].code == janssenCVX})
 
       if (oneDoseVaxes.count > 0 || vaxes.count > 1) {

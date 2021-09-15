@@ -32,7 +32,6 @@ class CodeValidationService {
     public func validate(code: String, completion: @escaping (CodeValidationResult)->Void) {
         // Move to a background thread
         DispatchQueue.global(qos: .userInteractive).async {
-            // Decode string and get name
             
             guard let compactjws = self.decodeNumeric(code: code) else {
                 return completion(CodeValidationResult(status: .InvalidCode, result: nil))

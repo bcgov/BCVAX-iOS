@@ -43,13 +43,13 @@ class ScanResultViewController: UIViewController {
         super.viewDidLoad()
         style()
         setData()
+        setupAccessibilityTags()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         setData()
         beginAutoDismissTimer()
-        
     }
     
     // MARK: Outlet Actions
@@ -84,7 +84,6 @@ class ScanResultViewController: UIViewController {
     }
     
     func beginAutoDismissTimer() {
-        // TODO: Add time to constants
         if let t = timer {
             t.invalidate()
         }
@@ -150,7 +149,9 @@ class ScanResultViewController: UIViewController {
         statusContainer.backgroundColor = Constants.UI.Status.notVaccinated.color
         styleStatusCard()
         cardIcon.isHidden = true
-        cardTitle.text = Constants.UI.Status.notVaccinated.cardTitle.uppercased()
+        let resultTitle = Constants.UI.Status.notVaccinated.cardTitle
+        cardTitle.text = resultTitle.uppercased()
+        cardTitle.accessibilityLabel = resultTitle
         cardSubtitle.text = Constants.UI.Status.notVaccinated.cardSubtitle
         cardTitle.textAlignment = .center
     }
@@ -159,13 +160,36 @@ class ScanResultViewController: UIViewController {
         statusContainer.backgroundColor = Constants.UI.Status.partiallyVaccinated.color
         styleStatusCard()
         cardIcon.isHidden = true
-        cardTitle.text = Constants.UI.Status.partiallyVaccinated.cardTitle.uppercased()
+        let resultTitle = Constants.UI.Status.partiallyVaccinated.cardTitle
+        cardTitle.text = resultTitle.uppercased()
+        cardTitle.accessibilityLabel = resultTitle
         cardSubtitle.text = Constants.UI.Status.partiallyVaccinated.cardSubtitle
         cardTitle.textAlignment = .center
         statusCardContainer.layer.borderWidth = 0
         view.layoutIfNeeded()
         statusContainer.layoutIfNeeded()
         statusCardContainer.addDashedBorder(color: UIColor.white.cgColor, width: 6)
+    }
+    
+    func setupAccessibilityTags() {
+        view.accessibilityTraits = .allowsDirectInteraction
+        view.accessibilityLabel = AccessibilityLabels.ScanResultView.view
+        cardTitle.accessibilityTraits = .allowsDirectInteraction
+        scanButton.accessibilityTraits = .allowsDirectInteraction
+        nameLabel.accessibilityTraits = .allowsDirectInteraction
+        
+        titleLabel.accessibilityLabel = AccessibilityLabels.ScanResultView.titleLabel
+        scanButton.accessibilityLabel = AccessibilityLabels.ScanResultView.scanButton
+        
+        cardIcon.isAccessibilityElement = false
+        cardIcon.accessibilityTraits = .notEnabled
+        
+        logo.isAccessibilityElement = false
+        logo.accessibilityTraits = .notEnabled
+        
+        divider.isAccessibilityElement = false
+        divider.accessibilityTraits = .notEnabled
+        
     }
 
 }
