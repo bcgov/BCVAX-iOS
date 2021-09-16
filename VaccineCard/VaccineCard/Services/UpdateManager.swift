@@ -48,11 +48,12 @@ class UpdateManager {
                         }
                     }
                 }
+                
                 completion(false) // no new version or failed to fetch app store version
                 
             } catch {
                 #if DEBUG
-                print("erroMsg")
+                print(error.localizedDescription)
                 #endif
                 return completion(false)
             }
