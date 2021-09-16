@@ -32,10 +32,10 @@ class UpdateManager {
                 if
                     let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String : Any],
                     let results = json["results"] as? NSArray, let entry = results.firstObject as? NSDictionary,
-                    let versionStore = entry["version"] as? String, let versionLocal = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+                    let versionStore = entry["version"] as? String
                 {
                     let arrayStore = versionStore.split(separator: ".")
-                    let arrayLocal = versionLocal.split(separator: ".")
+                    let arrayLocal = currentVersion.split(separator: ".")
                     
                     if arrayLocal.count != arrayStore.count {
                         completion(true) // different versioning system
