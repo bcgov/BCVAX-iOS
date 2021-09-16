@@ -78,6 +78,10 @@
 		29A2470D26F39203001ED8A9 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953546C26F390D000C0E437 /* OnBoardingView.swift */; };
 		29E2184526F39260001FDCD4 /* OnBoardingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29E2184426F39260001FDCD4 /* OnBoardingView.xib */; };
 		29E2184626F3927A001FDCD4 /* OnBoardingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29E2184426F39260001FDCD4 /* OnBoardingView.xib */; };
+		29E2184E26F3D26A001FDCD4 /* UpdateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E2184D26F3D26A001FDCD4 /* UpdateManager.swift */; };
+		29E2184F26F3D26A001FDCD4 /* UpdateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E2184D26F3D26A001FDCD4 /* UpdateManager.swift */; };
+		29E2185226F3DB3B001FDCD4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 29E2185126F3DB3B001FDCD4 /* Alamofire */; };
+		29E2185426F3DB4F001FDCD4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 29E2185326F3DB4F001FDCD4 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +146,7 @@
 		296030B026DB55F80026A0AC /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		296030B426DC30AD0026A0AC /* DecodedQRPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodedQRPayload.swift; sourceTree = "<group>"; };
 		29E2184426F39260001FDCD4 /* OnBoardingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingView.xib; sourceTree = "<group>"; };
+		29E2184D26F3D26A001FDCD4 /* UpdateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +161,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29E2185426F3DB4F001FDCD4 /* Alamofire in Frameworks */,
 				291D584526E1BD6D00C91F66 /* FirebaseAppDistribution-Beta in Frameworks */,
 				2979043F26E46FAA00077E57 /* JOSESwift in Frameworks */,
 			);
@@ -173,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2979044126E4847700077E57 /* JOSESwift in Frameworks */,
+				29E2185226F3DB3B001FDCD4 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +293,7 @@
 				2904727126E1B916003C4CA2 /* ImmunizationService.swift */,
 				2904727426E1BA2A003C4CA2 /* VerificationService.swift */,
 				2953545426F2802F00C0E437 /* JWKSStorage.swift */,
+				29E2184D26F3D26A001FDCD4 /* UpdateManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -378,6 +386,7 @@
 			packageProductDependencies = (
 				291D584426E1BD6D00C91F66 /* FirebaseAppDistribution-Beta */,
 				2979043E26E46FAA00077E57 /* JOSESwift */,
+				29E2185326F3DB4F001FDCD4 /* Alamofire */,
 			);
 			productName = VaccineCard;
 			productReference = 2904726A26E15210003C4CA2 /* VaccineCardTEST.app */;
@@ -416,6 +425,7 @@
 			name = VaccineCard;
 			packageProductDependencies = (
 				2979044026E4847700077E57 /* JOSESwift */,
+				29E2185126F3DB3B001FDCD4 /* Alamofire */,
 			);
 			productName = VaccineCard;
 			productReference = 292BC31F26D6B16000B0A064 /* VaccineCard.app */;
@@ -455,6 +465,7 @@
 			packageReferences = (
 				291D584326E1BD6D00C91F66 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				2979043D26E46FAA00077E57 /* XCRemoteSwiftPackageReference "JOSESwift" */,
+				29E2185026F3DB3A001FDCD4 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 292BC32026D6B16000B0A064 /* Products */;
 			projectDirPath = "";
@@ -552,6 +563,7 @@
 				2904725B26E15210003C4CA2 /* Array.swift in Sources */,
 				2904725C26E15210003C4CA2 /* DecodedQRPayload.swift in Sources */,
 				2904725D26E15210003C4CA2 /* UIView.swift in Sources */,
+				29E2184F26F3D26A001FDCD4 /* UpdateManager.swift in Sources */,
 				2904725E26E15210003C4CA2 /* ScanResultModel.swift in Sources */,
 				2904725F26E15210003C4CA2 /* String.swift in Sources */,
 				2904726026E15210003C4CA2 /* CodeValidationService.swift in Sources */,
@@ -590,6 +602,7 @@
 				2953545826F2938900C0E437 /* JWKSIssuersProd.swift in Sources */,
 				292BC36026D6DB4400B0A064 /* UIView.swift in Sources */,
 				296030A026D96F2E0026A0AC /* ScanResultModel.swift in Sources */,
+				29E2184E26F3D26A001FDCD4 /* UpdateManager.swift in Sources */,
 				2953546D26F390D000C0E437 /* OnBoardingView.swift in Sources */,
 				296030B126DB55F80026A0AC /* String.swift in Sources */,
 				292BC35926D6D68600B0A064 /* CodeValidationService.swift in Sources */,
@@ -680,7 +693,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = TCH45SXZ69;
 				INFOPLIST_FILE = "TEST Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -703,7 +716,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = TCH45SXZ69;
 				INFOPLIST_FILE = "TEST Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -882,7 +895,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = L796QSLV3E;
 				INFOPLIST_FILE = VaccineCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -905,7 +918,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = L796QSLV3E;
 				INFOPLIST_FILE = VaccineCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -988,6 +1001,14 @@
 				minimumVersion = 2.4.0;
 			};
 		};
+		29E2185026F3DB3A001FDCD4 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1005,6 +1026,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2979043D26E46FAA00077E57 /* XCRemoteSwiftPackageReference "JOSESwift" */;
 			productName = JOSESwift;
+		};
+		29E2185126F3DB3B001FDCD4 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 29E2185026F3DB3A001FDCD4 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		29E2185326F3DB4F001FDCD4 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 29E2185026F3DB3A001FDCD4 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

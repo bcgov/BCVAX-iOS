@@ -93,23 +93,35 @@ class ViewController: UIViewController {
     
     // MARK: Class Functions
     func showCameraOrOnboarding() {
-        DispatchQueue.main.async { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + Constants.cameraLaunchDelay) { [weak self] in
             guard let `self` = self else {return}
             if self.isCameraUsageAuthorized() {
-                if let onBoarding = self.view.viewWithTag(Constants.UI.onBoarding.tag) {
-                    onBoarding.removeFromSuperview()
-                }
-                DispatchQueue.main.asyncAfter(deadline: .now() + Constants.cameraLaunchDelay) {
-                    self.setupCaptureSession()
-                    self.addFlashlightButton()
-                }
+                self.showCamera()
             } else {
-                let onBoarding: OnBoardingView = OnBoardingView.fromNib()
-                onBoarding.setup(in: self.view) { [weak self] in
-                    guard let `self` = self else {return}
-                    self.OnboardingButtonTapped()
-                }
+                self.showOnboarding()
             }
+        }
+    }
+    
+    func showCamera() {
+        UpdateManager.shared.isUpdateAvailable { [weak self] shouldUpdate in
+            guard let `self` = self else {return}
+            if shouldUpdate {
+                self.alert(title: Constants.Strings.shouldUpdate.title, message: Constants.Strings.shouldUpdate.message)
+            }
+        }
+        if let onBoarding = self.view.viewWithTag(Constants.UI.onBoarding.tag) {
+            onBoarding.removeFromSuperview()
+        }
+        self.setupCaptureSession()
+        self.addFlashlightButton()
+    }
+    
+    func showOnboarding() {
+        let onBoarding: OnBoardingView = OnBoardingView.fromNib()
+        onBoarding.setup(in: self.view) { [weak self] in
+            guard let `self` = self else {return}
+            self.OnboardingButtonTapped()
         }
     }
     
@@ -119,7 +131,7 @@ class ViewController: UIViewController {
             askForCameraPermission {[weak self] allowed in
                 guard let `self` = self else { return }
                 if allowed {
-                    self.showCameraOrOnboarding()
+                    self.showCamera()
                     return
                 }
                 self.alertCameraAccessIsNecessary()

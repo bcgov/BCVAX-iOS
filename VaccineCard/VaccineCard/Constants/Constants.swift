@@ -25,6 +25,11 @@ struct Constants {
         static let vaccinationStatusHeader = "BC Vaccine Card Verifier"
         static let scanAgain = "Scan Next"
         
+        struct shouldUpdate {
+            static let title = "Please Update"
+            static let message = "A new version of this app is available on the app store"
+        }
+        
         struct Errors {
             struct CameraAccessIsNecessary {
                 static let title = "No Camera Access"
