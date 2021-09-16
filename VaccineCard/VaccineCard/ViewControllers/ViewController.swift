@@ -93,7 +93,7 @@ class ViewController: UIViewController {
     
     // MARK: Class Functions
     func showCameraOrOnboarding() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + Constants.cameraLaunchDelay) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + Constants.launchScreenExtension) { [weak self] in
             guard let `self` = self else {return}
             if self.isCameraUsageAuthorized() {
                 self.showCamera()

@@ -31,7 +31,7 @@ class OnBoardingView: UIView {
         style()
         setupAccessibilityTags()
         container.layoutIfNeeded()
-        UIView.animate(withDuration: 0.3) {[weak self] in
+        UIView.animate(withDuration: 0.4, delay: 1, options: .curveEaseIn) {[weak self] in
             guard let `self` = self else {return}
             self.alpha = 1
             self.layoutIfNeeded()
