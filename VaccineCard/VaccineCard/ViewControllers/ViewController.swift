@@ -170,6 +170,48 @@ class ViewController: UIViewController {
             self.showCameraPermissionsSettings()
         })
     }
+    
+    func addCameraCutout() {
+        // Constants
+        let width: CGFloat = 247 // Box width
+        let height: CGFloat = 293 // Box height
+        let colour = UIColor(hexString: "313132").cgColor // colour outside of the box
+        let opacity: Float = 0.7 // Opacity of colour outside of the box
+        let cornerRadius: CGFloat = 10 // corner radius of box
+        
+        let logoSize: CGFloat = 60
+        let paddingBetweenLogoAndBox: CGFloat = 12
+        
+        // positioning
+        let horizontalDistance = (view.bounds.size.height - height) / 2
+        let verticalDistance = (view.bounds.size.width - width) / 2
+        
+        // Outer
+        let path = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height), cornerRadius: 0)
+        // middle cutout
+        let middlePart = UIBezierPath(roundedRect: CGRect(x: verticalDistance, y: horizontalDistance, width: width, height: height), cornerRadius: cornerRadius)
+        path.append(middlePart)
+        path.usesEvenOddFillRule = true
+        let fillLayer = CAShapeLayer()
+        fillLayer.path = path.cgPath
+        fillLayer.fillRule = .evenOdd
+        fillLayer.fillColor = colour
+        fillLayer.opacity = opacity
+        view.layer.addSublayer(fillLayer)
+        // Add border
+        let borderLayer = CAShapeLayer()
+        let borderOuterPath = UIBezierPath(roundedRect: CGRect(x: verticalDistance, y: horizontalDistance, width: width, height: height), cornerRadius: cornerRadius)
+        borderLayer.path = borderOuterPath.cgPath
+        borderLayer.fillColor = UIColor.clear.cgColor
+        borderLayer.strokeColor = UIColor.white.cgColor
+        borderLayer.lineWidth = 0.5
+        view.layer.addSublayer(borderLayer)
+        
+        // Add logo
+        let logoImageView = UIImageView(frame: CGRect(x: verticalDistance, y: (horizontalDistance - logoSize) - paddingBetweenLogoAndBox, width: logoSize, height: logoSize))
+        view.addSubview(logoImageView)
+        logoImageView.image = UIImage(named: "onCameraLogo")
+    }
 }
 
 // MARK: Camera
@@ -225,6 +267,7 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
         // Begin Capture Session
         captureSession.startRunning()
         
+        addCameraCutout()
     }
     
     
@@ -252,8 +295,6 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
             pauseCamera()
             // Show code location
             showQRCodeLocation(for: metadataObject, isInValid: false, tag: Constants.UI.QRCodeHighlighter.tag)
-            // Feedback
-            AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
             // Validate QR code
             validate(code: stringValue)
         } else {
@@ -273,7 +314,8 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
             // Validation is done on background thread. This moves us back to main thread
             DispatchQueue.main.async {
                 self.view.endLoadingIndicator()
-                guard let data = result.result else {
+                guard let data = result.result, result.status == .ValidCode else {
+                    UINotificationFeedbackGenerator().notificationOccurred(.warning)
                     // show an error & start camera
                     switch result.status {
                     case .ValidCode:
@@ -289,6 +331,7 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
                     self.invalidScannedCodes.append(code)
                     return
                 }
+                UINotificationFeedbackGenerator().notificationOccurred(.success)
                 self.found(card: data)
             }
         }
@@ -390,19 +433,15 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
         button.layer.cornerRadius = btnSize/2
         
         button.imageView?.contentMode = .scaleAspectFit
-        button.imageEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
     }
     
     @objc func flashTapped(sender: UIButton?) {
+        UIImpactFeedbackGenerator(style: .light).impactOccurred()
         guard let btn = self.view.viewWithTag(Constants.UI.TorchButton.tag) as? UIButton else {
             return
         }
         let isOn = btn.imageView?.image == flashOnIcon
-        if isOn {
-            setFlash(on: false)
-        } else {
-            setFlash(on: true)
-        }
+        setFlash(on: !isOn)
     }
     
     

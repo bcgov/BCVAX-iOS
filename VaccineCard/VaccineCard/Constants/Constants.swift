@@ -11,7 +11,7 @@ import UIKit
 
 struct Constants {
     static let dismissResultsAfterSeconds: Double = 10
-    static let cameraLaunchDelay: Double = 1
+    static let cameraLaunchDelay: Double = 2
     
     struct JWKSPublic {
         static let urlExtension = ".well-known/jwks.json"
