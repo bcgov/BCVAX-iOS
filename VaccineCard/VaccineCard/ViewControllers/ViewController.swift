@@ -30,13 +30,6 @@ class ViewController: UIViewController {
         return .portrait
     }
     
-    // MARK: Outlets
-    @IBOutlet weak var onBoardContainer: UIView!
-    @IBOutlet weak var onBoardTitle: UILabel!
-    @IBOutlet weak var onBoardSubtitle: UILabel!
-    @IBOutlet weak var onBoardButton: UIButton!
-    @IBOutlet weak var onBoardImage: UIImageView!
-    
     enum Segues: String {
         case showScanResult = "showScanResult"
     }
@@ -56,7 +49,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = Constants.UI.Theme.primaryColor
         showCameraOrOnboarding()
-        setupAccessibilityTags()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -71,25 +63,6 @@ class ViewController: UIViewController {
         super.viewWillDisappear(animated)
         if (captureSession?.isRunning == true) {
             pauseCamera()
-        }
-    }
-    
-    // MARK: Outlet Actions
-    @IBAction func startScanningAction(_ sender: Any) {
-        let status = AVCaptureDevice.authorizationStatus(for: .video)
-        if status == .notDetermined {
-            askForCameraPermission {[weak self] allowed in
-                guard let `self` = self else { return }
-                if allowed {
-                    self.showCameraOrOnboarding()
-                    return
-                }
-                self.alertCameraAccessIsNecessary()
-            }
-        } else if status == .denied {
-            self.alertCameraAccessIsNecessary()
-        } else {
-            showCameraOrOnboarding()
         }
     }
     
@@ -123,13 +96,38 @@ class ViewController: UIViewController {
         DispatchQueue.main.async { [weak self] in
             guard let `self` = self else {return}
             if self.isCameraUsageAuthorized() {
-                self.setupCaptureSession()
-                self.addFlashlightButton()
-                self.onBoardContainer.alpha = 0
+                if let onBoarding = self.view.viewWithTag(Constants.UI.onBoarding.tag) {
+                    onBoarding.removeFromSuperview()
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + Constants.cameraLaunchDelay) {
+                    self.setupCaptureSession()
+                    self.addFlashlightButton()
+                }
             } else {
-                self.onBoardContainer.alpha = 1
-                self.styleOnBoarding()
+                let onBoarding: OnBoardingView = OnBoardingView.fromNib()
+                onBoarding.setup(in: self.view) { [weak self] in
+                    guard let `self` = self else {return}
+                    self.OnboardingButtonTapped()
+                }
             }
+        }
+    }
+    
+    func OnboardingButtonTapped() {
+        let status = AVCaptureDevice.authorizationStatus(for: .video)
+        if status == .notDetermined {
+            askForCameraPermission {[weak self] allowed in
+                guard let `self` = self else { return }
+                if allowed {
+                    self.showCameraOrOnboarding()
+                    return
+                }
+                self.alertCameraAccessIsNecessary()
+            }
+        } else if status == .denied {
+            self.alertCameraAccessIsNecessary()
+        } else {
+            showCameraOrOnboarding()
         }
     }
     
@@ -153,7 +151,9 @@ class ViewController: UIViewController {
     
     func askForCameraPermission(completion: @escaping(Bool)-> Void) {
         AVCaptureDevice.requestAccess(for: .video, completionHandler: {(granted: Bool) in
-            return completion(granted)
+            DispatchQueue.main.async {
+                return completion(granted)
+            }
         })
     }
     
@@ -169,31 +169,6 @@ class ViewController: UIViewController {
             guard let `self` = self else {return}
             self.showCameraPermissionsSettings()
         })
-    }
-    
-    // MARK: Styling
-    func styleOnBoarding() {
-        onBoardTitle.text = Constants.Strings.onBoarding.title
-        onBoardTitle.font = Constants.Strings.onBoarding.titleFont
-        onBoardSubtitle.text = Constants.Strings.onBoarding.subtitle
-        onBoardSubtitle.font = Constants.Strings.onBoarding.subtitleFont
-        onBoardButton.setTitle(Constants.Strings.onBoarding.buttonTitle, for: .normal)
-        onBoardButton.backgroundColor = Constants.UI.Theme.primaryColor
-        onBoardButton.setTitleColor(Constants.UI.Theme.primaryConstractColor, for: .normal)
-        onBoardButton.layer.cornerRadius = Constants.UI.Theme.cornerRadius
-        if let titleLabel = onBoardButton.titleLabel {
-            titleLabel.font = Constants.Strings.onBoarding.buttonFont
-        }
-        
-        
-    }
-    
-    func setupAccessibilityTags() {
-        onBoardContainer.accessibilityLabel = AccessibilityLabels.OnBoarding.onboardingView
-        onBoardButton.accessibilityLabel = AccessibilityLabels.OnBoarding.startScanningButton
-        onBoardTitle.accessibilityLabel = AccessibilityLabels.OnBoarding.title
-        onBoardSubtitle.accessibilityLabel = AccessibilityLabels.OnBoarding.subtitle
-        onBoardImage.accessibilityLabel = AccessibilityLabels.OnBoarding.phoneImage
     }
 }
 

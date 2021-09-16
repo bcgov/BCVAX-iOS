@@ -56,6 +56,11 @@ extension UIView {
         self.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0).isActive = true
         self.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0).isActive = true
     }
+    
+    // Load a nib
+    public class func fromNib<T: UIView>(bundle: Bundle? = Bundle.main) -> T {
+        return bundle!.loadNibNamed(String(describing: T.self), owner: nil, options: nil)![0] as! T
+    }
 }
 
 extension UIView {

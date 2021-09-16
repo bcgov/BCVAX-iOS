@@ -11,6 +11,7 @@ import UIKit
 
 struct Constants {
     static let dismissResultsAfterSeconds: Double = 10
+    static let cameraLaunchDelay: Double = 1
     
     struct JWKSPublic {
         static let urlExtension = ".well-known/jwks.json"
@@ -44,16 +45,6 @@ struct Constants {
                 static let message = "Your device does not support QR code scanning."
             }
         }
-        
-        struct onBoarding {
-            static let title = "BC Vaccine Card Verifier"
-            static let subtitle = "Businesses can scan official digital or paper BC vaccine cards"
-            static let buttonTitle = "Start Scanning"
-            static let titleFont: UIFont = UIFont.init(name: "BCSans-Bold", size: 24) ?? UIFont.systemFont(ofSize: 24, weight: .bold)
-            static let subtitleFont: UIFont = UIFont.init(name: "BCSans-Regular", size: 16) ?? UIFont.systemFont(ofSize: 16)
-            static let buttonFont: UIFont = UIFont.init(name: "BCSans-Bold", size: 18) ?? UIFont.systemFont(ofSize: 18, weight: .semibold)
-        }
-        
     }
     
     struct UI {
@@ -84,6 +75,16 @@ struct Constants {
             static let containerColor = UIColor.white
             static let containerSize: CGFloat = 70
             static let size: CGFloat = 30
+        }
+        
+        struct onBoarding {
+            static let tag = 3124145
+            static let title = "BC Vaccine Card Verifier"
+            static let subtitle = "Businesses can scan official digital or paper BC vaccine cards"
+            static let buttonTitle = "Start Scanning"
+            static let titleFont: UIFont = UIFont.init(name: "BCSans-Bold", size: 24) ?? UIFont.systemFont(ofSize: 24, weight: .bold)
+            static let subtitleFont: UIFont = UIFont.init(name: "BCSans-Regular", size: 16) ?? UIFont.systemFont(ofSize: 16)
+            static let buttonFont: UIFont = UIFont.init(name: "BCSans-Bold", size: 18) ?? UIFont.systemFont(ofSize: 18, weight: .semibold)
         }
         
         struct Status {
