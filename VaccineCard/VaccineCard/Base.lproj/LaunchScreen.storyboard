@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="ipad10_9rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <device id="ipad12_9" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -13,11 +13,18 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="1180" height="820"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2v7-La-Knd">
+                                <rect key="frame" x="0.0" y="1326" width="1024" height="40"/>
+                                <color key="backgroundColor" red="0.99601858850000002" green="0.88239347930000001" blue="0.00017073375059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="e0T-7i-OHZ"/>
+                                </constraints>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="7Zz-5v-wlF">
-                                <rect key="frame" x="448" y="329" width="284" height="162"/>
+                                <rect key="frame" x="370" y="602" width="284" height="162"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Zzy-gc-eSw">
                                         <rect key="frame" x="92" y="0.0" width="100" height="100"/>
@@ -34,33 +41,18 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2v7-La-Knd">
-                                <rect key="frame" x="0.0" y="780" width="1180" height="40"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="covidBrandingRectanglePink" translatesAutoresizingMaskIntoConstraints="NO" id="j8a-Wr-sgs">
-                                        <rect key="frame" x="995" y="0.0" width="185" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="K73-vQ-mrm"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="covidBrandingText" translatesAutoresizingMaskIntoConstraints="NO" id="Btz-Cm-eee">
-                                        <rect key="frame" x="1011" y="8" width="153" height="24"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" red="0.99601858850000002" green="0.88239347930000001" blue="0.00017073375059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="covidBrandingRectanglePink" translatesAutoresizingMaskIntoConstraints="NO" id="j8a-Wr-sgs">
+                                <rect key="frame" x="839" y="1326" width="185" height="40"/>
                                 <constraints>
-                                    <constraint firstItem="Btz-Cm-eee" firstAttribute="trailing" secondItem="j8a-Wr-sgs" secondAttribute="trailing" constant="-16" id="Agx-ma-DD3"/>
-                                    <constraint firstAttribute="bottom" secondItem="j8a-Wr-sgs" secondAttribute="bottom" id="LZh-8K-mcE"/>
-                                    <constraint firstItem="Btz-Cm-eee" firstAttribute="bottom" secondItem="j8a-Wr-sgs" secondAttribute="bottom" constant="-8" id="UKy-Zw-a2X"/>
-                                    <constraint firstAttribute="height" constant="40" id="e0T-7i-OHZ"/>
-                                    <constraint firstItem="Btz-Cm-eee" firstAttribute="leading" secondItem="j8a-Wr-sgs" secondAttribute="leading" constant="16" id="fCY-vB-C0G"/>
-                                    <constraint firstAttribute="trailing" secondItem="j8a-Wr-sgs" secondAttribute="trailing" id="gyy-8T-Fji"/>
-                                    <constraint firstItem="j8a-Wr-sgs" firstAttribute="top" secondItem="2v7-La-Knd" secondAttribute="top" id="o5M-JH-ef0"/>
-                                    <constraint firstItem="Btz-Cm-eee" firstAttribute="top" secondItem="j8a-Wr-sgs" secondAttribute="top" constant="8" id="vyf-W1-9jk"/>
+                                    <constraint firstAttribute="height" constant="40" id="K73-vQ-mrm"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="q9E-Gg-P2N"/>
                                 </constraints>
-                            </view>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="covidBrandingText" translatesAutoresizingMaskIntoConstraints="NO" id="Btz-Cm-eee">
+                                <rect key="frame" x="855" y="1334" width="153" height="24"/>
+                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bcGovLogo" translatesAutoresizingMaskIntoConstraints="NO" id="8nT-py-2qw">
-                                <rect key="frame" x="207" y="32" width="766.5" height="80"/>
+                                <rect key="frame" x="129" y="32" width="766.5" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="U2V-fH-pbE"/>
                                 </constraints>
@@ -72,9 +64,15 @@
                             <constraint firstItem="2v7-La-Knd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0m2-zG-cXk"/>
                             <constraint firstItem="7Zz-5v-wlF" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="7kx-u2-ZGf"/>
                             <constraint firstAttribute="bottom" secondItem="2v7-La-Knd" secondAttribute="bottom" id="ETj-dE-uin"/>
+                            <constraint firstItem="Btz-Cm-eee" firstAttribute="bottom" secondItem="j8a-Wr-sgs" secondAttribute="bottom" constant="-8" id="FQp-XZ-9j2"/>
+                            <constraint firstItem="Btz-Cm-eee" firstAttribute="trailing" secondItem="j8a-Wr-sgs" secondAttribute="trailing" constant="-16" id="I5j-h2-kzX"/>
+                            <constraint firstAttribute="bottom" secondItem="j8a-Wr-sgs" secondAttribute="bottom" id="IKs-gK-2Ln"/>
+                            <constraint firstItem="Btz-Cm-eee" firstAttribute="top" secondItem="j8a-Wr-sgs" secondAttribute="top" constant="8" id="Kxt-U4-1KX"/>
                             <constraint firstItem="2v7-La-Knd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="O7K-1e-fDL"/>
                             <constraint firstItem="8nT-py-2qw" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Qgi-Yr-2hV"/>
+                            <constraint firstItem="Btz-Cm-eee" firstAttribute="leading" secondItem="j8a-Wr-sgs" secondAttribute="leading" constant="16" id="avR-BG-dpb"/>
                             <constraint firstItem="8nT-py-2qw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="hMV-8x-8RY"/>
+                            <constraint firstItem="j8a-Wr-sgs" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="pIe-g9-T5q"/>
                             <constraint firstItem="7Zz-5v-wlF" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="xKd-W1-Uod"/>
                             <constraint firstItem="8nT-py-2qw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="8" id="yi7-qf-Kvl"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8nT-py-2qw" secondAttribute="trailing" constant="8" id="zc5-Fa-oXK"/>
@@ -83,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="51.86915887850467" y="374.51403887688986"/>
+            <point key="canvasLocation" x="51.864406779661017" y="373.90243902439022"/>
         </scene>
     </scenes>
     <resources>

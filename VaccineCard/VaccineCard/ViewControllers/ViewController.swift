@@ -74,7 +74,7 @@ class ViewController: UIViewController {
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         coordinator.animate(alongsideTransition: { [weak self](context) in
-            guard let `self` = self else { return }
+            guard let `self` = self, self.isCameraUsageAuthorized() else { return }
             self.reStartCamera()
         })
     }
@@ -88,8 +88,10 @@ class ViewController: UIViewController {
     }
     
     private func reStartCamera() {
-        self.setupCaptureSession()
-        self.addFlashlightButton()
+        DispatchQueue.main.async {
+            self.setupCaptureSession()
+            self.addFlashlightButton()
+        }
     }
     
     // MARK: Segue
