@@ -66,6 +66,27 @@ class ViewController: UIViewController {
         }
     }
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        coordinator.animate(alongsideTransition: { [weak self](context) in
+            guard let `self` = self, let windowInterfaceOrientation = self.windowInterfaceOrientation else { return }
+            self.reStartCamera()
+        })
+    }
+    
+    private var windowInterfaceOrientation: UIInterfaceOrientation? {
+        if #available(iOS 13.0, *) {
+            return UIApplication.shared.windows.first?.windowScene?.interfaceOrientation
+        } else {
+            return UIApplication.shared.statusBarOrientation
+        }
+    }
+    
+    private func reStartCamera() {
+        self.setupCaptureSession()
+        self.addFlashlightButton()
+    }
+    
     // MARK: Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let id = segue.identifier,
@@ -85,7 +106,7 @@ class ViewController: UIViewController {
                 // On close, Dismiss results and start capture session
                 destination.dismiss(animated: true, completion: { [weak self] in
                     guard let `self` = self else {return}
-                    self.startCamera()
+                    self.reStartCamera()
                 })
             }
         }
@@ -113,8 +134,7 @@ class ViewController: UIViewController {
         if let onBoarding = self.view.viewWithTag(Constants.UI.onBoarding.tag) {
             onBoarding.removeFromSuperview()
         }
-        self.setupCaptureSession()
-        self.addFlashlightButton()
+        self.reStartCamera()
     }
     
     func showOnboarding() {
@@ -228,9 +248,18 @@ class ViewController: UIViewController {
 
 // MARK: Camera
 extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
-    
     // MARK: Setup
     private func setupCaptureSession() {
+        
+        if let existingPreview = self.previewLayer {
+            existingPreview.removeFromSuperlayer()
+            self.previewLayer = nil
+        }
+        
+        if let existingSession = self.captureSession {
+            existingSession.stopRunning()
+            captureSession = nil
+        }
         
         let captureSession = AVCaptureSession()
         self.captureSession = captureSession
@@ -272,6 +301,7 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
         preview.videoGravity = .resizeAspectFill
         preview.isAccessibilityElement = true
         preview.accessibilityLabel = AccessibilityLabels.scannerView.cameraView
+        
         self.view.layer.addSublayer(preview)
         self.view.accessibilityLabel = AccessibilityLabels.scannerView.cameraView
         self.previewLayer = preview
@@ -280,6 +310,26 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
         captureSession.startRunning()
         
         addCameraCutout()
+        
+        // Set orientation
+        guard let connection = preview.connection, connection.isVideoOrientationSupported, let orientation = windowInterfaceOrientation else {
+            return
+        }
+        
+        switch orientation {
+        case .unknown:
+            connection.videoOrientation = .portrait
+        case .portrait:
+            connection.videoOrientation = .portrait
+        case .portraitUpsideDown:
+            connection.videoOrientation = .portraitUpsideDown
+        case .landscapeLeft:
+            connection.videoOrientation = .landscapeLeft
+        case .landscapeRight:
+            connection.videoOrientation = .landscapeRight
+        @unknown default:
+            connection.videoOrientation = .portrait
+        }
     }
     
     
@@ -428,8 +478,15 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
     }
     
     fileprivate func addFlashlightButton() {
+        if let existing = self.view.viewWithTag(Constants.UI.TorchButton.tag) {
+            existing.removeFromSuperview()
+        }
+        guard let device = AVCaptureDevice.default(for: .video) else { return }
+        if !device.hasTorch && !device.hasFlash { return }
+        
         let btnSize: CGFloat = Constants.UI.TorchButton.buttonSize
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: btnSize, height: btnSize))
+        
         button.tag = Constants.UI.TorchButton.tag
         view.addSubview(button)
         button.translatesAutoresizingMaskIntoConstraints = false

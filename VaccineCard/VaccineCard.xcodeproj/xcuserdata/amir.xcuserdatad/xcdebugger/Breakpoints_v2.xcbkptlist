@@ -23,16 +23,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A17F6DD8-F5E5-4273-A2CD-4A4AF53DF482"
+            uuid = "C46DEEE2-6F30-4E5E-8A0C-CB4404B42C01"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "VaccineCard/Services/CodeValidationService.swift"
+            filePath = "VaccineCard/ViewControllers/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "validate(code:completion:)"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "viewWillTransition(to:with:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
