@@ -73,7 +73,6 @@ class ViewController: UIViewController {
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
-        removeCameraPreview()
         coordinator.animate(alongsideTransition: { [weak self](context) in
             guard let `self` = self else { return }
             self.reStartCamera()
