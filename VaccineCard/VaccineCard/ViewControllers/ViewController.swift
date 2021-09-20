@@ -27,7 +27,16 @@ class ViewController: UIViewController {
     
     // Lock in portrait mode
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return .portrait
+        switch (UIScreen.main.traitCollection.userInterfaceIdiom) {
+        case .pad:
+            return [.portrait, .portraitUpsideDown, .landscape]
+        case .phone:
+            return .portrait
+        case .tv:
+            return .portrait
+        default:
+            return .portrait
+        }
     }
     
     enum Segues: String {
@@ -68,8 +77,9 @@ class ViewController: UIViewController {
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
+        removeCameraPreview()
         coordinator.animate(alongsideTransition: { [weak self](context) in
-            guard let `self` = self, let windowInterfaceOrientation = self.windowInterfaceOrientation else { return }
+            guard let `self` = self else { return }
             self.reStartCamera()
         })
     }
@@ -203,8 +213,40 @@ class ViewController: UIViewController {
         })
     }
     
+    func removeCameraCutout() {
+        // TODO: Move to Constants
+        let fillLayerName = "cutout-fill-layer"
+        let bornerLayerName = "border-layer"
+        let imageTag = 978142
+        
+        // Remove existing
+        view.layer.sublayers?
+            .filter { layer in return layer.name == fillLayerName }
+            .forEach { layer in
+                layer.removeFromSuperlayer()
+                layer.removeAllAnimations()
+            }
+        
+        view.layer.sublayers?
+            .filter { layer in return layer.name == bornerLayerName }
+            .forEach { layer in
+                layer.removeFromSuperlayer()
+                layer.removeAllAnimations()
+            }
+        
+        if let existingImage = view.viewWithTag(imageTag) {
+            existingImage.removeFromSuperview()
+        }
+        
+        view.layer.layoutIfNeeded()
+    }
+    
     func addCameraCutout() {
         // Constants
+        let fillLayerName = "cutout-fill-layer" // TODO: Move to Constants
+        let bornerLayerName = "border-layer" // TODO: Move to Constants
+        let imageTag = 978142 // TODO: Move to Constants
+        
         let width: CGFloat = 247 // Box width
         let height: CGFloat = 293 // Box height
         let colour = UIColor(hexString: "313132").cgColor // colour outside of the box
@@ -213,6 +255,8 @@ class ViewController: UIViewController {
         
         let logoSize: CGFloat = 60
         let paddingBetweenLogoAndBox: CGFloat = 12
+        
+        self.removeCameraCutout()
         
         // positioning
         let horizontalDistance = (view.bounds.size.height - height) / 2
@@ -229,7 +273,9 @@ class ViewController: UIViewController {
         fillLayer.fillRule = .evenOdd
         fillLayer.fillColor = colour
         fillLayer.opacity = opacity
+        fillLayer.name = fillLayerName
         view.layer.addSublayer(fillLayer)
+        
         // Add border
         let borderLayer = CAShapeLayer()
         let borderOuterPath = UIBezierPath(roundedRect: CGRect(x: verticalDistance, y: horizontalDistance, width: width, height: height), cornerRadius: cornerRadius)
@@ -237,10 +283,12 @@ class ViewController: UIViewController {
         borderLayer.fillColor = UIColor.clear.cgColor
         borderLayer.strokeColor = UIColor.white.cgColor
         borderLayer.lineWidth = 0.5
+        borderLayer.name = bornerLayerName
         view.layer.addSublayer(borderLayer)
         
         // Add logo
         let logoImageView = UIImageView(frame: CGRect(x: verticalDistance, y: (horizontalDistance - logoSize) - paddingBetweenLogoAndBox, width: logoSize, height: logoSize))
+        logoImageView.tag = imageTag
         view.addSubview(logoImageView)
         logoImageView.image = UIImage(named: "onCameraLogo")
     }
@@ -248,9 +296,9 @@ class ViewController: UIViewController {
 
 // MARK: Camera
 extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
-    // MARK: Setup
-    private func setupCaptureSession() {
-        
+    
+    private func removeCameraPreview() {
+        removeCameraCutout()
         if let existingPreview = self.previewLayer {
             existingPreview.removeFromSuperlayer()
             self.previewLayer = nil
@@ -260,6 +308,15 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
             existingSession.stopRunning()
             captureSession = nil
         }
+        
+        if let existingFlashButton = self.view.viewWithTag(Constants.UI.TorchButton.tag) {
+            existingFlashButton.removeFromSuperview()
+        }
+    }
+    // MARK: Setup
+    private func setupCaptureSession() {
+        
+        removeCameraPreview()
         
         let captureSession = AVCaptureSession()
         self.captureSession = captureSession

@@ -30,6 +30,19 @@ class ScanResultViewController: UIViewController {
     
     private var timer: Timer?
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        switch (UIScreen.main.traitCollection.userInterfaceIdiom) {
+        case .pad:
+            return [.portrait, .portraitUpsideDown, .landscape]
+        case .phone:
+            return .portrait
+        case .tv:
+            return .portrait
+        default:
+            return .portrait
+        }
+    }
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         if #available(iOS 13.0, *) {
             return .darkContent
