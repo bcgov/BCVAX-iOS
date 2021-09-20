@@ -27,15 +27,17 @@ class ViewController: UIViewController {
     
     // Lock in portrait mode
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return .portrait
+        switch (UIScreen.main.traitCollection.userInterfaceIdiom) {
+        case .pad:
+            return [.portrait, .portraitUpsideDown, .landscape]
+        case .phone:
+            return .portrait
+        case .tv:
+            return .portrait
+        default:
+            return .portrait
+        }
     }
-    
-    // MARK: Outlets
-    @IBOutlet weak var onBoardContainer: UIView!
-    @IBOutlet weak var onBoardTitle: UILabel!
-    @IBOutlet weak var onBoardSubtitle: UILabel!
-    @IBOutlet weak var onBoardButton: UIButton!
-    @IBOutlet weak var onBoardImage: UIImageView!
     
     enum Segues: String {
         case showScanResult = "showScanResult"
@@ -44,11 +46,7 @@ class ViewController: UIViewController {
     private var result: ScanResultModel? = nil
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        if #available(iOS 13.0, *) {
-            return .darkContent
-        } else {
-            return .default
-        }
+        return .lightContent
     }
     
     // MARK: LifeCycle
@@ -56,7 +54,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = Constants.UI.Theme.primaryColor
         showCameraOrOnboarding()
-        setupAccessibilityTags()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -74,22 +71,26 @@ class ViewController: UIViewController {
         }
     }
     
-    // MARK: Outlet Actions
-    @IBAction func startScanningAction(_ sender: Any) {
-        let status = AVCaptureDevice.authorizationStatus(for: .video)
-        if status == .notDetermined {
-            askForCameraPermission {[weak self] allowed in
-                guard let `self` = self else { return }
-                if allowed {
-                    self.showCameraOrOnboarding()
-                    return
-                }
-                self.alertCameraAccessIsNecessary()
-            }
-        } else if status == .denied {
-            self.alertCameraAccessIsNecessary()
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        coordinator.animate(alongsideTransition: { [weak self](context) in
+            guard let `self` = self, self.isCameraUsageAuthorized() else { return }
+            self.reStartCamera()
+        })
+    }
+    
+    private var windowInterfaceOrientation: UIInterfaceOrientation? {
+        if #available(iOS 13.0, *) {
+            return UIApplication.shared.windows.first?.windowScene?.interfaceOrientation
         } else {
-            showCameraOrOnboarding()
+            return UIApplication.shared.statusBarOrientation
+        }
+    }
+    
+    private func reStartCamera() {
+        DispatchQueue.main.async {
+            self.setupCaptureSession()
+            self.addFlashlightButton()
         }
     }
     
@@ -112,7 +113,7 @@ class ViewController: UIViewController {
                 // On close, Dismiss results and start capture session
                 destination.dismiss(animated: true, completion: { [weak self] in
                     guard let `self` = self else {return}
-                    self.startCamera()
+                    self.reStartCamera()
                 })
             }
         }
@@ -120,16 +121,52 @@ class ViewController: UIViewController {
     
     // MARK: Class Functions
     func showCameraOrOnboarding() {
-        DispatchQueue.main.async { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + Constants.launchScreenExtension) { [weak self] in
             guard let `self` = self else {return}
             if self.isCameraUsageAuthorized() {
-                self.setupCaptureSession()
-                self.addFlashlightButton()
-                self.onBoardContainer.alpha = 0
+                self.showCamera()
             } else {
-                self.onBoardContainer.alpha = 1
-                self.styleOnBoarding()
+                self.showOnboarding()
             }
+        }
+    }
+    
+    func showCamera() {
+        UpdateManager.shared.isUpdateAvailable { [weak self] shouldUpdate in
+            guard let `self` = self else {return}
+            if shouldUpdate {
+                self.alert(title: Constants.Strings.shouldUpdate.title, message: Constants.Strings.shouldUpdate.message)
+            }
+        }
+        if let onBoarding = self.view.viewWithTag(Constants.UI.onBoarding.tag) {
+            onBoarding.removeFromSuperview()
+        }
+        self.reStartCamera()
+    }
+    
+    func showOnboarding() {
+        let onBoarding: OnBoardingView = OnBoardingView.fromNib()
+        onBoarding.setup(in: self.view) { [weak self] in
+            guard let `self` = self else {return}
+            self.OnboardingButtonTapped()
+        }
+    }
+    
+    func OnboardingButtonTapped() {
+        let status = AVCaptureDevice.authorizationStatus(for: .video)
+        if status == .notDetermined {
+            askForCameraPermission {[weak self] allowed in
+                guard let `self` = self else { return }
+                if allowed {
+                    self.showCamera()
+                    return
+                }
+                self.alertCameraAccessIsNecessary()
+            }
+        } else if status == .denied {
+            self.alertCameraAccessIsNecessary()
+        } else {
+            showCameraOrOnboarding()
         }
     }
     
@@ -153,7 +190,9 @@ class ViewController: UIViewController {
     
     func askForCameraPermission(completion: @escaping(Bool)-> Void) {
         AVCaptureDevice.requestAccess(for: .video, completionHandler: {(granted: Bool) in
-            return completion(granted)
+            DispatchQueue.main.async {
+                return completion(granted)
+            }
         })
     }
     
@@ -171,37 +210,110 @@ class ViewController: UIViewController {
         })
     }
     
-    // MARK: Styling
-    func styleOnBoarding() {
-        onBoardTitle.text = Constants.Strings.onBoarding.title
-        onBoardTitle.font = Constants.Strings.onBoarding.titleFont
-        onBoardSubtitle.text = Constants.Strings.onBoarding.subtitle
-        onBoardSubtitle.font = Constants.Strings.onBoarding.subtitleFont
-        onBoardButton.setTitle(Constants.Strings.onBoarding.buttonTitle, for: .normal)
-        onBoardButton.backgroundColor = Constants.UI.Theme.primaryColor
-        onBoardButton.setTitleColor(Constants.UI.Theme.primaryConstractColor, for: .normal)
-        onBoardButton.layer.cornerRadius = Constants.UI.Theme.cornerRadius
-        if let titleLabel = onBoardButton.titleLabel {
-            titleLabel.font = Constants.Strings.onBoarding.buttonFont
+    func removeCameraCutout() {
+        // TODO: Move to Constants
+        let fillLayerName = "cutout-fill-layer"
+        let bornerLayerName = "border-layer"
+        let imageTag = 978142
+        
+        // Remove existing
+        view.layer.sublayers?
+            .filter { layer in return layer.name == fillLayerName }
+            .forEach { layer in
+                layer.removeFromSuperlayer()
+                layer.removeAllAnimations()
+            }
+        
+        view.layer.sublayers?
+            .filter { layer in return layer.name == bornerLayerName }
+            .forEach { layer in
+                layer.removeFromSuperlayer()
+                layer.removeAllAnimations()
+            }
+        
+        if let existingImage = view.viewWithTag(imageTag) {
+            existingImage.removeFromSuperview()
         }
         
-        
+        view.layer.layoutIfNeeded()
     }
     
-    func setupAccessibilityTags() {
-        onBoardContainer.accessibilityLabel = AccessibilityLabels.OnBoarding.onboardingView
-        onBoardButton.accessibilityLabel = AccessibilityLabels.OnBoarding.startScanningButton
-        onBoardTitle.accessibilityLabel = AccessibilityLabels.OnBoarding.title
-        onBoardSubtitle.accessibilityLabel = AccessibilityLabels.OnBoarding.subtitle
-        onBoardImage.accessibilityLabel = AccessibilityLabels.OnBoarding.phoneImage
+    func addCameraCutout() {
+        // Constants
+        let fillLayerName = "cutout-fill-layer" // TODO: Move to Constants
+        let bornerLayerName = "border-layer" // TODO: Move to Constants
+        let imageTag = 978142 // TODO: Move to Constants
+        
+        let width: CGFloat = 247 // Box width
+        let height: CGFloat = 293 // Box height
+        let colour = UIColor(hexString: "313132").cgColor // colour outside of the box
+        let opacity: Float = 0.7 // Opacity of colour outside of the box
+        let cornerRadius: CGFloat = 10 // corner radius of box
+        
+        let logoSize: CGFloat = 60
+        let paddingBetweenLogoAndBox: CGFloat = 12
+        
+        self.removeCameraCutout()
+        
+        // positioning
+        let horizontalDistance = (view.bounds.size.height - height) / 2
+        let verticalDistance = (view.bounds.size.width - width) / 2
+        
+        // Outer
+        let path = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height), cornerRadius: 0)
+        // middle cutout
+        let middlePart = UIBezierPath(roundedRect: CGRect(x: verticalDistance, y: horizontalDistance, width: width, height: height), cornerRadius: cornerRadius)
+        path.append(middlePart)
+        path.usesEvenOddFillRule = true
+        let fillLayer = CAShapeLayer()
+        fillLayer.path = path.cgPath
+        fillLayer.fillRule = .evenOdd
+        fillLayer.fillColor = colour
+        fillLayer.opacity = opacity
+        fillLayer.name = fillLayerName
+        view.layer.addSublayer(fillLayer)
+        
+        // Add border
+        let borderLayer = CAShapeLayer()
+        let borderOuterPath = UIBezierPath(roundedRect: CGRect(x: verticalDistance, y: horizontalDistance, width: width, height: height), cornerRadius: cornerRadius)
+        borderLayer.path = borderOuterPath.cgPath
+        borderLayer.fillColor = UIColor.clear.cgColor
+        borderLayer.strokeColor = UIColor.white.cgColor
+        borderLayer.lineWidth = 0.5
+        borderLayer.name = bornerLayerName
+        view.layer.addSublayer(borderLayer)
+        
+        // Add logo
+        let logoImageView = UIImageView(frame: CGRect(x: verticalDistance, y: (horizontalDistance - logoSize) - paddingBetweenLogoAndBox, width: logoSize, height: logoSize))
+        logoImageView.tag = imageTag
+        view.addSubview(logoImageView)
+        logoImageView.image = UIImage(named: "onCameraLogo")
     }
 }
 
 // MARK: Camera
 extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
     
+    private func removeCameraPreview() {
+        removeCameraCutout()
+        if let existingPreview = self.previewLayer {
+            existingPreview.removeFromSuperlayer()
+            self.previewLayer = nil
+        }
+        
+        if let existingSession = self.captureSession {
+            existingSession.stopRunning()
+            captureSession = nil
+        }
+        
+        if let existingFlashButton = self.view.viewWithTag(Constants.UI.TorchButton.tag) {
+            existingFlashButton.removeFromSuperview()
+        }
+    }
     // MARK: Setup
     private func setupCaptureSession() {
+        
+        removeCameraPreview()
         
         let captureSession = AVCaptureSession()
         self.captureSession = captureSession
@@ -243,6 +355,7 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
         preview.videoGravity = .resizeAspectFill
         preview.isAccessibilityElement = true
         preview.accessibilityLabel = AccessibilityLabels.scannerView.cameraView
+        
         self.view.layer.addSublayer(preview)
         self.view.accessibilityLabel = AccessibilityLabels.scannerView.cameraView
         self.previewLayer = preview
@@ -250,6 +363,27 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
         // Begin Capture Session
         captureSession.startRunning()
         
+        addCameraCutout()
+        
+        // Set orientation
+        guard let connection = preview.connection, connection.isVideoOrientationSupported, let orientation = windowInterfaceOrientation else {
+            return
+        }
+        
+        switch orientation {
+        case .unknown:
+            connection.videoOrientation = .portrait
+        case .portrait:
+            connection.videoOrientation = .portrait
+        case .portraitUpsideDown:
+            connection.videoOrientation = .portraitUpsideDown
+        case .landscapeLeft:
+            connection.videoOrientation = .landscapeLeft
+        case .landscapeRight:
+            connection.videoOrientation = .landscapeRight
+        @unknown default:
+            connection.videoOrientation = .portrait
+        }
     }
     
     
@@ -277,8 +411,6 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
             pauseCamera()
             // Show code location
             showQRCodeLocation(for: metadataObject, isInValid: false, tag: Constants.UI.QRCodeHighlighter.tag)
-            // Feedback
-            AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
             // Validate QR code
             validate(code: stringValue)
         } else {
@@ -298,7 +430,8 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
             // Validation is done on background thread. This moves us back to main thread
             DispatchQueue.main.async {
                 self.view.endLoadingIndicator()
-                guard let data = result.result else {
+                guard let data = result.result, result.status == .ValidCode else {
+                    UINotificationFeedbackGenerator().notificationOccurred(.warning)
                     // show an error & start camera
                     switch result.status {
                     case .ValidCode:
@@ -314,6 +447,7 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
                     self.invalidScannedCodes.append(code)
                     return
                 }
+                UINotificationFeedbackGenerator().notificationOccurred(.success)
                 self.found(card: data)
             }
         }
@@ -398,8 +532,15 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
     }
     
     fileprivate func addFlashlightButton() {
+        if let existing = self.view.viewWithTag(Constants.UI.TorchButton.tag) {
+            existing.removeFromSuperview()
+        }
+        guard let device = AVCaptureDevice.default(for: .video) else { return }
+        if !device.hasTorch && !device.hasFlash { return }
+        
         let btnSize: CGFloat = Constants.UI.TorchButton.buttonSize
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: btnSize, height: btnSize))
+        
         button.tag = Constants.UI.TorchButton.tag
         view.addSubview(button)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -415,19 +556,15 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
         button.layer.cornerRadius = btnSize/2
         
         button.imageView?.contentMode = .scaleAspectFit
-        button.imageEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
     }
     
     @objc func flashTapped(sender: UIButton?) {
+        UIImpactFeedbackGenerator(style: .light).impactOccurred()
         guard let btn = self.view.viewWithTag(Constants.UI.TorchButton.tag) as? UIButton else {
             return
         }
         let isOn = btn.imageView?.image == flashOnIcon
-        if isOn {
-            setFlash(on: false)
-        } else {
-            setFlash(on: true)
-        }
+        setFlash(on: !isOn)
     }
     
     

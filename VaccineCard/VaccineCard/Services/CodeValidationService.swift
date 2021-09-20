@@ -49,10 +49,6 @@ class CodeValidationService {
                 return completion(CodeValidationResult(status: .InvalidCode, result: nil))
             }
             
-            guard VerificationService.verify(jwkSigned: compactjws, iss: payload.iss, kid: header.kid) else {
-                return completion(CodeValidationResult(status: .ForgedCode, result: nil))
-            }
-            
             guard let name = payload.getName() else {
                 return completion(CodeValidationResult(status: .MissingData, result: nil))
             }
@@ -65,7 +61,12 @@ class CodeValidationService {
             
             let result = ScanResultModel(name: name, status: status)
             
-            return completion(CodeValidationResult(status: .ValidCode, result: result))
+            VerificationService.shared.verify(jwkSigned: compactjws, iss: payload.iss, kid: header.kid) { isVerified in
+                guard isVerified else {
+                    return completion(CodeValidationResult(status: .ForgedCode, result: nil))
+                }
+                return completion(CodeValidationResult(status: .ValidCode, result: result))
+            }
         }
     }
     

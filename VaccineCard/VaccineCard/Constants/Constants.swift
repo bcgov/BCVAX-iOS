@@ -8,34 +8,13 @@
 import Foundation
 import UIKit
 
-struct JWKSPublicKey {
-    var x: String
-    var y: String
-}
 
 struct Constants {
     static let dismissResultsAfterSeconds: Double = 10
+    static let launchScreenExtension: Double = 2
     
     struct JWKSPublic {
         static let urlExtension = ".well-known/jwks.json"
-        static let prodKeys: [JWKSPublicKey] = [ JWKSPublicKey(x: BC.x, y: BC.y) ]
-        static let devKeys: [JWKSPublicKey] = [ JWKSPublicKey(x: Dev.x, y: Dev.y) ]
-        static let testKeys: [JWKSPublicKey] = [ JWKSPublicKey(x: Test.x, y: Test.y) ]
-        
-        private struct BC {
-            static let x = "xscSbZemoTx1qFzFo-j9VSnvAXdv9K-3DchzJvNnwrY"
-            static let y = "jA5uS5bz8R2nxf_TU-0ZmXq6CKWZhAG1Y4icAx8a9CA"
-        }
-        
-        private struct Dev {
-            static let x = "c12pG4HpiCvx0nM4CHMfERZWG2rS7Bq8-GI2EFMcEHo"
-            static let y = "VsGE-cIg-a4s9chaFyRKCovIvqwM1Iw9FvdgikJ0yeg"
-        }
-        
-        private struct Test {
-            static let x = "11XvRWy1I2S0EyJlyf_bWfw_TQ5CJJNLw78bHXNxcgw"
-            static let y = "eZXwxvO1hvCY0KucrPfKo7yAyMT6Ajc3N7OkAB6VYy8"
-        }
     }
     
     struct CVX {
@@ -45,6 +24,11 @@ struct Constants {
     struct Strings {
         static let vaccinationStatusHeader = "BC Vaccine Card Verifier"
         static let scanAgain = "Scan Next"
+        
+        struct shouldUpdate {
+            static let title = "Please Update"
+            static let message = "A new version of this app is available on the app store"
+        }
         
         struct Errors {
             struct CameraAccessIsNecessary {
@@ -66,16 +50,6 @@ struct Constants {
                 static let message = "Your device does not support QR code scanning."
             }
         }
-        
-        struct onBoarding {
-            static let title = "BC Vaccine Card Verifier"
-            static let subtitle = "Businesses can scan official digital or paper BC vaccine cards"
-            static let buttonTitle = "Start Scanning"
-            static let titleFont: UIFont = UIFont.init(name: "BCSans-Bold", size: 24) ?? UIFont.systemFont(ofSize: 24, weight: .bold)
-            static let subtitleFont: UIFont = UIFont.init(name: "BCSans-Regular", size: 16) ?? UIFont.systemFont(ofSize: 16)
-            static let buttonFont: UIFont = UIFont.init(name: "BCSans-Bold", size: 18) ?? UIFont.systemFont(ofSize: 18, weight: .semibold)
-        }
-        
     }
     
     struct UI {
@@ -106,6 +80,16 @@ struct Constants {
             static let containerColor = UIColor.white
             static let containerSize: CGFloat = 70
             static let size: CGFloat = 30
+        }
+        
+        struct onBoarding {
+            static let tag = 3124145
+            static let title = "BC Vaccine Card Verifier"
+            static let subtitle = "Businesses can scan official digital or paper BC vaccine cards"
+            static let buttonTitle = "Start Scanning"
+            static let titleFont: UIFont = UIFont.init(name: "BCSans-Bold", size: 24) ?? UIFont.systemFont(ofSize: 24, weight: .bold)
+            static let subtitleFont: UIFont = UIFont.init(name: "BCSans-Regular", size: 16) ?? UIFont.systemFont(ofSize: 16)
+            static let buttonFont: UIFont = UIFont.init(name: "BCSans-Bold", size: 18) ?? UIFont.systemFont(ofSize: 18, weight: .semibold)
         }
         
         struct Status {

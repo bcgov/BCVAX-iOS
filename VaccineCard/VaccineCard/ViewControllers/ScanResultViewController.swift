@@ -30,12 +30,21 @@ class ScanResultViewController: UIViewController {
     
     private var timer: Timer?
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        if #available(iOS 13.0, *) {
-            return .darkContent
-        } else {
-            return .default
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        switch (UIScreen.main.traitCollection.userInterfaceIdiom) {
+        case .pad:
+            return [.portrait, .portraitUpsideDown, .landscape]
+        case .phone:
+            return .portrait
+        case .tv:
+            return .portrait
+        default:
+            return .portrait
         }
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     // MARK: LifeCycle
@@ -54,6 +63,7 @@ class ScanResultViewController: UIViewController {
     
     // MARK: Outlet Actions
     @IBAction func scanButtonAction(_ sender: Any) {
+        UIImpactFeedbackGenerator(style: .light).impactOccurred()
         dimissPage()
     }
     
@@ -67,7 +77,6 @@ class ScanResultViewController: UIViewController {
     public func setup(model: ScanResultModel, onClose: @escaping()->Void) {
         self.onClose = onClose
         self.model = model
-        
     }
     
     private func setData() {
