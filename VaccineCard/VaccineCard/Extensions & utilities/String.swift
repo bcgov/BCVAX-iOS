@@ -21,8 +21,8 @@ extension String {
         let remainder = self.count % 4
         if remainder > 0 {
             st = st.padding(toLength: st.count + 4 - remainder,
-                              withPad: "=",
-                              startingAt: 0)
+                            withPad: "=",
+                            startingAt: 0)
         }
         guard let d = Data(base64Encoded: st, options: .ignoreUnknownCharacters) else{
             return nil
@@ -37,24 +37,24 @@ extension String {
         let remainder = self.count % 4
         if remainder > 0 {
             st = st.padding(toLength: st.count + 4 - remainder,
-                              withPad: "=",
-                              startingAt: 0)
+                            withPad: "=",
+                            startingAt: 0)
         }
-         return Data(base64Encoded: st, options: .ignoreUnknownCharacters)
+        return Data(base64Encoded: st, options: .ignoreUnknownCharacters)
     }
 }
 
 
-extension String {
-    func heightForView(font:UIFont, width:CGFloat)-> CGFloat {
-        let label:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: CGFloat.greatestFiniteMagnitude))
-        label.numberOfLines = 0
-        label.lineBreakMode = NSLineBreakMode.byWordWrapping
-        label.font = font
-        label.text = self
-
-        label.sizeToFit()
-        return label.frame.height
+extension String {    
+    /// This method returns height of a string with specific `width` and `font`
+    /// - Parameter width: Width of the view where string has to be displayed
+    /// - Parameter font: Font of the view where string has to be displayed
+    func heightForView(font:UIFont, width:CGFloat)  -> CGFloat {
+        let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
+        let boundingRect = self.boundingRect(with: constraintRect, options: [.usesLineFragmentOrigin, .usesFontLeading],
+                                             attributes: [.font: font],
+                                             context: nil)
+        return ceil(boundingRect.height)
+                                             
     }
-    
 }
