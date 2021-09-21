@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "flash.png",
+      "filename" : "FLASH-SLASH.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "FLASH-SLASH-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "FLASH-SLASH-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

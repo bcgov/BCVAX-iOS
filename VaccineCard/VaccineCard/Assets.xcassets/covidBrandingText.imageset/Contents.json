@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "FLASH (1).png",
+      "filename" : "COVID-19 IN BC.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "FLASH (1)-2.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "FLASH (1)-1.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

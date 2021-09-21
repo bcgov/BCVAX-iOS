@@ -8,28 +8,27 @@
 import Foundation
 import UIKit
 
+
 struct Constants {
+    static let dismissResultsAfterSeconds: Double = 10
+    static let launchScreenExtension: Double = 2
+    
     struct JWKSPublic {
-        struct Prod {
-            static let x = "xscSbZemoTx1qFzFo-j9VSnvAXdv9K-3DchzJvNnwrY"
-            static let y = "jA5uS5bz8R2nxf_TU-0ZmXq6CKWZhAG1Y4icAx8a9CA"
-        }
-        
-        struct Dev {
-            static let x = "c12pG4HpiCvx0nM4CHMfERZWG2rS7Bq8-GI2EFMcEHo"
-            static let y = "VsGE-cIg-a4s9chaFyRKCovIvqwM1Iw9FvdgikJ0yeg"
-        }
-        
-        struct Test {
-            static let x = "11XvRWy1I2S0EyJlyf_bWfw_TQ5CJJNLw78bHXNxcgw"
-            static let y = "eZXwxvO1hvCY0KucrPfKo7yAyMT6Ajc3N7OkAB6VYy8"
-        }
+        static let urlExtension = ".well-known/jwks.json"
     }
     
-    static let dismissResultsAfterSeconds: Double = 10
+    struct CVX {
+        static let janssen = "212"
+    }
+    
     struct Strings {
         static let vaccinationStatusHeader = "BC Vaccine Card Verifier"
         static let scanAgain = "Scan Next"
+        
+        struct shouldUpdate {
+            static let title = "Please Update"
+            static let message = "A new version of this app is available on the app store"
+        }
         
         struct Errors {
             struct CameraAccessIsNecessary {
@@ -51,25 +50,20 @@ struct Constants {
                 static let message = "Your device does not support QR code scanning."
             }
         }
-        
-        struct onBoarding {
-            static let title = "BC Vaccine Card Verifier"
-            static let subtitle = "Businesses can scan official digital or paper BC vaccine cards"
-            static let buttonTitle = "Start Scanning"
-            static let titleFont: UIFont = UIFont.init(name: "BCSans-Bold", size: 24) ?? UIFont.systemFont(ofSize: 24, weight: .bold)
-            static let subtitleFont: UIFont = UIFont.init(name: "BCSans-Regular", size: 16) ?? UIFont.systemFont(ofSize: 16)
-            static let buttonFont: UIFont = UIFont.init(name: "BCSans-Bold", size: 18) ?? UIFont.systemFont(ofSize: 18, weight: .semibold)
-        }
-        
     }
+    
     struct UI {
-        
         struct Theme {
             static let primaryColor = UIColor(hexString: "#003366")
             static let secondaryColor = UIColor(hexString: "#eea73b")
             static let primaryConstractColor = UIColor.white
             static let cornerRadius: CGFloat = 4
             static let animationDuration = 0.3
+        }
+        
+        struct TorchButton {
+            static let tag = 92133
+            static let buttonSize: CGFloat = 42
         }
         
         struct QRCodeHighlighter {
@@ -86,6 +80,16 @@ struct Constants {
             static let containerColor = UIColor.white
             static let containerSize: CGFloat = 70
             static let size: CGFloat = 30
+        }
+        
+        struct onBoarding {
+            static let tag = 3124145
+            static let title = "BC Vaccine Card Verifier"
+            static let subtitle = "Businesses can scan official digital or paper BC vaccine cards"
+            static let buttonTitle = "Start Scanning"
+            static let titleFont: UIFont = UIFont.init(name: "BCSans-Bold", size: 24) ?? UIFont.systemFont(ofSize: 24, weight: .bold)
+            static let subtitleFont: UIFont = UIFont.init(name: "BCSans-Regular", size: 16) ?? UIFont.systemFont(ofSize: 16)
+            static let buttonFont: UIFont = UIFont.init(name: "BCSans-Bold", size: 18) ?? UIFont.systemFont(ofSize: 18, weight: .semibold)
         }
         
         struct Status {
