@@ -120,23 +120,23 @@ class ScanResultViewController: UIViewController {
         scanButton.setTitleColor(Constants.UI.Theme.primaryColor, for: .normal)
         
         // Fonts
-        titleLabel.font = UIFont.init(name: "BCSans-Bold", size: 18) ?? UIFont.systemFont(ofSize: 18, weight: .semibold)
+        titleLabel.font = Constants.UI.ScanResult.titleFont
         
-        let nameFont = UIFont.init(name: "BCSans-Bold", size: 20) ?? UIFont.systemFont(ofSize: 20, weight: .semibold)
+        let nameFont = Constants.UI.ScanResult.nameFont
         nameLabel.font = nameFont
         nameLabel.font = UIFontMetrics.default.scaledFont(for: nameFont)
         nameLabel.adjustsFontForContentSizeCategory = true
         nameLabel.adjustsFontSizeToFitWidth = true
         
         if let btnLabel = scanButton.titleLabel {
-            btnLabel.font = UIFont.init(name: "BCSans-Bold", size: 18) ?? UIFont.systemFont(ofSize: 18, weight: .semibold)
+            btnLabel.font = Constants.UI.ScanResult.buttonFont
         }
     }
     
     private func styleStatusCard() {
-        cardTitle.font = UIFont.init(name: "BCSans-Bold", size: 32) ?? UIFont.systemFont(ofSize: 32, weight: .bold)
+        cardTitle.font = Constants.UI.ScanResult.cardTitleFont
         cardTitle.numberOfLines = 0
-        cardSubtitle.font = UIFont.init(name: "BCSans-regular", size: 12) ?? UIFont.systemFont(ofSize: 12, weight: .regular)
+        cardSubtitle.font = Constants.UI.ScanResult.cardSubtitleFont
         statusCardContainer.backgroundColor = .clear
         statusCardContainer.layer.borderColor = UIColor.white.cgColor
         statusCardContainer.layer.borderWidth = 6
