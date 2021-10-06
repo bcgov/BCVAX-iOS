@@ -66,6 +66,39 @@ struct Constants {
             static let buttonSize: CGFloat = 42
         }
         
+        struct CameraView {
+            struct CameraCutout {
+                static let fillLayerName = "cutout-fill-layer"
+                static let bornerLayerName = "border-layer"
+                static let imageTag = 978142
+                
+                static let colour = UIColor(hexString: "313132").cgColor
+                static let opacity: Float = 0.7
+                static let cornerRadius: CGFloat = 10
+                
+                static let logoSize: CGFloat = 60
+                static let paddingBetweenLogoAndBox: CGFloat = 12
+                
+                static var width: CGFloat {
+                    switch (UIScreen.main.traitCollection.userInterfaceIdiom) {
+                    case .pad:
+                        return 506
+                    default:
+                        return 247
+                    } 
+                }
+                
+                static var height: CGFloat {
+                    switch (UIScreen.main.traitCollection.userInterfaceIdiom) {
+                    case .pad:
+                        return 469
+                    default:
+                        return 293
+                    }
+                }
+            }
+        }
+        
         struct QRCodeHighlighter {
             static let tag = 72192376
             static let cornerRadius: CGFloat = Constants.UI.Theme.cornerRadius
@@ -92,8 +125,62 @@ struct Constants {
             static let buttonFont: UIFont = UIFont.init(name: "BCSans-Bold", size: 18) ?? UIFont.systemFont(ofSize: 18, weight: .semibold)
         }
         
+        
+        struct ScanResult {
+            static var titleFont: UIFont {
+                switch (UIScreen.main.traitCollection.userInterfaceIdiom) {
+                case .pad:
+                    return UIFont.init(name: "BCSans-Bold", size: 27) ?? UIFont.systemFont(ofSize: 27, weight: .semibold)
+                default:
+                    return UIFont.init(name: "BCSans-Bold", size: 18) ?? UIFont.systemFont(ofSize: 18, weight: .semibold)
+                }
+            }
+           
+            static var nameFont: UIFont {
+                switch (UIScreen.main.traitCollection.userInterfaceIdiom) {
+                case .pad:
+                    return UIFont.init(name: "BCSans-Bold", size: 24) ?? UIFont.systemFont(ofSize: 24, weight: .semibold)
+                default:
+                    return UIFont.init(name: "BCSans-Bold", size: 20) ?? UIFont.systemFont(ofSize: 20, weight: .semibold)
+                }
+            }
+            
+            static var buttonFont: UIFont {
+                switch (UIScreen.main.traitCollection.userInterfaceIdiom) {
+                case .pad:
+                    return UIFont.init(name: "BCSans-Bold", size: 24) ?? UIFont.systemFont(ofSize: 24, weight: .semibold)
+                default:
+                    return UIFont.init(name: "BCSans-Bold", size: 18) ?? UIFont.systemFont(ofSize: 18, weight: .semibold)
+                }
+            }
+            
+            static var cardTitleFont: UIFont {
+                switch (UIScreen.main.traitCollection.userInterfaceIdiom) {
+                case .pad:
+                    return UIFont.init(name: "BCSans-Bold", size: 36) ?? UIFont.systemFont(ofSize: 36, weight: .bold)
+                default:
+                    return UIFont.init(name: "BCSans-Bold", size: 32) ?? UIFont.systemFont(ofSize: 32, weight: .bold)
+                }
+            }
+            
+            static var cardSubtitleFont: UIFont {
+                switch (UIScreen.main.traitCollection.userInterfaceIdiom) {
+                case .pad:
+                    return UIFont.init(name: "BCSans-regular", size: 16) ?? UIFont.systemFont(ofSize: 12, weight: .regular)
+                default:
+                    return UIFont.init(name: "BCSans-regular", size: 12) ?? UIFont.systemFont(ofSize: 12, weight: .regular)
+                }
+            }
+        }
         struct Status {
-            static let font: UIFont = UIFont.init(name: "BCSans-Regular", size: 22) ?? UIFont.systemFont(ofSize: 22)
+            static var font: UIFont {
+                switch (UIScreen.main.traitCollection.userInterfaceIdiom) {
+                case .pad:
+                    return UIFont.init(name: "BCSans-Regular", size: 22) ?? UIFont.systemFont(ofSize: 22)
+                default:
+                    return UIFont.init(name: "BCSans-Regular", size: 22) ?? UIFont.systemFont(ofSize: 22)
+                }
+            }
             static let textColor = UIColor.white
             
             

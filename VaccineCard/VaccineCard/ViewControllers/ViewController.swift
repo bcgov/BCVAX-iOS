@@ -11,14 +11,22 @@ import AVFoundation
 class ViewController: UIViewController {
     
     // MARK: Constants
-    let flashOnIcon = UIImage(named: "flashOn")
-    let flashOffIcon = UIImage(named: "flashOff")
+    private let flashOnIcon = UIImage(named: "flashOn")
+    private let flashOffIcon = UIImage(named: "flashOff")
     
     // MARK: Variables
     private var captureSession: AVCaptureSession?
     private var previewLayer: AVCaptureVideoPreviewLayer?
     fileprivate var codeHighlightTags: [Int] = []
     fileprivate var invalidScannedCodes: [String] = []
+    
+    private var windowInterfaceOrientation: UIInterfaceOrientation? {
+        if #available(iOS 13.0, *) {
+            return UIApplication.shared.windows.first?.windowScene?.interfaceOrientation
+        } else {
+            return UIApplication.shared.statusBarOrientation
+        }
+    }
     
     // Hide Statusbar
     override var prefersStatusBarHidden: Bool {
@@ -79,18 +87,14 @@ class ViewController: UIViewController {
         })
     }
     
-    private var windowInterfaceOrientation: UIInterfaceOrientation? {
-        if #available(iOS 13.0, *) {
-            return UIApplication.shared.windows.first?.windowScene?.interfaceOrientation
-        } else {
-            return UIApplication.shared.statusBarOrientation
-        }
-    }
-    
     private func reStartCamera() {
         DispatchQueue.main.async {
             self.setupCaptureSession()
             self.addFlashlightButton()
+            UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseIn) { [weak self] in
+                guard let `self` = self else {return}
+                self.view.layoutIfNeeded()
+            }
         }
     }
     
@@ -107,13 +111,26 @@ class ViewController: UIViewController {
             } else {
                 destination.modalPresentationStyle = .fullScreen
             }
+            
+            if UIScreen.main.traitCollection.userInterfaceIdiom == .pad {
+                DispatchQueue.main.async {
+                    self.removeCameraCutout()
+                    self.clearQRCodeLocations()
+                    self.removeCameraPreview()
+                }
+            }
+            
             // Set values on result controller
             destination.setup(model: result) { [weak self] in
                 guard let `self` = self else {return}
                 // On close, Dismiss results and start capture session
                 destination.dismiss(animated: true, completion: { [weak self] in
                     guard let `self` = self else {return}
-                    self.reStartCamera()
+                    if UIScreen.main.traitCollection.userInterfaceIdiom == .pad {
+                        self.reStartCamera()
+                    } else {
+                        self.startCamera()
+                    }
                 })
             }
         }
@@ -211,12 +228,10 @@ class ViewController: UIViewController {
     }
     
     func removeCameraCutout() {
-        // TODO: Move to Constants
-        let fillLayerName = "cutout-fill-layer"
-        let bornerLayerName = "border-layer"
-        let imageTag = 978142
+        let fillLayerName = Constants.UI.CameraView.CameraCutout.fillLayerName
+        let bornerLayerName = Constants.UI.CameraView.CameraCutout.bornerLayerName
+        let imageTag = Constants.UI.CameraView.CameraCutout.imageTag
         
-        // Remove existing
         view.layer.sublayers?
             .filter { layer in return layer.name == fillLayerName }
             .forEach { layer in
@@ -240,18 +255,18 @@ class ViewController: UIViewController {
     
     func addCameraCutout() {
         // Constants
-        let fillLayerName = "cutout-fill-layer" // TODO: Move to Constants
-        let bornerLayerName = "border-layer" // TODO: Move to Constants
-        let imageTag = 978142 // TODO: Move to Constants
+        let fillLayerName = Constants.UI.CameraView.CameraCutout.fillLayerName
+        let bornerLayerName = Constants.UI.CameraView.CameraCutout.bornerLayerName
+        let imageTag = Constants.UI.CameraView.CameraCutout.imageTag
         
-        let width: CGFloat = 247 // Box width
-        let height: CGFloat = 293 // Box height
-        let colour = UIColor(hexString: "313132").cgColor // colour outside of the box
-        let opacity: Float = 0.7 // Opacity of colour outside of the box
-        let cornerRadius: CGFloat = 10 // corner radius of box
+        let width: CGFloat = Constants.UI.CameraView.CameraCutout.width
+        let height: CGFloat = Constants.UI.CameraView.CameraCutout.height
+        let colour = Constants.UI.CameraView.CameraCutout.colour
+        let opacity: Float = Constants.UI.CameraView.CameraCutout.opacity
+        let cornerRadius: CGFloat = Constants.UI.CameraView.CameraCutout.cornerRadius
         
-        let logoSize: CGFloat = 60
-        let paddingBetweenLogoAndBox: CGFloat = 12
+        let logoSize: CGFloat = Constants.UI.CameraView.CameraCutout.logoSize
+        let paddingBetweenLogoAndBox: CGFloat = Constants.UI.CameraView.CameraCutout.paddingBetweenLogoAndBox
         
         self.removeCameraCutout()
         
@@ -270,6 +285,7 @@ class ViewController: UIViewController {
         fillLayer.fillRule = .evenOdd
         fillLayer.fillColor = colour
         fillLayer.opacity = opacity
+        
         fillLayer.name = fillLayerName
         view.layer.addSublayer(fillLayer)
         
@@ -280,13 +296,16 @@ class ViewController: UIViewController {
         borderLayer.fillColor = UIColor.clear.cgColor
         borderLayer.strokeColor = UIColor.white.cgColor
         borderLayer.lineWidth = 0.5
+        
         borderLayer.name = bornerLayerName
         view.layer.addSublayer(borderLayer)
         
         // Add logo
         let logoImageView = UIImageView(frame: CGRect(x: verticalDistance, y: (horizontalDistance - logoSize) - paddingBetweenLogoAndBox, width: logoSize, height: logoSize))
+        
         logoImageView.tag = imageTag
         view.addSubview(logoImageView)
+        
         logoImageView.image = UIImage(named: "onCameraLogo")
     }
 }
@@ -454,8 +473,10 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
     }
     
     public func startCamera() {
-        clearQRCodeLocations()
-        captureSession?.startRunning()
+        DispatchQueue.main.async {
+            self.clearQRCodeLocations()
+            self.captureSession?.startRunning()
+        }
     }
     
     public func pauseCamera() {
