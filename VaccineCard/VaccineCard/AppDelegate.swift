@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import BCVaccineValidator
 //import Firebase
 
 @main
@@ -17,10 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
         window?.makeKeyAndVisible()
 //        FirebaseApp.configure()
-        
-        // Seeds the initial JWKS data in its initializer
-        let _ = JWKSStorage()
+        BCVaccineValidator.shared.setup()
         return true
     }
 }
-

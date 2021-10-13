@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFoundation
+import BCVaccineValidator
 
 class ViewController: UIViewController {
     
@@ -62,6 +63,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = Constants.UI.Theme.primaryColor
         showCameraOrOnboarding()
+        Notification.Name.keysUpdated.onPost(object: nil, queue: .main) { [weak self] _ in
+            guard let `self` = self else {return}
+            self.invalidScannedCodes.removeAll()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -444,7 +449,7 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
         hideBanner()
         view.startLoadingIndicator()
         // Validate
-        CodeValidationService.shared.validate(code: code) { [weak self] result in
+        BCVaccineValidator.shared.validate(code: code) { [weak self] result in
             guard let `self` = self else {return}
             // Validation is done on background thread. This moves us back to main thread
             DispatchQueue.main.async {

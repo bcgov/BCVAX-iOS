@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import BCVaccineValidator
 
 class ScanResultViewController: UIViewController {
 
