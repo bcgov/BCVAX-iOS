@@ -24,8 +24,8 @@
         "repositoryURL": "https://github.com/FreshworksStudio/BCVaccineValidator.git",
         "state": {
           "branch": null,
-          "revision": "dec660ff22e8544cba697b0a09484d46b0c487f7",
-          "version": "1.0.26"
+          "revision": "3df973cd4539258994ebb191e2617d065266a7fa",
+          "version": "1.0.27"
         }
       },
       {
@@ -44,6 +44,15 @@
           "branch": null,
           "revision": "81b568348ab4e113dd8bcef5a83c5dd431741ae4",
           "version": "8.8.1"
+        }
+      },
+      {
+        "package": "FMDB",
+        "repositoryURL": "https://github.com/ccgus/fmdb",
+        "state": {
+          "branch": null,
+          "revision": "61e51fde7f7aab6554f30ab061cc588b28a97d04",
+          "version": "2.7.7"
         }
       },
       {
@@ -125,6 +134,15 @@
           "branch": null,
           "revision": "611337c330350c9c1823ad6d671e7f936af5ee13",
           "version": "2.0.0"
+        }
+      },
+      {
+        "package": "SnowplowTracker",
+        "repositoryURL": "https://github.com/snowplow/snowplow-objc-tracker",
+        "state": {
+          "branch": null,
+          "revision": "805dfc4aab4fd23c417677a5198a8860998f7f5a",
+          "version": "2.2.2"
         }
       },
       {

@@ -84,11 +84,11 @@ class ScanResultViewController: UIViewController {
         guard let model = self.model else {return}
         nameLabel.text = model.name.uppercased()
         switch model.status {
-        case .fully:
+        case .Fully:
             styleVaxinatedCard()
-        case .none:
+        case .None:
             styleNotVaxinatedCard()
-        case .partially:
+        case .Partially:
             stylePartiallyVaxinatedCard()
         }
     }

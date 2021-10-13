@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
 //        FirebaseApp.configure()
         BCVaccineValidator.shared.setup()
+        AnalyticsService.shared.trackScreenView(name: "testing", screenId: UUID())
         return true
     }
 }

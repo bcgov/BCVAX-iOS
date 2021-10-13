@@ -7,128 +7,64 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B3B11EF4-D5D2-490C-ACB7-CE2E9A6BD4E8"
+            uuid = "B073F302-2B7F-4B11-8EFD-7CD45292D73F"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../../../../../../../Library/Developer/Xcode/DerivedData/VaccineCard-fqkpnhkmgtnytcbqkwsschyejqrk/SourcePackages/checkouts/BCVaccineValidator/Sources/BCVaccineValidator/BCVaccineValidator.swift"
+            filePath = "VaccineCard/Services/AnalyticsService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "setupUpdateListener()"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "onSuccess(withCount:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FBC91964-DEE5-4F22-B556-9F4CEA389735"
+            uuid = "5B2D4CA7-E368-438D-9B14-F9C1F88B8E13"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../../../../../../../Library/Developer/Xcode/DerivedData/VaccineCard-fqkpnhkmgtnytcbqkwsschyejqrk/SourcePackages/checkouts/BCVaccineValidator/Sources/BCVaccineValidator/BCVaccineValidator.swift"
+            filePath = "VaccineCard/Services/AnalyticsService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "setupUpdateListener()"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "onFailure(withCount:successCount:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "06AD8BC9-4E32-4DF4-8742-562DFC8793EB"
+            uuid = "36788D26-48CB-45F6-AB3C-823FEF7F9259"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../../../../../../../Library/Developer/Xcode/DerivedData/VaccineCard-fqkpnhkmgtnytcbqkwsschyejqrk/SourcePackages/checkouts/BCVaccineValidator/Sources/BCVaccineValidator/BCVaccineValidator.swift"
+            filePath = "VaccineCard/Services/AnalyticsService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "setupUpdateListener()"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "trackScreenView(name:screenId:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DAAE1413-F71A-4A98-863E-B7D6A5600AE5"
+            uuid = "C9147B3A-3ADC-41BC-B810-0E17DB215131"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../../../../../../../Library/Developer/Xcode/DerivedData/VaccineCard-fqkpnhkmgtnytcbqkwsschyejqrk/SourcePackages/checkouts/BCVaccineValidator/Sources/BCVaccineValidator/BCVaccineValidator.swift"
+            filePath = "VaccineCard/Services/AnalyticsService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "setupUpdateListener()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "622DED00-E8F5-4583-B12C-D0F702C50EE9"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../../../../../../Library/Developer/Xcode/DerivedData/VaccineCard-fqkpnhkmgtnytcbqkwsschyejqrk/SourcePackages/checkouts/BCVaccineValidator/Sources/BCVaccineValidator/BCVaccineValidator.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "setupUpdateListener()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "49C59B27-FCF3-417E-9B14-05C2F24D80DB"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../../../../../../Library/Developer/Xcode/DerivedData/VaccineCard-fqkpnhkmgtnytcbqkwsschyejqrk/SourcePackages/checkouts/BCVaccineValidator/Sources/BCVaccineValidator/Services/KeyManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
-            landmarkName = "downloadKeys(forIssuers:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7E50423A-0982-4274-B0CE-E27CF398D037"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../../../../../../Library/Developer/Xcode/DerivedData/VaccineCard-fqkpnhkmgtnytcbqkwsschyejqrk/SourcePackages/checkouts/BCVaccineValidator/Sources/BCVaccineValidator/Services/KeyManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
-            landmarkName = "downloadKeys(forIssuers:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DC82405D-1590-4F30-84C9-7FA2CD9407AE"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../../../../../../Library/Developer/Xcode/DerivedData/VaccineCard-fqkpnhkmgtnytcbqkwsschyejqrk/SourcePackages/checkouts/BCVaccineValidator/Sources/BCVaccineValidator/Services/KeyManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
-            landmarkName = "downloadKeys(forIssuers:completion:)"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "trackSelfDescribingEvent(key:value:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
