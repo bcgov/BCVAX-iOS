@@ -47,7 +47,6 @@
 		2953544826F14A7F00C0E437 /* AccessibilityConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953544726F14A7F00C0E437 /* AccessibilityConstants.swift */; };
 		2953544926F14A9300C0E437 /* AccessibilityConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953544726F14A7F00C0E437 /* AccessibilityConstants.swift */; };
 		2953546D26F390D000C0E437 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953546C26F390D000C0E437 /* OnBoardingView.swift */; };
-		295CA08B27177C440032C90F /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295CA08A27177C440032C90F /* AnalyticsService.swift */; };
 		295CA08E27177E4E0032C90F /* SnowplowTracker in Frameworks */ = {isa = PBXBuildFile; productRef = 295CA08D27177E4E0032C90F /* SnowplowTracker */; };
 		296030A426D976A40026A0AC /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296030A326D976A40026A0AC /* UIViewController.swift */; };
 		296030B126DB55F80026A0AC /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296030B026DB55F80026A0AC /* String.swift */; };
@@ -105,7 +104,6 @@
 		292BC36126D6EC9100B0A064 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		2953544726F14A7F00C0E437 /* AccessibilityConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityConstants.swift; sourceTree = "<group>"; };
 		2953546C26F390D000C0E437 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
-		295CA08A27177C440032C90F /* AnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsService.swift; sourceTree = "<group>"; };
 		296030A326D976A40026A0AC /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		296030B026DB55F80026A0AC /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		29E2184426F39260001FDCD4 /* OnBoardingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingView.xib; sourceTree = "<group>"; };
@@ -241,7 +239,6 @@
 			isa = PBXGroup;
 			children = (
 				29E2184D26F3D26A001FDCD4 /* UpdateManager.swift */,
-				295CA08A27177C440032C90F /* AnalyticsService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -507,7 +504,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				292BC32726D6B16000B0A064 /* ViewController.swift in Sources */,
-				295CA08B27177C440032C90F /* AnalyticsService.swift in Sources */,
 				292BC36226D6EC9100B0A064 /* UIColor.swift in Sources */,
 				292BC35D26D6DB2A00B0A064 /* Constants.swift in Sources */,
 				2904724F26DF44F9003C4CA2 /* Date.swift in Sources */,
@@ -606,7 +602,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = TCH45SXZ69;
 				INFOPLIST_FILE = "TEST Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -629,7 +625,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = TCH45SXZ69;
 				INFOPLIST_FILE = "TEST Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -808,7 +804,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = L796QSLV3E;
 				INFOPLIST_FILE = VaccineCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -829,9 +825,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = L796QSLV3E;
 				INFOPLIST_FILE = VaccineCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -841,7 +837,7 @@
 				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = ca.bc.gov.VaxCheck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "VaxCheck Development";
+				PROVISIONING_PROFILE_SPECIFIER = "VaxCheck Distribution";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

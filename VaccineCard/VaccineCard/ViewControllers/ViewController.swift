@@ -67,6 +67,14 @@ class ViewController: UIViewController {
             guard let `self` = self else {return}
             self.invalidScannedCodes.removeAll()
         }
+        Notification.Name.issuersUpdated.onPost(object: nil, queue: .main) { [weak self] _ in
+            guard let `self` = self else {return}
+            self.invalidScannedCodes.removeAll()
+        }
+        Notification.Name.vaccinationRulesUpdated.onPost(object: nil, queue: .main) { [weak self] _ in
+            guard let `self` = self else {return}
+            self.invalidScannedCodes.removeAll()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
