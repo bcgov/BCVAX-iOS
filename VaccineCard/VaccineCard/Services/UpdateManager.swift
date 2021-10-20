@@ -23,7 +23,7 @@ class UpdateManager {
             return completion(false)
         }
         
-        AF.request("https://itunes.apple.com/lookup?bundleId=\(bundleId)").response { response in
+        AF.request("https://itunes.apple.com/ca/lookup?bundleId=\(bundleId)").response { response in
             guard let data = response.data else {
                 return completion(false)
             }
