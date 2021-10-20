@@ -47,7 +47,6 @@
 		2953544826F14A7F00C0E437 /* AccessibilityConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953544726F14A7F00C0E437 /* AccessibilityConstants.swift */; };
 		2953544926F14A9300C0E437 /* AccessibilityConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953544726F14A7F00C0E437 /* AccessibilityConstants.swift */; };
 		2953546D26F390D000C0E437 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953546C26F390D000C0E437 /* OnBoardingView.swift */; };
-		295CA08E27177E4E0032C90F /* SnowplowTracker in Frameworks */ = {isa = PBXBuildFile; productRef = 295CA08D27177E4E0032C90F /* SnowplowTracker */; };
 		296030A426D976A40026A0AC /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296030A326D976A40026A0AC /* UIViewController.swift */; };
 		296030B126DB55F80026A0AC /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296030B026DB55F80026A0AC /* String.swift */; };
 		29A2470D26F39203001ED8A9 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953546C26F390D000C0E437 /* OnBoardingView.swift */; };
@@ -139,7 +138,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				295CA08E27177E4E0032C90F /* SnowplowTracker in Frameworks */,
 				2925F9D5270E47B80078A4A7 /* BCVaccineValidator in Frameworks */,
 				29E2185226F3DB3B001FDCD4 /* Alamofire in Frameworks */,
 			);
@@ -358,7 +356,6 @@
 			packageProductDependencies = (
 				29E2185126F3DB3B001FDCD4 /* Alamofire */,
 				2925F9D4270E47B80078A4A7 /* BCVaccineValidator */,
-				295CA08D27177E4E0032C90F /* SnowplowTracker */,
 			);
 			productName = VaccineCard;
 			productReference = 292BC31F26D6B16000B0A064 /* VaccineCard.app */;
@@ -400,7 +397,6 @@
 				2979043D26E46FAA00077E57 /* XCRemoteSwiftPackageReference "JOSESwift" */,
 				29E2185026F3DB3A001FDCD4 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				2925F9D3270E46160078A4A7 /* XCRemoteSwiftPackageReference "BCVaccineValidator" */,
-				295CA08C27177E4D0032C90F /* XCRemoteSwiftPackageReference "snowplow-objc-tracker" */,
 			);
 			productRefGroup = 292BC32026D6B16000B0A064 /* Products */;
 			projectDirPath = "";
@@ -910,14 +906,6 @@
 				minimumVersion = 1.0.14;
 			};
 		};
-		295CA08C27177E4D0032C90F /* XCRemoteSwiftPackageReference "snowplow-objc-tracker" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/snowplow/snowplow-objc-tracker";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
-			};
-		};
 		2979043D26E46FAA00077E57 /* XCRemoteSwiftPackageReference "JOSESwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airsidemobile/JOSESwift";
@@ -951,11 +939,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2925F9D3270E46160078A4A7 /* XCRemoteSwiftPackageReference "BCVaccineValidator" */;
 			productName = BCVaccineValidator;
-		};
-		295CA08D27177E4E0032C90F /* SnowplowTracker */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 295CA08C27177E4D0032C90F /* XCRemoteSwiftPackageReference "snowplow-objc-tracker" */;
-			productName = SnowplowTracker;
 		};
 		29E2185126F3DB3B001FDCD4 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
