@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
         window?.makeKeyAndVisible()
 //        FirebaseApp.configure()
-        BCVaccineValidator.shared.setup()
+        BCVaccineValidator.shared.setup(mode: .Prod)
         return true
     }
 }
