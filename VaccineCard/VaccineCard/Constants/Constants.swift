@@ -117,8 +117,8 @@ struct Constants {
         
         struct onBoarding {
             static let tag = 3124145
-            static let title = "BC Vaccine Card Verifier"
-            static let subtitle = "Businesses can scan official digital or paper BC vaccine cards"
+            static let title = "Please scan an official proof of vaccination"
+            static let subtitle = "We need permission to access your camera to be able to scan an official proof of vaccination"
             static let buttonTitle = "Start Scanning"
             static let titleFont: UIFont = UIFont.init(name: "BCSans-Bold", size: 24) ?? UIFont.systemFont(ofSize: 24, weight: .bold)
             static let subtitleFont: UIFont = UIFont.init(name: "BCSans-Regular", size: 16) ?? UIFont.systemFont(ofSize: 16)
