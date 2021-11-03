@@ -82,7 +82,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   BCVaccineValidator:
-    :commit: 4272c7dc28d990136a3d397bf60a4c88ef8a9683
+    :commit: 81eabd4a6fd3e8c4cb5d533a69d92c31fa7205cf
     :git: https://github.com/bcgov/iOSVaccineValidator
 
 SPEC CHECKSUMS:
@@ -99,6 +99,6 @@ SPEC CHECKSUMS:
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
 
-PODFILE CHECKSUM: fd8fdec962390cad1f81fee75f9e03aaf6b98067
+PODFILE CHECKSUM: c786f95dd84c0af2b3603504caa730751f76322c
 
 COCOAPODS: 1.11.2
