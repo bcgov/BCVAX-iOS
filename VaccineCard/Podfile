@@ -1,0 +1,31 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'VaccineCard' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  pod 'Firebase/AppDistribution'
+  pod 'BCVaccineValidator', :git => 'https://github.com/bcgov/iOSVaccineValidator'
+  pod 'Alamofire'
+
+  target 'VaccineCardTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'VaccineCardUITests' do
+    pod 'Firebase/AppDistribution'
+    pod 'BCVaccineValidator', :git => 'https://github.com/bcgov/iOSVaccineValidator'
+    pod 'Alamofire'
+  end
+
+end
+
+target 'VaccineCardTEST' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  pod 'Firebase/AppDistribution'
+  pod 'BCVaccineValidator', :git => 'https://github.com/bcgov/iOSVaccineValidator'
+  pod 'Alamofire'
+end

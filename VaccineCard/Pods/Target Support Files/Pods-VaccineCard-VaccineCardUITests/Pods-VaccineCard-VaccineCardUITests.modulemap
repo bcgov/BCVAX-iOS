@@ -1,0 +1,6 @@
+framework module Pods_VaccineCard_VaccineCardUITests {
+  umbrella header "Pods-VaccineCard-VaccineCardUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
