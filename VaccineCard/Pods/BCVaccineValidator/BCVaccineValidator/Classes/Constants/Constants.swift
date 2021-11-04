@@ -15,7 +15,7 @@ struct Constants {
             switch BCVaccineValidator.mode {
             case .Prod:
                 return 6 * 60 // 6 hours
-            case .Test:
+            case .Test, .Dev:
                 return 1
             }
         }
@@ -24,7 +24,7 @@ struct Constants {
             switch BCVaccineValidator.mode {
             case .Prod:
                 return 6 * 60 // 6 hours
-            case .Test:
+            case .Test, .Dev:
                 return 1
             }
         }
@@ -37,6 +37,8 @@ struct Constants {
                 return "https://smarthealthcard.phsa.ca/v1/trusted/.well-known/issuers.json"
             case .Test:
                 return "https://phsasmarthealthcard-dev.azurewebsites.net/v1/trusted/.well-known/issuers.json"
+            case .Dev:
+                return "https://phsasmarthealthcard-dev.azurewebsites.net/v1/trusted/.well-known/issuers.json"
             }
         }
         
@@ -44,8 +46,10 @@ struct Constants {
             switch BCVaccineValidator.mode {
             case .Prod:
                 return "https://smarthealthcard.phsa.ca/v1/covid19proof/.well-known/rules.json"
-            case .Test:
+            case .Dev:
                 return "https://ds9mwekyyprcy.cloudfront.net/rules.json"
+            case .Test:
+                return "https://phsasmarthealthcard-dev.azurewebsites.net/v1/Covid19Proof/.well-known/rules.json"
             }
         }
         
@@ -64,7 +68,7 @@ struct Constants {
                 switch BCVaccineValidator.mode {
                 case .Prod:
                     return "issuers.json"
-                case .Test:
+                case .Test, .Dev:
                     return "issuers-test.json"
                 }
             }
@@ -78,6 +82,8 @@ struct Constants {
                     return "rules.json"
                 case .Test:
                     return "rules-test.json"
+                case .Dev:
+                    return "rules-dev.json"
                 }
             }
             static let directoryName = "rules"

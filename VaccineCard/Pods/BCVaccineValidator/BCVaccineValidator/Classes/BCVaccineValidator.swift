@@ -4,6 +4,7 @@ public class BCVaccineValidator {
     public enum Config {
         case Prod
         case Test
+        case Dev
     }
     static var mode: Config = .Prod
     static var enableRemoteRules = true

@@ -23,7 +23,6 @@
 /* Begin PBXBuildFile section */
 		001B59D6D19271BF430E1AB0525807D4 /* SecKeyECPrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8348BBBF39C5BB2619FB32EE8F4B2B1B /* SecKeyECPrivateKey.swift */; };
 		00AF4AF0F806997D97A9B3E0DC03437F /* GDTCCTUploader.h in Headers */ = {isa = PBXBuildFile; fileRef = 2475506394DCC3489B96DF5710343A40 /* GDTCCTUploader.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		00B817647FDE15237272618AE3252323 /* Pods-VaccineCard-VaccineCardUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BAF5E3065E8917B3A9C10DAEA637D80 /* Pods-VaccineCard-VaccineCardUITests-dummy.m */; };
 		00BB22D1FCFBF0CAE905403940B24FD1 /* GDTCOREvent+GDTCCTSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 86F1DE9D4518F63907E86F1DE55AE9C0 /* GDTCOREvent+GDTCCTSupport.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		014099FB1E46D889E2452D787B1DDE84 /* GULSecureCoding.h in Headers */ = {isa = PBXBuildFile; fileRef = B310E3EA55F385D522F067D79AF68443 /* GULSecureCoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		017DCB3E08090FB6D14C48C06F55D907 /* JWEHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0531AD3EBCA4571ED815FA5F27B29D /* JWEHeader.swift */; };
@@ -34,6 +33,7 @@
 		02621C4B82398D0657F474E21493A3A2 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8779B1D1CF6051294C8656E21C8410A0 /* HTTPMethod.swift */; };
 		0264CE4BAAE90BB4AECA59F18952B90B /* FBLPromise+Wrap.h in Headers */ = {isa = PBXBuildFile; fileRef = 1567D4874E5DDDD2F13587C5B1004887 /* FBLPromise+Wrap.h */; };
 		02DB462B121245593CE653B9B377F970 /* Protected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262567451A5609BD5412F9661E2B76FD /* Protected.swift */; };
+		02EAA3B1547D2AE06065DF842EE800F9 /* Pods-VaccineCardTEST-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EE691EAD84173554CAB7947775B71933 /* Pods-VaccineCardTEST-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		032C889C5594A611506D938CB0C6FF64 /* DataECPrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6671E6E643DC089DA0331AF4EBE78245 /* DataECPrivateKey.swift */; };
 		041B6396BB4DCF275F209A4ACBFDF74C /* PromisesObjC-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 184FBFFD638EA8AFF613C5C34F826E43 /* PromisesObjC-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		052D27BA2BE817F5A8E1764C93BE67A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74FDAF2EF25566D77F98FF71C24B8535 /* Foundation.framework */; };
@@ -54,7 +54,7 @@
 		102DB5271CBB19BE79619C98EBABFAE0 /* RulesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2C36288E0F81C41C36672E40495D5D /* RulesManager.swift */; };
 		1077E3A2DBF3D59E7D6C5D257907FF7A /* GULReachabilityChecker.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AEA6F506BF20945EEB0B359CC1E7E73 /* GULReachabilityChecker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		10BF00B293AFCD40FDE5CE61A6AFA77F /* rules.json in Resources */ = {isa = PBXBuildFile; fileRef = 824DFF4BE13A9703B073DCF1C4EEA55D /* rules.json */; };
-		11B2D4CB38BB9FE5DDAA33E9BBCE5305 /* Pods-VaccineCard-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E0ABB589902B50059B70BDE69B9C5ED5 /* Pods-VaccineCard-dummy.m */; };
+		11B2D4CB38BB9FE5DDAA33E9BBCE5305 /* Pods-VaccineCard-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 110ED2852EA87C7F3721B8941BAB0A2D /* Pods-VaccineCard-dummy.m */; };
 		12BBC8648AEECC6061951494448AAF71 /* JWKParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232160D7C692E06F83CF27F85848ADF3 /* JWKParameters.swift */; };
 		13819AE9E68A31BC1C8A2AB660460BB3 /* FIRAppDistributionMachO.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F83F9ECEDED354DE37CC92AAD30F9A /* FIRAppDistributionMachO.m */; };
 		13CD0D5592E600A2CC977811AFF33454 /* NSURLSession+GULPromises.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6A895DEF3A0F232F1867C586EA98C1 /* NSURLSession+GULPromises.m */; };
@@ -83,7 +83,6 @@
 		1CDCFDF228E1E29DE6F5692A5E667221 /* GULLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F68100844E461ADBB06E5B78F2C38A /* GULLogger.m */; };
 		1D17B83410DC98911D539F2BD5254C05 /* RequestTaskMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165DA66FD9C3CF98DA4991BE273F247E /* RequestTaskMap.swift */; };
 		1D5C79BC458844F11FFA14CFF6DBE8D2 /* GULUserDefaults.h in Headers */ = {isa = PBXBuildFile; fileRef = 46FD5290AC7CEE5AF66A837EBEB68D22 /* GULUserDefaults.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1E137CEB47F564D670AD9D278C6F8674 /* Pods-VaccineCard-VaccineCardUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B1F6C9E66713CED033E1290EA405200 /* Pods-VaccineCard-VaccineCardUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E1779BAB0FD962282455267771A6F7A /* GDTCOREvent_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 714B4919A3B773F130BFA338967D133B /* GDTCOREvent_Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		1EE5D3D853FB973C2CCD76089EF367D3 /* FIRInstallationsErrorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B53031FC187A2C94CEAC6A04EDBD0AD /* FIRInstallationsErrorUtil.m */; };
 		20506EA770B2379E62AADF5BC9E8A2F0 /* FIRInstallations.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A3D18EC9FD77C660A3C92CC8CAC2CCD /* FIRInstallations.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -132,9 +131,9 @@
 		3D4356D38FA64BC17744E1A0F7F61A21 /* QRHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29FF0E707A1287AD18FBBA7CAB77B4D /* QRHeader.swift */; };
 		3D4FB34827A78EDE202E2A8B0D0E6FA7 /* FIRAppAssociationRegistration.m in Sources */ = {isa = PBXBuildFile; fileRef = 218240EDEAD5B32E6865A67EFA8CDF58 /* FIRAppAssociationRegistration.m */; };
 		3D90BCDC49121D1AC75ED345E4533AED /* GULURLSessionDataResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = DFD988DF179279FAD15A9C9A2B0373FF /* GULURLSessionDataResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D93CF2EFC6E7BF3DD10A30F8CF7438F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74FDAF2EF25566D77F98FF71C24B8535 /* Foundation.framework */; };
 		3E0690F77E43C980B60B25CA752CDD91 /* GDTCORTransformer_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E9BE73A8AA8EEC2B8A6D74236190513 /* GDTCORTransformer_Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		3E28AE6DEF69990FD62E1F10FB60C05C /* GDTCORDirectorySizeTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B872DEB15C57F7BA27E1DC694A4552 /* GDTCORDirectorySizeTracker.m */; };
-		3EFC3E3A64DB590629A175B23FFF897D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74FDAF2EF25566D77F98FF71C24B8535 /* Foundation.framework */; };
 		3F53353DF2C57B008E515AB4389A34BD /* GULNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = DCAC84F0898F6609F729A2B19A335B68 /* GULNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3F67B42BC205F09B0255DC1F13BA77CB /* GDTCORRegistrar.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BF779C271318F0117FD360D33DADB2A /* GDTCORRegistrar.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		3FE8E07DD54C1FBEA3B3381B9D63FCAF /* FirebaseInstallations-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A95D43C1B5A4819D0BDFEC17226599C /* FirebaseInstallations-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -161,7 +160,6 @@
 		4BCB9D2552241E94C6128D27E67BE479 /* Payload.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3068AB2B116FDEA2D3047360682BA95 /* Payload.swift */; };
 		4C44804332A1D10322EE1A1DB2B13609 /* GDTCORDirectorySizeTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = D9F10E1991C05C451F3E7246859C3B2E /* GDTCORDirectorySizeTracker.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		4CCC0E6BEEB78A4C690CEFAC45FBBBB0 /* GDTCCTUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC3239DA2FF4190400CA660CB3BC08D /* GDTCCTUploader.m */; };
-		4D3E2DD8E9153880A8E1E7FBE2E85F56 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74FDAF2EF25566D77F98FF71C24B8535 /* Foundation.framework */; };
 		4D9904236DCDD3370B295737D6E89630 /* FBLPromiseError.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F86914F7F121E680AE2342818AAC07B /* FBLPromiseError.h */; };
 		4DB0802466AECC57B61929B41DA0A6D4 /* FIRInstallationsAuthTokenResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E286E0B89996EBE8B6D2A2E8FC0CDDED /* FIRInstallationsAuthTokenResult.m */; };
 		4E28F0C99B1D7F1A347E5D3A8F128E75 /* pb_decode.h in Headers */ = {isa = PBXBuildFile; fileRef = 322839F8C8940C42B4221F3223D81230 /* pb_decode.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -186,6 +184,7 @@
 		5460CA8B1F1AC8420D02466F39991C32 /* GDTCOREndpoints.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C05DBCD070D53DDA596DDEA3792D644 /* GDTCOREndpoints.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		549CB26C9D6D7588A6398C1B3E41E893 /* GDTCORTransport.h in Headers */ = {isa = PBXBuildFile; fileRef = C4863BAAD7DA0D44672B35D645926C09 /* GDTCORTransport.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54D95CA583502539376CFEAC68686CEC /* GDTCORFlatFileStorage+Promises.h in Headers */ = {isa = PBXBuildFile; fileRef = 05F0FC25B1ED6C0CF85791C4535654CE /* GDTCORFlatFileStorage+Promises.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		559D7FE0F5F93D77CD6F52567106B3E7 /* Pods-VaccineCardDEV-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E8700552A14316EA076633A6838064E1 /* Pods-VaccineCardDEV-dummy.m */; };
 		55B73B4E97B85D94CB2B6ABED0F88B22 /* FirebaseCoreDiagnostics-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F0650D02607CCEE254032C1CF86490 /* FirebaseCoreDiagnostics-dummy.m */; };
 		55CDBFBDAE93A356A375FF886C964B4B /* JWKSetCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAE2B17092475882FDFFD326ACE5D47 /* JWKSetCodable.swift */; };
 		56504CB68C7B9566A4EDDB30A3DE4B8C /* FBLPromise+Delay.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 445FD130B253AF3405D91DE13842FBCD /* FBLPromise+Delay.h */; };
@@ -205,6 +204,7 @@
 		5DA414BF161FBB662774CE2A6B8D8EB4 /* FIRCoreDiagnostics.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BB1390C48E63330B82D40EFE3FE5E7 /* FIRCoreDiagnostics.m */; };
 		5E594FA3290D3D70F500572D0AC100DB /* URLConvertible+URLRequestConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C594C9B531D4A17F04B6F54E59D77A /* URLConvertible+URLRequestConvertible.swift */; };
 		5F1892E8B954306E42AF2355D688C44C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F9B1336DD60F7363A99380301336BD /* UIKit.framework */; };
+		5F961B95598903E36BC46B29CCA631DB /* Pods-VaccineCard-VaccineCardUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D47338FB5CCEB7AE2ACFCD380FCC9C8 /* Pods-VaccineCard-VaccineCardUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		606F080E571B7F78403BC324EBF38928 /* FIRHeartbeatInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = A6C7AD2CBA97FE22C34799F79473E1DB /* FIRHeartbeatInfo.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		60DD4EC90CDA6D752BAA0F651E1518E2 /* GULNetworkConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A31118D46259F86FC6D460F98B93E0E /* GULNetworkConstants.m */; };
 		61A84D0B35EA4F612EBE24FABDA9277B /* FIROptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 58873FAEAF3240AA1545CBDE13BD06B2 /* FIROptions.m */; };
@@ -233,7 +233,6 @@
 		703BE4098DC366B04B3117924E5A837F /* FirebaseCore-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 347EBD1F9657A0B3247FBC2A6BC7F9B3 /* FirebaseCore-dummy.m */; };
 		711303EC2C331E720F08BBDF7228CF35 /* FIRCoreDiagnosticsData.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FF469C9976222BDE02A50D3855FE95A /* FIRCoreDiagnosticsData.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		712C80E98ABF79AD46EDABC42340434F /* FIRComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = C8C801E6AC187E8531547162C36133FD /* FIRComponent.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		71FE47838927B039824CBAFBF4C203C9 /* Pods-VaccineCardTEST-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9047D07C28B3CAD6B0392820EEFBDDE0 /* Pods-VaccineCardTEST-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		725ECFF57FC0F6F93458F485EB1673DA /* GDTCORPlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFCC0B5BD77549D685DAC411221C93A /* GDTCORPlatform.m */; };
 		72DDF998194381953556CC9F29AB65F0 /* GULNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BD043172C64C81C17F5106D46455128 /* GULNetwork.m */; };
 		733AAFF2135D90F5898BA25E1D32E548 /* FIRAnalyticsConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 808BE6DB591C0AEBB51CBCEB56A4DA97 /* FIRAnalyticsConfiguration.m */; };
@@ -268,10 +267,12 @@
 		814C42F48E5A7DA2932D92FE91248056 /* FBLPromise+All.m in Sources */ = {isa = PBXBuildFile; fileRef = 615DDA2C16BB46E4CFB1F0BB0429FF38 /* FBLPromise+All.m */; };
 		844443B24F5554AE4F14898D03EAD9FC /* GDTCORReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = B4754A57DC55CA09695C987DB13BD89C /* GDTCORReachability.m */; };
 		846FDFA6CEE8CFB1A51557D731148010 /* GULURLSessionDataResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 878F1BCAF9DED3922F62368B91796796 /* GULURLSessionDataResponse.m */; };
+		8488860231A5F907FBD14EF8B86034D4 /* Pods-VaccineCardTEST-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F7DD41B946FD9015BBF5BF1814C076 /* Pods-VaccineCardTEST-dummy.m */; };
 		852462A0464AB0A701B1AB16AC9CED11 /* FIRAppInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A278A1496A17705B36F0EA37CFFA321 /* FIRAppInternal.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		85BE31241AD95BF3F35DFB8148FDCA83 /* FIRInstallationsErrors.h in Headers */ = {isa = PBXBuildFile; fileRef = 59CE8B4DF74552743DAEC3CB5BDC040B /* FIRInstallationsErrors.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8674FA24D38E60BBD7C5B027228E4408 /* GDTCOREventDataObject.h in Headers */ = {isa = PBXBuildFile; fileRef = F01E03941662B55A3E857E65888423B6 /* GDTCOREventDataObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8889279810E04A25A3148692F09C0DAD /* FIRCurrentDateProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 752BAE8FF94408CE1CAB5EAC7CF58EEA /* FIRCurrentDateProvider.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		893DC7D807ECCCC7340AEE26886B3939 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74FDAF2EF25566D77F98FF71C24B8535 /* Foundation.framework */; };
 		8A382F35495C1521F5E2296F74DDD211 /* GDTCORStorageProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BDE47A5FFD29105FA81768E5B673ECF /* GDTCORStorageProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		8A4D3E64C9273AB4C1C4D8EA577D4255 /* FirebaseAppDistribution-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF2F28C982D7896F055028E191D3097 /* FirebaseAppDistribution-dummy.m */; };
 		8A4E0FEF092EEECDA38AE0E841BCC23E /* FIRInstallationsBackoffController.h in Headers */ = {isa = PBXBuildFile; fileRef = 498A1C7E4EC8309BC94C6D52782362EC /* FIRInstallationsBackoffController.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -316,6 +317,7 @@
 		9C0BE8FA0030B2BC1DF7C159FA059389 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74FDAF2EF25566D77F98FF71C24B8535 /* Foundation.framework */; };
 		9CE96107D53BFC5B9FA73AFE74B296B6 /* FBLPromise+Wrap.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 1567D4874E5DDDD2F13587C5B1004887 /* FBLPromise+Wrap.h */; };
 		9CFDA7C92E0EEA31F709663B0E727ABA /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9935C89C1C150F68056FDA55BDD18AF8 /* EventMonitor.swift */; };
+		9E4F1F124961BD534DC466A0B8B09E1F /* Pods-VaccineCard-VaccineCardUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA3C78729C264B7119A843464768859 /* Pods-VaccineCard-VaccineCardUITests-dummy.m */; };
 		A095BB5F7BFC3C69E4774DD5259EB151 /* HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B1DFFA166D87F6E9B34204ADDFB99E /* HMAC.swift */; };
 		A0A480D13F63C9C9A837D07CC92E89BB /* FBLPromise+Then.m in Sources */ = {isa = PBXBuildFile; fileRef = 2119B6186393C8FDAF8D82B59C71A3B3 /* FBLPromise+Then.m */; };
 		A1E132AF20EB948044DA656ED14ED977 /* GULSecureCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB282B1EEC0FCE6F84D62FBB7D39D3F /* GULSecureCoding.m */; };
@@ -354,7 +356,7 @@
 		B89D1C69742F61878115334A1D2DFFE7 /* URLRequest+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7834B263630F616A52FDFB35E519F167 /* URLRequest+Alamofire.swift */; };
 		B9DCE868D01AAE17A95B7A54F7DBE789 /* FBLPromise+Timeout.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 0F6E9C0F9BD90600338199C9C23934E6 /* FBLPromise+Timeout.h */; };
 		B9FF35D53A4034AC12D09519F74C2E77 /* FIRDependency.h in Headers */ = {isa = PBXBuildFile; fileRef = 536F22043405E27720569773A3D6E3F5 /* FIRDependency.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		BB29CDA2A6F5FD513A92FB14B3064CB8 /* Pods-VaccineCardTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 681D4FC63E8892158B31184CE3F4D399 /* Pods-VaccineCardTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB29CDA2A6F5FD513A92FB14B3064CB8 /* Pods-VaccineCardTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 33F2849F13FA26D62E43B426D1E35F52 /* Pods-VaccineCardTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB40FE804153BCC342F42B95206811F6 /* FBLPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 343FF1A9581297EC7C50FEB5BE30BFEE /* FBLPromise.m */; };
 		BB42DA57BD4AF4C8FC164B009BDFC3F1 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B9BCED0E0C57CAF32E480C39FEBC7DF /* CoreTelephony.framework */; };
 		BB4CF7DC57C9D82EA9C90A8373560B21 /* FBLPromise+Race.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 15080E0A367293CEEDDC3124AD085B53 /* FBLPromise+Race.h */; };
@@ -378,9 +380,10 @@
 		C55F7A5C98F45D368901078D22AD66CC /* FirebaseCoreInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C85730BAF99C685D340372877D545A5 /* FirebaseCoreInternal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C7B9857AA4321188C1F3EE7A6C2927D9 /* GULNetworkConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E0E08467EF8764FC2D8ADA37E4F4FA8 /* GULNetworkConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C7F66519CE6148F21D7DB11423F1D34D /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC61C5F6E9293E8F1F6A25FD6AA57108 /* Response.swift */; };
-		C8259EACE0815975C2E378A858EBA3FE /* Pods-VaccineCardTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DD00400AE4502160769FC83CEFA72C /* Pods-VaccineCardTests-dummy.m */; };
+		C8259EACE0815975C2E378A858EBA3FE /* Pods-VaccineCardTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 14492B64051B0525483930391913564D /* Pods-VaccineCardTests-dummy.m */; };
 		C8448C1928BAA37098A7E77B79FC2C2D /* JWKSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE986B21D19C081C18769D9490AB54 /* JWKSet.swift */; };
 		C89A53EA415A71F21346DFA68CFF114D /* bcvaxcardgen.freshworks.club in Resources */ = {isa = PBXBuildFile; fileRef = 507E882708D6CF912E771E6358FC59A1 /* bcvaxcardgen.freshworks.club */; };
+		C9E157E97FFE8B1FEB2FFA0C4C8DFB03 /* Pods-VaccineCardDEV-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EC308328AE6E0A6BD4E0E42A5B332161 /* Pods-VaccineCardDEV-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CA3AD3BD3C68FE4AE38302737B0BD26C /* FBLPromise+Always.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = A1F005E08262B4330E39768C64FCAA6F /* FBLPromise+Always.h */; };
 		CA885FC46FBE850D24FD0AE2BB396EE3 /* FIRDiagnosticsData.h in Headers */ = {isa = PBXBuildFile; fileRef = 3476853CB9A97BEC28B6A14F6719D355 /* FIRDiagnosticsData.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		CADA74CF21383623247052AF29BB2E67 /* FIRInstallationsStoredItem.h in Headers */ = {isa = PBXBuildFile; fileRef = C5B100B511FB196E2AD10A419F706ECA /* FIRInstallationsStoredItem.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -462,10 +465,11 @@
 		EC92360A0B36C56D2D4659E88139A85D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74FDAF2EF25566D77F98FF71C24B8535 /* Foundation.framework */; };
 		EC9A8AA619794930A830131ADF800AF4 /* JOSESwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D89E4CE62F2334414DF1946AAEEE9864 /* JOSESwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ED1A44276AA465123BBA791600952B7F /* FBLPromise+All.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = F8C6521286E4D8DCB4BAC45308C82C31 /* FBLPromise+All.h */; };
-		EDA74CA52293D1847A8E721AF0D54D5F /* Pods-VaccineCard-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FF15AD9EF4D3ED3A3172D396E931EBD2 /* Pods-VaccineCard-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EDA74CA52293D1847A8E721AF0D54D5F /* Pods-VaccineCard-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E87855D25CF51F26DDC33CF33C86FEC /* Pods-VaccineCard-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EDB0645F3AED14C71CB251B95F179764 /* FIRInstallationsAuthTokenResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 60CE5506AB43374A42CECC54302AB19F /* FIRInstallationsAuthTokenResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EEBD85D5FB5EDCEFEA70473A113A0A86 /* FIRLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 2742F2AE9F3827CAA38C7B32CADE8889 /* FIRLogger.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		EF0AC96C35A95BF4296E537242F500FC /* FIRComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = A52CB1CA378424EAE785F50F44B6FE18 /* FIRComponent.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		EFA2044A3D85B97577729052D9CD9753 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74FDAF2EF25566D77F98FF71C24B8535 /* Foundation.framework */; };
 		EFC673BBAD57D1063493B6595E7542B4 /* FIRInstallationsErrorUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FE3677CB4C9533239820645D7673E16 /* FIRInstallationsErrorUtil.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		EFEECA38BBA464917BF0470B2829BE36 /* Verifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF871D721B8F256BFD704FB53688A54 /* Verifier.swift */; };
 		EFF4D65F695971DA0470565F3DD53854 /* FBLPromise+Recover.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C443235D1FCD4A646660FC4747EFBCE /* FBLPromise+Recover.h */; };
@@ -474,7 +478,6 @@
 		F0B4BB64A069E5EF961E0863D1A9AEEF /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580952CA9536887FEAE29E247E431D58 /* Rules.swift */; };
 		F1B030209AE275639BFA97D70579A0F8 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA99EB7BA863C50B7906152EB060483 /* NetworkService.swift */; };
 		F36D96A4346C90A2D11CB3B6A2ECF4CF /* AuthenticationInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468EA89CD0CB25F17DDE17E47F5B73B /* AuthenticationInterceptor.swift */; };
-		F3E98E3A3852BE38F7BAB71CA8107147 /* Pods-VaccineCardTEST-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7796CD4F4BCAC39B120D60E38447753F /* Pods-VaccineCardTEST-dummy.m */; };
 		F45F6B999A6D30DEE8AAE3E58354423C /* FBLPromise+Recover.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DC2D86B468AEEDFC80AE4CB1DEE6E7 /* FBLPromise+Recover.m */; };
 		F483BABCB6D385870D6C40D3E8ACD860 /* FIRHeartbeatInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D49B026D77DF7F0960DC0F20E95BDC6B /* FIRHeartbeatInfo.m */; };
 		F57DFE558BADE585EF469EA40A3DC4CB /* FBLPromise+Validate.m in Sources */ = {isa = PBXBuildFile; fileRef = DADADE1D5AB4452379AD6B0484FDCE2B /* FBLPromise+Validate.m */; };
@@ -511,40 +514,33 @@
 			remoteGlobalIDString = 2BBF7206D7FAC92C82A042A99C4A98F8;
 			remoteInfo = PromisesObjC;
 		};
-		02B556D1807E2BFC7EFFE442C1F159C2 /* PBXContainerItemProxy */ = {
+		00BD67CA46854FFDF25F8B1926A4B1A5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 57B7E23CE80EC1AAA76AD2F821D233EC;
-			remoteInfo = FirebaseAppDistribution;
+			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
+			remoteInfo = Alamofire;
 		};
-		0AF3659C37B4F12DCB48FAE84F12FC21 /* PBXContainerItemProxy */ = {
+		10AF7C5EDE6DA1E5EEAA75380859C449 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 57B7E23CE80EC1AAA76AD2F821D233EC;
-			remoteInfo = FirebaseAppDistribution;
+			remoteGlobalIDString = 7D6BAEF60FA9AF969CF0D876E6A61EA5;
+			remoteInfo = BCVaccineValidator;
 		};
-		130702D4A1F728381AA48A7040986AAA /* PBXContainerItemProxy */ = {
+		116339E6AE67B72FA1313156A4D9FE45 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 072CEA044D2EF26F03496D5996BBF59F;
-			remoteInfo = Firebase;
+			remoteGlobalIDString = 87803597EB3F20FC46472B85392EC4FD;
+			remoteInfo = FirebaseInstallations;
 		};
-		14C23DB8F378E0A0EF225E4F850937EE /* PBXContainerItemProxy */ = {
+		15F2BE57E3C0A1FDE9FAE37D66EDB771 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2BBF7206D7FAC92C82A042A99C4A98F8;
-			remoteInfo = PromisesObjC;
-		};
-		1D5E3BADA04EE25AD91C7E70F5409F67 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2BBF7206D7FAC92C82A042A99C4A98F8;
-			remoteInfo = PromisesObjC;
+			remoteGlobalIDString = 7D6BAEF60FA9AF969CF0D876E6A61EA5;
+			remoteInfo = BCVaccineValidator;
 		};
 		267E88C4315CFEB68D5306647D4604FB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -553,13 +549,6 @@
 			remoteGlobalIDString = 4402AFF83DBDC4DD07E198685FDC2DF2;
 			remoteInfo = FirebaseCore;
 		};
-		297DBABB3AF639050EB0FAD1DB8AC4DC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 87803597EB3F20FC46472B85392EC4FD;
-			remoteInfo = FirebaseInstallations;
-		};
 		2A6BD6CE507CBE4A8225C8311C4F152E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -567,40 +556,33 @@
 			remoteGlobalIDString = 57B7E23CE80EC1AAA76AD2F821D233EC;
 			remoteInfo = FirebaseAppDistribution;
 		};
-		2FB536BFDD8DC7C341A611D78A3062C6 /* PBXContainerItemProxy */ = {
+		35CC090FAD9EC096FC15D26238E00D9E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
-			remoteInfo = Alamofire;
+			remoteGlobalIDString = 7CCD8AFB41855F80CA73D2C8ABC802C9;
+			remoteInfo = JOSESwift;
 		};
-		33F840D0D4182159F8DC1F5414BED813 /* PBXContainerItemProxy */ = {
+		476168DB341BCB21AA3481B69F606F65 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 620E05868772C10B4920DC7E324F2C87;
-			remoteInfo = FirebaseCoreDiagnostics;
+			remoteGlobalIDString = 8D7F5D5DD528D21A72DC87ADA5B12E2D;
+			remoteInfo = GoogleUtilities;
 		};
-		3A3CADB9549AB6C08C72CFE6ADC39524 /* PBXContainerItemProxy */ = {
+		4A0184AFEE50886F89786B981A79359A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D2B5E7DCCBBFB32341D857D01211A1A3;
-			remoteInfo = nanopb;
+			remoteGlobalIDString = 7D6BAEF60FA9AF969CF0D876E6A61EA5;
+			remoteInfo = BCVaccineValidator;
 		};
-		3EC6285C28FED3DCAE451099DB94F4A3 /* PBXContainerItemProxy */ = {
+		4BCC26DC79B0AF862F8B115A6EC748B3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4402AFF83DBDC4DD07E198685FDC2DF2;
-			remoteInfo = FirebaseCore;
-		};
-		410BCE123ED035B94B8F303752E60219 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5C0371EE948D0357B8EE0E34ABB44BF0;
-			remoteInfo = GoogleDataTransport;
+			remoteGlobalIDString = 2BBF7206D7FAC92C82A042A99C4A98F8;
+			remoteInfo = PromisesObjC;
 		};
 		4E662FD5FF0CD95ED2F9F84DCB4C594A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -623,21 +605,14 @@
 			remoteGlobalIDString = 8D7F5D5DD528D21A72DC87ADA5B12E2D;
 			remoteInfo = GoogleUtilities;
 		};
-		59FF427C372D805A31E7331EC6D4630D /* PBXContainerItemProxy */ = {
+		5C947A3FD8C7775725D402B71CEB27FE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 7CCD8AFB41855F80CA73D2C8ABC802C9;
-			remoteInfo = JOSESwift;
+			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
+			remoteInfo = Alamofire;
 		};
 		5C9E29A115DEBEC690DCA41577D31832 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7D6BAEF60FA9AF969CF0D876E6A61EA5;
-			remoteInfo = BCVaccineValidator;
-		};
-		61A853E1D66761C7E6597B8362DC1A44 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -650,13 +625,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 8D7F5D5DD528D21A72DC87ADA5B12E2D;
 			remoteInfo = GoogleUtilities;
-		};
-		756299F315FCDB605B659C1F2EB611B0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 87803597EB3F20FC46472B85392EC4FD;
-			remoteInfo = FirebaseInstallations;
 		};
 		75633A66BEB41B40905DB9997DA48C34 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -672,12 +640,40 @@
 			remoteGlobalIDString = 2BBF7206D7FAC92C82A042A99C4A98F8;
 			remoteInfo = PromisesObjC;
 		};
+		7B83BCACC72DEDB315AA34100720A0A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
+			remoteInfo = Alamofire;
+		};
+		7F5815569E881FC31D19702997513990 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 072CEA044D2EF26F03496D5996BBF59F;
+			remoteInfo = Firebase;
+		};
 		80595A5B6E600FE58C8D118A69C6848E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 5C0371EE948D0357B8EE0E34ABB44BF0;
 			remoteInfo = GoogleDataTransport;
+		};
+		8378FA6F4CAC64D05407AA19950BC3ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 620E05868772C10B4920DC7E324F2C87;
+			remoteInfo = FirebaseCoreDiagnostics;
+		};
+		847562B0EC3A301AB935E95824678851 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 57B7E23CE80EC1AAA76AD2F821D233EC;
+			remoteInfo = FirebaseAppDistribution;
 		};
 		86FE335B13F7EDA2D145FA77C2D18153 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -693,19 +689,19 @@
 			remoteGlobalIDString = 620E05868772C10B4920DC7E324F2C87;
 			remoteInfo = FirebaseCoreDiagnostics;
 		};
-		94A39B6145575C9806B4A2D1810737C1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 072CEA044D2EF26F03496D5996BBF59F;
-			remoteInfo = Firebase;
-		};
 		9E6D27DDF80221A1754E3EF7865E8500 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 4402AFF83DBDC4DD07E198685FDC2DF2;
 			remoteInfo = FirebaseCore;
+		};
+		A235B4D147796A5667CDCCD76E39C619 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7CCD8AFB41855F80CA73D2C8ABC802C9;
+			remoteInfo = JOSESwift;
 		};
 		A7F7076BF8DB7591E27C4B27A50012D6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -728,19 +724,12 @@
 			remoteGlobalIDString = 8D7F5D5DD528D21A72DC87ADA5B12E2D;
 			remoteInfo = GoogleUtilities;
 		};
-		AC18D25E0AC4764C192531003477FA33 /* PBXContainerItemProxy */ = {
+		B0D762ED4739EBA48E98EC51F3F9EE2B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 620E05868772C10B4920DC7E324F2C87;
-			remoteInfo = FirebaseCoreDiagnostics;
-		};
-		B487F9FA639C1315EFFBDFADBD61A05F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4402AFF83DBDC4DD07E198685FDC2DF2;
-			remoteInfo = FirebaseCore;
+			remoteGlobalIDString = D2B5E7DCCBBFB32341D857D01211A1A3;
+			remoteInfo = nanopb;
 		};
 		B76305C07B0F385635A38010B087A2F8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -756,19 +745,12 @@
 			remoteGlobalIDString = 5C0371EE948D0357B8EE0E34ABB44BF0;
 			remoteInfo = GoogleDataTransport;
 		};
-		C34DD8DB6981724D06CDFA39BF4207CE /* PBXContainerItemProxy */ = {
+		C1476342544F50D4CC4C6D67F7402137 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D2B5E7DCCBBFB32341D857D01211A1A3;
-			remoteInfo = nanopb;
-		};
-		C54E1EEF88A254FF5304E85B3E13C535 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7D6BAEF60FA9AF969CF0D876E6A61EA5;
-			remoteInfo = BCVaccineValidator;
+			remoteGlobalIDString = 7CCD8AFB41855F80CA73D2C8ABC802C9;
+			remoteInfo = JOSESwift;
 		};
 		C6050BDE19BD4B3613B317B5EE14AA68 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -777,26 +759,12 @@
 			remoteGlobalIDString = 7CCD8AFB41855F80CA73D2C8ABC802C9;
 			remoteInfo = JOSESwift;
 		};
-		C6533CFF7C74C6E9CA829B2008F2D3A9 /* PBXContainerItemProxy */ = {
+		DF8023D51F41234F2E0D78880EDDB4AB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 7CCD8AFB41855F80CA73D2C8ABC802C9;
-			remoteInfo = JOSESwift;
-		};
-		C69C888F019A6C85FE818C24610770AF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8D7F5D5DD528D21A72DC87ADA5B12E2D;
-			remoteInfo = GoogleUtilities;
-		};
-		C7F0ABB10ADE9FBED30D73F0E06991D1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
-			remoteInfo = Alamofire;
+			remoteGlobalIDString = 4402AFF83DBDC4DD07E198685FDC2DF2;
+			remoteInfo = FirebaseCore;
 		};
 		E14A635BF9AFF02D25223A4F114714CB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -804,20 +772,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
 			remoteInfo = Alamofire;
-		};
-		E239F0BCF2883E641EFE46711C2701BB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5C0371EE948D0357B8EE0E34ABB44BF0;
-			remoteInfo = GoogleDataTransport;
-		};
-		E9FCE8BFC9CA5DC0178BE082BFC2CF1D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8D7F5D5DD528D21A72DC87ADA5B12E2D;
-			remoteInfo = GoogleUtilities;
 		};
 		ED10DB6F5015873DECAB5D0F26A2941E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -832,6 +786,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = D2B5E7DCCBBFB32341D857D01211A1A3;
 			remoteInfo = nanopb;
+		};
+		F210329CC2ACDE835C322AA68A47AEC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C0371EE948D0357B8EE0E34ABB44BF0;
+			remoteInfo = GoogleDataTransport;
 		};
 		FA0B8082E5B575B911C6D8E22822E3FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -898,6 +859,7 @@
 		011DCEAA693986AE3FB8D1BDF5807B1D /* RSAVerifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RSAVerifier.swift; path = JOSESwift/Sources/RSAVerifier.swift; sourceTree = "<group>"; };
 		0162BC73C5B058E50E33D17F3AA45953 /* Pods-VaccineCard */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-VaccineCard"; path = Pods_VaccineCard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		022DC50F6716F34D24C3E75B9CD9156B /* FirebaseInstallations.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FirebaseInstallations.h; path = FirebaseInstallations/Source/Library/Public/FirebaseInstallations/FirebaseInstallations.h; sourceTree = "<group>"; };
+		02E26A94626366988D568A5D8B7AA56C /* Pods-VaccineCardTEST-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VaccineCardTEST-frameworks.sh"; sourceTree = "<group>"; };
 		02F4897A19D1E9883032987C896C3399 /* FIRVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRVersion.h; path = FirebaseCore/Sources/Public/FirebaseCore/FIRVersion.h; sourceTree = "<group>"; };
 		0407BC352136E4C75AFA35845C3F937B /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
 		05411B2415B9D7F40DACBBA8828D5A6F /* FIRLibrary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRLibrary.h; path = FirebaseCore/Sources/Private/FIRLibrary.h; sourceTree = "<group>"; };
@@ -906,27 +868,29 @@
 		06FC5C9CF96D60C50FCD47D339C91951 /* nanopb */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = nanopb; path = nanopb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		077FC45587B3BA75AE7E54DDE035380A /* GoogleUtilities-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleUtilities-umbrella.h"; sourceTree = "<group>"; };
 		07F80E53B6F687FF2EC2C4F47DDEA96B /* FIROptionsInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIROptionsInternal.h; path = FirebaseCore/Sources/Private/FIROptionsInternal.h; sourceTree = "<group>"; };
+		0809391B484C772A40A8FD7A6E592CA1 /* Pods-VaccineCard-VaccineCardUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VaccineCard-VaccineCardUITests-frameworks.sh"; sourceTree = "<group>"; };
 		092AE0B54C0B06B3621087B62C33C48F /* FirebaseCoreDiagnostics-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FirebaseCoreDiagnostics-Info.plist"; sourceTree = "<group>"; };
 		0A05FB16F19E4CA3860D5BC3102CED3C /* SecureRandom.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecureRandom.swift; path = JOSESwift/Sources/CryptoImplementation/SecureRandom.swift; sourceTree = "<group>"; };
 		0AC6DC2BCBE92977ED339893D3021F98 /* HMACSigner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HMACSigner.swift; path = JOSESwift/Sources/HMACSigner.swift; sourceTree = "<group>"; };
-		0BAF5E3065E8917B3A9C10DAEA637D80 /* Pods-VaccineCard-VaccineCardUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VaccineCard-VaccineCardUITests-dummy.m"; sourceTree = "<group>"; };
 		0BE3D79F3746F5EBBE7FE82B52373479 /* GDTCORUploadCoordinator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTCORUploadCoordinator.h; path = GoogleDataTransport/GDTCORLibrary/Private/GDTCORUploadCoordinator.h; sourceTree = "<group>"; };
+		0D4208120001C409ADEBA761D684C34C /* Pods-VaccineCardDEV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VaccineCardDEV.release.xcconfig"; sourceTree = "<group>"; };
 		0DADFA856089B06FD1B0BB3F4EAB10B6 /* JOSESwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JOSESwift-prefix.pch"; sourceTree = "<group>"; };
 		0E08DBEEA56C0E97084004BBDA29FF65 /* nanopb.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = nanopb.modulemap; sourceTree = "<group>"; };
+		0E64A8D2E08DB7A59B48C197DE41A0E0 /* Pods-VaccineCard-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VaccineCard-Info.plist"; sourceTree = "<group>"; };
 		0ECD2C30D734B1D60FA7A8A7662EFE3C /* DirectEncryptionMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DirectEncryptionMode.swift; path = JOSESwift/Sources/DirectEncryptionMode.swift; sourceTree = "<group>"; };
 		0F208A0397B3FB7245BC255F818E00DB /* FIRLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRLogger.h; path = FirebaseCore/Sources/Private/FIRLogger.h; sourceTree = "<group>"; };
-		0F3D73728328FA29D76B233E7D18810B /* Pods-VaccineCard-VaccineCardUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VaccineCard-VaccineCardUITests-frameworks.sh"; sourceTree = "<group>"; };
 		0F6E9C0F9BD90600338199C9C23934E6 /* FBLPromise+Timeout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Timeout.h"; path = "Sources/FBLPromises/include/FBLPromise+Timeout.h"; sourceTree = "<group>"; };
 		0F86914F7F121E680AE2342818AAC07B /* FBLPromiseError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBLPromiseError.h; path = Sources/FBLPromises/include/FBLPromiseError.h; sourceTree = "<group>"; };
 		1015577B995DDFD3E301395AF807CD1D /* FBLPromise+Catch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Catch.h"; path = "Sources/FBLPromises/include/FBLPromise+Catch.h"; sourceTree = "<group>"; };
 		10DA48C06A8BCA0FCD1A06512D7D8257 /* FIRComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRComponent.m; path = FirebaseCore/Sources/FIRComponent.m; sourceTree = "<group>"; };
-		1132F0B0859F0D9873A1517B870E3D19 /* Pods-VaccineCardTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-VaccineCardTests.modulemap"; sourceTree = "<group>"; };
+		110ED2852EA87C7F3721B8941BAB0A2D /* Pods-VaccineCard-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VaccineCard-dummy.m"; sourceTree = "<group>"; };
 		1181BC81C26117A4A8D4C4A33A9E5342 /* FBLPromise+Async.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Async.h"; path = "Sources/FBLPromises/include/FBLPromise+Async.h"; sourceTree = "<group>"; };
 		125B52ACE28C61DFD6629BAFA4DDF43F /* GDTCORTransport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GDTCORTransport.m; path = GoogleDataTransport/GDTCORLibrary/GDTCORTransport.m; sourceTree = "<group>"; };
 		12732D7E4F13AAC734606B9C732A417A /* FBLPromise+Catch.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Catch.m"; path = "Sources/FBLPromises/FBLPromise+Catch.m"; sourceTree = "<group>"; };
 		12993D79ADAB08F9ECDD03BFE80AD0AC /* GULLoggerCodes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULLoggerCodes.h; path = GoogleUtilities/Common/GULLoggerCodes.h; sourceTree = "<group>"; };
 		13C8C8B254851998F9289F71229B28A2 /* FirebaseInstallations */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FirebaseInstallations; path = FirebaseInstallations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		140319A6BA48360B144B83CCB1E6708C /* JWS.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JWS.swift; path = JOSESwift/Sources/JWS.swift; sourceTree = "<group>"; };
+		14492B64051B0525483930391913564D /* Pods-VaccineCardTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VaccineCardTests-dummy.m"; sourceTree = "<group>"; };
 		14A921E055682F742093772D399C5790 /* nanopb-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "nanopb-Info.plist"; sourceTree = "<group>"; };
 		14BB38823AF100CE17EC9A5AB17A2B6A /* FIRComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRComponent.h; path = FirebaseCore/Sources/Private/FIRComponent.h; sourceTree = "<group>"; };
 		15080E0A367293CEEDDC3124AD085B53 /* FBLPromise+Race.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Race.h"; path = "Sources/FBLPromises/include/FBLPromise+Race.h"; sourceTree = "<group>"; };
@@ -937,7 +901,6 @@
 		181C134612557814DA8E6D37D56EEDBB /* FIRApp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRApp.h; path = FirebaseCore/Sources/Public/FirebaseCore/FIRApp.h; sourceTree = "<group>"; };
 		18316FDE8512595A33636107F3C6068C /* DeflateWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DeflateWrapper.swift; path = JOSESwift/Sources/CompressionImplementation/DeflateWrapper.swift; sourceTree = "<group>"; };
 		184FBFFD638EA8AFF613C5C34F826E43 /* PromisesObjC-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PromisesObjC-umbrella.h"; sourceTree = "<group>"; };
-		1854CB9D4185E8496E10BE2B2A6AD9EE /* Pods-VaccineCardTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VaccineCardTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		18871FD439658529833782C96B314513 /* FirebaseAppDistribution.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FirebaseAppDistribution.h; path = FirebaseAppDistribution/Sources/Public/FirebaseAppDistribution/FirebaseAppDistribution.h; sourceTree = "<group>"; };
 		18E77E834F1BFD3B5B44B75F77AA7A62 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
 		18EF0EB8EEDD60A5E8574050043DA24D /* FIRHeartbeatInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRHeartbeatInfo.h; path = FirebaseCore/Sources/Private/FIRHeartbeatInfo.h; sourceTree = "<group>"; };
@@ -946,7 +909,6 @@
 		1A31118D46259F86FC6D460F98B93E0E /* GULNetworkConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULNetworkConstants.m; path = GoogleUtilities/Network/GULNetworkConstants.m; sourceTree = "<group>"; };
 		1A8BB736A99CB5BB209FC26B0D6FF9BE /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
 		1AAC858412E52CE31CB0E8D10923FD17 /* FIRCoreDiagnosticsConnector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRCoreDiagnosticsConnector.h; path = FirebaseCore/Sources/Private/FIRCoreDiagnosticsConnector.h; sourceTree = "<group>"; };
-		1B363556CB4B421402110A9E15F21FB5 /* Pods-VaccineCard-VaccineCardUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VaccineCard-VaccineCardUITests-Info.plist"; sourceTree = "<group>"; };
 		1B41654E8B1F138E1405275352739E03 /* FirebaseCore-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FirebaseCore-umbrella.h"; sourceTree = "<group>"; };
 		1B91BC6F2FC4938AC87F2AC151BD4302 /* FBLPromises.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBLPromises.h; path = Sources/FBLPromises/include/FBLPromises.h; sourceTree = "<group>"; };
 		1BD043172C64C81C17F5106D46455128 /* GULNetwork.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULNetwork.m; path = GoogleUtilities/Network/GULNetwork.m; sourceTree = "<group>"; };
@@ -959,11 +921,11 @@
 		1FE077D8057EB2EDBEF6A81FEBB00671 /* pb_common.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_common.c; sourceTree = "<group>"; };
 		2119B6186393C8FDAF8D82B59C71A3B3 /* FBLPromise+Then.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Then.m"; path = "Sources/FBLPromises/FBLPromise+Then.m"; sourceTree = "<group>"; };
 		218240EDEAD5B32E6865A67EFA8CDF58 /* FIRAppAssociationRegistration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRAppAssociationRegistration.m; path = FirebaseCore/Sources/FIRAppAssociationRegistration.m; sourceTree = "<group>"; };
+		21DE4BCDFE9FD73773571B7295EB903D /* Pods-VaccineCardDEV-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VaccineCardDEV-acknowledgements.markdown"; sourceTree = "<group>"; };
 		2292B7E7E9AA8526110860ACF1FCE082 /* GULNetworkURLSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULNetworkURLSession.h; path = GoogleUtilities/Network/Public/GoogleUtilities/GULNetworkURLSession.h; sourceTree = "<group>"; };
 		23012C832C7C39DAB2E3B0BD0567DEC1 /* GULLoggerLevel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULLoggerLevel.h; path = GoogleUtilities/Logger/Public/GoogleUtilities/GULLoggerLevel.h; sourceTree = "<group>"; };
 		232160D7C692E06F83CF27F85848ADF3 /* JWKParameters.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JWKParameters.swift; path = JOSESwift/Sources/JWKParameters.swift; sourceTree = "<group>"; };
 		2475506394DCC3489B96DF5710343A40 /* GDTCCTUploader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTCCTUploader.h; path = GoogleDataTransport/GDTCCTLibrary/Private/GDTCCTUploader.h; sourceTree = "<group>"; };
-		24823437386BB6337FB4C8F2750DFF94 /* Pods-VaccineCardTEST.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VaccineCardTEST.release.xcconfig"; sourceTree = "<group>"; };
 		251E13BB78E7B2230FB91BC5124B3355 /* FIRAppDistributionUIService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRAppDistributionUIService.m; path = FirebaseAppDistribution/Sources/FIRAppDistributionUIService.m; sourceTree = "<group>"; };
 		253515AE1B8F6C555CC3A013187FCC3A /* FBLPromise+Await.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Await.m"; path = "Sources/FBLPromises/FBLPromise+Await.m"; sourceTree = "<group>"; };
 		25D8FFD9E46EB7D12C2DDD5EDD9427CA /* GoogleUtilities-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GoogleUtilities-Info.plist"; sourceTree = "<group>"; };
@@ -971,23 +933,25 @@
 		2742F2AE9F3827CAA38C7B32CADE8889 /* FIRLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRLogger.h; path = FirebaseCore/Sources/Private/FIRLogger.h; sourceTree = "<group>"; };
 		2771C607BDBEB691C4A967399FEB9091 /* FIRLoggerLevel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRLoggerLevel.h; path = FirebaseCore/Sources/Public/FirebaseCore/FIRLoggerLevel.h; sourceTree = "<group>"; };
 		2846CC8529410BE2FA908031E58CF530 /* JOSESwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JOSESwift.debug.xcconfig; sourceTree = "<group>"; };
-		28C1F205A39E47D8163D63ED441E1C88 /* Pods-VaccineCardTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VaccineCardTests-Info.plist"; sourceTree = "<group>"; };
+		28F5874CD204FBCE93323D46E158B26A /* Pods-VaccineCard-VaccineCardUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VaccineCard-VaccineCardUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		291624A434202FF21713135C0DD47496 /* Pods-VaccineCardDEV-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VaccineCardDEV-frameworks.sh"; sourceTree = "<group>"; };
 		2957469DD5FE9D6C30722CB05AAAA691 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
 		2957D68902FC2091E852B175161061C3 /* Thumbprint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Thumbprint.swift; path = JOSESwift/Sources/CryptoImplementation/Thumbprint.swift; sourceTree = "<group>"; };
 		297FE90BE451747250EC573F077BA5EC /* FIRInstallationsAPIService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstallationsAPIService.h; path = FirebaseInstallations/Source/Library/InstallationsAPI/FIRInstallationsAPIService.h; sourceTree = "<group>"; };
 		29E1F32F689608CECD2DC1FECD65E68E /* FIRInstallationsStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstallationsStore.h; path = FirebaseInstallations/Source/Library/InstallationsStore/FIRInstallationsStore.h; sourceTree = "<group>"; };
 		29FB393AC639C3ECB50C8C6A150D1B2B /* GULHeartbeatDateStorable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULHeartbeatDateStorable.h; path = GoogleUtilities/Environment/Public/GoogleUtilities/GULHeartbeatDateStorable.h; sourceTree = "<group>"; };
 		2A95D43C1B5A4819D0BDFEC17226599C /* FirebaseInstallations-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FirebaseInstallations-umbrella.h"; sourceTree = "<group>"; };
+		2AAE26A74580FF86A4677F5738900279 /* Pods-VaccineCardDEV-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VaccineCardDEV-acknowledgements.plist"; sourceTree = "<group>"; };
 		2AAF91BC821BC1CC3A12E805226F7CDF /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
-		2B1F6C9E66713CED033E1290EA405200 /* Pods-VaccineCard-VaccineCardUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VaccineCard-VaccineCardUITests-umbrella.h"; sourceTree = "<group>"; };
 		2B5894AEFF5152D2AD6A5DBF473B13C6 /* BCVaccineValidator */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BCVaccineValidator; path = BCVaccineValidator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2CE244DB1F948D60E3037871D137327E /* Pods-VaccineCard-VaccineCardUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-VaccineCard-VaccineCardUITests.modulemap"; sourceTree = "<group>"; };
 		2D302FFC90185A4699E04DDB8B977158 /* FirebaseCoreInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FirebaseCoreInternal.h; path = FirebaseCore/Sources/Private/FirebaseCoreInternal.h; sourceTree = "<group>"; };
 		2DB497A2063652FD575CC08F92F8E1C8 /* RSAKeys.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RSAKeys.swift; path = JOSESwift/Sources/RSAKeys.swift; sourceTree = "<group>"; };
+		2E87855D25CF51F26DDC33CF33C86FEC /* Pods-VaccineCard-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VaccineCard-umbrella.h"; sourceTree = "<group>"; };
 		2E9902E9D8F0E6B04E4AA8C490E6A027 /* URLSessionConfiguration+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLSessionConfiguration+Alamofire.swift"; path = "Source/URLSessionConfiguration+Alamofire.swift"; sourceTree = "<group>"; };
 		2EB63B898B714D05A3F8F9E37F2A2751 /* FIRComponentType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRComponentType.h; path = FirebaseCore/Sources/Private/FIRComponentType.h; sourceTree = "<group>"; };
 		2F1BFB2FE976AB266DA98D0D2ACB832A /* StringExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = BCVaccineValidator/Classes/Helpers/StringExtension.swift; sourceTree = "<group>"; };
 		2F7990A8209DDBF360FB07E8EBA77174 /* GULNSData+zlib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GULNSData+zlib.m"; path = "GoogleUtilities/NSData+zlib/GULNSData+zlib.m"; sourceTree = "<group>"; };
+		2F9038F842B441084CCD04D442D947D1 /* Pods-VaccineCard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VaccineCard.debug.xcconfig"; sourceTree = "<group>"; };
 		2FA1CE23AF76F0DFD39E41557EDC54F5 /* Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Combine.swift; path = Source/Combine.swift; sourceTree = "<group>"; };
 		3032321EDB445854184807DE2B81DD3D /* BCVaccineValidator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BCVaccineValidator.modulemap; sourceTree = "<group>"; };
 		303B9D667338441EA0A26441599E0450 /* DateExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateExtension.swift; path = BCVaccineValidator/Classes/Helpers/DateExtension.swift; sourceTree = "<group>"; };
@@ -1001,12 +965,12 @@
 		332041B59D4F629238A0E7362F323180 /* FIRFADLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRFADLogger.h; path = FirebaseAppDistribution/Sources/FIRFADLogger.h; sourceTree = "<group>"; };
 		3347A1AB6546F0A3977529B8F199DC41 /* PromisesObjC */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PromisesObjC; path = FBLPromises.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		33CF0B6DDAD88C614009C89DA8DD2AB1 /* FIRComponentContainerInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRComponentContainerInternal.h; path = FirebaseCore/Sources/FIRComponentContainerInternal.h; sourceTree = "<group>"; };
+		33F2849F13FA26D62E43B426D1E35F52 /* Pods-VaccineCardTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VaccineCardTests-umbrella.h"; sourceTree = "<group>"; };
 		343FF1A9581297EC7C50FEB5BE30BFEE /* FBLPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBLPromise.m; path = Sources/FBLPromises/FBLPromise.m; sourceTree = "<group>"; };
 		3476853CB9A97BEC28B6A14F6719D355 /* FIRDiagnosticsData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRDiagnosticsData.h; path = FirebaseCore/Sources/FIRDiagnosticsData.h; sourceTree = "<group>"; };
 		347EBD1F9657A0B3247FBC2A6BC7F9B3 /* FirebaseCore-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FirebaseCore-dummy.m"; sourceTree = "<group>"; };
 		35652E99B6F2C2EF1ED3FE2538666D17 /* FIRInstallationsIIDTokenStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstallationsIIDTokenStore.h; path = FirebaseInstallations/Source/Library/IIDMigration/FIRInstallationsIIDTokenStore.h; sourceTree = "<group>"; };
 		35FD43432F46775AFA39DB525CE70D2E /* GoogleDataTransport-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GoogleDataTransport-Info.plist"; sourceTree = "<group>"; };
-		3612E5F76C40DACECEF09177A9D97075 /* Pods-VaccineCard.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-VaccineCard.modulemap"; sourceTree = "<group>"; };
 		366903836EC969007BC1AED614EBA90E /* FirebaseInstallationsInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FirebaseInstallationsInternal.h; path = FirebaseInstallations/Source/Library/Private/FirebaseInstallationsInternal.h; sourceTree = "<group>"; };
 		37626D1B645C282C53B31D68A36521C5 /* FIRDiagnosticsData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRDiagnosticsData.m; path = FirebaseCore/Sources/FIRDiagnosticsData.m; sourceTree = "<group>"; };
 		37C594C9B531D4A17F04B6F54E59D77A /* URLConvertible+URLRequestConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLConvertible+URLRequestConvertible.swift"; path = "Source/URLConvertible+URLRequestConvertible.swift"; sourceTree = "<group>"; };
@@ -1017,12 +981,18 @@
 		39FFF153BE632641719CAF1CAF04A670 /* FirebaseCoreInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FirebaseCoreInternal.h; path = FirebaseCore/Sources/Private/FirebaseCoreInternal.h; sourceTree = "<group>"; };
 		3C05DBCD070D53DDA596DDEA3792D644 /* GDTCOREndpoints.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTCOREndpoints.h; path = GoogleDataTransport/GDTCORLibrary/Public/GoogleDataTransport/GDTCOREndpoints.h; sourceTree = "<group>"; };
 		3C443235D1FCD4A646660FC4747EFBCE /* FBLPromise+Recover.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Recover.h"; path = "Sources/FBLPromises/include/FBLPromise+Recover.h"; sourceTree = "<group>"; };
+		3C6593AEE1F391FFE62EF97EF937B42B /* Pods-VaccineCardDEV.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-VaccineCardDEV.modulemap"; sourceTree = "<group>"; };
 		3CB704D6010091D0C82575F7D4D1546F /* FIRInstallationsStoredItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstallationsStoredItem.m; path = FirebaseInstallations/Source/Library/InstallationsStore/FIRInstallationsStoredItem.m; sourceTree = "<group>"; };
+		3CE981E7CBA74B1E700706252C98A4CA /* Pods-VaccineCard-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VaccineCard-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3D47338FB5CCEB7AE2ACFCD380FCC9C8 /* Pods-VaccineCard-VaccineCardUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VaccineCard-VaccineCardUITests-umbrella.h"; sourceTree = "<group>"; };
 		3D6ADE08EC745B286BA4B00A7F241270 /* ImmunizationService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImmunizationService.swift; path = BCVaccineValidator/Classes/Services/ImmunizationService.swift; sourceTree = "<group>"; };
 		3E0E08467EF8764FC2D8ADA37E4F4FA8 /* GULNetworkConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULNetworkConstants.h; path = GoogleUtilities/Network/Public/GoogleUtilities/GULNetworkConstants.h; sourceTree = "<group>"; };
 		3FCB7333E548BC1BC7B56DA269BDED4B /* ArrayExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ArrayExtension.swift; path = BCVaccineValidator/Classes/Helpers/ArrayExtension.swift; sourceTree = "<group>"; };
 		3FEEBD3E5E8A85BCFD1EF5CB6C127244 /* FBLPromise+Timeout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Timeout.m"; path = "Sources/FBLPromises/FBLPromise+Timeout.m"; sourceTree = "<group>"; };
 		40EE21A40E8FDC4482169810222A42AD /* GDTCOREvent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GDTCOREvent.m; path = GoogleDataTransport/GDTCORLibrary/GDTCOREvent.m; sourceTree = "<group>"; };
+		41F7DD41B946FD9015BBF5BF1814C076 /* Pods-VaccineCardTEST-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VaccineCardTEST-dummy.m"; sourceTree = "<group>"; };
+		4272F95641844710B466A71C44659D4E /* Pods-VaccineCardTEST.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VaccineCardTEST.debug.xcconfig"; sourceTree = "<group>"; };
+		42E60725C8C8EC45FFCBB75E8FEDECD3 /* Pods-VaccineCard-VaccineCardUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VaccineCard-VaccineCardUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		42FC9D066AA24742F1D55DEC6E27ADA8 /* ECKeys.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ECKeys.swift; path = JOSESwift/Sources/ECKeys.swift; sourceTree = "<group>"; };
 		43F68100844E461ADBB06E5B78F2C38A /* GULLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULLogger.m; path = GoogleUtilities/Logger/GULLogger.m; sourceTree = "<group>"; };
 		444C53B6C9878A100A4BCA976690E576 /* Key.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Key.swift; path = BCVaccineValidator/Classes/Models/Key.swift; sourceTree = "<group>"; };
@@ -1051,7 +1021,9 @@
 		4D4DE91080904A67006AD7B9F0986C4F /* PromisesObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PromisesObjC.release.xcconfig; sourceTree = "<group>"; };
 		4D5138402DBB551126202F80BE2A7D17 /* FIRDependency.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRDependency.h; path = FirebaseCore/Sources/Private/FIRDependency.h; sourceTree = "<group>"; };
 		4D8941D68AEB20A0356C16F6706FC693 /* FIRAppDistributionRelease.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRAppDistributionRelease.h; path = FirebaseAppDistribution/Sources/Private/FIRAppDistributionRelease.h; sourceTree = "<group>"; };
+		4E104BA2A7525655E9506F2A3ECE74BB /* Pods-VaccineCard-VaccineCardUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VaccineCard-VaccineCardUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4E9EAB68E3399393162581692A26F893 /* ECKeyCodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ECKeyCodable.swift; path = JOSESwift/Sources/ECKeyCodable.swift; sourceTree = "<group>"; };
+		4F4675F23643AFB16DEC1011CE16A3EB /* Pods-VaccineCardTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VaccineCardTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4FBFE0F81487C3FE7597A76DAA725BE2 /* GDTCORTransport_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTCORTransport_Private.h; path = GoogleDataTransport/GDTCORLibrary/Private/GDTCORTransport_Private.h; sourceTree = "<group>"; };
 		4FF757F44196B881079B2C3E2698B9CA /* FirebaseCoreDiagnostics-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FirebaseCoreDiagnostics-umbrella.h"; sourceTree = "<group>"; };
 		507E882708D6CF912E771E6358FC59A1 /* bcvaxcardgen.freshworks.club */ = {isa = PBXFileReference; includeInIndex = 1; name = bcvaxcardgen.freshworks.club; path = BCVaccineValidator/Assets/bcvaxcardgen.freshworks.club; sourceTree = "<group>"; };
@@ -1069,11 +1041,11 @@
 		562D2A1C1C548358DA18C877DEBF7E38 /* HMACVerifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HMACVerifier.swift; path = JOSESwift/Sources/HMACVerifier.swift; sourceTree = "<group>"; };
 		5633DBB3FB63A433DDEF0C96291B16C2 /* JOSESwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JOSESwift.release.xcconfig; sourceTree = "<group>"; };
 		576845C8A391A63F1A950FA4AA2AE9A7 /* GDTCORUploader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTCORUploader.h; path = GoogleDataTransport/GDTCORLibrary/Internal/GDTCORUploader.h; sourceTree = "<group>"; };
+		57E7B8ED916740AB9AFCAB004B6F7817 /* Pods-VaccineCardTEST.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VaccineCardTEST.release.xcconfig"; sourceTree = "<group>"; };
 		580952CA9536887FEAE29E247E431D58 /* Rules.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Rules.swift; path = BCVaccineValidator/Classes/Models/Rules.swift; sourceTree = "<group>"; };
 		58873FAEAF3240AA1545CBDE13BD06B2 /* FIROptions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIROptions.m; path = FirebaseCore/Sources/FIROptions.m; sourceTree = "<group>"; };
 		58DC2D86B468AEEDFC80AE4CB1DEE6E7 /* FBLPromise+Recover.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Recover.m"; path = "Sources/FBLPromises/FBLPromise+Recover.m"; sourceTree = "<group>"; };
 		59323E18945EE4DA37AC6DF2038AADDD /* GDTCORAssert.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GDTCORAssert.m; path = GoogleDataTransport/GDTCORLibrary/GDTCORAssert.m; sourceTree = "<group>"; };
-		59A03BE07FE99A4BB3A1C37385ED2BF0 /* Pods-VaccineCard-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VaccineCard-Info.plist"; sourceTree = "<group>"; };
 		59CE8B4DF74552743DAEC3CB5BDC040B /* FIRInstallationsErrors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstallationsErrors.h; path = FirebaseInstallations/Source/Library/Public/FirebaseInstallations/FIRInstallationsErrors.h; sourceTree = "<group>"; };
 		5AD69635CFD7B1206A4CDEED46EFBC5A /* GULMutableDictionary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULMutableDictionary.h; path = GoogleUtilities/Network/Public/GoogleUtilities/GULMutableDictionary.h; sourceTree = "<group>"; };
 		5B112B08ED8A55B6A3DA52B6A7127444 /* ReachabilityService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReachabilityService.swift; path = BCVaccineValidator/Classes/Services/ReachabilityService.swift; sourceTree = "<group>"; };
@@ -1095,7 +1067,6 @@
 		67035195F420CD1EE4509804551EF1B5 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
 		677FDB7577104F85DDCE3A936303928A /* Issuers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Issuers.swift; path = BCVaccineValidator/Classes/Models/Issuers.swift; sourceTree = "<group>"; };
 		67F2648637B3E7E3FD2FB5FD954B49BA /* NSURLSession+GULPromises.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURLSession+GULPromises.h"; path = "GoogleUtilities/Environment/Public/GoogleUtilities/NSURLSession+GULPromises.h"; sourceTree = "<group>"; };
-		681D4FC63E8892158B31184CE3F4D399 /* Pods-VaccineCardTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VaccineCardTests-umbrella.h"; sourceTree = "<group>"; };
 		683C3631A8CB7F45D07E20AAC96B4556 /* FIRCoreDiagnosticsConnector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRCoreDiagnosticsConnector.h; path = FirebaseCore/Sources/Private/FIRCoreDiagnosticsConnector.h; sourceTree = "<group>"; };
 		68B1DFFA166D87F6E9B34204ADDFB99E /* HMAC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HMAC.swift; path = JOSESwift/Sources/CryptoImplementation/HMAC.swift; sourceTree = "<group>"; };
 		68CA49DC449E56ADF52B91FFEA769F30 /* FIRCoreDiagnosticsInterop.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRCoreDiagnosticsInterop.h; path = Interop/CoreDiagnostics/Public/FIRCoreDiagnosticsInterop.h; sourceTree = "<group>"; };
@@ -1103,9 +1074,10 @@
 		69559B5F5770AB71D414D8E5CEDA0BAA /* FirebaseInstallations-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FirebaseInstallations-dummy.m"; sourceTree = "<group>"; };
 		69C2BF2B3735666C439B2AA7DA710ADB /* smarthealthcard.phsa.ca~v1~issuer */ = {isa = PBXFileReference; includeInIndex = 1; name = "smarthealthcard.phsa.ca~v1~issuer"; path = "BCVaccineValidator/Assets/smarthealthcard.phsa.ca~v1~issuer"; sourceTree = "<group>"; };
 		69C97BD9EB6462A60538C9E508FF953E /* FBLPromise+Any.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Any.m"; path = "Sources/FBLPromises/FBLPromise+Any.m"; sourceTree = "<group>"; };
-		69D8C2F6E167E6DD945900F3ECA78551 /* Pods-VaccineCardTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VaccineCardTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		6A99E678B3F4141BCA8EA9112CD1BCDF /* Pods-VaccineCard-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VaccineCard-acknowledgements.plist"; sourceTree = "<group>"; };
 		6B40E3D7A604EBF7A2EA5502A82A5125 /* FIRAppInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRAppInternal.h; path = FirebaseCore/Sources/Private/FIRAppInternal.h; sourceTree = "<group>"; };
 		6B53031FC187A2C94CEAC6A04EDBD0AD /* FIRInstallationsErrorUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstallationsErrorUtil.m; path = FirebaseInstallations/Source/Library/Errors/FIRInstallationsErrorUtil.m; sourceTree = "<group>"; };
+		6B919F9D65F44E974F91F40442B47B02 /* Pods-VaccineCardTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VaccineCardTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6BF779C271318F0117FD360D33DADB2A /* GDTCORRegistrar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTCORRegistrar.h; path = GoogleDataTransport/GDTCORLibrary/Internal/GDTCORRegistrar.h; sourceTree = "<group>"; };
 		6C5091E0277B73B3E13915FD95645B48 /* GDTCORAssert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTCORAssert.h; path = GoogleDataTransport/GDTCORLibrary/Internal/GDTCORAssert.h; sourceTree = "<group>"; };
 		6DF1E44E6E7D05B4E0A2A774872F24F9 /* FirebaseAppDistribution */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FirebaseAppDistribution; path = FirebaseAppDistribution.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1121,6 +1093,7 @@
 		731F32058411E408527FCEB677A89737 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
 		7393720C0AE47D893A4360FD14C56A48 /* GULAppDelegateSwizzler_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULAppDelegateSwizzler_Private.h; path = GoogleUtilities/AppDelegateSwizzler/Internal/GULAppDelegateSwizzler_Private.h; sourceTree = "<group>"; };
 		73B1AEEDF19C1D734071ADD928FE81C4 /* JWSHeader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JWSHeader.swift; path = JOSESwift/Sources/JWSHeader.swift; sourceTree = "<group>"; };
+		73CE5A3D46826C733B1653CB465FE4AA /* Pods-VaccineCardDEV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VaccineCardDEV.debug.xcconfig"; sourceTree = "<group>"; };
 		74BA69B27CBA63ACB2CE3B4897C45C3B /* SecKeyECPublicKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecKeyECPublicKey.swift; path = JOSESwift/Sources/CryptoImplementation/SecKeyECPublicKey.swift; sourceTree = "<group>"; };
 		74FDAF2EF25566D77F98FF71C24B8535 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		752BAE8FF94408CE1CAB5EAC7CF58EEA /* FIRCurrentDateProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRCurrentDateProvider.h; path = FirebaseInstallations/Source/Library/InstallationsIDController/FIRCurrentDateProvider.h; sourceTree = "<group>"; };
@@ -1131,11 +1104,8 @@
 		75F83F9ECEDED354DE37CC92AAD30F9A /* FIRAppDistributionMachO.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRAppDistributionMachO.m; path = FirebaseAppDistribution/Sources/FIRAppDistributionMachO.m; sourceTree = "<group>"; };
 		76412D536B963D08BD5103AE23B0F812 /* Compressor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Compressor.swift; path = JOSESwift/Sources/Compressor.swift; sourceTree = "<group>"; };
 		76809B0C9608B7B2DB37FDE53AB150CD /* BCVaccineValidator-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "BCVaccineValidator-Info.plist"; sourceTree = "<group>"; };
-		76BC4C4BCE3FD7BA33340940D24582C7 /* Pods-VaccineCard-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VaccineCard-frameworks.sh"; sourceTree = "<group>"; };
 		7728A756E818BD32E9C71ECDAFF8162C /* GoogleUtilities-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GoogleUtilities-dummy.m"; sourceTree = "<group>"; };
 		77545067055C84954BB336DF0C6ECA33 /* SecKeyRSAPublicKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecKeyRSAPublicKey.swift; path = JOSESwift/Sources/CryptoImplementation/SecKeyRSAPublicKey.swift; sourceTree = "<group>"; };
-		7796CD4F4BCAC39B120D60E38447753F /* Pods-VaccineCardTEST-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VaccineCardTEST-dummy.m"; sourceTree = "<group>"; };
-		77C044568D596BB8DE321BF55433DAC0 /* Pods-VaccineCard-VaccineCardUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VaccineCard-VaccineCardUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		77F321B5854AEE7EFF2EBE9621510A26 /* GULAppDelegateSwizzler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULAppDelegateSwizzler.m; path = GoogleUtilities/AppDelegateSwizzler/GULAppDelegateSwizzler.m; sourceTree = "<group>"; };
 		7834B263630F616A52FDFB35E519F167 /* URLRequest+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLRequest+Alamofire.swift"; path = "Source/URLRequest+Alamofire.swift"; sourceTree = "<group>"; };
 		784F92FA4C6F23B525ABB716FBE2ECFF /* Alamofire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.release.xcconfig; sourceTree = "<group>"; };
@@ -1152,7 +1122,6 @@
 		7B9BCED0E0C57CAF32E480C39FEBC7DF /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
 		7BAEA8BA30E7A63F7B036F26EFEFC8B4 /* FBLPromise+Async.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Async.m"; path = "Sources/FBLPromises/FBLPromise+Async.m"; sourceTree = "<group>"; };
 		7BDA8AAAD8090814FDACFFBB94BC0DB6 /* FIRFADApiService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRFADApiService.h; path = FirebaseAppDistribution/Sources/FIRFADApiService.h; sourceTree = "<group>"; };
-		7C20C8DA05C33D4C48B042C6D8CEEFBB /* Pods-VaccineCardTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VaccineCardTests.release.xcconfig"; sourceTree = "<group>"; };
 		7C85730BAF99C685D340372877D545A5 /* FirebaseCoreInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FirebaseCoreInternal.h; path = FirebaseCore/Sources/Private/FirebaseCoreInternal.h; sourceTree = "<group>"; };
 		7CA5074527A1AA381E870D70CA2D8AAD /* FIRCurrentDateProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRCurrentDateProvider.m; path = FirebaseInstallations/Source/Library/InstallationsIDController/FIRCurrentDateProvider.m; sourceTree = "<group>"; };
 		7E18294DC34FC5781D5AF8D0B9DEA063 /* DataConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataConvertible.swift; path = JOSESwift/Sources/DataConvertible.swift; sourceTree = "<group>"; };
@@ -1178,8 +1147,8 @@
 		83B80A6410EFB777FE88052ED8901CC9 /* pvc.service.yukon.ca~issuer */ = {isa = PBXFileReference; includeInIndex = 1; name = "pvc.service.yukon.ca~issuer"; path = "BCVaccineValidator/Assets/pvc.service.yukon.ca~issuer"; sourceTree = "<group>"; };
 		84D2E53624850063818F6299973EE893 /* JOSESwift */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JOSESwift; path = JOSESwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85393002AAFB7FE4E843CFEF1CDBBB3B /* PromisesObjC-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PromisesObjC-Info.plist"; sourceTree = "<group>"; };
+		853A50446C1B564B3CC810AEF22B138D /* Pods-VaccineCard-VaccineCardUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-VaccineCard-VaccineCardUITests.modulemap"; sourceTree = "<group>"; };
 		856B5CD56F194FAD26EA91620B66D614 /* GoogleDataTransport */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GoogleDataTransport; path = GoogleDataTransport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		863BB59DD774FA83AFA1C401505A668B /* Pods-VaccineCard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VaccineCard.release.xcconfig"; sourceTree = "<group>"; };
 		86F1DE9D4518F63907E86F1DE55AE9C0 /* GDTCOREvent+GDTCCTSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GDTCOREvent+GDTCCTSupport.h"; path = "GoogleDataTransport/GDTCCTLibrary/Public/GDTCOREvent+GDTCCTSupport.h"; sourceTree = "<group>"; };
 		872D3A771768431DC4A9FD43663A9899 /* pb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb.h; sourceTree = "<group>"; };
 		8779B1D1CF6051294C8656E21C8410A0 /* HTTPMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPMethod.swift; path = Source/HTTPMethod.swift; sourceTree = "<group>"; };
@@ -1193,17 +1162,14 @@
 		8AC006DB064B4F0FBBBE18E14D115901 /* AES.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AES.swift; path = JOSESwift/Sources/CryptoImplementation/AES.swift; sourceTree = "<group>"; };
 		8AEADD22AF36B3EFB3C71E3BDAAC70B6 /* GDTCORPlatform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTCORPlatform.h; path = GoogleDataTransport/GDTCORLibrary/Internal/GDTCORPlatform.h; sourceTree = "<group>"; };
 		8B0EDC9AFCC5BCA9DA406E8EA2430F80 /* GULMutableDictionary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULMutableDictionary.m; path = GoogleUtilities/Network/GULMutableDictionary.m; sourceTree = "<group>"; };
-		8C2C8C8DFCF4D79249601FBCB2125542 /* Pods-VaccineCard-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VaccineCard-acknowledgements.markdown"; sourceTree = "<group>"; };
 		8CC9178C366942FD6FF6A115604EAD58 /* FirebaseCoreDiagnostics */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FirebaseCoreDiagnostics; path = FirebaseCoreDiagnostics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D7648F5921A39D3F5D48BA053315AB2 /* NotificationExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NotificationExtension.swift; path = BCVaccineValidator/Classes/Helpers/NotificationExtension.swift; sourceTree = "<group>"; };
 		8E70CBB28175E85FCCDB4A482834C65F /* FIRInstallationsIIDStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstallationsIIDStore.m; path = FirebaseInstallations/Source/Library/IIDMigration/FIRInstallationsIIDStore.m; sourceTree = "<group>"; };
 		8E838BB41D026396CC12DF6A0792188C /* JOSESwift.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JOSESwift.h; path = JOSESwift/Support/JOSESwift.h; sourceTree = "<group>"; };
 		8EE525AD34CB559A83EFDBC64EE937E6 /* GDTCORReachability_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTCORReachability_Private.h; path = GoogleDataTransport/GDTCORLibrary/Private/GDTCORReachability_Private.h; sourceTree = "<group>"; };
-		8FE8DEF4185CF810312CD8A474D3D110 /* Pods-VaccineCardTEST-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VaccineCardTEST-acknowledgements.markdown"; sourceTree = "<group>"; };
 		8FF469C9976222BDE02A50D3855FE95A /* FIRCoreDiagnosticsData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRCoreDiagnosticsData.h; path = Interop/CoreDiagnostics/Public/FIRCoreDiagnosticsData.h; sourceTree = "<group>"; };
 		8FF871D721B8F256BFD704FB53688A54 /* Verifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Verifier.swift; path = JOSESwift/Sources/Verifier.swift; sourceTree = "<group>"; };
-		9047D07C28B3CAD6B0392820EEFBDDE0 /* Pods-VaccineCardTEST-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VaccineCardTEST-umbrella.h"; sourceTree = "<group>"; };
-		9196A8B63399828339CB3F3BBD09AB00 /* Pods-VaccineCardTEST-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VaccineCardTEST-Info.plist"; sourceTree = "<group>"; };
+		92BA7532E8E821595F5C05D64B1AFDE6 /* Pods-VaccineCardTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-VaccineCardTests.modulemap"; sourceTree = "<group>"; };
 		9331D92BD0B496077A12C395D1374A83 /* FIRConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRConfiguration.m; path = FirebaseCore/Sources/FIRConfiguration.m; sourceTree = "<group>"; };
 		93A3207E55B35E10455C4ECBA6EE1D28 /* FirebaseCoreDiagnostics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FirebaseCoreDiagnostics.release.xcconfig; sourceTree = "<group>"; };
 		955EE337168493BE53F0A78283530BD9 /* FIRAppDistributionRelease.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRAppDistributionRelease.m; path = FirebaseAppDistribution/Sources/FIRAppDistributionRelease.m; sourceTree = "<group>"; };
@@ -1218,11 +1184,12 @@
 		9A2DC938468A16348A686B5E4D880C4C /* ParameterEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoder.swift; path = Source/ParameterEncoder.swift; sourceTree = "<group>"; };
 		9A482A47F7B90145F82C37F526BCBBC7 /* FIRAppDistribution.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRAppDistribution.h; path = FirebaseAppDistribution/Sources/Public/FirebaseAppDistribution/FIRAppDistribution.h; sourceTree = "<group>"; };
 		9A95720C1361BE70151F8001D250D88B /* GoogleUtilities.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GoogleUtilities.modulemap; sourceTree = "<group>"; };
+		9ABBCA544E8C491CCDFDA2667EDEBC76 /* Pods-VaccineCardTEST-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VaccineCardTEST-Info.plist"; sourceTree = "<group>"; };
 		9BA7DDB72B7BAED7C70070B1157FBE01 /* GDTCORUploadCoordinator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GDTCORUploadCoordinator.m; path = GoogleDataTransport/GDTCORLibrary/GDTCORUploadCoordinator.m; sourceTree = "<group>"; };
 		9BACBB3511C8D7C0AE6C3A608DDA972E /* MultipartUpload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartUpload.swift; path = Source/MultipartUpload.swift; sourceTree = "<group>"; };
-		9C53755E7FCCD446C92640A650A190FB /* Pods-VaccineCardTEST.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-VaccineCardTEST.modulemap"; sourceTree = "<group>"; };
 		9D021A444762A558F701191641F24867 /* FIRDependency.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRDependency.m; path = FirebaseCore/Sources/FIRDependency.m; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9EA3C78729C264B7119A843464768859 /* Pods-VaccineCard-VaccineCardUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VaccineCard-VaccineCardUITests-dummy.m"; sourceTree = "<group>"; };
 		9EB1F5DCEAF8503EE222C82E4EF5F3F0 /* phsasmarthealthcard-dev.azurewebsites.net~v1~issuer */ = {isa = PBXFileReference; includeInIndex = 1; name = "phsasmarthealthcard-dev.azurewebsites.net~v1~issuer"; path = "BCVaccineValidator/Assets/phsasmarthealthcard-dev.azurewebsites.net~v1~issuer"; sourceTree = "<group>"; };
 		9ECF1FB1540A187A482A460143CC5FA9 /* JWKExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JWKExtensions.swift; path = JOSESwift/Sources/JWKExtensions.swift; sourceTree = "<group>"; };
 		9F34DD322F6964B9D4CB21241C646466 /* JOSESwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JOSESwift-Info.plist"; sourceTree = "<group>"; };
@@ -1234,7 +1201,6 @@
 		A1BF24B78A53C9FD4DE4D0E3B8785CBE /* FirebaseCore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FirebaseCore.release.xcconfig; sourceTree = "<group>"; };
 		A1F005E08262B4330E39768C64FCAA6F /* FBLPromise+Always.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Always.h"; path = "Sources/FBLPromises/include/FBLPromise+Always.h"; sourceTree = "<group>"; };
 		A20A7B02F09C97C111EE389A8349E0D9 /* JOSESwiftError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JOSESwiftError.swift; path = JOSESwift/Sources/JOSESwiftError.swift; sourceTree = "<group>"; };
-		A2A39E4F25EF4140977D0AFE195BC65F /* Pods-VaccineCardTEST.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VaccineCardTEST.debug.xcconfig"; sourceTree = "<group>"; };
 		A2D99EFB22699CDD4FA0ECF592ED1102 /* FIRAnalyticsConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRAnalyticsConfiguration.h; path = FirebaseCore/Sources/FIRAnalyticsConfiguration.h; sourceTree = "<group>"; };
 		A34F31BFA14774656617237ED1514F39 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		A3E95D539CBE8A29365BB978C2492B02 /* FIRAppDistribution.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRAppDistribution.m; path = FirebaseAppDistribution/Sources/FIRAppDistribution.m; sourceTree = "<group>"; };
@@ -1247,6 +1213,7 @@
 		A67BE7B4B7B53425DA0E046D2945D5F1 /* KeyManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyManager.swift; path = BCVaccineValidator/Classes/Services/KeyManager.swift; sourceTree = "<group>"; };
 		A6C7AD2CBA97FE22C34799F79473E1DB /* FIRHeartbeatInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRHeartbeatInfo.h; path = FirebaseCore/Sources/Private/FIRHeartbeatInfo.h; sourceTree = "<group>"; };
 		A762A8DAE35D7E6933E13269144DBBFD /* HTTPHeaders.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPHeaders.swift; path = Source/HTTPHeaders.swift; sourceTree = "<group>"; };
+		A7BC125869D5F0168CFDA417EB46DA25 /* Pods-VaccineCardTEST-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VaccineCardTEST-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A80D9509F8028DDEE3F509515ED2CEA5 /* FIRInstallationsHTTPError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstallationsHTTPError.h; path = FirebaseInstallations/Source/Library/Errors/FIRInstallationsHTTPError.h; sourceTree = "<group>"; };
 		A8380EF8905B9FC3DECD3D482F4B41BC /* FirebaseAppDistribution.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FirebaseAppDistribution.release.xcconfig; sourceTree = "<group>"; };
 		A8FAB6DEE121DCCC57460BCB06C889B1 /* GDTCORTransformer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTCORTransformer.h; path = GoogleDataTransport/GDTCORLibrary/Private/GDTCORTransformer.h; sourceTree = "<group>"; };
@@ -1265,7 +1232,7 @@
 		AFF2F28C982D7896F055028E191D3097 /* FirebaseAppDistribution-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FirebaseAppDistribution-dummy.m"; sourceTree = "<group>"; };
 		B0081CB9709441D0860102425DA0624A /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = CoreOnly/Sources/Firebase.h; sourceTree = "<group>"; };
 		B1898A6B3E599D506C84D88034A21133 /* FBLPromise+Do.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Do.h"; path = "Sources/FBLPromises/include/FBLPromise+Do.h"; sourceTree = "<group>"; };
-		B2DD00400AE4502160769FC83CEFA72C /* Pods-VaccineCardTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VaccineCardTests-dummy.m"; sourceTree = "<group>"; };
+		B2860A17180E398AF169CF48986551E9 /* Pods-VaccineCardDEV-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VaccineCardDEV-Info.plist"; sourceTree = "<group>"; };
 		B310E3EA55F385D522F067D79AF68443 /* GULSecureCoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULSecureCoding.h; path = GoogleUtilities/Environment/Public/GoogleUtilities/GULSecureCoding.h; sourceTree = "<group>"; };
 		B33D2A9DE7D037C86B305DC180A340C9 /* GULHeartbeatDateStorage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULHeartbeatDateStorage.m; path = GoogleUtilities/Environment/GULHeartbeatDateStorage.m; sourceTree = "<group>"; };
 		B35F8008A406F42A8B671844203FBE46 /* DataRSAPublicKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataRSAPublicKey.swift; path = JOSESwift/Sources/CryptoImplementation/DataRSAPublicKey.swift; sourceTree = "<group>"; };
@@ -1281,6 +1248,7 @@
 		B9BE2062350FB03C0E7CB530BCD6E096 /* Firebase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Firebase.release.xcconfig; sourceTree = "<group>"; };
 		BACCABD93ECDE01E69B52904194EDCB1 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
 		BB2BA4C41CB9432DDE212D426487381D /* FBLPromise+Race.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Race.m"; path = "Sources/FBLPromises/FBLPromise+Race.m"; sourceTree = "<group>"; };
+		BBBF8CEB5A8FD8DC7703ABBC0C888421 /* Pods-VaccineCard-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VaccineCard-frameworks.sh"; sourceTree = "<group>"; };
 		BBCDEF8BB6EAA571DF6ACB7921F84518 /* OperationQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "OperationQueue+Alamofire.swift"; path = "Source/OperationQueue+Alamofire.swift"; sourceTree = "<group>"; };
 		BBE1C798FF30D55EB682FEC0702DCA94 /* GoogleUtilities.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleUtilities.debug.xcconfig; sourceTree = "<group>"; };
 		BC510351D0D0D3564015AA6E40D204E2 /* KeyManagementMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyManagementMode.swift; path = JOSESwift/Sources/KeyManagementMode.swift; sourceTree = "<group>"; };
@@ -1292,6 +1260,7 @@
 		C0F697652BA1D4BFACE7FBF13BECE7ED /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
 		C111C96984AE0408AF38E9B5D9A28474 /* GULHeartbeatDateStorageUserDefaults.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULHeartbeatDateStorageUserDefaults.m; path = GoogleUtilities/Environment/GULHeartbeatDateStorageUserDefaults.m; sourceTree = "<group>"; };
 		C1BB1390C48E63330B82D40EFE3FE5E7 /* FIRCoreDiagnostics.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRCoreDiagnostics.m; path = Firebase/CoreDiagnostics/FIRCDLibrary/FIRCoreDiagnostics.m; sourceTree = "<group>"; };
+		C24696EB7D98CC76B57F07EB60FD500A /* Pods-VaccineCard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VaccineCard.release.xcconfig"; sourceTree = "<group>"; };
 		C27AE0E393C12F23CBF31B42925A2F29 /* cct.nanopb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cct.nanopb.h; path = GoogleDataTransport/GDTCCTLibrary/Protogen/nanopb/cct.nanopb.h; sourceTree = "<group>"; };
 		C28669D4089C79D70D401488B2B26108 /* GULKeychainUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULKeychainUtils.m; path = GoogleUtilities/Environment/SecureStorage/GULKeychainUtils.m; sourceTree = "<group>"; };
 		C2B872DEB15C57F7BA27E1DC694A4552 /* GDTCORDirectorySizeTracker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GDTCORDirectorySizeTracker.m; path = GoogleDataTransport/GDTCORLibrary/GDTCORDirectorySizeTracker.m; sourceTree = "<group>"; };
@@ -1299,6 +1268,7 @@
 		C433289162645E11C54E24A8800B8E24 /* GoogleDataTransport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GoogleDataTransport.h; path = GoogleDataTransport/GDTCORLibrary/Public/GoogleDataTransport/GoogleDataTransport.h; sourceTree = "<group>"; };
 		C4863BAAD7DA0D44672B35D645926C09 /* GDTCORTransport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTCORTransport.h; path = GoogleDataTransport/GDTCORLibrary/Public/GoogleDataTransport/GDTCORTransport.h; sourceTree = "<group>"; };
 		C5441444B8EB44CC0FA5C962B9ADB902 /* Pods-VaccineCardTEST */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-VaccineCardTEST"; path = Pods_VaccineCardTEST.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C55B551AE1CE302DE9890572C3DC38B3 /* Pods-VaccineCard-VaccineCardUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VaccineCard-VaccineCardUITests-Info.plist"; sourceTree = "<group>"; };
 		C5B100B511FB196E2AD10A419F706ECA /* FIRInstallationsStoredItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstallationsStoredItem.h; path = FirebaseInstallations/Source/Library/InstallationsStore/FIRInstallationsStoredItem.h; sourceTree = "<group>"; };
 		C64898B4FA7E93737862F91897B1E6D6 /* FIROptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIROptions.h; path = FirebaseCore/Sources/Public/FirebaseCore/FIROptions.h; sourceTree = "<group>"; };
 		C68DB186D5C60B9676DCD1D6AF8AD878 /* FIRInstallationsStatus.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstallationsStatus.h; path = FirebaseInstallations/Source/Library/InstallationsIDController/FIRInstallationsStatus.h; sourceTree = "<group>"; };
@@ -1315,7 +1285,6 @@
 		CA10635595B2D4DEC51A2B889B3FA165 /* GDTCCTUploadOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTCCTUploadOperation.h; path = GoogleDataTransport/GDTCCTLibrary/Private/GDTCCTUploadOperation.h; sourceTree = "<group>"; };
 		CA813F57787283DE17FFB3F7C6E245EA /* FirebaseCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FirebaseCore.debug.xcconfig; sourceTree = "<group>"; };
 		CAC295BBAEF4CE14BAC27EE00ED4AABA /* GDTCORFlatFileStorage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTCORFlatFileStorage.h; path = GoogleDataTransport/GDTCORLibrary/Private/GDTCORFlatFileStorage.h; sourceTree = "<group>"; };
-		CC2E55630E6F1918DC4FB89E9D6D8F38 /* Pods-VaccineCardTEST-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VaccineCardTEST-frameworks.sh"; sourceTree = "<group>"; };
 		CC7A5DEB06D086B6192618B3DD437A0B /* SymmetricKeys.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SymmetricKeys.swift; path = JOSESwift/Sources/SymmetricKeys.swift; sourceTree = "<group>"; };
 		CCAE2B17092475882FDFFD326ACE5D47 /* JWKSetCodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JWKSetCodable.swift; path = JOSESwift/Sources/JWKSetCodable.swift; sourceTree = "<group>"; };
 		CCE6446EBED95039673B3558020071D7 /* GULSceneDelegateSwizzler_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULSceneDelegateSwizzler_Private.h; path = GoogleUtilities/AppDelegateSwizzler/Internal/GULSceneDelegateSwizzler_Private.h; sourceTree = "<group>"; };
@@ -1336,10 +1305,11 @@
 		D2D9B161460CD1C85FB79DD8B5019D84 /* Firebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Firebase.debug.xcconfig; sourceTree = "<group>"; };
 		D39F71D40CD3058D6739156220199667 /* FIRComponentType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRComponentType.h; path = FirebaseCore/Sources/Private/FIRComponentType.h; sourceTree = "<group>"; };
 		D49B026D77DF7F0960DC0F20E95BDC6B /* FIRHeartbeatInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRHeartbeatInfo.m; path = FirebaseCore/Sources/FIRHeartbeatInfo.m; sourceTree = "<group>"; };
+		D4F776F1DCC0A1A38219929CE6C7252C /* Pods-VaccineCard.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-VaccineCard.modulemap"; sourceTree = "<group>"; };
 		D54AC90168C84EAE4A4B0AF17E7D7F4D /* GDTCORRegistrar_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTCORRegistrar_Private.h; path = GoogleDataTransport/GDTCORLibrary/Private/GDTCORRegistrar_Private.h; sourceTree = "<group>"; };
 		D64BAC1DE60A15951FDEFE7DBFC60478 /* DecodedQRPayload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DecodedQRPayload.swift; path = BCVaccineValidator/Classes/Models/DecodedQRPayload.swift; sourceTree = "<group>"; };
 		D89E4CE62F2334414DF1946AAEEE9864 /* JOSESwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JOSESwift-umbrella.h"; sourceTree = "<group>"; };
-		D91F40A7A4353F4E9EC095ACE5639FCC /* Pods-VaccineCard-VaccineCardUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VaccineCard-VaccineCardUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D8A2CCA97BA80375F0373D292E3F1696 /* Pods-VaccineCardTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VaccineCardTests-Info.plist"; sourceTree = "<group>"; };
 		D927B5DB2853D44FBA6AAF502DFB49BB /* nanopb-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "nanopb-dummy.m"; sourceTree = "<group>"; };
 		D94AC4A261AE176F013EF877CA630DB4 /* FirebaseAppDistribution-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FirebaseAppDistribution-umbrella.h"; sourceTree = "<group>"; };
 		D9F10E1991C05C451F3E7246859C3B2E /* GDTCORDirectorySizeTracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTCORDirectorySizeTracker.h; path = GoogleDataTransport/GDTCORLibrary/Internal/GDTCORDirectorySizeTracker.h; sourceTree = "<group>"; };
@@ -1347,7 +1317,6 @@
 		DB018BAAD715FAEE5EA961FDE198DA45 /* BCVaccineValidator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BCVaccineValidator.debug.xcconfig; sourceTree = "<group>"; };
 		DB5C1468E70481E9A11FB5F651B10E20 /* FirebaseAppDistribution.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FirebaseAppDistribution.debug.xcconfig; sourceTree = "<group>"; };
 		DB81CDA79C1AB0A75EBD473F053A8B40 /* FIRCoreDiagnosticsConnector.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRCoreDiagnosticsConnector.m; path = FirebaseCore/Sources/FIRCoreDiagnosticsConnector.m; sourceTree = "<group>"; };
-		DBE8AC3335CE1BB2BCCD0BB108534DEF /* Pods-VaccineCard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VaccineCard.debug.xcconfig"; sourceTree = "<group>"; };
 		DBFEA7343EA84FACC584763B3F377507 /* GULAppDelegateSwizzler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULAppDelegateSwizzler.h; path = GoogleUtilities/AppDelegateSwizzler/Public/GoogleUtilities/GULAppDelegateSwizzler.h; sourceTree = "<group>"; };
 		DCAC84F0898F6609F729A2B19A335B68 /* GULNetwork.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULNetwork.h; path = GoogleUtilities/Network/Public/GoogleUtilities/GULNetwork.h; sourceTree = "<group>"; };
 		DDFB812721828A82D94464F12282BD8D /* RetryPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RetryPolicy.swift; path = Source/RetryPolicy.swift; sourceTree = "<group>"; };
@@ -1358,7 +1327,7 @@
 		DEEF19C42D9E43DD3916A300BAF057E4 /* ECVerifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ECVerifier.swift; path = JOSESwift/Sources/ECVerifier.swift; sourceTree = "<group>"; };
 		DF42D8B91B0D4ACBE5F049C66C79A671 /* PromisesObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PromisesObjC.debug.xcconfig; sourceTree = "<group>"; };
 		DFD988DF179279FAD15A9C9A2B0373FF /* GULURLSessionDataResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULURLSessionDataResponse.h; path = GoogleUtilities/Environment/Public/GoogleUtilities/GULURLSessionDataResponse.h; sourceTree = "<group>"; };
-		E0ABB589902B50059B70BDE69B9C5ED5 /* Pods-VaccineCard-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VaccineCard-dummy.m"; sourceTree = "<group>"; };
+		E06F1BD75B8A134C91CB67005F7F93A9 /* Pods-VaccineCard-VaccineCardUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VaccineCard-VaccineCardUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		E1A605D078ACE8DE8257BAB8020206B3 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
 		E2449F3752ABA14A4BE0D63AF15169CE /* ECSigner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ECSigner.swift; path = JOSESwift/Sources/ECSigner.swift; sourceTree = "<group>"; };
 		E286E0B89996EBE8B6D2A2E8FC0CDDED /* FIRInstallationsAuthTokenResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstallationsAuthTokenResult.m; path = FirebaseInstallations/Source/Library/FIRInstallationsAuthTokenResult.m; sourceTree = "<group>"; };
@@ -1372,37 +1341,40 @@
 		E3EE986B21D19C081C18769D9490AB54 /* JWKSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JWKSet.swift; path = JOSESwift/Sources/JWKSet.swift; sourceTree = "<group>"; };
 		E4267672D4C73D97D45DFDBA77A90827 /* DataECPublicKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataECPublicKey.swift; path = JOSESwift/Sources/CryptoImplementation/DataECPublicKey.swift; sourceTree = "<group>"; };
 		E468EA89CD0CB25F17DDE17E47F5B73B /* AuthenticationInterceptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthenticationInterceptor.swift; path = Source/AuthenticationInterceptor.swift; sourceTree = "<group>"; };
-		E50690921C5BF35559474E35EBBB8F0A /* Pods-VaccineCardTEST-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VaccineCardTEST-acknowledgements.plist"; sourceTree = "<group>"; };
+		E5628A17625519A92819270F0BAFE58B /* Pods-VaccineCardTEST-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VaccineCardTEST-acknowledgements.plist"; sourceTree = "<group>"; };
+		E587A481FC76B45FAEF9055E42B3EBDB /* Pods-VaccineCardTEST.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-VaccineCardTEST.modulemap"; sourceTree = "<group>"; };
 		E5F7D941E63585F4B15644AABF15DD45 /* FirebaseAppDistribution-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FirebaseAppDistribution-Info.plist"; sourceTree = "<group>"; };
 		E7022A449611C343D972BDD1FCF85CEC /* FBLPromisePrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBLPromisePrivate.h; path = Sources/FBLPromises/include/FBLPromisePrivate.h; sourceTree = "<group>"; };
 		E712C38498DF0BCB782AF1DE7B23DE15 /* GDTCORClock.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GDTCORClock.m; path = GoogleDataTransport/GDTCORLibrary/GDTCORClock.m; sourceTree = "<group>"; };
 		E731FE6855C7A5DBCEF53E63DE30E6C2 /* FBLPromise+Await.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Await.h"; path = "Sources/FBLPromises/include/FBLPromise+Await.h"; sourceTree = "<group>"; };
 		E7351E8684C2D1C1A8E6A84EF68ED878 /* firebasecore.nanopb.c */ = {isa = PBXFileReference; includeInIndex = 1; name = firebasecore.nanopb.c; path = Firebase/CoreDiagnostics/FIRCDLibrary/Protogen/nanopb/firebasecore.nanopb.c; sourceTree = "<group>"; };
 		E86467554BA189BD4BDCCEBD46356059 /* RSAKeyCodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RSAKeyCodable.swift; path = JOSESwift/Sources/RSAKeyCodable.swift; sourceTree = "<group>"; };
+		E8700552A14316EA076633A6838064E1 /* Pods-VaccineCardDEV-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VaccineCardDEV-dummy.m"; sourceTree = "<group>"; };
 		E90C2A1370DC0BAB27E390B4D27215B0 /* FBLPromise+Reduce.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Reduce.h"; path = "Sources/FBLPromises/include/FBLPromise+Reduce.h"; sourceTree = "<group>"; };
 		E956B98868A9FB6E7CAD49468E13C441 /* smarthealthcard.phsa.ca~v1~trusted~.well-known~issuers.json */ = {isa = PBXFileReference; includeInIndex = 1; name = "smarthealthcard.phsa.ca~v1~trusted~.well-known~issuers.json"; path = "BCVaccineValidator/Assets/smarthealthcard.phsa.ca~v1~trusted~.well-known~issuers.json"; sourceTree = "<group>"; };
 		E9BE5B0762F06C6BF926843083C96B68 /* GDTCCTNanopbHelpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTCCTNanopbHelpers.h; path = GoogleDataTransport/GDTCCTLibrary/Private/GDTCCTNanopbHelpers.h; sourceTree = "<group>"; };
-		E9F780C83B88E09B9E8D2B5ABD791A42 /* Pods-VaccineCard-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VaccineCard-acknowledgements.plist"; sourceTree = "<group>"; };
-		EA229514D9C8E2DAA58FBDE99B15DD3F /* Pods-VaccineCardTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VaccineCardTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EA2679D10A6EBBC1F9509B5DA90E5897 /* BCVaccineValidator-BCVaccineValidator */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "BCVaccineValidator-BCVaccineValidator"; path = BCVaccineValidator.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA4AD33EB645C5D302F86D5BE5B2C612 /* FIRInstallationsItem+RegisterInstallationAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FIRInstallationsItem+RegisterInstallationAPI.h"; path = "FirebaseInstallations/Source/Library/InstallationsAPI/FIRInstallationsItem+RegisterInstallationAPI.h"; sourceTree = "<group>"; };
 		EA6A895DEF3A0F232F1867C586EA98C1 /* NSURLSession+GULPromises.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURLSession+GULPromises.m"; path = "GoogleUtilities/Environment/URLSessionPromiseWrapper/NSURLSession+GULPromises.m"; sourceTree = "<group>"; };
 		EA767BD293BAE34C83F81184851E2005 /* StringEncoding+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "StringEncoding+Alamofire.swift"; path = "Source/StringEncoding+Alamofire.swift"; sourceTree = "<group>"; };
 		EA7B22A5552DEA117D6A3DF2A6C25F1F /* Signer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Signer.swift; path = JOSESwift/Sources/Signer.swift; sourceTree = "<group>"; };
+		EC308328AE6E0A6BD4E0E42A5B332161 /* Pods-VaccineCardDEV-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VaccineCardDEV-umbrella.h"; sourceTree = "<group>"; };
 		EC61C5F6E9293E8F1F6A25FD6AA57108 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
 		EC635D08FB0A2AEDF80DF53D0047C471 /* FBLPromise+Wrap.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Wrap.m"; path = "Sources/FBLPromises/FBLPromise+Wrap.m"; sourceTree = "<group>"; };
 		ED986E6898C7BA4A429D75CD6E48284C /* Session.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Session.swift; path = Source/Session.swift; sourceTree = "<group>"; };
+		EE691EAD84173554CAB7947775B71933 /* Pods-VaccineCardTEST-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VaccineCardTEST-umbrella.h"; sourceTree = "<group>"; };
 		EE77D6E8AD66BC6B9B1C9BFACC024A67 /* FIRConfigurationInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRConfigurationInternal.h; path = FirebaseCore/Sources/FIRConfigurationInternal.h; sourceTree = "<group>"; };
 		EF0B639B582C41AE933AE211070629E2 /* RSAKeyEncryptionMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RSAKeyEncryptionMode.swift; path = JOSESwift/Sources/RSAKeyEncryptionMode.swift; sourceTree = "<group>"; };
 		EF4979DCF30A55035AD1BAEA7D823C66 /* FirebaseCoreDiagnostics.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FirebaseCoreDiagnostics.modulemap; sourceTree = "<group>"; };
 		EF5DA6B03B92816043CE3CBCC3FB78AF /* GULReachabilityChecker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULReachabilityChecker.m; path = GoogleUtilities/Reachability/GULReachabilityChecker.m; sourceTree = "<group>"; };
 		F01E03941662B55A3E857E65888423B6 /* GDTCOREventDataObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTCOREventDataObject.h; path = GoogleDataTransport/GDTCORLibrary/Public/GoogleDataTransport/GDTCOREventDataObject.h; sourceTree = "<group>"; };
+		F05FA6DBEC546C4905B6F22696B4EBDB /* Pods-VaccineCardTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VaccineCardTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		F08741E8F874BB1EB733154FBB740AFA /* FIRInstallationsBackoffController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstallationsBackoffController.m; path = FirebaseInstallations/Source/Library/InstallationsIDController/FIRInstallationsBackoffController.m; sourceTree = "<group>"; };
 		F08AF3E4956B0185DCDA18AC5942B1F7 /* FirebaseAppDistribution.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FirebaseAppDistribution.modulemap; sourceTree = "<group>"; };
 		F161250EADF85A00EE7403876F39AEF7 /* GDTCOREvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTCOREvent.h; path = GoogleDataTransport/GDTCORLibrary/Public/GoogleDataTransport/GDTCOREvent.h; sourceTree = "<group>"; };
 		F16A325166AB7A39F46DD359DCAFCBFE /* FIRInstallationsItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstallationsItem.m; path = FirebaseInstallations/Source/Library/FIRInstallationsItem.m; sourceTree = "<group>"; };
 		F1AB3CB4F0A922D069B8EC4DD15F2E53 /* FBLPromise+Delay.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Delay.m"; path = "Sources/FBLPromises/FBLPromise+Delay.m"; sourceTree = "<group>"; };
-		F1D780B9B2534665F23BC294C4575504 /* Pods-VaccineCard-VaccineCardUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VaccineCard-VaccineCardUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		F21548744BB2B1FFBEC29DACBF647FEA /* Pods-VaccineCardTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VaccineCardTests.release.xcconfig"; sourceTree = "<group>"; };
 		F22E0E71CD1B6DB129A63F60C3F7DED9 /* FIRInstallationsStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstallationsStore.m; path = FirebaseInstallations/Source/Library/InstallationsStore/FIRInstallationsStore.m; sourceTree = "<group>"; };
 		F2E26EB4A81680F0103EAF06171BA961 /* GDTCORUploadBatch.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GDTCORUploadBatch.m; path = GoogleDataTransport/GDTCORLibrary/GDTCORUploadBatch.m; sourceTree = "<group>"; };
 		F3A1409308B1B9BE9599188CC6432F0B /* FBLPromise+Validate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Validate.h"; path = "Sources/FBLPromises/include/FBLPromise+Validate.h"; sourceTree = "<group>"; };
@@ -1422,13 +1394,12 @@
 		F8C6521286E4D8DCB4BAC45308C82C31 /* FBLPromise+All.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+All.h"; path = "Sources/FBLPromises/include/FBLPromise+All.h"; sourceTree = "<group>"; };
 		FA53892AAA828148E6F249B8B2A51476 /* GULReachabilityChecker+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GULReachabilityChecker+Internal.h"; path = "GoogleUtilities/Reachability/GULReachabilityChecker+Internal.h"; sourceTree = "<group>"; };
 		FB585057F0050735D5093ED25ADA1D97 /* FIRInstallations.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstallations.m; path = FirebaseInstallations/Source/Library/FIRInstallations.m; sourceTree = "<group>"; };
-		FC0366D321BA57AD11BDC48F9F2C9E43 /* Pods-VaccineCard-VaccineCardUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VaccineCard-VaccineCardUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FC8997650438CF8B8ACAED18C552C248 /* Pods-VaccineCardDEV */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-VaccineCardDEV"; path = Pods_VaccineCardDEV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCE21FE6DD68EF34BC867F80742C54C9 /* GDTCCTUploadOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GDTCCTUploadOperation.m; path = GoogleDataTransport/GDTCCTLibrary/GDTCCTUploadOperation.m; sourceTree = "<group>"; };
 		FD8A883B7244D650DABDA96A757CFDF8 /* Pods-VaccineCardTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-VaccineCardTests"; path = Pods_VaccineCardTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD8DDE219735FC7880669CF0131F87CD /* FBLPromise+Testing.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Testing.m"; path = "Sources/FBLPromises/FBLPromise+Testing.m"; sourceTree = "<group>"; };
 		FDF85EBC90ACED1BC9F69F9857BC5279 /* FIRInstallationsIDController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstallationsIDController.h; path = FirebaseInstallations/Source/Library/InstallationsIDController/FIRInstallationsIDController.h; sourceTree = "<group>"; };
 		FE7DF31FAB61518BB91609C83B41EE8F /* GDTCCTNanopbHelpers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GDTCCTNanopbHelpers.m; path = GoogleDataTransport/GDTCCTLibrary/GDTCCTNanopbHelpers.m; sourceTree = "<group>"; };
-		FF15AD9EF4D3ED3A3172D396E931EBD2 /* Pods-VaccineCard-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VaccineCard-umbrella.h"; sourceTree = "<group>"; };
 		FF2C36288E0F81C41C36672E40495D5D /* RulesManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RulesManager.swift; path = BCVaccineValidator/Classes/Services/RulesManager.swift; sourceTree = "<group>"; };
 		FF5FDAEF59D951970A6670122DBE1EEE /* RSASigner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RSASigner.swift; path = JOSESwift/Sources/RSASigner.swift; sourceTree = "<group>"; };
 		FFFCC0B5BD77549D685DAC411221C93A /* GDTCORPlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GDTCORPlatform.m; path = GoogleDataTransport/GDTCORLibrary/GDTCORPlatform.m; sourceTree = "<group>"; };
@@ -1440,6 +1411,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC92360A0B36C56D2D4659E88139A85D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12071920D34C8A76387DDEB2322FD3AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D93CF2EFC6E7BF3DD10A30F8CF7438F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1495,6 +1474,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		491E3BE5823ED7F9057D6B942B67D864 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFA2044A3D85B97577729052D9CD9753 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7F2114DDE9F5B1C025CE72981F47F5A1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1502,19 +1489,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AEEB4D707D25AE19C371656FC21CBFAF /* Frameworks */ = {
+		B072B8608DCEFB20FC4420B27351BC68 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EFC3E3A64DB590629A175B23FFF897D /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C84A2638EF8CF7D093B22376E0B31418 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4D3E2DD8E9153880A8E1E7FBE2E85F56 /* Foundation.framework in Frameworks */,
+				893DC7D807ECCCC7340AEE26886B3939 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1668,6 +1647,23 @@
 			path = FirebaseCoreDiagnostics;
 			sourceTree = "<group>";
 		};
+		19F9DB40273C0FC003E564602584EB1A /* Pods-VaccineCard */ = {
+			isa = PBXGroup;
+			children = (
+				D4F776F1DCC0A1A38219929CE6C7252C /* Pods-VaccineCard.modulemap */,
+				3CE981E7CBA74B1E700706252C98A4CA /* Pods-VaccineCard-acknowledgements.markdown */,
+				6A99E678B3F4141BCA8EA9112CD1BCDF /* Pods-VaccineCard-acknowledgements.plist */,
+				110ED2852EA87C7F3721B8941BAB0A2D /* Pods-VaccineCard-dummy.m */,
+				BBBF8CEB5A8FD8DC7703ABBC0C888421 /* Pods-VaccineCard-frameworks.sh */,
+				0E64A8D2E08DB7A59B48C197DE41A0E0 /* Pods-VaccineCard-Info.plist */,
+				2E87855D25CF51F26DDC33CF33C86FEC /* Pods-VaccineCard-umbrella.h */,
+				2F9038F842B441084CCD04D442D947D1 /* Pods-VaccineCard.debug.xcconfig */,
+				C24696EB7D98CC76B57F07EB60FD500A /* Pods-VaccineCard.release.xcconfig */,
+			);
+			name = "Pods-VaccineCard";
+			path = "Target Support Files/Pods-VaccineCard";
+			sourceTree = "<group>";
+		};
 		1C8D5DC1C5E181590503A4E8A83EE867 /* JOSESwift */ = {
 			isa = PBXGroup;
 			children = (
@@ -1802,6 +1798,23 @@
 			path = GoogleDataTransport;
 			sourceTree = "<group>";
 		};
+		2ED60910371F971CA38E0E460A9BB2F9 /* Pods-VaccineCardTEST */ = {
+			isa = PBXGroup;
+			children = (
+				E587A481FC76B45FAEF9055E42B3EBDB /* Pods-VaccineCardTEST.modulemap */,
+				A7BC125869D5F0168CFDA417EB46DA25 /* Pods-VaccineCardTEST-acknowledgements.markdown */,
+				E5628A17625519A92819270F0BAFE58B /* Pods-VaccineCardTEST-acknowledgements.plist */,
+				41F7DD41B946FD9015BBF5BF1814C076 /* Pods-VaccineCardTEST-dummy.m */,
+				02E26A94626366988D568A5D8B7AA56C /* Pods-VaccineCardTEST-frameworks.sh */,
+				9ABBCA544E8C491CCDFDA2667EDEBC76 /* Pods-VaccineCardTEST-Info.plist */,
+				EE691EAD84173554CAB7947775B71933 /* Pods-VaccineCardTEST-umbrella.h */,
+				4272F95641844710B466A71C44659D4E /* Pods-VaccineCardTEST.debug.xcconfig */,
+				57E7B8ED916740AB9AFCAB004B6F7817 /* Pods-VaccineCardTEST.release.xcconfig */,
+			);
+			name = "Pods-VaccineCardTEST";
+			path = "Target Support Files/Pods-VaccineCardTEST";
+			sourceTree = "<group>";
+		};
 		37BCD3FB1E8B4A17AC39406EFF44C876 /* FirebaseInstallations */ = {
 			isa = PBXGroup;
 			children = (
@@ -1879,22 +1892,6 @@
 			name = Network;
 			sourceTree = "<group>";
 		};
-		3CC871EFFB1F5FE606B07EC79B30A40F /* Pods-VaccineCardTests */ = {
-			isa = PBXGroup;
-			children = (
-				1132F0B0859F0D9873A1517B870E3D19 /* Pods-VaccineCardTests.modulemap */,
-				1854CB9D4185E8496E10BE2B2A6AD9EE /* Pods-VaccineCardTests-acknowledgements.markdown */,
-				69D8C2F6E167E6DD945900F3ECA78551 /* Pods-VaccineCardTests-acknowledgements.plist */,
-				B2DD00400AE4502160769FC83CEFA72C /* Pods-VaccineCardTests-dummy.m */,
-				28C1F205A39E47D8163D63ED441E1C88 /* Pods-VaccineCardTests-Info.plist */,
-				681D4FC63E8892158B31184CE3F4D399 /* Pods-VaccineCardTests-umbrella.h */,
-				EA229514D9C8E2DAA58FBDE99B15DD3F /* Pods-VaccineCardTests.debug.xcconfig */,
-				7C20C8DA05C33D4C48B042C6D8CEEFBB /* Pods-VaccineCardTests.release.xcconfig */,
-			);
-			name = "Pods-VaccineCardTests";
-			path = "Target Support Files/Pods-VaccineCardTests";
-			sourceTree = "<group>";
-		};
 		4628E28446445E58A51F0DD99F4B3A5E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -1926,23 +1923,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/nanopb";
-			sourceTree = "<group>";
-		};
-		4B0534B392385E4697B6D4BD33F0FACC /* Pods-VaccineCardTEST */ = {
-			isa = PBXGroup;
-			children = (
-				9C53755E7FCCD446C92640A650A190FB /* Pods-VaccineCardTEST.modulemap */,
-				8FE8DEF4185CF810312CD8A474D3D110 /* Pods-VaccineCardTEST-acknowledgements.markdown */,
-				E50690921C5BF35559474E35EBBB8F0A /* Pods-VaccineCardTEST-acknowledgements.plist */,
-				7796CD4F4BCAC39B120D60E38447753F /* Pods-VaccineCardTEST-dummy.m */,
-				CC2E55630E6F1918DC4FB89E9D6D8F38 /* Pods-VaccineCardTEST-frameworks.sh */,
-				9196A8B63399828339CB3F3BBD09AB00 /* Pods-VaccineCardTEST-Info.plist */,
-				9047D07C28B3CAD6B0392820EEFBDDE0 /* Pods-VaccineCardTEST-umbrella.h */,
-				A2A39E4F25EF4140977D0AFE195BC65F /* Pods-VaccineCardTEST.debug.xcconfig */,
-				24823437386BB6337FB4C8F2750DFF94 /* Pods-VaccineCardTEST.release.xcconfig */,
-			);
-			name = "Pods-VaccineCardTEST";
-			path = "Target Support Files/Pods-VaccineCardTEST";
 			sourceTree = "<group>";
 		};
 		4E9B6A716A660DF3E154B58CFAB1FE3F /* Firebase */ = {
@@ -2095,6 +2075,22 @@
 			path = FirebaseCore;
 			sourceTree = "<group>";
 		};
+		859DC3B46F63B0E925070A6301BB5E50 /* Pods-VaccineCardTests */ = {
+			isa = PBXGroup;
+			children = (
+				92BA7532E8E821595F5C05D64B1AFDE6 /* Pods-VaccineCardTests.modulemap */,
+				6B919F9D65F44E974F91F40442B47B02 /* Pods-VaccineCardTests-acknowledgements.markdown */,
+				F05FA6DBEC546C4905B6F22696B4EBDB /* Pods-VaccineCardTests-acknowledgements.plist */,
+				14492B64051B0525483930391913564D /* Pods-VaccineCardTests-dummy.m */,
+				D8A2CCA97BA80375F0373D292E3F1696 /* Pods-VaccineCardTests-Info.plist */,
+				33F2849F13FA26D62E43B426D1E35F52 /* Pods-VaccineCardTests-umbrella.h */,
+				4F4675F23643AFB16DEC1011CE16A3EB /* Pods-VaccineCardTests.debug.xcconfig */,
+				F21548744BB2B1FFBEC29DACBF647FEA /* Pods-VaccineCardTests.release.xcconfig */,
+			);
+			name = "Pods-VaccineCardTests";
+			path = "Target Support Files/Pods-VaccineCardTests";
+			sourceTree = "<group>";
+		};
 		8A9F734DF12873F069BD4661C5C83038 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -2120,23 +2116,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/FirebaseCoreDiagnostics";
-			sourceTree = "<group>";
-		};
-		9C2C784262748280E3368CB2D7A2AEF2 /* Pods-VaccineCard-VaccineCardUITests */ = {
-			isa = PBXGroup;
-			children = (
-				2CE244DB1F948D60E3037871D137327E /* Pods-VaccineCard-VaccineCardUITests.modulemap */,
-				77C044568D596BB8DE321BF55433DAC0 /* Pods-VaccineCard-VaccineCardUITests-acknowledgements.markdown */,
-				F1D780B9B2534665F23BC294C4575504 /* Pods-VaccineCard-VaccineCardUITests-acknowledgements.plist */,
-				0BAF5E3065E8917B3A9C10DAEA637D80 /* Pods-VaccineCard-VaccineCardUITests-dummy.m */,
-				0F3D73728328FA29D76B233E7D18810B /* Pods-VaccineCard-VaccineCardUITests-frameworks.sh */,
-				1B363556CB4B421402110A9E15F21FB5 /* Pods-VaccineCard-VaccineCardUITests-Info.plist */,
-				2B1F6C9E66713CED033E1290EA405200 /* Pods-VaccineCard-VaccineCardUITests-umbrella.h */,
-				FC0366D321BA57AD11BDC48F9F2C9E43 /* Pods-VaccineCard-VaccineCardUITests.debug.xcconfig */,
-				D91F40A7A4353F4E9EC095ACE5639FCC /* Pods-VaccineCard-VaccineCardUITests.release.xcconfig */,
-			);
-			name = "Pods-VaccineCard-VaccineCardUITests";
-			path = "Target Support Files/Pods-VaccineCard-VaccineCardUITests";
 			sourceTree = "<group>";
 		};
 		9D5F6A573B58E0E849F9418995DB49D0 /* Reachability */ = {
@@ -2233,6 +2212,52 @@
 			path = "../Target Support Files/GoogleUtilities";
 			sourceTree = "<group>";
 		};
+		B808E4518A62C4B78996C364055DB912 /* Pods-VaccineCard-VaccineCardUITests */ = {
+			isa = PBXGroup;
+			children = (
+				853A50446C1B564B3CC810AEF22B138D /* Pods-VaccineCard-VaccineCardUITests.modulemap */,
+				28F5874CD204FBCE93323D46E158B26A /* Pods-VaccineCard-VaccineCardUITests-acknowledgements.markdown */,
+				E06F1BD75B8A134C91CB67005F7F93A9 /* Pods-VaccineCard-VaccineCardUITests-acknowledgements.plist */,
+				9EA3C78729C264B7119A843464768859 /* Pods-VaccineCard-VaccineCardUITests-dummy.m */,
+				0809391B484C772A40A8FD7A6E592CA1 /* Pods-VaccineCard-VaccineCardUITests-frameworks.sh */,
+				C55B551AE1CE302DE9890572C3DC38B3 /* Pods-VaccineCard-VaccineCardUITests-Info.plist */,
+				3D47338FB5CCEB7AE2ACFCD380FCC9C8 /* Pods-VaccineCard-VaccineCardUITests-umbrella.h */,
+				42E60725C8C8EC45FFCBB75E8FEDECD3 /* Pods-VaccineCard-VaccineCardUITests.debug.xcconfig */,
+				4E104BA2A7525655E9506F2A3ECE74BB /* Pods-VaccineCard-VaccineCardUITests.release.xcconfig */,
+			);
+			name = "Pods-VaccineCard-VaccineCardUITests";
+			path = "Target Support Files/Pods-VaccineCard-VaccineCardUITests";
+			sourceTree = "<group>";
+		};
+		B883F3E74C1276383B22181D28F4CE6F /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				19F9DB40273C0FC003E564602584EB1A /* Pods-VaccineCard */,
+				B808E4518A62C4B78996C364055DB912 /* Pods-VaccineCard-VaccineCardUITests */,
+				BD8FCE937DB709B6F57CC773ED3007B5 /* Pods-VaccineCardDEV */,
+				2ED60910371F971CA38E0E460A9BB2F9 /* Pods-VaccineCardTEST */,
+				859DC3B46F63B0E925070A6301BB5E50 /* Pods-VaccineCardTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		BD8FCE937DB709B6F57CC773ED3007B5 /* Pods-VaccineCardDEV */ = {
+			isa = PBXGroup;
+			children = (
+				3C6593AEE1F391FFE62EF97EF937B42B /* Pods-VaccineCardDEV.modulemap */,
+				21DE4BCDFE9FD73773571B7295EB903D /* Pods-VaccineCardDEV-acknowledgements.markdown */,
+				2AAE26A74580FF86A4677F5738900279 /* Pods-VaccineCardDEV-acknowledgements.plist */,
+				E8700552A14316EA076633A6838064E1 /* Pods-VaccineCardDEV-dummy.m */,
+				291624A434202FF21713135C0DD47496 /* Pods-VaccineCardDEV-frameworks.sh */,
+				B2860A17180E398AF169CF48986551E9 /* Pods-VaccineCardDEV-Info.plist */,
+				EC308328AE6E0A6BD4E0E42A5B332161 /* Pods-VaccineCardDEV-umbrella.h */,
+				73CE5A3D46826C733B1653CB465FE4AA /* Pods-VaccineCardDEV.debug.xcconfig */,
+				0D4208120001C409ADEBA761D684C34C /* Pods-VaccineCardDEV.release.xcconfig */,
+			);
+			name = "Pods-VaccineCardDEV";
+			path = "Target Support Files/Pods-VaccineCardDEV";
+			sourceTree = "<group>";
+		};
 		BF9EF4E46E27C721D61CACB596AB5485 /* CoreOnly */ = {
 			isa = PBXGroup;
 			children = (
@@ -2250,31 +2275,14 @@
 			name = "NSData+zlib";
 			sourceTree = "<group>";
 		};
-		C8D882BF0F956E994EE1348C8713EB93 /* Pods-VaccineCard */ = {
-			isa = PBXGroup;
-			children = (
-				3612E5F76C40DACECEF09177A9D97075 /* Pods-VaccineCard.modulemap */,
-				8C2C8C8DFCF4D79249601FBCB2125542 /* Pods-VaccineCard-acknowledgements.markdown */,
-				E9F780C83B88E09B9E8D2B5ABD791A42 /* Pods-VaccineCard-acknowledgements.plist */,
-				E0ABB589902B50059B70BDE69B9C5ED5 /* Pods-VaccineCard-dummy.m */,
-				76BC4C4BCE3FD7BA33340940D24582C7 /* Pods-VaccineCard-frameworks.sh */,
-				59A03BE07FE99A4BB3A1C37385ED2BF0 /* Pods-VaccineCard-Info.plist */,
-				FF15AD9EF4D3ED3A3172D396E931EBD2 /* Pods-VaccineCard-umbrella.h */,
-				DBE8AC3335CE1BB2BCCD0BB108534DEF /* Pods-VaccineCard.debug.xcconfig */,
-				863BB59DD774FA83AFA1C401505A668B /* Pods-VaccineCard.release.xcconfig */,
-			);
-			name = "Pods-VaccineCard";
-			path = "Target Support Files/Pods-VaccineCard";
-			sourceTree = "<group>";
-		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D68CA58901FBF589D75F5E40F1EAF5BA /* Frameworks */,
 				5CAD2E5CB0C19A31FC37E6E1B07A2CF4 /* Pods */,
-				DA2BE24548840500C3EA7027D16A253E /* Products */,
-				FC3BD37F42B5EC380068EF66688A3419 /* Targets Support Files */,
+				E076C340837B7E9D4A8FFE654A1C212E /* Products */,
+				B883F3E74C1276383B22181D28F4CE6F /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -2307,29 +2315,6 @@
 				7AD3484477CF7BD376656FC7606DE4EA /* GULUserDefaults.m */,
 			);
 			name = UserDefaults;
-			sourceTree = "<group>";
-		};
-		DA2BE24548840500C3EA7027D16A253E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */,
-				2B5894AEFF5152D2AD6A5DBF473B13C6 /* BCVaccineValidator */,
-				EA2679D10A6EBBC1F9509B5DA90E5897 /* BCVaccineValidator-BCVaccineValidator */,
-				6DF1E44E6E7D05B4E0A2A774872F24F9 /* FirebaseAppDistribution */,
-				E2B63D462DB7F827C4B11FD51E4F8E2D /* FirebaseCore */,
-				8CC9178C366942FD6FF6A115604EAD58 /* FirebaseCoreDiagnostics */,
-				13C8C8B254851998F9289F71229B28A2 /* FirebaseInstallations */,
-				856B5CD56F194FAD26EA91620B66D614 /* GoogleDataTransport */,
-				B43874C6CBB50E7134FBEC24BABFE14F /* GoogleUtilities */,
-				84D2E53624850063818F6299973EE893 /* JOSESwift */,
-				06FC5C9CF96D60C50FCD47D339C91951 /* nanopb */,
-				0162BC73C5B058E50E33D17F3AA45953 /* Pods-VaccineCard */,
-				8263CB5B480DFAA193DB2A8F9C2317AE /* Pods-VaccineCard-VaccineCardUITests */,
-				C5441444B8EB44CC0FA5C962B9ADB902 /* Pods-VaccineCardTEST */,
-				FD8A883B7244D650DABDA96A757CFDF8 /* Pods-VaccineCardTests */,
-				3347A1AB6546F0A3977529B8F199DC41 /* PromisesObjC */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		DA76870284968939595C1A62B1D7EF62 /* AppDelegateSwizzler */ = {
@@ -2426,6 +2411,30 @@
 			path = PromisesObjC;
 			sourceTree = "<group>";
 		};
+		E076C340837B7E9D4A8FFE654A1C212E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */,
+				2B5894AEFF5152D2AD6A5DBF473B13C6 /* BCVaccineValidator */,
+				EA2679D10A6EBBC1F9509B5DA90E5897 /* BCVaccineValidator-BCVaccineValidator */,
+				6DF1E44E6E7D05B4E0A2A774872F24F9 /* FirebaseAppDistribution */,
+				E2B63D462DB7F827C4B11FD51E4F8E2D /* FirebaseCore */,
+				8CC9178C366942FD6FF6A115604EAD58 /* FirebaseCoreDiagnostics */,
+				13C8C8B254851998F9289F71229B28A2 /* FirebaseInstallations */,
+				856B5CD56F194FAD26EA91620B66D614 /* GoogleDataTransport */,
+				B43874C6CBB50E7134FBEC24BABFE14F /* GoogleUtilities */,
+				84D2E53624850063818F6299973EE893 /* JOSESwift */,
+				06FC5C9CF96D60C50FCD47D339C91951 /* nanopb */,
+				0162BC73C5B058E50E33D17F3AA45953 /* Pods-VaccineCard */,
+				8263CB5B480DFAA193DB2A8F9C2317AE /* Pods-VaccineCard-VaccineCardUITests */,
+				FC8997650438CF8B8ACAED18C552C248 /* Pods-VaccineCardDEV */,
+				C5441444B8EB44CC0FA5C962B9ADB902 /* Pods-VaccineCardTEST */,
+				FD8A883B7244D650DABDA96A757CFDF8 /* Pods-VaccineCardTests */,
+				3347A1AB6546F0A3977529B8F199DC41 /* PromisesObjC */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		EBC9C818B80CC312EC23CE7D409A048E /* Alamofire */ = {
 			isa = PBXGroup;
 			children = (
@@ -2470,17 +2479,6 @@
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
-		FC3BD37F42B5EC380068EF66688A3419 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				C8D882BF0F956E994EE1348C8713EB93 /* Pods-VaccineCard */,
-				9C2C784262748280E3368CB2D7A2AEF2 /* Pods-VaccineCard-VaccineCardUITests */,
-				4B0534B392385E4697B6D4BD33F0FACC /* Pods-VaccineCardTEST */,
-				3CC871EFFB1F5FE606B07EC79B30A40F /* Pods-VaccineCardTests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
 		FE1E66EE759D1E00E6A36B7CB16F0BC1 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -2499,14 +2497,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		08BFE9D6588F90E11455AF36D385362C /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				71FE47838927B039824CBAFBF4C203C9 /* Pods-VaccineCardTEST-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		0A70621BDFC3E22329ABC64C4018B7E2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -2601,6 +2591,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1744FEFFA9B9164BE5D5731C0F6B06F3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9E157E97FFE8B1FEB2FFA0C4C8DFB03 /* Pods-VaccineCardDEV-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		21D683244F79D2458325EBDA7DEE8442 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -2610,19 +2608,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2B3940AD150C7AEDF51C8860A29762BE /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1E137CEB47F564D670AD9D278C6F8674 /* Pods-VaccineCard-VaccineCardUITests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		78AFD380AEABB44AF32A407D4E224CAE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B3781ED8DE3578A125632545470E6524 /* BCVaccineValidator-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88FE8DC64A2341BF4991E7AA2DC69981 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02EAA3B1547D2AE06065DF842EE800F9 /* Pods-VaccineCardTEST-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92A3C902C14B481D6D2847678283ADDD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F961B95598903E36BC46B29CCA631DB /* Pods-VaccineCard-VaccineCardUITests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2960,28 +2966,19 @@
 		};
 		80CCA0F27E27D975AB00D1DACA7C0C06 /* Pods-VaccineCardTEST */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EA31E79E97E3F728804A5F6F919621D9 /* Build configuration list for PBXNativeTarget "Pods-VaccineCardTEST" */;
+			buildConfigurationList = 56C5CD357C256D4937A70872197257B1 /* Build configuration list for PBXNativeTarget "Pods-VaccineCardTEST" */;
 			buildPhases = (
-				08BFE9D6588F90E11455AF36D385362C /* Headers */,
-				32ECBACB31422D1707E9FB0C6291E1B9 /* Sources */,
-				C84A2638EF8CF7D093B22376E0B31418 /* Frameworks */,
-				A3D71D808073B8526D7923C08E7A3C59 /* Resources */,
+				88FE8DC64A2341BF4991E7AA2DC69981 /* Headers */,
+				F5603E5BDCE9A7953EE6B4F6D025D9C4 /* Sources */,
+				12071920D34C8A76387DDEB2322FD3AA /* Frameworks */,
+				0B739B1EA027C27861C7D9FAEBD24001 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				91A7A2401BF4D09BD92A7F16E8923087 /* PBXTargetDependency */,
-				B2D8FA3B512D1745138CF2EE53DC14CC /* PBXTargetDependency */,
-				3AAF1F1E7EFB3AF3DC475C3D7D453473 /* PBXTargetDependency */,
-				BCFA770DE884B4620F1A8C7563952DBF /* PBXTargetDependency */,
-				2D1F2B5D1F0F779D64287861DB44565F /* PBXTargetDependency */,
-				BFC328978870D184B0E67EB465A664BA /* PBXTargetDependency */,
-				9B9BF1E32EF3BC18E33B133D0FEAD8F5 /* PBXTargetDependency */,
-				89CD386386F78AB3752B3370550C35E9 /* PBXTargetDependency */,
-				8BDC1314D390815B17B25444AEC3FD54 /* PBXTargetDependency */,
-				E8925C18709E8754AB00FAF07546C70A /* PBXTargetDependency */,
-				5696FE9532135A9250A21C42E60C2FDF /* PBXTargetDependency */,
-				7E0D0434D3F5CA51C59D8DE466A6BB51 /* PBXTargetDependency */,
+				041A332BCA7E3354435AE5884EA11F6B /* PBXTargetDependency */,
+				F61EFA51459690664AE27030EF58B447 /* PBXTargetDependency */,
+				163BF63A1CF273CB3EF30B35E04EE6E8 /* PBXTargetDependency */,
 			);
 			name = "Pods-VaccineCardTEST";
 			productName = Pods_VaccineCardTEST;
@@ -3028,30 +3025,51 @@
 			productReference = B43874C6CBB50E7134FBEC24BABFE14F /* GoogleUtilities */;
 			productType = "com.apple.product-type.framework";
 		};
-		BB4661E1403D975C92FED2C641A442EE /* Pods-VaccineCard-VaccineCardUITests */ = {
+		991A2261D811140B7F7A14703D5DA3D2 /* Pods-VaccineCardDEV */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2B321FA1C37558A71163D0D05B42A3C4 /* Build configuration list for PBXNativeTarget "Pods-VaccineCard-VaccineCardUITests" */;
+			buildConfigurationList = 7F010262371BA870EB8BD9AE07D7017F /* Build configuration list for PBXNativeTarget "Pods-VaccineCardDEV" */;
 			buildPhases = (
-				2B3940AD150C7AEDF51C8860A29762BE /* Headers */,
-				80D4C5A6E4F1FC13E2945F78F7B2378A /* Sources */,
-				AEEB4D707D25AE19C371656FC21CBFAF /* Frameworks */,
-				200FA3B56B0B7E2053B5FC45638E3494 /* Resources */,
+				1744FEFFA9B9164BE5D5731C0F6B06F3 /* Headers */,
+				00BB9A700CAD6A59C3AEE1B6B9DBC805 /* Sources */,
+				B072B8608DCEFB20FC4420B27351BC68 /* Frameworks */,
+				3CF10E77651BEA3822FBA7A1311837BD /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8AB8411B34D6251370771390AA30C0EC /* PBXTargetDependency */,
-				733A7D5AF44AA38611CED4D623C0DE1F /* PBXTargetDependency */,
-				79CEFC16A60041F5CE81BA73DFD77E92 /* PBXTargetDependency */,
-				EED75536C91F85012AF91BF807CD4F7D /* PBXTargetDependency */,
-				0B497C12DD589D5F1F17964726E56B6E /* PBXTargetDependency */,
-				E8AFDAB1A230A3A0C6F4BEC80259CB02 /* PBXTargetDependency */,
-				5FB0D0A30CD02404BB05D2BE380F1533 /* PBXTargetDependency */,
-				F0386BF2C5573B098BDD63EB2C3EBDEF /* PBXTargetDependency */,
-				B210B7F0A375335F72EB3CE0CB159FDE /* PBXTargetDependency */,
-				5CE3FA7728ACEA01606B1F80CCB0E3BA /* PBXTargetDependency */,
-				2A8830E8C50FFE6A9AD744DDC4E8E617 /* PBXTargetDependency */,
-				352D46AAE8CFE29C5261024B68C597B1 /* PBXTargetDependency */,
+				7A5BB7DDF61171CCB0D732AF15C4E915 /* PBXTargetDependency */,
+				EA5C5CEBB1704DF7D4F04F1018AD984C /* PBXTargetDependency */,
+				6EA39C70E95AD3E2E77CCA05E18FA356 /* PBXTargetDependency */,
+				6D58D303593C737834F32328557575B8 /* PBXTargetDependency */,
+				0845DE1023599864B0A207132465AE8E /* PBXTargetDependency */,
+				50CBCAE9DD5203F77110FF9BE9E16CC6 /* PBXTargetDependency */,
+				05912FE720467CDC1246DB154A79571A /* PBXTargetDependency */,
+				B1162E0E5BB31963B37BFD0F4FC73C30 /* PBXTargetDependency */,
+				B4E671B9EF9DFC11D4941B5F72E32482 /* PBXTargetDependency */,
+				B7BD4FD38862E34E42F6FF7F5C862DF3 /* PBXTargetDependency */,
+				B299E1ACDA97C309ECF6C3B0DD9508E8 /* PBXTargetDependency */,
+				992E74D16E7D8E9AB5D070BF508002A2 /* PBXTargetDependency */,
+			);
+			name = "Pods-VaccineCardDEV";
+			productName = Pods_VaccineCardDEV;
+			productReference = FC8997650438CF8B8ACAED18C552C248 /* Pods-VaccineCardDEV */;
+			productType = "com.apple.product-type.framework";
+		};
+		BB4661E1403D975C92FED2C641A442EE /* Pods-VaccineCard-VaccineCardUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 064605F7D20496798CECA99A29384453 /* Build configuration list for PBXNativeTarget "Pods-VaccineCard-VaccineCardUITests" */;
+			buildPhases = (
+				92A3C902C14B481D6D2847678283ADDD /* Headers */,
+				0E9148B47CC73687D2AB00105EFAF75C /* Sources */,
+				491E3BE5823ED7F9057D6B942B67D864 /* Frameworks */,
+				DDAD96726220D1349B17B11AD2578917 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A85D6D52667BFBC7C557DA0F3BB05B3E /* PBXTargetDependency */,
+				110CFA68F8A777A6ED7114249544A74E /* PBXTargetDependency */,
+				CDA5F1B5CB453602764F70DA29D4CFEA /* PBXTargetDependency */,
 			);
 			name = "Pods-VaccineCard-VaccineCardUITests";
 			productName = Pods_VaccineCard_VaccineCardUITests;
@@ -3152,7 +3170,7 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = DA2BE24548840500C3EA7027D16A253E /* Products */;
+			productRefGroup = E076C340837B7E9D4A8FFE654A1C212E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -3170,6 +3188,7 @@
 				D2B5E7DCCBBFB32341D857D01211A1A3 /* nanopb */,
 				C878117D1E9183A09A0433748C2BC16F /* Pods-VaccineCard */,
 				BB4661E1403D975C92FED2C641A442EE /* Pods-VaccineCard-VaccineCardUITests */,
+				991A2261D811140B7F7A14703D5DA3D2 /* Pods-VaccineCardDEV */,
 				80CCA0F27E27D975AB00D1DACA7C0C06 /* Pods-VaccineCardTEST */,
 				CB5F521C94148C32E57DB0651214A779 /* Pods-VaccineCardTests */,
 				2BBF7206D7FAC92C82A042A99C4A98F8 /* PromisesObjC */,
@@ -3178,6 +3197,13 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0B739B1EA027C27861C7D9FAEBD24001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1E2376A769DF8A603DDAE89C868A8C88 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -3185,14 +3211,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		200FA3B56B0B7E2053B5FC45638E3494 /* Resources */ = {
+		366B4E8C98D5DD1F52B63E514AC4470F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		366B4E8C98D5DD1F52B63E514AC4470F /* Resources */ = {
+		3CF10E77651BEA3822FBA7A1311837BD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -3239,13 +3265,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A3D71D808073B8526D7923C08E7A3C59 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		BD6F23590CF50FF35E007B780E97AFE9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -3261,6 +3280,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DAF16BDBEFC0AA4500C9E166AD714285 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDAD96726220D1349B17B11AD2578917 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -3326,6 +3352,22 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		00BB9A700CAD6A59C3AEE1B6B9DBC805 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				559D7FE0F5F93D77CD6F52567106B3E7 /* Pods-VaccineCardDEV-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E9148B47CC73687D2AB00105EFAF75C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E4F1F124961BD534DC466A0B8B09E1F /* Pods-VaccineCard-VaccineCardUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		26BA326077B5AC0B0573168FCE998087 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -3372,14 +3414,6 @@
 				5DA414BF161FBB662774CE2A6B8D8EB4 /* FIRCoreDiagnostics.m in Sources */,
 				0A95536E287C6801378A9867EAA53A88 /* firebasecore.nanopb.c in Sources */,
 				55B73B4E97B85D94CB2B6ABED0F88B22 /* FirebaseCoreDiagnostics-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		32ECBACB31422D1707E9FB0C6291E1B9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F3E98E3A3852BE38F7BAB71CA8107147 /* Pods-VaccineCardTEST-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3512,14 +3546,6 @@
 				4B4D38EB11470B4F1C47AA4BF5D8EC27 /* SymmetricKeys.swift in Sources */,
 				2B4A98FC03A104C5D83ACC44A4775322 /* Thumbprint.swift in Sources */,
 				EFEECA38BBA464917BF0470B2829BE36 /* Verifier.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		80D4C5A6E4F1FC13E2945F78F7B2378A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				00B817647FDE15237272618AE3252323 /* Pods-VaccineCard-VaccineCardUITests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3662,6 +3688,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F5603E5BDCE9A7953EE6B4F6D025D9C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8488860231A5F907FBD14EF8B86034D4 /* Pods-VaccineCardTEST-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FB9B583688172A3D47CE4051FAF1B422 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -3682,17 +3716,41 @@
 			target = 7CCD8AFB41855F80CA73D2C8ABC802C9 /* JOSESwift */;
 			targetProxy = B76305C07B0F385635A38010B087A2F8 /* PBXContainerItemProxy */;
 		};
-		0B497C12DD589D5F1F17964726E56B6E /* PBXTargetDependency */ = {
+		041A332BCA7E3354435AE5884EA11F6B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
+			targetProxy = 5C947A3FD8C7775725D402B71CEB27FE /* PBXContainerItemProxy */;
+		};
+		05912FE720467CDC1246DB154A79571A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FirebaseInstallations;
+			target = 87803597EB3F20FC46472B85392EC4FD /* FirebaseInstallations */;
+			targetProxy = 116339E6AE67B72FA1313156A4D9FE45 /* PBXContainerItemProxy */;
+		};
+		0845DE1023599864B0A207132465AE8E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FirebaseCore;
 			target = 4402AFF83DBDC4DD07E198685FDC2DF2 /* FirebaseCore */;
-			targetProxy = 3EC6285C28FED3DCAE451099DB94F4A3 /* PBXContainerItemProxy */;
+			targetProxy = DF8023D51F41234F2E0D78880EDDB4AB /* PBXContainerItemProxy */;
+		};
+		110CFA68F8A777A6ED7114249544A74E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BCVaccineValidator;
+			target = 7D6BAEF60FA9AF969CF0D876E6A61EA5 /* BCVaccineValidator */;
+			targetProxy = 10AF7C5EDE6DA1E5EEAA75380859C449 /* PBXContainerItemProxy */;
 		};
 		1527FA8BB05C320D03003E749283DA23 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = nanopb;
 			target = D2B5E7DCCBBFB32341D857D01211A1A3 /* nanopb */;
 			targetProxy = F1092E034EF6A197DFDD15E03E621E35 /* PBXContainerItemProxy */;
+		};
+		163BF63A1CF273CB3EF30B35E04EE6E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JOSESwift;
+			target = 7CCD8AFB41855F80CA73D2C8ABC802C9 /* JOSESwift */;
+			targetProxy = 35CC090FAD9EC096FC15D26238E00D9E /* PBXContainerItemProxy */;
 		};
 		19FF4B616780DBF93EFE92851E47A77A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3706,29 +3764,11 @@
 			target = 8D7F5D5DD528D21A72DC87ADA5B12E2D /* GoogleUtilities */;
 			targetProxy = 6C6376CF6903CA3BD9D7CD8649915C39 /* PBXContainerItemProxy */;
 		};
-		2A8830E8C50FFE6A9AD744DDC4E8E617 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = PromisesObjC;
-			target = 2BBF7206D7FAC92C82A042A99C4A98F8 /* PromisesObjC */;
-			targetProxy = 14C23DB8F378E0A0EF225E4F850937EE /* PBXContainerItemProxy */;
-		};
-		2D1F2B5D1F0F779D64287861DB44565F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FirebaseCore;
-			target = 4402AFF83DBDC4DD07E198685FDC2DF2 /* FirebaseCore */;
-			targetProxy = B487F9FA639C1315EFFBDFADBD61A05F /* PBXContainerItemProxy */;
-		};
 		30EA571BCEB63D6D2CC70E57FB0AB62C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GoogleUtilities;
 			target = 8D7F5D5DD528D21A72DC87ADA5B12E2D /* GoogleUtilities */;
 			targetProxy = A9C936C20AFE97BB88A55AB0F305BC38 /* PBXContainerItemProxy */;
-		};
-		352D46AAE8CFE29C5261024B68C597B1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = nanopb;
-			target = D2B5E7DCCBBFB32341D857D01211A1A3 /* nanopb */;
-			targetProxy = 3A3CADB9549AB6C08C72CFE6ADC39524 /* PBXContainerItemProxy */;
 		};
 		36506CE04F759B415A4A4DBE96EBF3CB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3742,12 +3782,6 @@
 			target = 57B7E23CE80EC1AAA76AD2F821D233EC /* FirebaseAppDistribution */;
 			targetProxy = 2A6BD6CE507CBE4A8225C8311C4F152E /* PBXContainerItemProxy */;
 		};
-		3AAF1F1E7EFB3AF3DC475C3D7D453473 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Firebase;
-			target = 072CEA044D2EF26F03496D5996BBF59F /* Firebase */;
-			targetProxy = 130702D4A1F728381AA48A7040986AAA /* PBXContainerItemProxy */;
-		};
 		41DD392968782EF963A388275226E219 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PromisesObjC;
@@ -3760,23 +3794,11 @@
 			target = 5C0371EE948D0357B8EE0E34ABB44BF0 /* GoogleDataTransport */;
 			targetProxy = BFB47A925F2CC9F702F52F31E72837B5 /* PBXContainerItemProxy */;
 		};
-		5696FE9532135A9250A21C42E60C2FDF /* PBXTargetDependency */ = {
+		50CBCAE9DD5203F77110FF9BE9E16CC6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = PromisesObjC;
-			target = 2BBF7206D7FAC92C82A042A99C4A98F8 /* PromisesObjC */;
-			targetProxy = 1D5E3BADA04EE25AD91C7E70F5409F67 /* PBXContainerItemProxy */;
-		};
-		5CE3FA7728ACEA01606B1F80CCB0E3BA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = JOSESwift;
-			target = 7CCD8AFB41855F80CA73D2C8ABC802C9 /* JOSESwift */;
-			targetProxy = C6533CFF7C74C6E9CA829B2008F2D3A9 /* PBXContainerItemProxy */;
-		};
-		5FB0D0A30CD02404BB05D2BE380F1533 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FirebaseInstallations;
-			target = 87803597EB3F20FC46472B85392EC4FD /* FirebaseInstallations */;
-			targetProxy = 756299F315FCDB605B659C1F2EB611B0 /* PBXContainerItemProxy */;
+			name = FirebaseCoreDiagnostics;
+			target = 620E05868772C10B4920DC7E324F2C87 /* FirebaseCoreDiagnostics */;
+			targetProxy = 8378FA6F4CAC64D05407AA19950BC3ED /* PBXContainerItemProxy */;
 		};
 		608CD282035FF38FFF1963CE127975B4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3802,11 +3824,17 @@
 			target = C878117D1E9183A09A0433748C2BC16F /* Pods-VaccineCard */;
 			targetProxy = ED10DB6F5015873DECAB5D0F26A2941E /* PBXContainerItemProxy */;
 		};
-		733A7D5AF44AA38611CED4D623C0DE1F /* PBXTargetDependency */ = {
+		6D58D303593C737834F32328557575B8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = BCVaccineValidator;
-			target = 7D6BAEF60FA9AF969CF0D876E6A61EA5 /* BCVaccineValidator */;
-			targetProxy = C54E1EEF88A254FF5304E85B3E13C535 /* PBXContainerItemProxy */;
+			name = FirebaseAppDistribution;
+			target = 57B7E23CE80EC1AAA76AD2F821D233EC /* FirebaseAppDistribution */;
+			targetProxy = 847562B0EC3A301AB935E95824678851 /* PBXContainerItemProxy */;
+		};
+		6EA39C70E95AD3E2E77CCA05E18FA356 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Firebase;
+			target = 072CEA044D2EF26F03496D5996BBF59F /* Firebase */;
+			targetProxy = 7F5815569E881FC31D19702997513990 /* PBXContainerItemProxy */;
 		};
 		74436551E299464BF12A446930FA8797 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3814,11 +3842,11 @@
 			target = 4402AFF83DBDC4DD07E198685FDC2DF2 /* FirebaseCore */;
 			targetProxy = 267E88C4315CFEB68D5306647D4604FB /* PBXContainerItemProxy */;
 		};
-		79CEFC16A60041F5CE81BA73DFD77E92 /* PBXTargetDependency */ = {
+		7A5BB7DDF61171CCB0D732AF15C4E915 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = Firebase;
-			target = 072CEA044D2EF26F03496D5996BBF59F /* Firebase */;
-			targetProxy = 94A39B6145575C9806B4A2D1810737C1 /* PBXContainerItemProxy */;
+			name = Alamofire;
+			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
+			targetProxy = 7B83BCACC72DEDB315AA34100720A0A6 /* PBXContainerItemProxy */;
 		};
 		7BD6D31FF424BA5800F6126EB5BCA38B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3826,47 +3854,17 @@
 			target = 3FECF474E55BD03143F14F8FC2EC11BB /* BCVaccineValidator-BCVaccineValidator */;
 			targetProxy = 75633A66BEB41B40905DB9997DA48C34 /* PBXContainerItemProxy */;
 		};
-		7E0D0434D3F5CA51C59D8DE466A6BB51 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = nanopb;
-			target = D2B5E7DCCBBFB32341D857D01211A1A3 /* nanopb */;
-			targetProxy = C34DD8DB6981724D06CDFA39BF4207CE /* PBXContainerItemProxy */;
-		};
-		89CD386386F78AB3752B3370550C35E9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = GoogleDataTransport;
-			target = 5C0371EE948D0357B8EE0E34ABB44BF0 /* GoogleDataTransport */;
-			targetProxy = 410BCE123ED035B94B8F303752E60219 /* PBXContainerItemProxy */;
-		};
-		8AB8411B34D6251370771390AA30C0EC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Alamofire;
-			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
-			targetProxy = C7F0ABB10ADE9FBED30D73F0E06991D1 /* PBXContainerItemProxy */;
-		};
-		8BDC1314D390815B17B25444AEC3FD54 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = GoogleUtilities;
-			target = 8D7F5D5DD528D21A72DC87ADA5B12E2D /* GoogleUtilities */;
-			targetProxy = C69C888F019A6C85FE818C24610770AF /* PBXContainerItemProxy */;
-		};
-		91A7A2401BF4D09BD92A7F16E8923087 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Alamofire;
-			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
-			targetProxy = 2FB536BFDD8DC7C341A611D78A3062C6 /* PBXContainerItemProxy */;
-		};
 		91B73EBEFEF0DF6C867EBC1FBFDD94DA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GoogleUtilities;
 			target = 8D7F5D5DD528D21A72DC87ADA5B12E2D /* GoogleUtilities */;
 			targetProxy = A7F7076BF8DB7591E27C4B27A50012D6 /* PBXContainerItemProxy */;
 		};
-		9B9BF1E32EF3BC18E33B133D0FEAD8F5 /* PBXTargetDependency */ = {
+		992E74D16E7D8E9AB5D070BF508002A2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = FirebaseInstallations;
-			target = 87803597EB3F20FC46472B85392EC4FD /* FirebaseInstallations */;
-			targetProxy = 297DBABB3AF639050EB0FAD1DB8AC4DC /* PBXContainerItemProxy */;
+			name = nanopb;
+			target = D2B5E7DCCBBFB32341D857D01211A1A3 /* nanopb */;
+			targetProxy = B0D762ED4739EBA48E98EC51F3F9EE2B /* PBXContainerItemProxy */;
 		};
 		A3139A4A65C2FAC57B6E5B181E3A8CEC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3880,6 +3878,12 @@
 			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
 			targetProxy = FE986A78B705BA461C4CB1809FF86AA5 /* PBXContainerItemProxy */;
 		};
+		A85D6D52667BFBC7C557DA0F3BB05B3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
+			targetProxy = 00BD67CA46854FFDF25F8B1926A4B1A5 /* PBXContainerItemProxy */;
+		};
 		AE426243EB229641EF1711562C228457 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FirebaseCore;
@@ -3892,35 +3896,41 @@
 			target = 8D7F5D5DD528D21A72DC87ADA5B12E2D /* GoogleUtilities */;
 			targetProxy = AA615F1D3D2F476D0997A11E21E92A0B /* PBXContainerItemProxy */;
 		};
-		B210B7F0A375335F72EB3CE0CB159FDE /* PBXTargetDependency */ = {
+		B1162E0E5BB31963B37BFD0F4FC73C30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleDataTransport;
+			target = 5C0371EE948D0357B8EE0E34ABB44BF0 /* GoogleDataTransport */;
+			targetProxy = F210329CC2ACDE835C322AA68A47AEC6 /* PBXContainerItemProxy */;
+		};
+		B299E1ACDA97C309ECF6C3B0DD9508E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PromisesObjC;
+			target = 2BBF7206D7FAC92C82A042A99C4A98F8 /* PromisesObjC */;
+			targetProxy = 4BCC26DC79B0AF862F8B115A6EC748B3 /* PBXContainerItemProxy */;
+		};
+		B4E671B9EF9DFC11D4941B5F72E32482 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GoogleUtilities;
 			target = 8D7F5D5DD528D21A72DC87ADA5B12E2D /* GoogleUtilities */;
-			targetProxy = E9FCE8BFC9CA5DC0178BE082BFC2CF1D /* PBXContainerItemProxy */;
+			targetProxy = 476168DB341BCB21AA3481B69F606F65 /* PBXContainerItemProxy */;
 		};
-		B2D8FA3B512D1745138CF2EE53DC14CC /* PBXTargetDependency */ = {
+		B7BD4FD38862E34E42F6FF7F5C862DF3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = BCVaccineValidator;
-			target = 7D6BAEF60FA9AF969CF0D876E6A61EA5 /* BCVaccineValidator */;
-			targetProxy = 61A853E1D66761C7E6597B8362DC1A44 /* PBXContainerItemProxy */;
-		};
-		BCFA770DE884B4620F1A8C7563952DBF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FirebaseAppDistribution;
-			target = 57B7E23CE80EC1AAA76AD2F821D233EC /* FirebaseAppDistribution */;
-			targetProxy = 02B556D1807E2BFC7EFFE442C1F159C2 /* PBXContainerItemProxy */;
-		};
-		BFC328978870D184B0E67EB465A664BA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FirebaseCoreDiagnostics;
-			target = 620E05868772C10B4920DC7E324F2C87 /* FirebaseCoreDiagnostics */;
-			targetProxy = AC18D25E0AC4764C192531003477FA33 /* PBXContainerItemProxy */;
+			name = JOSESwift;
+			target = 7CCD8AFB41855F80CA73D2C8ABC802C9 /* JOSESwift */;
+			targetProxy = C1476342544F50D4CC4C6D67F7402137 /* PBXContainerItemProxy */;
 		};
 		C1F35D984E133915BE4499355CE76B97 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FirebaseCore;
 			target = 4402AFF83DBDC4DD07E198685FDC2DF2 /* FirebaseCore */;
 			targetProxy = 9E6D27DDF80221A1754E3EF7865E8500 /* PBXContainerItemProxy */;
+		};
+		CDA5F1B5CB453602764F70DA29D4CFEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JOSESwift;
+			target = 7CCD8AFB41855F80CA73D2C8ABC802C9 /* JOSESwift */;
+			targetProxy = A235B4D147796A5667CDCCD76E39C619 /* PBXContainerItemProxy */;
 		};
 		D07792C6965075F070CB1EC8FBC6ECA9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3934,29 +3944,11 @@
 			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
 			targetProxy = E14A635BF9AFF02D25223A4F114714CB /* PBXContainerItemProxy */;
 		};
-		E8925C18709E8754AB00FAF07546C70A /* PBXTargetDependency */ = {
+		EA5C5CEBB1704DF7D4F04F1018AD984C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = JOSESwift;
-			target = 7CCD8AFB41855F80CA73D2C8ABC802C9 /* JOSESwift */;
-			targetProxy = 59FF427C372D805A31E7331EC6D4630D /* PBXContainerItemProxy */;
-		};
-		E8AFDAB1A230A3A0C6F4BEC80259CB02 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FirebaseCoreDiagnostics;
-			target = 620E05868772C10B4920DC7E324F2C87 /* FirebaseCoreDiagnostics */;
-			targetProxy = 33F840D0D4182159F8DC1F5414BED813 /* PBXContainerItemProxy */;
-		};
-		EED75536C91F85012AF91BF807CD4F7D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FirebaseAppDistribution;
-			target = 57B7E23CE80EC1AAA76AD2F821D233EC /* FirebaseAppDistribution */;
-			targetProxy = 0AF3659C37B4F12DCB48FAE84F12FC21 /* PBXContainerItemProxy */;
-		};
-		F0386BF2C5573B098BDD63EB2C3EBDEF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = GoogleDataTransport;
-			target = 5C0371EE948D0357B8EE0E34ABB44BF0 /* GoogleDataTransport */;
-			targetProxy = E239F0BCF2883E641EFE46711C2701BB /* PBXContainerItemProxy */;
+			name = BCVaccineValidator;
+			target = 7D6BAEF60FA9AF969CF0D876E6A61EA5 /* BCVaccineValidator */;
+			targetProxy = 4A0184AFEE50886F89786B981A79359A /* PBXContainerItemProxy */;
 		};
 		F2D969E47748DBAFEB001B8C170D569B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3970,12 +3962,18 @@
 			target = 7CCD8AFB41855F80CA73D2C8ABC802C9 /* JOSESwift */;
 			targetProxy = C6050BDE19BD4B3613B317B5EE14AA68 /* PBXContainerItemProxy */;
 		};
+		F61EFA51459690664AE27030EF58B447 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BCVaccineValidator;
+			target = 7D6BAEF60FA9AF969CF0D876E6A61EA5 /* BCVaccineValidator */;
+			targetProxy = 15F2BE57E3C0A1FDE9FAE37D66EDB771 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		00ECCA8C83369C2807BE3B54D62B2F05 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DBE8AC3335CE1BB2BCCD0BB108534DEF /* Pods-VaccineCard.debug.xcconfig */;
+			baseConfigurationReference = 2F9038F842B441084CCD04D442D947D1 /* Pods-VaccineCard.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -4081,7 +4079,7 @@
 		};
 		0E9A8256094941DFEE04C1A4FC64B29E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7C20C8DA05C33D4C48B042C6D8CEEFBB /* Pods-VaccineCardTests.release.xcconfig */;
+			baseConfigurationReference = F21548744BB2B1FFBEC29DACBF647FEA /* Pods-VaccineCardTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -4151,44 +4149,6 @@
 			};
 			name = Release;
 		};
-		1FF89F527C79D24194361A64F8251B6D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D91F40A7A4353F4E9EC095ACE5639FCC /* Pods-VaccineCard-VaccineCardUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-VaccineCard-VaccineCardUITests/Pods-VaccineCard-VaccineCardUITests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-VaccineCard-VaccineCardUITests/Pods-VaccineCard-VaccineCardUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		33FDD6038DE7A4602A3E67B36958C020 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C79B12858854F18F445C55EC3F76D578 /* BCVaccineValidator.release.xcconfig */;
@@ -4241,6 +4201,44 @@
 			};
 			name = Debug;
 		};
+		3EB83555A36EF96BA135191F04CFAC74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D4208120001C409ADEBA761D684C34C /* Pods-VaccineCardDEV.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-VaccineCardDEV/Pods-VaccineCardDEV-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-VaccineCardDEV/Pods-VaccineCardDEV.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		43F9AF432DBB6129E1A90D598E0F8BE1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A1BF24B78A53C9FD4DE4D0E3B8785CBE /* FirebaseCore.release.xcconfig */;
@@ -4277,7 +4275,7 @@
 		};
 		47C9DC515CE80AD15522B3ADDEEA0FFA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EA229514D9C8E2DAA58FBDE99B15DD3F /* Pods-VaccineCardTests.debug.xcconfig */;
+			baseConfigurationReference = 4F4675F23643AFB16DEC1011CE16A3EB /* Pods-VaccineCardTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -4311,6 +4309,44 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		4A3D2652DB0EEE2A952391B87749155D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E104BA2A7525655E9506F2A3ECE74BB /* Pods-VaccineCard-VaccineCardUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-VaccineCard-VaccineCardUITests/Pods-VaccineCard-VaccineCardUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-VaccineCard-VaccineCardUITests/Pods-VaccineCard-VaccineCardUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		4B71300BA382A836D809E164BB6FE108 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -4431,81 +4467,6 @@
 			};
 			name = Debug;
 		};
-		6021A97E567848CB94D5434119233A2A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 24823437386BB6337FB4C8F2750DFF94 /* Pods-VaccineCardTEST.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-VaccineCardTEST/Pods-VaccineCardTEST-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-VaccineCardTEST/Pods-VaccineCardTEST.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		64EAABE25CF1737A307BFA007042DA29 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A2A39E4F25EF4140977D0AFE195BC65F /* Pods-VaccineCardTEST.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-VaccineCardTEST/Pods-VaccineCardTEST-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-VaccineCardTEST/Pods-VaccineCardTEST.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		66B5F3DB33D43AE4A2E3DF993B22B8C2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 49295F7D1EBCEA059FC8223CCDD14D51 /* nanopb.release.xcconfig */;
@@ -4579,7 +4540,7 @@
 		};
 		7ACD2CA9BA2BD1BF3BEC32B12620C05D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 863BB59DD774FA83AFA1C401505A668B /* Pods-VaccineCard.release.xcconfig */;
+			baseConfigurationReference = C24696EB7D98CC76B57F07EB60FD500A /* Pods-VaccineCard.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -4614,6 +4575,43 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		8633530D86ABF0881C9EE52EFCFD1D3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73CE5A3D46826C733B1653CB465FE4AA /* Pods-VaccineCardDEV.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-VaccineCardDEV/Pods-VaccineCardDEV-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-VaccineCardDEV/Pods-VaccineCardDEV.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		903A0004D3E6651EFD5D2E16214D101B /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -4676,6 +4674,43 @@
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
+		};
+		91173E3360D76CCF3FD3950D5A4E704D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42E60725C8C8EC45FFCBB75E8FEDECD3 /* Pods-VaccineCard-VaccineCardUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-VaccineCard-VaccineCardUITests/Pods-VaccineCard-VaccineCardUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-VaccineCard-VaccineCardUITests/Pods-VaccineCard-VaccineCardUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		998B4E5C7C22D7E87A3ECC4B10766E34 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -5014,43 +5049,6 @@
 			};
 			name = Debug;
 		};
-		DD9884119FB2A411471695903FC7FA0A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FC0366D321BA57AD11BDC48F9F2C9E43 /* Pods-VaccineCard-VaccineCardUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-VaccineCard-VaccineCardUITests/Pods-VaccineCard-VaccineCardUITests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-VaccineCard-VaccineCardUITests/Pods-VaccineCard-VaccineCardUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		DDE66E9EF2650949C1F28ED6BFEEEFED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 15968501C3A571E31011C633248A9303 /* Alamofire.debug.xcconfig */;
@@ -5115,6 +5113,81 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E3C08CD3BDC9679B89AEFA4017785022 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57E7B8ED916740AB9AFCAB004B6F7817 /* Pods-VaccineCardTEST.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-VaccineCardTEST/Pods-VaccineCardTEST-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-VaccineCardTEST/Pods-VaccineCardTEST.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E41D409BE048CAB5A4A34BA6614716F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4272F95641844710B466A71C44659D4E /* Pods-VaccineCardTEST.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-VaccineCardTEST/Pods-VaccineCardTEST-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-VaccineCardTEST/Pods-VaccineCardTEST.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -5224,6 +5297,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		064605F7D20496798CECA99A29384453 /* Build configuration list for PBXNativeTarget "Pods-VaccineCard-VaccineCardUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91173E3360D76CCF3FD3950D5A4E704D /* Debug */,
+				4A3D2652DB0EEE2A952391B87749155D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		19307028D59EA75464FE6D6F4DE74027 /* Build configuration list for PBXNativeTarget "nanopb" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -5251,15 +5333,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2B321FA1C37558A71163D0D05B42A3C4 /* Build configuration list for PBXNativeTarget "Pods-VaccineCard-VaccineCardUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DD9884119FB2A411471695903FC7FA0A /* Debug */,
-				1FF89F527C79D24194361A64F8251B6D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -5269,11 +5342,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		56C5CD357C256D4937A70872197257B1 /* Build configuration list for PBXNativeTarget "Pods-VaccineCardTEST" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E41D409BE048CAB5A4A34BA6614716F7 /* Debug */,
+				E3C08CD3BDC9679B89AEFA4017785022 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7EE48D5299B1734479E5580E8E49E011 /* Build configuration list for PBXNativeTarget "BCVaccineValidator-BCVaccineValidator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3994C302242B2D8A6E31E23B4DBCD159 /* Debug */,
 				CDC6A3A2DA9AFC0BE687298ED6075DAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F010262371BA870EB8BD9AE07D7017F /* Build configuration list for PBXNativeTarget "Pods-VaccineCardDEV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8633530D86ABF0881C9EE52EFCFD1D3F /* Debug */,
+				3EB83555A36EF96BA135191F04CFAC74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -5364,15 +5455,6 @@
 			buildConfigurations = (
 				00ECCA8C83369C2807BE3B54D62B2F05 /* Debug */,
 				7ACD2CA9BA2BD1BF3BEC32B12620C05D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EA31E79E97E3F728804A5F6F919621D9 /* Build configuration list for PBXNativeTarget "Pods-VaccineCardTEST" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				64EAABE25CF1737A307BFA007042DA29 /* Debug */,
-				6021A97E567848CB94D5434119233A2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

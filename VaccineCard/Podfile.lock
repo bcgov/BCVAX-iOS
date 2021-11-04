@@ -1,6 +1,6 @@
 PODS:
   - Alamofire (5.4.4)
-  - BCVaccineValidator (1.0.0):
+  - BCVaccineValidator (1.0.1):
     - Alamofire
     - JOSESwift
   - Firebase/AppDistribution (8.9.1):
@@ -82,12 +82,12 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   BCVaccineValidator:
-    :commit: 81eabd4a6fd3e8c4cb5d533a69d92c31fa7205cf
+    :commit: 267ed965e9cbd29c008cc73c87c1f2334bb18472
     :git: https://github.com/bcgov/iOSVaccineValidator
 
 SPEC CHECKSUMS:
   Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
-  BCVaccineValidator: a9141ac9a7e492b0226349b119b0d9fdb27e5495
+  BCVaccineValidator: b4fc28b582edfa72c474c060c6479fa94b61bffb
   Firebase: fb5114cd2bf96e2ff7bcb01d0d9a156cf5fd2f07
   FirebaseAppDistribution: c4164c8a660b8f8f1427e219d169b837a8e46575
   FirebaseCore: c5aab092d9c4b8efea894946166b04c9d9ef0e68
@@ -99,6 +99,6 @@ SPEC CHECKSUMS:
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
 
-PODFILE CHECKSUM: c786f95dd84c0af2b3603504caa730751f76322c
+PODFILE CHECKSUM: a0350032d5216877f6b5121907503301baab8196
 
 COCOAPODS: 1.11.2

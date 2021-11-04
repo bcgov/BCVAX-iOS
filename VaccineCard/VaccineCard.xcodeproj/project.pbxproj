@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0BE0EA09353A777B808964A3 /* Pods_VaccineCard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67E31DE45C58695993A98A70 /* Pods_VaccineCard.framework */; };
+		0BE0EA09353A777B808964A3 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		1CAD6CD5A4060A6B06CBD226 /* Pods_VaccineCardDEV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ADE7EFE6B767FC3B42AF845 /* Pods_VaccineCardDEV.framework */; };
 		2904724726DD9A75003C4CA2 /* VaccineCardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2904724626DD9A75003C4CA2 /* VaccineCardTests.swift */; };
 		2904724F26DF44F9003C4CA2 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2904724E26DF44F9003C4CA2 /* Date.swift */; };
 		2904725226E15210003C4CA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC32626D6B16000B0A064 /* ViewController.swift */; };
 		2904725326E15210003C4CA2 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC36126D6EC9100B0A064 /* UIColor.swift */; };
 		2904725426E15210003C4CA2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC35C26D6DB2A00B0A064 /* Constants.swift */; };
 		2904725526E15210003C4CA2 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2904724E26DF44F9003C4CA2 /* Date.swift */; };
-		2904725626E15210003C4CA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC32226D6B16000B0A064 /* AppDelegate.swift */; };
 		2904725826E15210003C4CA2 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296030A326D976A40026A0AC /* UIViewController.swift */; };
 		2904725926E15210003C4CA2 /* ScanResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC35A26D6D79300B0A064 /* ScanResultViewController.swift */; };
 		2904725D26E15210003C4CA2 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC35F26D6DB4400B0A064 /* UIView.swift */; };
@@ -22,7 +22,6 @@
 		2904726426E15210003C4CA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 292BC32D26D6B16200B0A064 /* LaunchScreen.storyboard */; };
 		2904726526E15210003C4CA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 292BC32B26D6B16200B0A064 /* Assets.xcassets */; };
 		2904726626E15210003C4CA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 292BC32826D6B16000B0A064 /* Main.storyboard */; };
-		2904727026E1B7DE003C4CA2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2904726F26E1B7DD003C4CA2 /* GoogleService-Info.plist */; };
 		29136DDC26E283DC00D6D829 /* TEST Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29136DDB26E283DC00D6D829 /* TEST Info.plist */; };
 		291E8AC626E67B5B00A60ADD /* BCSans-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 291E8AC226E67B5B00A60ADD /* BCSans-Italic.otf */; };
 		291E8AC726E67B5B00A60ADD /* BCSans-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 291E8AC226E67B5B00A60ADD /* BCSans-Italic.otf */; };
@@ -48,6 +47,28 @@
 		296030A426D976A40026A0AC /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296030A326D976A40026A0AC /* UIViewController.swift */; };
 		296030B126DB55F80026A0AC /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296030B026DB55F80026A0AC /* String.swift */; };
 		29A2470D26F39203001ED8A9 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953546C26F390D000C0E437 /* OnBoardingView.swift */; };
+		29B446A82734727A00E0F967 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2904726F26E1B7DD003C4CA2 /* GoogleService-Info.plist */; };
+		29CAA81A273470CD00A1CAD3 /* AppDeletageTEST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CAA818273470B300A1CAD3 /* AppDeletageTEST.swift */; };
+		29CAA81E273470DD00A1CAD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC32626D6B16000B0A064 /* ViewController.swift */; };
+		29CAA81F273470DD00A1CAD3 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC36126D6EC9100B0A064 /* UIColor.swift */; };
+		29CAA820273470DD00A1CAD3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC35C26D6DB2A00B0A064 /* Constants.swift */; };
+		29CAA821273470DD00A1CAD3 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2904724E26DF44F9003C4CA2 /* Date.swift */; };
+		29CAA823273470DD00A1CAD3 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296030A326D976A40026A0AC /* UIViewController.swift */; };
+		29CAA824273470DD00A1CAD3 /* ScanResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC35A26D6D79300B0A064 /* ScanResultViewController.swift */; };
+		29CAA825273470DD00A1CAD3 /* AccessibilityConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953544726F14A7F00C0E437 /* AccessibilityConstants.swift */; };
+		29CAA826273470DD00A1CAD3 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BC35F26D6DB4400B0A064 /* UIView.swift */; };
+		29CAA827273470DD00A1CAD3 /* UpdateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E2184D26F3D26A001FDCD4 /* UpdateManager.swift */; };
+		29CAA828273470DD00A1CAD3 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953546C26F390D000C0E437 /* OnBoardingView.swift */; };
+		29CAA829273470DD00A1CAD3 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296030B026DB55F80026A0AC /* String.swift */; };
+		29CAA82E273470DD00A1CAD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 292BC32D26D6B16200B0A064 /* LaunchScreen.storyboard */; };
+		29CAA82F273470DD00A1CAD3 /* BCSans-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 291E8AC226E67B5B00A60ADD /* BCSans-Italic.otf */; };
+		29CAA830273470DD00A1CAD3 /* BCSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 291E8AC426E67B5B00A60ADD /* BCSans-Bold.otf */; };
+		29CAA831273470DD00A1CAD3 /* BCSans-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 291E8AC326E67B5B00A60ADD /* BCSans-BoldItalic.otf */; };
+		29CAA832273470DD00A1CAD3 /* OnBoardingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29E2184426F39260001FDCD4 /* OnBoardingView.xib */; };
+		29CAA833273470DD00A1CAD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 292BC32B26D6B16200B0A064 /* Assets.xcassets */; };
+		29CAA834273470DD00A1CAD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 292BC32826D6B16000B0A064 /* Main.storyboard */; };
+		29CAA835273470DD00A1CAD3 /* BCSans-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 291E8AC526E67B5B00A60ADD /* BCSans-Regular.otf */; };
+		29CAA83C273470F200A1CAD3 /* AppDelegateDEV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CAA8152734707D00A1CAD3 /* AppDelegateDEV.swift */; };
 		29E2184526F39260001FDCD4 /* OnBoardingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29E2184426F39260001FDCD4 /* OnBoardingView.xib */; };
 		29E2184626F3927A001FDCD4 /* OnBoardingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29E2184426F39260001FDCD4 /* OnBoardingView.xib */; };
 		29E2184E26F3D26A001FDCD4 /* UpdateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E2184D26F3D26A001FDCD4 /* UpdateManager.swift */; };
@@ -55,6 +76,7 @@
 		79F1C236B19CDA8CF3D30523 /* Pods_VaccineCardTEST.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EDE28D7162B4391813E9D31 /* Pods_VaccineCardTEST.framework */; };
 		A4152ADDFA2A9CC23ED5DC89 /* Pods_VaccineCardTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCF2A19180E6F4CEC2D55F1 /* Pods_VaccineCardTests.framework */; };
 		EBDEC6D405A587D274658DF1 /* Pods_VaccineCard_VaccineCardUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E914790D7771B9D6C9E4901 /* Pods_VaccineCard_VaccineCardUITests.framework */; };
+		F49428C500F35542E061A5C4 /* Pods_VaccineCard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 060620513BAF90285A97DFDB /* Pods_VaccineCard.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +97,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		060620513BAF90285A97DFDB /* Pods_VaccineCard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VaccineCard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FF267934EB27C9366A2A1EA /* Pods-VaccineCardTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccineCardTests.debug.xcconfig"; path = "Target Support Files/Pods-VaccineCardTests/Pods-VaccineCardTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2904724426DD9A75003C4CA2 /* VaccineCardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VaccineCardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2904724626DD9A75003C4CA2 /* VaccineCardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineCardTests.swift; sourceTree = "<group>"; };
@@ -105,16 +128,22 @@
 		2953546C26F390D000C0E437 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		296030A326D976A40026A0AC /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		296030B026DB55F80026A0AC /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		29CAA8152734707D00A1CAD3 /* AppDelegateDEV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateDEV.swift; sourceTree = "<group>"; };
+		29CAA818273470B300A1CAD3 /* AppDeletageTEST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDeletageTEST.swift; sourceTree = "<group>"; };
+		29CAA83A273470DD00A1CAD3 /* VaccineCardDEV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VaccineCardDEV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		29CAA83B273470DD00A1CAD3 /* VaccineCard copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "VaccineCard copy-Info.plist"; path = "/Users/amir/Developer/Work/covid/BCVAX-iOS/VaccineCard/VaccineCard copy-Info.plist"; sourceTree = "<absolute>"; };
 		29E2184426F39260001FDCD4 /* OnBoardingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingView.xib; sourceTree = "<group>"; };
 		29E2184D26F3D26A001FDCD4 /* UpdateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateManager.swift; sourceTree = "<group>"; };
 		2EDE28D7162B4391813E9D31 /* Pods_VaccineCardTEST.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VaccineCardTEST.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3940F916090119B0602930B9 /* Pods-VaccineCardDEV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccineCardDEV.debug.xcconfig"; path = "Target Support Files/Pods-VaccineCardDEV/Pods-VaccineCardDEV.debug.xcconfig"; sourceTree = "<group>"; };
+		5ADE7EFE6B767FC3B42AF845 /* Pods_VaccineCardDEV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VaccineCardDEV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C65EDBA88D74AF5ADF0152E /* Pods-VaccineCardTEST.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccineCardTEST.release.xcconfig"; path = "Target Support Files/Pods-VaccineCardTEST/Pods-VaccineCardTEST.release.xcconfig"; sourceTree = "<group>"; };
-		67E31DE45C58695993A98A70 /* Pods_VaccineCard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VaccineCard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69415A87A01AB91A421DFF81 /* Pods-VaccineCardTEST.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccineCardTEST.debug.xcconfig"; path = "Target Support Files/Pods-VaccineCardTEST/Pods-VaccineCardTEST.debug.xcconfig"; sourceTree = "<group>"; };
 		7DCF2A19180E6F4CEC2D55F1 /* Pods_VaccineCardTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VaccineCardTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89D493A0BE6EFE49031E23E5 /* Pods-VaccineCard-VaccineCardUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccineCard-VaccineCardUITests.release.xcconfig"; path = "Target Support Files/Pods-VaccineCard-VaccineCardUITests/Pods-VaccineCard-VaccineCardUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8E914790D7771B9D6C9E4901 /* Pods_VaccineCard_VaccineCardUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VaccineCard_VaccineCardUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABEB961C7700BB302888AA68 /* Pods-VaccineCard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccineCard.debug.xcconfig"; path = "Target Support Files/Pods-VaccineCard/Pods-VaccineCard.debug.xcconfig"; sourceTree = "<group>"; };
+		AEC5A67FD5157899A55BCC05 /* Pods-VaccineCardDEV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccineCardDEV.release.xcconfig"; path = "Target Support Files/Pods-VaccineCardDEV/Pods-VaccineCardDEV.release.xcconfig"; sourceTree = "<group>"; };
 		CEDE44E21ABFA9043D5CD38E /* Pods-VaccineCard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccineCard.release.xcconfig"; path = "Target Support Files/Pods-VaccineCard/Pods-VaccineCard.release.xcconfig"; sourceTree = "<group>"; };
 		D4BD7F98F2752B2DA466EF29 /* Pods-VaccineCard-VaccineCardUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccineCard-VaccineCardUITests.debug.xcconfig"; path = "Target Support Files/Pods-VaccineCard-VaccineCardUITests/Pods-VaccineCard-VaccineCardUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F73B77F088B903C055BB8A33 /* Pods-VaccineCardTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccineCardTests.release.xcconfig"; path = "Target Support Files/Pods-VaccineCardTests/Pods-VaccineCardTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -149,7 +178,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BE0EA09353A777B808964A3 /* Pods_VaccineCard.framework in Frameworks */,
+				0BE0EA09353A777B808964A3 /* (null) in Frameworks */,
+				F49428C500F35542E061A5C4 /* Pods_VaccineCard.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29CAA82B273470DD00A1CAD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CAD6CD5A4060A6B06CBD226 /* Pods_VaccineCardDEV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,10 +207,11 @@
 			isa = PBXGroup;
 			children = (
 				29136DDB26E283DC00D6D829 /* TEST Info.plist */,
-				67E31DE45C58695993A98A70 /* Pods_VaccineCard.framework */,
 				8E914790D7771B9D6C9E4901 /* Pods_VaccineCard_VaccineCardUITests.framework */,
 				2EDE28D7162B4391813E9D31 /* Pods_VaccineCardTEST.framework */,
 				7DCF2A19180E6F4CEC2D55F1 /* Pods_VaccineCardTests.framework */,
+				5ADE7EFE6B767FC3B42AF845 /* Pods_VaccineCardDEV.framework */,
+				060620513BAF90285A97DFDB /* Pods_VaccineCard.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -207,6 +246,7 @@
 				292BC32026D6B16000B0A064 /* Products */,
 				29136DD626E281BA00D6D829 /* Frameworks */,
 				88B4046C0EFC1A60939E009A /* Pods */,
+				29CAA83B273470DD00A1CAD3 /* VaccineCard copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -217,6 +257,7 @@
 				2904724426DD9A75003C4CA2 /* VaccineCardTests.xctest */,
 				2904726A26E15210003C4CA2 /* VaccineCardTEST.app */,
 				291E8AD226E90ECE00A60ADD /* VaccineCardUITests.xctest */,
+				29CAA83A273470DD00A1CAD3 /* VaccineCardDEV.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -231,6 +272,8 @@
 				292BC35E26D6DB3300B0A064 /* Extensions & utilities */,
 				2953545326F2725800C0E437 /* Constants */,
 				292BC32226D6B16000B0A064 /* AppDelegate.swift */,
+				29CAA8152734707D00A1CAD3 /* AppDelegateDEV.swift */,
+				29CAA818273470B300A1CAD3 /* AppDeletageTEST.swift */,
 				292BC32B26D6B16200B0A064 /* Assets.xcassets */,
 				292BC32D26D6B16200B0A064 /* LaunchScreen.storyboard */,
 				292BC33026D6B16200B0A064 /* Info.plist */,
@@ -305,6 +348,8 @@
 				5C65EDBA88D74AF5ADF0152E /* Pods-VaccineCardTEST.release.xcconfig */,
 				1FF267934EB27C9366A2A1EA /* Pods-VaccineCardTests.debug.xcconfig */,
 				F73B77F088B903C055BB8A33 /* Pods-VaccineCardTests.release.xcconfig */,
+				3940F916090119B0602930B9 /* Pods-VaccineCardDEV.debug.xcconfig */,
+				AEC5A67FD5157899A55BCC05 /* Pods-VaccineCardDEV.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -389,6 +434,25 @@
 			productReference = 292BC31F26D6B16000B0A064 /* VaccineCard.app */;
 			productType = "com.apple.product-type.application";
 		};
+		29CAA81B273470DD00A1CAD3 /* VaccineCardDEV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29CAA837273470DD00A1CAD3 /* Build configuration list for PBXNativeTarget "VaccineCardDEV" */;
+			buildPhases = (
+				29CAA81C273470DD00A1CAD3 /* [CP] Check Pods Manifest.lock */,
+				29CAA81D273470DD00A1CAD3 /* Sources */,
+				29CAA82B273470DD00A1CAD3 /* Frameworks */,
+				29CAA82D273470DD00A1CAD3 /* Resources */,
+				29CAA836273470DD00A1CAD3 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VaccineCardDEV;
+			productName = VaccineCard;
+			productReference = 29CAA83A273470DD00A1CAD3 /* VaccineCardDEV.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -428,6 +492,7 @@
 				2904724326DD9A75003C4CA2 /* VaccineCardTests */,
 				291E8AD126E90ECE00A60ADD /* VaccineCardUITests */,
 				2904725026E15210003C4CA2 /* VaccineCardTEST */,
+				29CAA81B273470DD00A1CAD3 /* VaccineCardDEV */,
 			);
 		};
 /* End PBXProject section */
@@ -447,7 +512,6 @@
 				2904726426E15210003C4CA2 /* LaunchScreen.storyboard in Resources */,
 				291E8ACD26E67B5B00A60ADD /* BCSans-Regular.otf in Resources */,
 				2904726526E15210003C4CA2 /* Assets.xcassets in Resources */,
-				2904727026E1B7DE003C4CA2 /* GoogleService-Info.plist in Resources */,
 				2904726626E15210003C4CA2 /* Main.storyboard in Resources */,
 				291E8AC926E67B5B00A60ADD /* BCSans-BoldItalic.otf in Resources */,
 				29136DDC26E283DC00D6D829 /* TEST Info.plist in Resources */,
@@ -476,6 +540,22 @@
 				292BC32C26D6B16200B0A064 /* Assets.xcassets in Resources */,
 				292BC32A26D6B16000B0A064 /* Main.storyboard in Resources */,
 				291E8ACC26E67B5B00A60ADD /* BCSans-Regular.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29CAA82D273470DD00A1CAD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29CAA82E273470DD00A1CAD3 /* LaunchScreen.storyboard in Resources */,
+				29CAA82F273470DD00A1CAD3 /* BCSans-Italic.otf in Resources */,
+				29B446A82734727A00E0F967 /* GoogleService-Info.plist in Resources */,
+				29CAA830273470DD00A1CAD3 /* BCSans-Bold.otf in Resources */,
+				29CAA831273470DD00A1CAD3 /* BCSans-BoldItalic.otf in Resources */,
+				29CAA832273470DD00A1CAD3 /* OnBoardingView.xib in Resources */,
+				29CAA833273470DD00A1CAD3 /* Assets.xcassets in Resources */,
+				29CAA834273470DD00A1CAD3 /* Main.storyboard in Resources */,
+				29CAA835273470DD00A1CAD3 /* BCSans-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,6 +626,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		29CAA81C273470DD00A1CAD3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VaccineCardDEV-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		29CAA836273470DD00A1CAD3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VaccineCardDEV/Pods-VaccineCardDEV-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VaccineCardDEV/Pods-VaccineCardDEV-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VaccineCardDEV/Pods-VaccineCardDEV-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4A0622F481250CB26D08A320 /* [CP] Check Pods Manifest.lock */ = {
@@ -641,13 +760,13 @@
 				2904725326E15210003C4CA2 /* UIColor.swift in Sources */,
 				2904725426E15210003C4CA2 /* Constants.swift in Sources */,
 				2904725526E15210003C4CA2 /* Date.swift in Sources */,
-				2904725626E15210003C4CA2 /* AppDelegate.swift in Sources */,
 				2904725826E15210003C4CA2 /* UIViewController.swift in Sources */,
 				2904725926E15210003C4CA2 /* ScanResultViewController.swift in Sources */,
 				2953544926F14A9300C0E437 /* AccessibilityConstants.swift in Sources */,
 				2904725D26E15210003C4CA2 /* UIView.swift in Sources */,
 				29E2184F26F3D26A001FDCD4 /* UpdateManager.swift in Sources */,
 				2904725F26E15210003C4CA2 /* String.swift in Sources */,
+				29CAA81A273470CD00A1CAD3 /* AppDeletageTEST.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -675,6 +794,25 @@
 				29E2184E26F3D26A001FDCD4 /* UpdateManager.swift in Sources */,
 				2953546D26F390D000C0E437 /* OnBoardingView.swift in Sources */,
 				296030B126DB55F80026A0AC /* String.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29CAA81D273470DD00A1CAD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29CAA81E273470DD00A1CAD3 /* ViewController.swift in Sources */,
+				29CAA81F273470DD00A1CAD3 /* UIColor.swift in Sources */,
+				29CAA820273470DD00A1CAD3 /* Constants.swift in Sources */,
+				29CAA821273470DD00A1CAD3 /* Date.swift in Sources */,
+				29CAA823273470DD00A1CAD3 /* UIViewController.swift in Sources */,
+				29CAA83C273470F200A1CAD3 /* AppDelegateDEV.swift in Sources */,
+				29CAA824273470DD00A1CAD3 /* ScanResultViewController.swift in Sources */,
+				29CAA825273470DD00A1CAD3 /* AccessibilityConstants.swift in Sources */,
+				29CAA826273470DD00A1CAD3 /* UIView.swift in Sources */,
+				29CAA827273470DD00A1CAD3 /* UpdateManager.swift in Sources */,
+				29CAA828273470DD00A1CAD3 /* OnBoardingView.swift in Sources */,
+				29CAA829273470DD00A1CAD3 /* String.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -763,19 +901,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = TCH45SXZ69;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_TEAM = L796QSLV3E;
 				INFOPLIST_FILE = "TEST Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.31;
-				PRODUCT_BUNDLE_IDENTIFIER = io.freshworks.VaxCheck;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.bc.gov.VaxCheck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "VaxCheck Development";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -787,19 +925,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = TCH45SXZ69;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_TEAM = L796QSLV3E;
 				INFOPLIST_FILE = "TEST Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.31;
-				PRODUCT_BUNDLE_IDENTIFIER = io.freshworks.VaxCheck;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.bc.gov.VaxCheck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "VaxCheck Development";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -971,7 +1109,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = L796QSLV3E;
 				INFOPLIST_FILE = VaccineCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -995,7 +1133,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = L796QSLV3E;
 				INFOPLIST_FILE = VaccineCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1006,6 +1144,54 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ca.bc.gov.VaxCheck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "VaxCheck Distribution";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		29CAA838273470DD00A1CAD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3940F916090119B0602930B9 /* Pods-VaccineCardDEV.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_TEAM = TCH45SXZ69;
+				INFOPLIST_FILE = "VaccineCard copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.31;
+				PRODUCT_BUNDLE_IDENTIFIER = io.freshworks.VaxCheck;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		29CAA839273470DD00A1CAD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEC5A67FD5157899A55BCC05 /* Pods-VaccineCardDEV.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_TEAM = TCH45SXZ69;
+				INFOPLIST_FILE = "VaccineCard copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.31;
+				PRODUCT_BUNDLE_IDENTIFIER = io.freshworks.VaxCheck;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1055,6 +1241,15 @@
 			buildConfigurations = (
 				292BC33426D6B16200B0A064 /* Debug */,
 				292BC33526D6B16200B0A064 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		29CAA837273470DD00A1CAD3 /* Build configuration list for PBXNativeTarget "VaccineCardDEV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29CAA838273470DD00A1CAD3 /* Debug */,
+				29CAA839273470DD00A1CAD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
