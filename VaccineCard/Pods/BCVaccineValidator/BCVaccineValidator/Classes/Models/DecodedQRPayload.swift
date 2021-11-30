@@ -15,28 +15,28 @@ public struct DecodedQRPayload: Codable {
 }
 
 // MARK: - Vc
-struct Vc: Codable {
+public struct Vc: Codable {
     let type: [String]
     let credentialSubject: CredentialSubject
 }
 
 // MARK: - CredentialSubject
-struct CredentialSubject: Codable {
+public struct CredentialSubject: Codable {
     let fhirVersion: String
     let fhirBundle: FhirBundle
 }
 
 // MARK: - FhirBundle
-struct FhirBundle: Codable {
+public struct FhirBundle: Codable {
     let resourceType, type: String
     let entry: [Entry]
 }
 
 // MARK: - Entry
-struct Entry: Codable {
+public struct Entry: Codable {
     let fullURL: String
     let resource: Resource
-
+    
     enum CodingKeys: String, CodingKey {
         case fullURL = "fullUrl"
         case resource
@@ -44,7 +44,7 @@ struct Entry: Codable {
 }
 
 // MARK: - Resource
-struct Resource: Codable {
+public struct Resource: Codable {
     let resourceType: String
     let name: [Name]?
     let birthDate, status: String?
@@ -57,56 +57,64 @@ struct Resource: Codable {
 }
 
 // MARK: - Meta
-struct Meta: Codable {
+public struct Meta: Codable {
     let security: [Security]?
 }
 
 // MARK: - Security
-struct Security: Codable {
+public struct Security: Codable {
     let system: String?
     let code: String?
 }
 
 // MARK: - Name
-struct Name: Codable {
+public struct Name: Codable {
     let family: String?
     let given: [String]?
 }
 
 // MARK: - Patient
-struct Patient: Codable {
+public struct Patient: Codable {
     let reference: String
 }
 
 // MARK: - Performer
-struct Performer: Codable {
+public struct Performer: Codable {
     let actor: Actor?
 }
 
 // MARK: - Actor
-struct Actor: Codable {
+public struct Actor: Codable {
     let display: String?
 }
 
 // MARK: - VaccineCode
-struct VaccineCode: Codable {
+public struct VaccineCode: Codable {
     let coding: [Coding]
 }
 
 // MARK: - Coding
-struct Coding: Codable {
+public struct Coding: Codable {
     let system: String?
     let code: String?
 }
 
 
-extension DecodedQRPayload {
+public extension DecodedQRPayload {
+    var fhirBundle: FhirBundle {
+        return vc.credentialSubject.fhirBundle
+    }
+    
+    func fhirBundleHash() -> String? {
+        return fhirBundle.toString()?.md5Base64()
+    }
+    
     func getName() -> String {
         guard let first = self.vc.credentialSubject.fhirBundle.entry.first,
               let nameModel = first.resource.name?.first else {
-            return ""
-        }
-       
+                  return ""
+              }
+        
         var fullName = ""
         let familyName = nameModel.family ?? ""
         nameModel.given?.forEach { name in
@@ -119,8 +127,13 @@ extension DecodedQRPayload {
     func getBirthDate() -> String? {
         guard let first = self.vc.credentialSubject.fhirBundle.entry.first,
               let birthDate = first.resource.birthDate else {
-            return nil
-        }
+                  return nil
+              }
         return birthDate
+    }
+    
+    func vaxes() -> [Resource] {
+        return self.vc.credentialSubject.fhirBundle.entry
+            .compactMap({$0.resource}).filter({$0.resourceType.lowercased() == "Immunization".lowercased()})
     }
 }

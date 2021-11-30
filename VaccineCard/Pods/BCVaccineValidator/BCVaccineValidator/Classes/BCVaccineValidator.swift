@@ -4,6 +4,7 @@ public class BCVaccineValidator {
     public enum Config {
         case Prod
         case Test
+        case Dev
     }
     static var mode: Config = .Prod
     static var enableRemoteRules = true
@@ -65,11 +66,40 @@ public class BCVaccineValidator {
         }
     }
     
-    public func setup(mode: Config, remoteRules: Bool? = true) {
+    public func setup(mode: Config,
+                      remoteRules: Bool? = true,
+                      prodIssuers: String? = nil,
+                      devIssuers: String? = nil,
+                      testIssuers: String? = nil,
+                      prodRules: String? = nil,
+                      devRules: String? = nil,
+                      testRuls: String? = nil
+                      
+    ) {
+        if let prodIssuers = prodIssuers {
+            Constants.JWKSPublic.prodIssuers = prodIssuers
+        }
+        if let  devIssuers = devIssuers {
+            Constants.JWKSPublic.devIssuers = devIssuers
+        }
+        if let  testIssuers = testIssuers {
+            Constants.JWKSPublic.testIssuers = testIssuers
+        }
+        if let prodRules = prodRules {
+            Constants.JWKSPublic.prodRules = prodRules
+        }
+        if let devRules = devRules {
+            Constants.JWKSPublic.devRules = devRules
+        }
+        if let testRuls = testRuls {
+            Constants.JWKSPublic.testRuls = testRuls
+        }
         BCVaccineValidator.enableRemoteRules = remoteRules ?? true
         BCVaccineValidator.mode = mode
         initData()
     }
+    
+    
     
     private func setupUpdateListener() {
         // When issuers list is updated, re-download keys for issuers
@@ -96,6 +126,6 @@ public class BCVaccineValidator {
     }
     
     public func validate(code: String, completion: @escaping (CodeValidationResult)->Void) {
-        CodeValidationService.shared.validate(code: code, completion: completion)
+        CodeValidationService.shared.validate(code: code.lowercased(), completion: completion)
     }
 }

@@ -6,8 +6,29 @@
 //
 
 import Foundation
+import CommonCrypto
 
 extension String {
+    
+    func md5Base64() -> String? {
+        guard let messageData = self.data(using:.utf8) else {
+            return nil
+        }
+        let length = Int(CC_MD5_DIGEST_LENGTH)
+        
+        var digestData = Data(count: length)
+        
+        _ = digestData.withUnsafeMutableBytes { digestBytes -> UInt8 in
+            messageData.withUnsafeBytes { messageBytes -> UInt8 in
+                if let messageBytesBaseAddress = messageBytes.baseAddress, let digestBytesBlindMemory = digestBytes.bindMemory(to: UInt8.self).baseAddress {
+                    let messageLength = CC_LONG(messageData.count)
+                    CC_MD5(messageBytesBaseAddress, messageLength, digestBytesBlindMemory)
+                }
+                return 0
+            }
+        }
+        return digestData.base64EncodedString()
+    }
     
     func chunks(size: Int) -> [String] {
         map { $0 }.chunks(size: size).compactMap { String($0) }
