@@ -44,7 +44,7 @@ struct Constants {
                 return devIssuers
             }
         }
-        static var prodRules = "https://phsasmarthealthcard-dev.azurewebsites.net/v1/Covid19Proof/.well-known/rules.json"
+        static var prodRules = "https://smarthealthcard.phsa.ca/v1/covid19proof/.well-known/rules.json"
         static var devRules = "https://ds9mwekyyprcy.cloudfront.net/rules.json"
         static var testRuls = "https://phsasmarthealthcard-dev.azurewebsites.net/v1/Covid19Proof/.well-known/rules.json"
         

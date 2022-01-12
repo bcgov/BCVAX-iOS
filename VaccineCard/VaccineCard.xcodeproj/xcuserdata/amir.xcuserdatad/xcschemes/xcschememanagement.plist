@@ -72,6 +72,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>VaccineCardDEV.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>19</integer>
+		</dict>
 		<key>VaccineCardTEST.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -91,6 +96,11 @@
 			<true/>
 		</dict>
 		<key>292BC31E26D6B16000B0A064</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>29CAA81B273470DD00A1CAD3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
