@@ -31,25 +31,31 @@ struct Constants {
     }
     
     struct JWKSPublic {
+        static var prodIssuers = "https://smarthealthcard.phsa.ca/v1/trusted/.well-known/issuers.json"
+        static var devIssuers = "https://phsasmarthealthcard-dev.azurewebsites.net/v1/trusted/.well-known/issuers.json"
+        static var testIssuers = "https://phsasmarthealthcard-dev.azurewebsites.net/v1/trusted/.well-known/issuers.json"
         static var issuersListUrl: String {
             switch BCVaccineValidator.mode {
             case .Prod:
-                return "https://smarthealthcard.phsa.ca/v1/trusted/.well-known/issuers.json"
+                return prodIssuers
             case .Test:
-                return "https://phsasmarthealthcard-dev.azurewebsites.net/v1/trusted/.well-known/issuers.json"
+                return testIssuers
             case .Dev:
-                return "https://phsasmarthealthcard-dev.azurewebsites.net/v1/trusted/.well-known/issuers.json"
+                return devIssuers
             }
         }
+        static var prodRules = "https://smarthealthcard.phsa.ca/v1/covid19proof/.well-known/rules.json"
+        static var devRules = "https://ds9mwekyyprcy.cloudfront.net/rules.json"
+        static var testRuls = "https://phsasmarthealthcard-dev.azurewebsites.net/v1/Covid19Proof/.well-known/rules.json"
         
         static var rulesURL: String {
             switch BCVaccineValidator.mode {
             case .Prod:
-                return "https://smarthealthcard.phsa.ca/v1/covid19proof/.well-known/rules.json"
+                return prodRules
             case .Dev:
-                return "https://ds9mwekyyprcy.cloudfront.net/rules.json"
+                return devRules
             case .Test:
-                return "https://phsasmarthealthcard-dev.azurewebsites.net/v1/Covid19Proof/.well-known/rules.json"
+                return testRuls
             }
         }
         

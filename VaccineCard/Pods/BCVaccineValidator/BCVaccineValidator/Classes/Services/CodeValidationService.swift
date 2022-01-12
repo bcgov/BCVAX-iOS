@@ -16,7 +16,7 @@ class CodeValidationService {
         // Move to a background thread
         DispatchQueue.global(qos: .userInteractive).async {
             
-            guard let compactjws = self.decodeNumeric(code: code) else {
+            guard let compactjws = self.decodeNumeric(code: code.lowercased()) else {
                 return completion(CodeValidationResult(status: .InvalidCode, result: nil))
             }
             
@@ -44,8 +44,28 @@ class CodeValidationService {
                 if status == .None {
                     return completion(CodeValidationResult(status: .InvalidCode, result: nil))
                 }
-                
-                let result = ScanResultModel(code: code, issueDate: Double(payload.nbf), name: payload.getName(), birthdate: birthdate, status: status)
+                let vaxes = payload.vaxes()
+                var immunizations: [COVIDImmunizationRecord] = []
+                for vax in vaxes {
+                    let date: String? = vax.occurrenceDateTime
+                    var vaxCode: String? = nil
+                    var snomed: String? = nil
+                    if let coding = vax.vaccineCode?.coding {
+                        if !coding.isEmpty {
+                            vaxCode = coding[0].code
+                        }
+                        if coding.count > 1 {
+                            snomed = coding[1].code
+                        }
+                    }
+                    var provider: String? = nil
+                    if let performer = vax.performer, !performer.isEmpty {
+                        provider = performer[0].actor?.display
+                    }
+                    let lot: String? = vax.lotNumber
+                    immunizations.append(COVIDImmunizationRecord(vaccineCode: vaxCode, date: date, provider: provider, lotNumber: lot, snomed: snomed))
+                }
+                let result = ScanResultModel(code: code, issueDate: Double(payload.nbf), name: payload.getName(), birthdate: birthdate, status: status, immunizations: immunizations, payload: payload)
                 
                 VerificationService.shared.verify(jwkSigned: compactjws, iss: payload.iss, kid: header.kid) { isVerified in
                     guard isVerified else {

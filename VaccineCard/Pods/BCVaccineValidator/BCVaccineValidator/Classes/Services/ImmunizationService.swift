@@ -41,8 +41,7 @@ class ImmunizationService {
     }
     
     private func getImmunizationStatus(for payload: DecodedQRPayload, using rulesSet: RuleSet) -> ImmunizationStatus? {
-        let payloadVaxes = payload.vc.credentialSubject.fhirBundle.entry
-            .compactMap({$0.resource}).filter({$0.resourceType.lowercased() == "Immunization".lowercased()})
+        let payloadVaxes = payload.vaxes()
         
         var mrnType = 0
         var nrvvType = 0
