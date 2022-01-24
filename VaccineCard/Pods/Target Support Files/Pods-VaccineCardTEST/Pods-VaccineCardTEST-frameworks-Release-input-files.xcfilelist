@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-VaccineCardTEST/Pods-VaccineCardTEST-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/BCVaccineValidator/BCVaccineValidator.framework
+${BUILT_PRODUCTS_DIR}/JOSESwift/JOSESwift.framework

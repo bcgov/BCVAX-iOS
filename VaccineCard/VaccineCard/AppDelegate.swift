@@ -6,7 +6,7 @@
 //
 
 import UIKit
-//import Firebase
+import BCVaccineValidator
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,8 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
         window?.makeKeyAndVisible()
-//        FirebaseApp.configure()
+        BCVaccineValidator.shared.setup(mode: .Prod)
         return true
     }
 }
-

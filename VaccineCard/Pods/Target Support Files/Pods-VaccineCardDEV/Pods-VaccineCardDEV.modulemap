@@ -1,0 +1,6 @@
+framework module Pods_VaccineCardDEV {
+  umbrella header "Pods-VaccineCardDEV-umbrella.h"
+
+  export *
+  module * { export * }
+}

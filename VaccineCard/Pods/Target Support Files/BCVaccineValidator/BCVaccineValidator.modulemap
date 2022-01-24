@@ -1,0 +1,6 @@
+framework module BCVaccineValidator {
+  umbrella header "BCVaccineValidator-umbrella.h"
+
+  export *
+  module * { export * }
+}

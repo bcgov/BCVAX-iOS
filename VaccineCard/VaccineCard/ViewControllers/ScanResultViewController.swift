@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import BCVaccineValidator
 
 class ScanResultViewController: UIViewController {
 
@@ -30,12 +31,21 @@ class ScanResultViewController: UIViewController {
     
     private var timer: Timer?
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        if #available(iOS 13.0, *) {
-            return .darkContent
-        } else {
-            return .default
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        switch (UIScreen.main.traitCollection.userInterfaceIdiom) {
+        case .pad:
+            return [.portrait, .portraitUpsideDown, .landscape]
+        case .phone:
+            return .portrait
+        case .tv:
+            return .portrait
+        default:
+            return .portrait
         }
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     // MARK: LifeCycle
@@ -43,17 +53,18 @@ class ScanResultViewController: UIViewController {
         super.viewDidLoad()
         style()
         setData()
+        setupAccessibilityTags()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         setData()
         beginAutoDismissTimer()
-        
     }
     
     // MARK: Outlet Actions
     @IBAction func scanButtonAction(_ sender: Any) {
+        UIImpactFeedbackGenerator(style: .light).impactOccurred()
         dimissPage()
     }
     
@@ -67,24 +78,22 @@ class ScanResultViewController: UIViewController {
     public func setup(model: ScanResultModel, onClose: @escaping()->Void) {
         self.onClose = onClose
         self.model = model
-        
     }
     
     private func setData() {
         guard let model = self.model else {return}
         nameLabel.text = model.name.uppercased()
         switch model.status {
-        case .fully:
+        case .Fully:
             styleVaxinatedCard()
-        case .none:
+        case .None:
             styleNotVaxinatedCard()
-        case .partially:
+        case .Partially:
             stylePartiallyVaxinatedCard()
         }
     }
     
     func beginAutoDismissTimer() {
-        // TODO: Add time to constants
         if let t = timer {
             t.invalidate()
         }
@@ -112,23 +121,23 @@ class ScanResultViewController: UIViewController {
         scanButton.setTitleColor(Constants.UI.Theme.primaryColor, for: .normal)
         
         // Fonts
-        titleLabel.font = UIFont.init(name: "BCSans-Bold", size: 18) ?? UIFont.systemFont(ofSize: 18, weight: .semibold)
+        titleLabel.font = Constants.UI.ScanResult.titleFont
         
-        let nameFont = UIFont.init(name: "BCSans-Bold", size: 20) ?? UIFont.systemFont(ofSize: 20, weight: .semibold)
+        let nameFont = Constants.UI.ScanResult.nameFont
         nameLabel.font = nameFont
         nameLabel.font = UIFontMetrics.default.scaledFont(for: nameFont)
         nameLabel.adjustsFontForContentSizeCategory = true
         nameLabel.adjustsFontSizeToFitWidth = true
         
         if let btnLabel = scanButton.titleLabel {
-            btnLabel.font = UIFont.init(name: "BCSans-Bold", size: 18) ?? UIFont.systemFont(ofSize: 18, weight: .semibold)
+            btnLabel.font = Constants.UI.ScanResult.buttonFont
         }
     }
     
     private func styleStatusCard() {
-        cardTitle.font = UIFont.init(name: "BCSans-Bold", size: 32) ?? UIFont.systemFont(ofSize: 32, weight: .bold)
+        cardTitle.font = Constants.UI.ScanResult.cardTitleFont
         cardTitle.numberOfLines = 0
-        cardSubtitle.font = UIFont.init(name: "BCSans-regular", size: 12) ?? UIFont.systemFont(ofSize: 12, weight: .regular)
+        cardSubtitle.font = Constants.UI.ScanResult.cardSubtitleFont
         statusCardContainer.backgroundColor = .clear
         statusCardContainer.layer.borderColor = UIColor.white.cgColor
         statusCardContainer.layer.borderWidth = 6
@@ -150,7 +159,9 @@ class ScanResultViewController: UIViewController {
         statusContainer.backgroundColor = Constants.UI.Status.notVaccinated.color
         styleStatusCard()
         cardIcon.isHidden = true
-        cardTitle.text = Constants.UI.Status.notVaccinated.cardTitle.uppercased()
+        let resultTitle = Constants.UI.Status.notVaccinated.cardTitle
+        cardTitle.text = resultTitle.uppercased()
+        cardTitle.accessibilityLabel = resultTitle
         cardSubtitle.text = Constants.UI.Status.notVaccinated.cardSubtitle
         cardTitle.textAlignment = .center
     }
@@ -159,13 +170,36 @@ class ScanResultViewController: UIViewController {
         statusContainer.backgroundColor = Constants.UI.Status.partiallyVaccinated.color
         styleStatusCard()
         cardIcon.isHidden = true
-        cardTitle.text = Constants.UI.Status.partiallyVaccinated.cardTitle.uppercased()
+        let resultTitle = Constants.UI.Status.partiallyVaccinated.cardTitle
+        cardTitle.text = resultTitle.uppercased()
+        cardTitle.accessibilityLabel = resultTitle
         cardSubtitle.text = Constants.UI.Status.partiallyVaccinated.cardSubtitle
         cardTitle.textAlignment = .center
         statusCardContainer.layer.borderWidth = 0
         view.layoutIfNeeded()
         statusContainer.layoutIfNeeded()
         statusCardContainer.addDashedBorder(color: UIColor.white.cgColor, width: 6)
+    }
+    
+    func setupAccessibilityTags() {
+        view.accessibilityTraits = .allowsDirectInteraction
+        view.accessibilityLabel = AccessibilityLabels.ScanResultView.view
+        cardTitle.accessibilityTraits = .allowsDirectInteraction
+        scanButton.accessibilityTraits = .allowsDirectInteraction
+        nameLabel.accessibilityTraits = .allowsDirectInteraction
+        
+        titleLabel.accessibilityLabel = AccessibilityLabels.ScanResultView.titleLabel
+        scanButton.accessibilityLabel = AccessibilityLabels.ScanResultView.scanButton
+        
+        cardIcon.isAccessibilityElement = false
+        cardIcon.accessibilityTraits = .notEnabled
+        
+        logo.isAccessibilityElement = false
+        logo.accessibilityTraits = .notEnabled
+        
+        divider.isAccessibilityElement = false
+        divider.accessibilityTraits = .notEnabled
+        
     }
 
 }

@@ -1,0 +1,37 @@
+{
+  "name": "BCVaccineValidator",
+  "version": "1.0.12",
+  "summary": "Validate vaccine cards allowed in British Columbia",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/bcgov/iOSVaccineValidator",
+  "authors": {
+    "amirshayegh": "shayegh@me.com"
+  },
+  "source": {
+    "git": "https://github.com/bcgov/iOSVaccineValidator.git",
+    "tag": "1.0.12"
+  },
+  "platforms": {
+    "ios": "11.0"
+  },
+  "swift_versions": "5.0",
+  "source_files": "BCVaccineValidator/Classes/**/*",
+  "resource_bundles": {
+    "BCVaccineValidator": [
+      "BCVaccineValidator/Assets/*"
+    ]
+  },
+  "dependencies": {
+    "Alamofire": [
+
+    ],
+    "JOSESwift": [
+
+    ]
+  },
+  "swift_version": "5.0"
+}

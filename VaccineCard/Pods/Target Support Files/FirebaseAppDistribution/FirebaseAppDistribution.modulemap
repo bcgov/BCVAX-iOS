@@ -1,0 +1,6 @@
+framework module FirebaseAppDistribution {
+  umbrella header "FirebaseAppDistribution-umbrella.h"
+
+  export *
+  module * { export * }
+}
