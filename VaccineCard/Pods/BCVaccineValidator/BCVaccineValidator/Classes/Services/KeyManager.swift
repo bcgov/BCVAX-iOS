@@ -22,7 +22,7 @@ class KeyManager: DirectoryManager {
         // define a direcotry path
         // for example, it a directory named:
         // smarthealthcard.phsa.ca~v1~issuer
-        let issuerPath = getDirectory(for: issuer.removeWellKnownJWKS_URLExtension().filePathSafeName())
+        let issuerPath = getDirectory(for: issuer.removeWellKnownJWKS_URLExtension().filePathSafeName().lowercased())
         // Create directory for the issuer (if one doesnt exist already)
         createDirectoryIfDoesntExist(path: issuerPath)
         // Verify that the directory exists - TODO: remove?

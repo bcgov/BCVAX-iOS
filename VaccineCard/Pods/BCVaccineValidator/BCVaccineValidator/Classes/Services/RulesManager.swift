@@ -29,8 +29,8 @@ class RulesManager: DirectoryManager {
             guard let rules = rules else {return completion(nil)}
             
             for rule in rules.ruleSet {
-                let resolved = self.resolveRuleTarget(ruleTarget: rule.ruleTarget)
-                if resolved.contains(issuer.removeWellKnownJWKS_URLExtension()) {
+                let resolved = self.resolveRuleTarget(ruleTarget: rule.ruleTarget).map({$0.lowercased()})
+                if resolved.contains(issuer.removeWellKnownJWKS_URLExtension().lowercased()) {
                     return completion(rule)
                 }
             }
