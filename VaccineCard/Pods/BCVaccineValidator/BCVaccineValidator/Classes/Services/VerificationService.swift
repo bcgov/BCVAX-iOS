@@ -58,7 +58,7 @@ class VerificationService {
             guard let issuers = issuers else {
                 return completion([])
             }
-            let allowedIssuers: [String] = issuers.participatingIssuers.map({$0.iss.removeWellKnownJWKS_URLExtension()})
+            let allowedIssuers: [String] = issuers.participatingIssuers.map({$0.iss.removeWellKnownJWKS_URLExtension().lowercased()})
             
             // Verify that the issuer is allowed
             guard allowedIssuers.contains(issuer.removeWellKnownJWKS_URLExtension()) else {

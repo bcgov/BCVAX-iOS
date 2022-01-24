@@ -1,32 +1,32 @@
 PODS:
   - Alamofire (5.5.0)
-  - BCVaccineValidator (1.0.11):
+  - BCVaccineValidator (1.0.12):
     - Alamofire
     - JOSESwift
-  - Firebase/AppDistribution (8.10.0):
+  - Firebase/AppDistribution (8.11.0):
     - Firebase/CoreOnly
-    - FirebaseAppDistribution (~> 8.10.0-beta)
-  - Firebase/CoreOnly (8.10.0):
-    - FirebaseCore (= 8.10.0)
-  - FirebaseAppDistribution (8.10.0-beta):
+    - FirebaseAppDistribution (~> 8.11.0-beta)
+  - Firebase/CoreOnly (8.11.0):
+    - FirebaseCore (= 8.11.0)
+  - FirebaseAppDistribution (8.11.0-beta):
     - FirebaseCore (~> 8.0)
     - FirebaseInstallations (~> 8.0)
     - GoogleDataTransport (~> 9.1)
-    - GoogleUtilities/AppDelegateSwizzler (~> 7.6)
-    - GoogleUtilities/UserDefaults (~> 7.6)
-  - FirebaseCore (8.10.0):
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.7)
+    - GoogleUtilities/UserDefaults (~> 7.7)
+  - FirebaseCore (8.11.0):
     - FirebaseCoreDiagnostics (~> 8.0)
-    - GoogleUtilities/Environment (~> 7.6)
-    - GoogleUtilities/Logger (~> 7.6)
-  - FirebaseCoreDiagnostics (8.10.0):
+    - GoogleUtilities/Environment (~> 7.7)
+    - GoogleUtilities/Logger (~> 7.7)
+  - FirebaseCoreDiagnostics (8.11.0):
     - GoogleDataTransport (~> 9.1)
-    - GoogleUtilities/Environment (~> 7.6)
-    - GoogleUtilities/Logger (~> 7.6)
+    - GoogleUtilities/Environment (~> 7.7)
+    - GoogleUtilities/Logger (~> 7.7)
     - nanopb (~> 2.30908.0)
-  - FirebaseInstallations (8.10.0):
+  - FirebaseInstallations (8.11.0):
     - FirebaseCore (~> 8.0)
-    - GoogleUtilities/Environment (~> 7.6)
-    - GoogleUtilities/UserDefaults (~> 7.6)
+    - GoogleUtilities/Environment (~> 7.7)
+    - GoogleUtilities/UserDefaults (~> 7.7)
     - PromisesObjC (< 3.0, >= 1.2)
   - GoogleDataTransport (9.1.2):
     - GoogleUtilities/Environment (~> 7.2)
@@ -82,17 +82,17 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   BCVaccineValidator:
-    :commit: b83c48efc2bb180d2cd6b349e4a83317a6dbf057
+    :commit: b68e55c75180dd2a0f3c2ca78b5e77c7b29b8137
     :git: https://github.com/bcgov/iOSVaccineValidator
 
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
-  BCVaccineValidator: d9bc33a3695ba4825c9a8dd7b004fb2324ddab93
-  Firebase: 44213362f1dcc52555b935dc925ed35ac55f1b20
-  FirebaseAppDistribution: 1d62aa8711bd2d9a56aa4c44098f533d3d459822
-  FirebaseCore: 04186597c095da37d90ff9fd3e53bc61a1ff2440
-  FirebaseCoreDiagnostics: 56fb7216d87e0e6ec2feddefa9d8a392fe8b2c18
-  FirebaseInstallations: 830327b45345ffc859eaa9c17bcd5ae893fd5425
+  BCVaccineValidator: 7a41c49aa40531f74d9fb5104a5b7b104527d6d4
+  Firebase: 44dd9724c84df18b486639e874f31436eaa9a20c
+  FirebaseAppDistribution: 48e14ff829eb5bb6209649a806a7624fc3f143f8
+  FirebaseCore: 2f4f85b453cc8fea4bb2b37e370007d2bcafe3f0
+  FirebaseCoreDiagnostics: 64d9709d804a6c25bd77841371c1fcfd909d5601
+  FirebaseInstallations: 044eede8a049bce71c4541ee68d6e4364fcbe774
   GoogleDataTransport: 629c20a4d363167143f30ea78320d5a7eb8bd940
   GoogleUtilities: e0913149f6b0625b553d70dae12b49fc62914fd1
   JOSESwift: 7ff178bb9173ff42c6e990929a9f2fa702a34f69
