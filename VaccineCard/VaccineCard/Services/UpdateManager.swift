@@ -38,18 +38,25 @@ class UpdateManager {
                     let arrayLocal = currentVersion.split(separator: ".")
                     
                     if arrayLocal.count != arrayStore.count {
-                        completion(true) // different versioning system
+                        return completion(true) // different versioning system
                     }
                     
                     // check each segment of the version
                     for (key, value) in arrayLocal.enumerated() {
-                        if let intValue = Int(value), let intAppStore = Int(arrayStore[key]), intValue < intAppStore {
-                            completion(true)
+                        if let intValue = Int(value),
+                           let intAppStore = Int(arrayStore[key])
+                        {
+                            if intValue < intAppStore {
+                                return completion(true)
+                            }
+                            if intValue > intAppStore {
+                                return completion(false)
+                            }
                         }
                     }
                 }
                 
-                completion(false) // no new version or failed to fetch app store version
+                return completion(false) // no new version or failed to fetch app store version
                 
             } catch {
                 #if DEBUG
